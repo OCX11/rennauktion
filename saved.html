@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>My Saved — RennAuktion</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#0d0d0d;color:#e2ddd8;font-family:'DM Sans',sans-serif;min-height:100vh}
+
+/* ── Topbar ── */
+.topbar{display:flex;align-items:center;justify-content:space-between;padding:12px 20px;border-bottom:1px solid #1e1e1e;position:sticky;top:0;z-index:100;background:#0d0d0d}
+.logo{text-decoration:none;display:flex;align-items:center}
+.topbar-right{display:flex;align-items:center;gap:8px}
+.topbar-btn{background:none;border:1px solid #333;color:#e2ddd8;font-size:11px;font-family:'DM Mono',monospace;letter-spacing:1px;padding:5px 10px;border-radius:6px;cursor:pointer}
+.topbar-btn:hover{border-color:#555}
+
+/* ── Page header ── */
+.page-header{padding:32px 20px 16px;border-bottom:1px solid #1e1e1e;max-width:1200px;margin:0 auto}
+.page-title{font-family:'Syne',sans-serif;font-size:28px;font-weight:800;letter-spacing:-0.5px}
+.page-title span{color:#c0392b}
+.page-subtitle{color:#666;font-size:13px;margin-top:6px;font-family:'DM Mono',monospace}
+
+/* ── Tabs ── */
+.tabs{display:flex;gap:0;padding:0 20px;border-bottom:1px solid #1e1e1e;max-width:1200px;margin:0 auto}
+.tab{background:none;border:none;border-bottom:2px solid transparent;color:#666;font-size:13px;font-family:'DM Mono',monospace;letter-spacing:1px;padding:14px 16px;cursor:pointer;text-transform:uppercase}
+.tab.active{color:#e2ddd8;border-bottom-color:#c0392b}
+.tab:hover:not(.active){color:#999}
+.tab-count{background:#2a2a2a;color:#888;font-size:10px;padding:2px 6px;border-radius:10px;margin-left:6px}
+.tab.active .tab-count{background:#c0392b22;color:#c0392b}
+
+/* ── Content area ── */
+.content{max-width:1200px;margin:0 auto;padding:24px 20px}
+
+/* ── Gate (not logged in) ── */
+.gate{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:80px 20px;text-align:center}
+.gate-icon{font-size:48px;margin-bottom:20px;opacity:0.3}
+.gate-title{font-size:20px;font-weight:700;margin-bottom:8px}
+.gate-sub{color:#666;font-size:14px;margin-bottom:28px;line-height:1.6}
+.gate-btn{background:#c0392b;color:#fff;border:none;padding:12px 28px;border-radius:8px;font-size:14px;font-weight:600;cursor:pointer}
+.gate-btn:hover{background:#a93226}
+
+/* ── Empty state ── */
+.empty{display:flex;flex-direction:column;align-items:center;padding:80px 20px;text-align:center}
+.empty-icon{font-size:48px;margin-bottom:16px;opacity:0.2}
+.empty-title{font-size:16px;font-weight:600;margin-bottom:8px;color:#888}
+.empty-sub{color:#555;font-size:13px;line-height:1.6;max-width:320px}
+.empty-link{color:#c0392b;text-decoration:none}
+
+/* ── Grid ── */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:16px}
+
+/* ── Card ── */
+.card{background:#141414;border:1px solid #232323;border-radius:10px;overflow:hidden;transition:border-color .15s}
+.card:hover{border-color:#333}
+.card-img{width:100%;height:160px;object-fit:cover;background:#1a1a1a;display:block}
+.card-img-placeholder{width:100%;height:160px;background:#1a1a1a;display:flex;align-items:center;justify-content:center;font-size:32px;opacity:0.2}
+.card-body{padding:14px}
+.card-source{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:#c0392b;margin-bottom:4px}
+.card-title{font-size:14px;font-weight:600;line-height:1.3;margin-bottom:8px;color:#e2ddd8}
+.card-meta{display:flex;align-items:center;justify-content:space-between}
+.card-price{font-family:'DM Mono',monospace;font-size:15px;font-weight:500;color:#e2ddd8}
+.card-price.no-price{color:#555;font-size:12px}
+.card-actions{display:flex;gap:8px;align-items:center}
+.card-link{background:#c0392b;color:#fff;text-decoration:none;font-size:11px;font-family:'DM Mono',monospace;letter-spacing:0.5px;padding:5px 10px;border-radius:6px}
+.card-link:hover{background:#a93226}
+.card-unsave{background:none;border:1px solid #2a2a2a;color:#555;font-size:11px;padding:5px 10px;border-radius:6px;cursor:pointer;font-family:'DM Mono',monospace}
+.card-unsave:hover{border-color:#c0392b;color:#c0392b}
+.card-saved-date{font-size:10px;color:#444;font-family:'DM Mono',monospace;margin-top:8px}
+
+/* ── Loading ── */
+.loading{display:flex;align-items:center;justify-content:center;padding:80px;color:#444;font-family:'DM Mono',monospace;font-size:12px;gap:10px}
+.spinner{width:16px;height:16px;border:2px solid #333;border-top-color:#c0392b;border-radius:50%;animation:spin .7s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* ── Responsive ── */
+@media(max-width:600px){
+  .grid{grid-template-columns:1fr}
+  .page-title{font-size:22px}
+}
+</style>
+</head>
+<body>
+
+<!-- ── Topbar ── -->
+<header class="topbar">
+  <a class="logo" href="/">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 64"><g transform="translate(8,6)"><circle cx="26" cy="26" r="22" fill="none" stroke="#242424" stroke-width="2.5"/><path d="M6,38 A22,22 0 0,1 43.5,8.5" fill="none" stroke="#D85A30" stroke-width="2.5" stroke-linecap="round"/><g stroke="#333" stroke-width="1.2" stroke-linecap="round"><line x1="4" y1="26" x2="8.5" y2="26" transform="rotate(-80,26,26)"/><line x1="4" y1="26" x2="8.5" y2="26" transform="rotate(-55,26,26)"/><line x1="4" y1="26" x2="8.5" y2="26" transform="rotate(-30,26,26)"/><line x1="4" y1="26" x2="8.5" y2="26" transform="rotate(-5,26,26)"/><line x1="4" y1="26" x2="8.5" y2="26" transform="rotate(20,26,26)"/><line x1="4" y1="26" x2="8.5" y2="26" transform="rotate(45,26,26)"/><line x1="4" y1="26" x2="8.5" y2="26" transform="rotate(70,26,26)"/><line x1="4" y1="26" x2="8.5" y2="26" transform="rotate(95,26,26)"/></g><line x1="26" y1="26" x2="43.5" y2="8.5" stroke="white" stroke-width="1.8" stroke-linecap="round"/><circle cx="26" cy="26" r="4" fill="#D85A30"/><circle cx="26" cy="26" r="1.6" fill="#0d0d0d"/><text x="62" y="34" font-family="'Helvetica Neue',Arial,sans-serif" font-size="32" letter-spacing="-0.5"><tspan font-weight="800" fill="white">Renn</tspan><tspan font-weight="300" fill="#D85A30">Auktion</tspan></text></g></svg>
+  </a>
+  <div class="topbar-right">
+    <button class="topbar-btn auth-login-btn" onclick="window.RA&&window.RA.openLoginModal()" style="display:none">Sign in</button>
+    <button class="topbar-btn auth-logout-btn" onclick="window.RA&&window.RA.signOut()" style="display:none"><span class="auth-user-label"></span> · Sign out</button>
+  </div>
+</header>
+
+<!-- ── Page header ── -->
+<div class="page-header">
+  <h1 class="page-title">My <span>Saved</span></h1>
+  <p class="page-subtitle" id="saved-subtitle">Your saved auctions and listings</p>
+</div>
+
+<!-- ── Tabs ── -->
+<div class="tabs">
+  <button class="tab active" data-tab="auctions" onclick="switchTab('auctions',this)">
+    Auctions <span class="tab-count" id="count-auctions">0</span>
+  </button>
+  <button class="tab" data-tab="listings" onclick="switchTab('listings',this)">
+    Listings <span class="tab-count" id="count-listings">0</span>
+  </button>
+</div>
+
+<!-- ── Content ── -->
+<div class="content">
+  <div id="state-loading" class="loading"><div class="spinner"></div>Loading…</div>
+  <div id="state-gate" class="gate" style="display:none">
+    <div class="gate-icon">♡</div>
+    <div class="gate-title">Sign in to view your saved cars</div>
+    <div class="gate-sub">Save auctions and listings with the ♡ button — they'll all appear here.</div>
+    <button class="gate-btn" onclick="window.RA&&window.RA.openLoginModal()">Sign in / Create account</button>
+  </div>
+  <div id="state-content" style="display:none">
+    <div id="tab-auctions">
+      <div id="grid-auctions" class="grid"></div>
+      <div id="empty-auctions" class="empty" style="display:none">
+        <div class="empty-icon">♡</div>
+        <div class="empty-title">No saved auctions yet</div>
+        <div class="empty-sub">Tap ♡ on any auction card to save it here. <br><a class="empty-link" href="/">Browse auctions →</a></div>
+      </div>
+    </div>
+    <div id="tab-listings" style="display:none">
+      <div id="grid-listings" class="grid"></div>
+      <div id="empty-listings" class="empty" style="display:none">
+        <div class="empty-icon">♡</div>
+        <div class="empty-title">No saved listings yet</div>
+        <div class="empty-sub">Tap ♡ on any listing card to save it here. <br><a class="empty-link" href="https://rennmarkt.net/dashboard.html">Browse listings →</a></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── Supabase ── -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="auth.js"></script>
+
+<script>
+const SUPABASE_URL      = 'https://kulgecvykrhfalvvyeru.supabase.co';
+const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imt1bGdlY3Z5a3JoZmFsdnZ5ZXJ1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzc2NDkyODcsImV4cCI6MjA5MzIyNTI4N30.xvylwBUU-Tt7-dbUUe68o2RZCIBtZrnspMconUFgqH4';
+const _sb2 = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+let currentTab = 'auctions';
+let savedAuctions = [];
+let savedListings = [];
+
+// ── Tab switch ──────────────────────────────────────────────────────────────
+function switchTab(tab, el) {
+  currentTab = tab;
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  el.classList.add('active');
+  document.getElementById('tab-auctions').style.display = tab === 'auctions' ? 'block' : 'none';
+  document.getElementById('tab-listings').style.display = tab === 'listings' ? 'block' : 'none';
+}
+
+// ── Format helpers ──────────────────────────────────────────────────────────
+function fmtPrice(p) {
+  if (!p) return null;
+  const n = typeof p === 'string' ? parseInt(p.replace(/\D/g,'')) : p;
+  if (!n || isNaN(n)) return null;
+  return '$' + n.toLocaleString();
+}
+
+function fmtDate(iso) {
+  if (!iso) return '';
+  const d = new Date(iso);
+  return 'Saved ' + d.toLocaleDateString('en-US', {month:'short', day:'numeric', year:'numeric'});
+}
+
+function sourceLabel(url) {
+  if (!url) return 'Saved';
+  if (url.includes('bringatrailer')) return 'Bring a Trailer';
+  if (url.includes('carsandbids'))   return 'Cars & Bids';
+  if (url.includes('pcarmarket'))    return 'PCarMarket';
+  if (url.includes('rennmarkt'))     return 'RennMarkt';
+  return 'Auction';
+}
+
+// ── Render ──────────────────────────────────────────────────────────────────
+function renderCard(item, type) {
+  const price = fmtPrice(item.price);
+  const img   = item.image_url;
+  const url   = item.listing_url;
+  const src   = item.source || sourceLabel(url);
+  const title = item.title || 'Saved Car';
+
+  return `
+    <div class="card" id="card-${item.listing_id}">
+      ${img
+        ? `<img class="card-img" src="${img}" alt="${title}" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">`
+        : ''}
+      <div class="card-img-placeholder" ${img ? 'style="display:none"' : ''}>🏎</div>
+      <div class="card-body">
+        <div class="card-source">${src}</div>
+        <div class="card-title">${title}</div>
+        <div class="card-meta">
+          <div class="card-price ${price ? '' : 'no-price'}">${price || 'Price N/A'}</div>
+          <div class="card-actions">
+            ${url ? `<a class="card-link" href="${url}" target="_blank" rel="noopener">View ↗</a>` : ''}
+            <button class="card-unsave" onclick="unsave('${item.listing_id}','${type}')">Remove</button>
+          </div>
+        </div>
+        <div class="card-saved-date">${fmtDate(item.created_at)}</div>
+      </div>
+    </div>`;
+}
+
+function renderGrid(items, type) {
+  const grid  = document.getElementById('grid-' + type);
+  const empty = document.getElementById('empty-' + type);
+  if (!items.length) {
+    grid.innerHTML  = '';
+    empty.style.display = 'flex';
+  } else {
+    empty.style.display = 'none';
+    grid.innerHTML = items.map(i => renderCard(i, type)).join('');
+  }
+  document.getElementById('count-' + type).textContent = items.length;
+}
+
+// ── Unsave ──────────────────────────────────────────────────────────────────
+async function unsave(listingId, type) {
+  const { data: { session } } = await _sb2.auth.getSession();
+  if (!session) return;
+  const table = type === 'auctions' ? 'saved_auctions' : 'saved_listings';
+  await _sb2.from(table).delete().eq('user_id', session.user.id).eq('listing_id', listingId);
+  // Remove from local array and re-render
+  if (type === 'auctions') {
+    savedAuctions = savedAuctions.filter(i => i.listing_id !== listingId);
+    renderGrid(savedAuctions, 'auctions');
+  } else {
+    savedListings = savedListings.filter(i => i.listing_id !== listingId);
+    renderGrid(savedListings, 'listings');
+  }
+}
+
+// ── Load saved data ──────────────────────────────────────────────────────────
+async function loadSaved(userId) {
+  const [aRes, lRes] = await Promise.all([
+    _sb2.from('saved_auctions').select('*').eq('user_id', userId).order('created_at', {ascending: false}),
+    _sb2.from('saved_listings').select('*').eq('user_id', userId).order('created_at', {ascending: false})
+  ]);
+
+  savedAuctions = aRes.data || [];
+  savedListings = lRes.data || [];
+
+  renderGrid(savedAuctions, 'auctions');
+  renderGrid(savedListings, 'listings');
+
+  const total = savedAuctions.length + savedListings.length;
+  document.getElementById('saved-subtitle').textContent =
+    total === 0 ? 'No saved cars yet' :
+    total === 1 ? '1 saved car' : total + ' saved cars';
+
+  document.getElementById('state-loading').style.display = 'none';
+  document.getElementById('state-content').style.display = 'block';
+}
+
+// ── Auth state ───────────────────────────────────────────────────────────────
+document.addEventListener('DOMContentLoaded', async () => {
+  const { data: { session } } = await _sb2.auth.getSession();
+
+  if (session) {
+    await loadSaved(session.user.id);
+  } else {
+    document.getElementById('state-loading').style.display = 'none';
+    document.getElementById('state-gate').style.display    = 'flex';
+  }
+
+  _sb2.auth.onAuthStateChange(async (event, session) => {
+    if (session && event === 'SIGNED_IN') {
+      document.getElementById('state-gate').style.display    = 'none';
+      document.getElementById('state-loading').style.display = 'flex';
+      await loadSaved(session.user.id);
+    } else if (!session) {
+      document.getElementById('state-content').style.display = 'none';
+      document.getElementById('state-gate').style.display    = 'flex';
+    }
+  });
+});
+</script>
+</body>
+</html>
