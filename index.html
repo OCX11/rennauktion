@@ -234,13 +234,13 @@ a { color:inherit; text-decoration:none; }
 .ra-modal-wrap { position:fixed; inset:0; z-index:501; display:flex; align-items:center; justify-content:center; pointer-events:none; }
 .ra-modal {
   background:var(--bg1); border:1px solid var(--bd2); border-radius:11px;
-  width:520px; max-height:90vh; display:flex; flex-direction:column; overflow:hidden;
+  width:min(720px,95vw); max-height:92vh; display:flex; flex-direction:column; overflow:hidden;
   pointer-events:none;
   opacity:0; transform:scale(.87); transform-origin:center center;
   transition:opacity .2s cubic-bezier(.4,0,.2,1), transform .22s cubic-bezier(.34,1.28,.64,1);
 }
 .ra-backdrop.open .ra-modal { opacity:1; transform:scale(1); pointer-events:all; }
-.ra-modal-img { height:200px; background:var(--bg4); position:relative; overflow:hidden; flex-shrink:0; }
+.ra-modal-img { height:280px; background:var(--bg4); position:relative; overflow:hidden; flex-shrink:0; }
 .ra-modal-img img { width:100%; height:100%; object-fit:cover; opacity:.88; }
 .ra-modal-grad { position:absolute; bottom:0; left:0; right:0; height:100px; background:linear-gradient(transparent, var(--bg1)); }
 .ra-modal-close { position:absolute; top:10px; right:10px; width:28px; height:28px; border-radius:6px; background:rgba(9,9,9,.85); border:1px solid var(--bd2); color:var(--tx2); font-size:13px; display:flex; align-items:center; justify-content:center; cursor:pointer; z-index:2; transition:all .12s; }
@@ -257,13 +257,13 @@ a { color:inherit; text-decoration:none; }
 .ra-kv-lbl { font-size:8px; color:var(--tx3); font-family:'JetBrains Mono',monospace; text-transform:uppercase; letter-spacing:.5px; margin-bottom:3px; }
 .ra-kv-val { font-family:'JetBrains Mono',monospace; font-size:21px; font-weight:500; color:#ebebeb; }
 .ra-kv-sub { font-size:9px; margin-top:2px; font-family:'JetBrains Mono',monospace; }
-.ra-spec-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:4px; margin-bottom:11px; }
+.ra-spec-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:5px; margin-bottom:11px; }
 .ra-spec { background:var(--bg2); border:1px solid var(--bd); border-radius:5px; padding:6px 8px; }
 .ra-spec-k { font-size:7px; color:var(--tx3); font-family:'JetBrains Mono',monospace; text-transform:uppercase; letter-spacing:.4px; margin-bottom:2px; }
 .ra-spec-v { font-size:10px; font-weight:500; color:var(--tx2); }
 .ra-graph-hdr { display:flex; justify-content:space-between; font-size:8px; color:var(--tx3); font-family:'JetBrains Mono',monospace; text-transform:uppercase; letter-spacing:.5px; margin-bottom:5px; }
 .ra-graph-sub { text-transform:none; letter-spacing:0; color:var(--bd3); }
-.ra-modal-svg { width:100%; height:160px; display:block; }
+.ra-modal-svg { width:100%; height:200px; display:block; }
 .ra-modal-foot { padding:9px 14px; border-top:1px solid var(--bd); display:grid; grid-template-columns:1fr 1fr 1.5fr; gap:6px; flex-shrink:0; background:var(--bg1); }
 .ra-mfb { padding:8px; border-radius:5px; border:1px solid var(--bd2); background:var(--bg3); color:var(--tx2); font-size:10px; font-weight:500; font-family:'Inter',sans-serif; cursor:pointer; transition:all .12s; text-align:center; }
 .ra-mfb:hover { border-color:var(--bd3); color:var(--text); }
@@ -310,7 +310,7 @@ a { color:inherit; text-decoration:none; }
     <input type="text" placeholder="Search auctions…">
   </div>
   <div class="hdr-right">
-    <span class="hdr-time"><span class="live-dot"></span>May 13 22:49 UTC</span>
+    <span class="hdr-time"><span class="live-dot"></span>May 13 22:54 UTC</span>
     <div class="hdr-avatar" onclick="toggleDD()">CL</div>
   </div>
 </div>
@@ -432,7 +432,7 @@ a { color:inherit; text-decoration:none; }
  data-fmv-high="576666"
  data-bid="508888"
  data-lid="9675"
- data-mileage="999999"
+ data-mileage="2600"
  data-trans=""
  data-color=""
  data-comp-count="8"
@@ -464,7 +464,7 @@ a { color:inherit; text-decoration:none; }
       <span class="bid-val">$508,888</span>
       
     </div>
-    <div class="card-specs"></div>
+    <div class="card-specs"><span class="spec-pill">2,600 mi</span></div>
   </div>
   <div class="expand-panel">
     <div class="expand-inner">
@@ -472,7 +472,7 @@ a { color:inherit; text-decoration:none; }
         <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$496K &ndash; $577K</div></div>
         <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">8 sales</div></div>
         <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">7</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">2,600 mi</div></div>
         <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">—</div></div>
         <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
       </div>
@@ -495,7 +495,7 @@ a { color:inherit; text-decoration:none; }
  data-fmv-high="0"
  data-bid="1050000"
  data-lid="9419"
- data-mileage="999999"
+ data-mileage="316"
  data-trans=""
  data-color=""
  data-comp-count="0"
@@ -527,7 +527,7 @@ a { color:inherit; text-decoration:none; }
       <span class="bid-val">$1,050,000</span>
       
     </div>
-    <div class="card-specs"></div>
+    <div class="card-specs"><span class="spec-pill">316 mi</span></div>
   </div>
   <div class="expand-panel">
     <div class="expand-inner">
@@ -535,7 +535,7 @@ a { color:inherit; text-decoration:none; }
         <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">—</div></div>
         <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">0 sales</div></div>
         <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">8</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">316 mi</div></div>
         <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">—</div></div>
         <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
       </div>
@@ -747,7 +747,7 @@ a { color:inherit; text-decoration:none; }
  data-fmv-high="216000"
  data-bid="150000"
  data-lid="10039"
- data-mileage="999999"
+ data-mileage="12000"
  data-trans=""
  data-color=""
  data-comp-count="76"
@@ -779,7 +779,7 @@ a { color:inherit; text-decoration:none; }
       <span class="bid-val">$150,000</span>
       <span class="fmv-pill fmv-below">▼ 11% below FMV</span>
     </div>
-    <div class="card-specs"></div>
+    <div class="card-specs"><span class="spec-pill">12,000 mi</span></div>
   </div>
   <div class="expand-panel">
     <div class="expand-inner">
@@ -787,7 +787,7 @@ a { color:inherit; text-decoration:none; }
         <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$131K &ndash; $216K</div></div>
         <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">76 sales</div></div>
         <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">6</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">12,000 mi</div></div>
         <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">—</div></div>
         <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
       </div>
@@ -818,7 +818,7 @@ a { color:inherit; text-decoration:none; }
  data-days-listed="5"
  data-ends="2026-05-14T18:29:25Z" data-listed="2026-05-08">
   <div class="img-wrap">
-    <img src="https://d2niwqq19lf86s.cloudfront.net/htwritable/media/.thumbnails/551479a9-7e3e-4789-b22d-f13dcc516fdc-f8887ebb-ddd3-4abf-9d0a-5623033cf852-IMG_0955-tiny-2048x0.webp/551479a9-7e3e-4789-b22d-f13dcc516fdc-f8887ebb-ddd3-4abf-9d0a-5623033cf852-IMG_0955-tiny-2048x0-tiny-380x0.webp" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
+    <img src="https://d2niwqq19lf86s.cloudfront.net/htwritable/media/.thumbnails/551479a9-7e3e-4789-b22d-f13dcc516fdc-f8887ebb-ddd3-4abf-9d0a-5623033cf852-IMG_0955-tiny-2048x0.webp/551479a9-7e3e-4789-b22d-f13dcc516fdc-f8887ebb-ddd3-4abf-9d0a-5623033cf852-IMG_0955-tiny-2048x0-tiny-2048x0.webp" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
     <div class="img-grad"></div>
     <span class="img-src-badge src-badge" style="background:#0A1F14;color:#4ade80">pcarmarket</span>
     <span class="img-timer countdown-timer timer-amber" data-ends="2026-05-14T18:29:25Z">…</span>
@@ -944,7 +944,7 @@ a { color:inherit; text-decoration:none; }
  data-days-listed="6"
  data-ends="2026-05-14T18:39:25Z" data-listed="2026-05-07">
   <div class="img-wrap">
-    <img src="https://d2niwqq19lf86s.cloudfront.net/htwritable/media/prod/eyJ0aXRsZSI6IjY1MzM3IC0gMTk4NiBQb3JzY2hlIDkxMSBDYWJyaW9sZXQiLCJzbHVnIjoiNjUzMzctMTk4Ni1wb3JzY2hlLTkxMS1jYWJyaW9sZXQtNzM2YzY2ZTUifQ/.thumbnails/62fa856b-db0b-4896-9465-d4afd3bcf04d.webp/62fa856b-db0b-4896-9465-d4afd3bcf04d-tiny-380x0.webp" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
+    <img src="https://d2niwqq19lf86s.cloudfront.net/htwritable/media/prod/eyJ0aXRsZSI6IjY1MzM3IC0gMTk4NiBQb3JzY2hlIDkxMSBDYWJyaW9sZXQiLCJzbHVnIjoiNjUzMzctMTk4Ni1wb3JzY2hlLTkxMS1jYWJyaW9sZXQtNzM2YzY2ZTUifQ/.thumbnails/62fa856b-db0b-4896-9465-d4afd3bcf04d.webp/62fa856b-db0b-4896-9465-d4afd3bcf04d-tiny-2048x0.webp" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
     <div class="img-grad"></div>
     <span class="img-src-badge src-badge" style="background:#0A1F14;color:#4ade80">pcarmarket</span>
     <span class="img-timer countdown-timer timer-amber" data-ends="2026-05-14T18:39:25Z">…</span>
@@ -1007,7 +1007,7 @@ a { color:inherit; text-decoration:none; }
  data-days-listed="6"
  data-ends="2026-05-14T18:49:25Z" data-listed="2026-05-07">
   <div class="img-wrap">
-    <img src="https://d2niwqq19lf86s.cloudfront.net/htwritable/media/prod/eyJ0aXRsZSI6IjY1MTgxIC0gMjAxNCBQb3JzY2hlIENheW1hbiBTIiwic2x1ZyI6IjY1MTgxLTIwMTQtcG9yc2NoZS1jYXltYW4tcy03YjVmYTgyZSJ9/.thumbnails/23985d6d-100b-410d-bff5-90604bbb76fe.webp/23985d6d-100b-410d-bff5-90604bbb76fe-tiny-380x0.webp" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
+    <img src="https://d2niwqq19lf86s.cloudfront.net/htwritable/media/prod/eyJ0aXRsZSI6IjY1MTgxIC0gMjAxNCBQb3JzY2hlIENheW1hbiBTIiwic2x1ZyI6IjY1MTgxLTIwMTQtcG9yc2NoZS1jYXltYW4tcy03YjVmYTgyZSJ9/.thumbnails/23985d6d-100b-410d-bff5-90604bbb76fe.webp/23985d6d-100b-410d-bff5-90604bbb76fe-tiny-2048x0.webp" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
     <div class="img-grad"></div>
     <span class="img-src-badge src-badge" style="background:#0A1F14;color:#4ade80">pcarmarket</span>
     <span class="img-timer countdown-timer timer-amber" data-ends="2026-05-14T18:49:25Z">…</span>
@@ -1062,7 +1062,7 @@ a { color:inherit; text-decoration:none; }
  data-fmv-high="70500"
  data-bid="25000"
  data-lid="10064"
- data-mileage="999999"
+ data-mileage="12000"
  data-trans="Manual"
  data-color=""
  data-comp-count="91"
@@ -1094,7 +1094,7 @@ a { color:inherit; text-decoration:none; }
       <span class="bid-val">$25,000</span>
       <span class="fmv-pill fmv-below">▼ 54% below FMV</span>
     </div>
-    <div class="card-specs"><span class="spec-pill">Manual</span></div>
+    <div class="card-specs"><span class="spec-pill">12,000 mi</span><span class="spec-pill">Manual</span></div>
   </div>
   <div class="expand-panel">
     <div class="expand-inner">
@@ -1102,7 +1102,7 @@ a { color:inherit; text-decoration:none; }
         <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$41K &ndash; $70K</div></div>
         <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">91 sales</div></div>
         <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">6</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">12,000 mi</div></div>
         <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">Manual</div></div>
         <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
       </div>
@@ -1133,7 +1133,7 @@ a { color:inherit; text-decoration:none; }
  data-days-listed="19"
  data-ends="2026-05-14T18:59:17Z" data-listed="2026-04-24">
   <div class="img-wrap">
-    <img src="https://d2niwqq19lf86s.cloudfront.net/htwritable/media/.thumbnails/551479a9-7e3e-4789-b22d-f13dcc516fdc-f8887ebb-ddd3-4abf-9d0a-5623033cf852-IMG_0955-tiny-2048x0.webp/551479a9-7e3e-4789-b22d-f13dcc516fdc-f8887ebb-ddd3-4abf-9d0a-5623033cf852-IMG_0955-tiny-2048x0-tiny-380x0.webp" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
+    <img src="https://d2niwqq19lf86s.cloudfront.net/htwritable/media/.thumbnails/551479a9-7e3e-4789-b22d-f13dcc516fdc-f8887ebb-ddd3-4abf-9d0a-5623033cf852-IMG_0955-tiny-2048x0.webp/551479a9-7e3e-4789-b22d-f13dcc516fdc-f8887ebb-ddd3-4abf-9d0a-5623033cf852-IMG_0955-tiny-2048x0-tiny-2048x0.webp" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
     <div class="img-grad"></div>
     <span class="img-src-badge src-badge" style="background:#0A1F14;color:#4ade80">pcarmarket</span>
     <span class="img-timer countdown-timer timer-amber" data-ends="2026-05-14T18:59:17Z">…</span>
@@ -1196,7 +1196,7 @@ a { color:inherit; text-decoration:none; }
  data-days-listed="6"
  data-ends="2026-05-14T18:59:25Z" data-listed="2026-05-07">
   <div class="img-wrap">
-    <img src="https://d2niwqq19lf86s.cloudfront.net/htwritable/media/prod/eyJ0aXRsZSI6IjY1NTA4IC0gMjAyMCBQb3JzY2hlIDkxMSBDYXJyZXJhIFMiLCJzbHVnIjoiNjU1MDgtMjAyMC1wb3JzY2hlLTkxMS1jYXJyZXJhLXMtYTBhM2EyZTUifQ/.thumbnails/9648c830-67de-49d5-b3d4-655726c942a8.webp/9648c830-67de-49d5-b3d4-655726c942a8-tiny-380x0.webp" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
+    <img src="https://d2niwqq19lf86s.cloudfront.net/htwritable/media/prod/eyJ0aXRsZSI6IjY1NTA4IC0gMjAyMCBQb3JzY2hlIDkxMSBDYXJyZXJhIFMiLCJzbHVnIjoiNjU1MDgtMjAyMC1wb3JzY2hlLTkxMS1jYXJyZXJhLXMtYTBhM2EyZTUifQ/.thumbnails/9648c830-67de-49d5-b3d4-655726c942a8.webp/9648c830-67de-49d5-b3d4-655726c942a8-tiny-2048x0.webp" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
     <div class="img-grad"></div>
     <span class="img-src-badge src-badge" style="background:#0A1F14;color:#4ade80">pcarmarket</span>
     <span class="img-timer countdown-timer timer-amber" data-ends="2026-05-14T18:59:25Z">…</span>
@@ -1251,7 +1251,7 @@ a { color:inherit; text-decoration:none; }
  data-fmv-high="49982"
  data-bid="37500"
  data-lid="10067"
- data-mileage="999999"
+ data-mileage="12000"
  data-trans=""
  data-color=""
  data-comp-count="9"
@@ -1283,7 +1283,7 @@ a { color:inherit; text-decoration:none; }
       <span class="bid-val">$37,500</span>
       <span class="fmv-pill fmv-below">▼ 19% below FMV</span>
     </div>
-    <div class="card-specs"></div>
+    <div class="card-specs"><span class="spec-pill">12,000 mi</span></div>
   </div>
   <div class="expand-panel">
     <div class="expand-inner">
@@ -1291,7 +1291,7 @@ a { color:inherit; text-decoration:none; }
         <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$44K &ndash; $50K</div></div>
         <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">9 sales</div></div>
         <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">6</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">12,000 mi</div></div>
         <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">—</div></div>
         <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
       </div>
@@ -1322,7 +1322,7 @@ a { color:inherit; text-decoration:none; }
  data-days-listed="6"
  data-ends="2026-05-14T19:09:25Z" data-listed="2026-05-07">
   <div class="img-wrap">
-    <img src="https://d2niwqq19lf86s.cloudfront.net/htwritable/media/prod/eyJ0aXRsZSI6IjY1MDQ1IC0gMjAxOCBQb3JzY2hlIDkxMSBDYXJyZXJhIDQgR1RTIENhYnJpb2xldCIsInNsdWciOiI2NTA0NS0yMDE4LXBvcnNjaGUtOTExLWNhcnJlcmEtNC1ndHMtY2FicmlvbGV0LWFhYWZkZmJiIn0/.thumbnails/b2fab8f7-b53e-4019-a904-6bc63b08b64e.webp/b2fab8f7-b53e-4019-a904-6bc63b08b64e-tiny-380x0.webp" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
+    <img src="https://d2niwqq19lf86s.cloudfront.net/htwritable/media/prod/eyJ0aXRsZSI6IjY1MDQ1IC0gMjAxOCBQb3JzY2hlIDkxMSBDYXJyZXJhIDQgR1RTIENhYnJpb2xldCIsInNsdWciOiI2NTA0NS0yMDE4LXBvcnNjaGUtOTExLWNhcnJlcmEtNC1ndHMtY2FicmlvbGV0LWFhYWZkZmJiIn0/.thumbnails/b2fab8f7-b53e-4019-a904-6bc63b08b64e.webp/b2fab8f7-b53e-4019-a904-6bc63b08b64e-tiny-2048x0.webp" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
     <div class="img-grad"></div>
     <span class="img-src-badge src-badge" style="background:#0A1F14;color:#4ade80">pcarmarket</span>
     <span class="img-timer countdown-timer timer-amber" data-ends="2026-05-14T19:09:25Z">…</span>
@@ -1440,7 +1440,7 @@ a { color:inherit; text-decoration:none; }
  data-fmv-high="270000"
  data-bid="177777"
  data-lid="10071"
- data-mileage="999999"
+ data-mileage="12000"
  data-trans=""
  data-color=""
  data-comp-count="55"
@@ -1472,7 +1472,7 @@ a { color:inherit; text-decoration:none; }
       <span class="bid-val">$177,777</span>
       <span class="fmv-pill fmv-below">▼ 25% below FMV</span>
     </div>
-    <div class="card-specs"></div>
+    <div class="card-specs"><span class="spec-pill">12,000 mi</span></div>
   </div>
   <div class="expand-panel">
     <div class="expand-inner">
@@ -1480,7 +1480,7 @@ a { color:inherit; text-decoration:none; }
         <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$221K &ndash; $270K</div></div>
         <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">55 sales</div></div>
         <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">6</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">12,000 mi</div></div>
         <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">—</div></div>
         <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
       </div>
@@ -1511,7 +1511,7 @@ a { color:inherit; text-decoration:none; }
  data-days-listed="6"
  data-ends="2026-05-14T19:19:25Z" data-listed="2026-05-07">
   <div class="img-wrap">
-    <img src="https://d2niwqq19lf86s.cloudfront.net/htwritable/media/.thumbnails/70ecb0d3-5339-47c3-bb67-b165edee0c67-cd107e51-54ba-4822-b0cf-713ecc286f3f-tiny-2048x0.webp/70ecb0d3-5339-47c3-bb67-b165edee0c67-cd107e51-54ba-4822-b0cf-713ecc286f3f-tiny-2048x0-tiny-380x0.webp" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
+    <img src="https://d2niwqq19lf86s.cloudfront.net/htwritable/media/.thumbnails/70ecb0d3-5339-47c3-bb67-b165edee0c67-cd107e51-54ba-4822-b0cf-713ecc286f3f-tiny-2048x0.webp/70ecb0d3-5339-47c3-bb67-b165edee0c67-cd107e51-54ba-4822-b0cf-713ecc286f3f-tiny-2048x0-tiny-2048x0.webp" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
     <div class="img-grad"></div>
     <span class="img-src-badge src-badge" style="background:#0A1F14;color:#4ade80">pcarmarket</span>
     <span class="img-timer countdown-timer timer-amber" data-ends="2026-05-14T19:19:25Z">…</span>
@@ -1637,7 +1637,7 @@ a { color:inherit; text-decoration:none; }
  data-days-listed="6"
  data-ends="2026-05-14T19:29:25Z" data-listed="2026-05-07">
   <div class="img-wrap">
-    <img src="https://d2niwqq19lf86s.cloudfront.net/htwritable/media/.thumbnails/bde2109c-ac85-4405-871b-b0707dc47243-1c470168-239f-4c6d-ba68-c11e4dc57eb8-tiny-2048x0.webp/bde2109c-ac85-4405-871b-b0707dc47243-1c470168-239f-4c6d-ba68-c11e4dc57eb8-tiny-2048x0-tiny-380x0.webp" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
+    <img src="https://d2niwqq19lf86s.cloudfront.net/htwritable/media/.thumbnails/bde2109c-ac85-4405-871b-b0707dc47243-1c470168-239f-4c6d-ba68-c11e4dc57eb8-tiny-2048x0.webp/bde2109c-ac85-4405-871b-b0707dc47243-1c470168-239f-4c6d-ba68-c11e4dc57eb8-tiny-2048x0-tiny-2048x0.webp" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
     <div class="img-grad"></div>
     <span class="img-src-badge src-badge" style="background:#0A1F14;color:#4ade80">pcarmarket</span>
     <span class="img-timer countdown-timer timer-amber" data-ends="2026-05-14T19:29:25Z">…</span>
@@ -1692,7 +1692,7 @@ a { color:inherit; text-decoration:none; }
  data-fmv-high="64000"
  data-bid="47250"
  data-lid="10047"
- data-mileage="999999"
+ data-mileage="34200"
  data-trans=""
  data-color=""
  data-comp-count="13"
@@ -1724,7 +1724,7 @@ a { color:inherit; text-decoration:none; }
       <span class="bid-val">$47,250</span>
       <span class="fmv-pill fmv-below">▼ 20% below FMV</span>
     </div>
-    <div class="card-specs"></div>
+    <div class="card-specs"><span class="spec-pill">34,200 mi</span></div>
   </div>
   <div class="expand-panel">
     <div class="expand-inner">
@@ -1732,7 +1732,7 @@ a { color:inherit; text-decoration:none; }
         <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$49K &ndash; $64K</div></div>
         <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">13 sales</div></div>
         <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">6</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">34,200 mi</div></div>
         <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">—</div></div>
         <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
       </div>
@@ -1755,7 +1755,7 @@ a { color:inherit; text-decoration:none; }
  data-fmv-high="76000"
  data-bid="73000"
  data-lid="10730"
- data-mileage="999999"
+ data-mileage="621"
  data-trans="Manual"
  data-color=""
  data-comp-count="61"
@@ -1787,7 +1787,7 @@ a { color:inherit; text-decoration:none; }
       <span class="bid-val">$73,000</span>
       <span class="fmv-pill fmv-above">▲ 8% above FMV</span>
     </div>
-    <div class="card-specs"><span class="spec-pill">Manual</span></div>
+    <div class="card-specs"><span class="spec-pill">621 mi</span><span class="spec-pill">Manual</span></div>
   </div>
   <div class="expand-panel">
     <div class="expand-inner">
@@ -1795,7 +1795,7 @@ a { color:inherit; text-decoration:none; }
         <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$56K &ndash; $76K</div></div>
         <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">61 sales</div></div>
         <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">0</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">621 mi</div></div>
         <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">Manual</div></div>
         <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
       </div>
@@ -1881,7 +1881,7 @@ a { color:inherit; text-decoration:none; }
  data-fmv-high="128000"
  data-bid="64000"
  data-lid="10068"
- data-mileage="999999"
+ data-mileage="64200"
  data-trans=""
  data-color=""
  data-comp-count="34"
@@ -1913,7 +1913,7 @@ a { color:inherit; text-decoration:none; }
       <span class="bid-val">$64,000</span>
       <span class="fmv-pill fmv-below">▼ 11% below FMV</span>
     </div>
-    <div class="card-specs"></div>
+    <div class="card-specs"><span class="spec-pill">64,200 mi</span></div>
   </div>
   <div class="expand-panel">
     <div class="expand-inner">
@@ -1921,7 +1921,7 @@ a { color:inherit; text-decoration:none; }
         <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$61K &ndash; $128K</div></div>
         <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">34 sales</div></div>
         <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">6</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">64,200 mi</div></div>
         <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">—</div></div>
         <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
       </div>
@@ -1956,7 +1956,7 @@ a { color:inherit; text-decoration:none; }
  data-fmv-high="128500"
  data-bid="103000"
  data-lid="6683"
- data-mileage="999999"
+ data-mileage="725"
  data-trans=""
  data-color=""
  data-comp-count="33"
@@ -1988,7 +1988,7 @@ a { color:inherit; text-decoration:none; }
       <span class="bid-val">$103,000</span>
       <span class="fmv-pill fmv-below">▼ 16% below FMV</span>
     </div>
-    <div class="card-specs"></div>
+    <div class="card-specs"><span class="spec-pill">725 mi</span></div>
   </div>
   <div class="expand-panel">
     <div class="expand-inner">
@@ -1996,7 +1996,7 @@ a { color:inherit; text-decoration:none; }
         <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$112K &ndash; $128K</div></div>
         <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">33 sales</div></div>
         <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">22</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">725 mi</div></div>
         <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">—</div></div>
         <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
       </div>
@@ -2019,7 +2019,7 @@ a { color:inherit; text-decoration:none; }
  data-fmv-high="161000"
  data-bid="130000"
  data-lid="10244"
- data-mileage="999999"
+ data-mileage="12000"
  data-trans=""
  data-color=""
  data-comp-count="11"
@@ -2051,7 +2051,7 @@ a { color:inherit; text-decoration:none; }
       <span class="bid-val">$130,000</span>
       <span class="fmv-pill fmv-below">▼ 15% below FMV</span>
     </div>
-    <div class="card-specs"></div>
+    <div class="card-specs"><span class="spec-pill">12,000 mi</span></div>
   </div>
   <div class="expand-panel">
     <div class="expand-inner">
@@ -2059,7 +2059,7 @@ a { color:inherit; text-decoration:none; }
         <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$134K &ndash; $161K</div></div>
         <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">11 sales</div></div>
         <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">5</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">12,000 mi</div></div>
         <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">—</div></div>
         <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
       </div>
@@ -2082,7 +2082,7 @@ a { color:inherit; text-decoration:none; }
  data-fmv-high="136000"
  data-bid="92500"
  data-lid="10746"
- data-mileage="999999"
+ data-mileage="621"
  data-trans="Manual"
  data-color=""
  data-comp-count="20"
@@ -2114,7 +2114,7 @@ a { color:inherit; text-decoration:none; }
       <span class="bid-val">$92,500</span>
       <span class="fmv-pill fmv-below">▼ 29% below FMV</span>
     </div>
-    <div class="card-specs"><span class="spec-pill">Manual</span></div>
+    <div class="card-specs"><span class="spec-pill">621 mi</span><span class="spec-pill">Manual</span></div>
   </div>
   <div class="expand-panel">
     <div class="expand-inner">
@@ -2122,7 +2122,7 @@ a { color:inherit; text-decoration:none; }
         <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$126K &ndash; $136K</div></div>
         <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">20 sales</div></div>
         <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">0</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">621 mi</div></div>
         <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">Manual</div></div>
         <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
       </div>
@@ -2153,7 +2153,7 @@ a { color:inherit; text-decoration:none; }
  data-days-listed="5"
  data-ends="2026-05-15T19:09:25Z" data-listed="2026-05-08">
   <div class="img-wrap">
-    <img src="https://d2niwqq19lf86s.cloudfront.net/htwritable/media/.thumbnails/fc0fce01-6df4-497d-b3e6-19b2969b5951-24959f46-738d-43be-a727-271649e71787-tiny-2048x0.webp/fc0fce01-6df4-497d-b3e6-19b2969b5951-24959f46-738d-43be-a727-271649e71787-tiny-2048x0-tiny-380x0.webp" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
+    <img src="https://d2niwqq19lf86s.cloudfront.net/htwritable/media/.thumbnails/fc0fce01-6df4-497d-b3e6-19b2969b5951-24959f46-738d-43be-a727-271649e71787-tiny-2048x0.webp/fc0fce01-6df4-497d-b3e6-19b2969b5951-24959f46-738d-43be-a727-271649e71787-tiny-2048x0-tiny-2048x0.webp" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
     <div class="img-grad"></div>
     <span class="img-src-badge src-badge" style="background:#0A1F14;color:#4ade80">pcarmarket</span>
     <span class="img-timer countdown-timer timer-green" data-ends="2026-05-15T19:09:25Z">…</span>
@@ -2216,7 +2216,7 @@ a { color:inherit; text-decoration:none; }
  data-days-listed="5"
  data-ends="2026-05-15T19:19:25Z" data-listed="2026-05-08">
   <div class="img-wrap">
-    <img src="https://d2niwqq19lf86s.cloudfront.net/htwritable/media/prod/eyJ0aXRsZSI6IjY1NTE1IC0gMjAxNiBQb3JzY2hlIFRhcmdhIDQgR1RTIiwic2x1ZyI6IjY1NTE1LTIwMTYtcG9yc2NoZS10YXJnYS00LWd0cy04YjdjZTc0MSJ9/.thumbnails/ff139036-8335-4023-be82-b37064639834.webp/ff139036-8335-4023-be82-b37064639834-tiny-380x0.webp" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
+    <img src="https://d2niwqq19lf86s.cloudfront.net/htwritable/media/prod/eyJ0aXRsZSI6IjY1NTE1IC0gMjAxNiBQb3JzY2hlIFRhcmdhIDQgR1RTIiwic2x1ZyI6IjY1NTE1LTIwMTYtcG9yc2NoZS10YXJnYS00LWd0cy04YjdjZTc0MSJ9/.thumbnails/ff139036-8335-4023-be82-b37064639834.webp/ff139036-8335-4023-be82-b37064639834-tiny-2048x0.webp" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
     <div class="img-grad"></div>
     <span class="img-src-badge src-badge" style="background:#0A1F14;color:#4ade80">pcarmarket</span>
     <span class="img-timer countdown-timer timer-green" data-ends="2026-05-15T19:19:25Z">…</span>
@@ -2342,7 +2342,7 @@ a { color:inherit; text-decoration:none; }
  data-days-listed="5"
  data-ends="2026-05-15T19:29:25Z" data-listed="2026-05-08">
   <div class="img-wrap">
-    <img src="https://d2niwqq19lf86s.cloudfront.net/htwritable/media/.thumbnails/58067b90-39c1-4d81-98e1-c1adb06ee9b9-8d462e26-486f-4ec6-ab45-043adf034412-tiny-2048x0.webp/58067b90-39c1-4d81-98e1-c1adb06ee9b9-8d462e26-486f-4ec6-ab45-043adf034412-tiny-2048x0-tiny-380x0.webp" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
+    <img src="https://d2niwqq19lf86s.cloudfront.net/htwritable/media/.thumbnails/58067b90-39c1-4d81-98e1-c1adb06ee9b9-8d462e26-486f-4ec6-ab45-043adf034412-tiny-2048x0.webp/58067b90-39c1-4d81-98e1-c1adb06ee9b9-8d462e26-486f-4ec6-ab45-043adf034412-tiny-2048x0-tiny-2048x0.webp" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
     <div class="img-grad"></div>
     <span class="img-src-badge src-badge" style="background:#0A1F14;color:#4ade80">pcarmarket</span>
     <span class="img-timer countdown-timer timer-green" data-ends="2026-05-15T19:29:25Z">…</span>
@@ -2397,7 +2397,7 @@ a { color:inherit; text-decoration:none; }
  data-fmv-high="82500"
  data-bid="37500"
  data-lid="10247"
- data-mileage="999999"
+ data-mileage="60400"
  data-trans=""
  data-color=""
  data-comp-count="25"
@@ -2429,7 +2429,7 @@ a { color:inherit; text-decoration:none; }
       <span class="bid-val">$37,500</span>
       <span class="fmv-pill fmv-below">▼ 49% below FMV</span>
     </div>
-    <div class="card-specs"></div>
+    <div class="card-specs"><span class="spec-pill">60,400 mi</span></div>
   </div>
   <div class="expand-panel">
     <div class="expand-inner">
@@ -2437,7 +2437,7 @@ a { color:inherit; text-decoration:none; }
         <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$69K &ndash; $82K</div></div>
         <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">25 sales</div></div>
         <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">5</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">60,400 mi</div></div>
         <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">—</div></div>
         <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
       </div>
@@ -2460,7 +2460,7 @@ a { color:inherit; text-decoration:none; }
  data-fmv-high="80500"
  data-bid="41750"
  data-lid="10249"
- data-mileage="999999"
+ data-mileage="63600"
  data-trans=""
  data-color=""
  data-comp-count="157"
@@ -2492,7 +2492,7 @@ a { color:inherit; text-decoration:none; }
       <span class="bid-val">$41,750</span>
       <span class="fmv-pill fmv-below">▼ 36% below FMV</span>
     </div>
-    <div class="card-specs"></div>
+    <div class="card-specs"><span class="spec-pill">63,600 mi</span></div>
   </div>
   <div class="expand-panel">
     <div class="expand-inner">
@@ -2500,7 +2500,7 @@ a { color:inherit; text-decoration:none; }
         <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$53K &ndash; $80K</div></div>
         <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">157 sales</div></div>
         <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">5</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">63,600 mi</div></div>
         <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">—</div></div>
         <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
       </div>
@@ -2523,7 +2523,7 @@ a { color:inherit; text-decoration:none; }
  data-fmv-high="103500"
  data-bid="87000"
  data-lid="10251"
- data-mileage="999999"
+ data-mileage="23600"
  data-trans=""
  data-color=""
  data-comp-count="53"
@@ -2555,7 +2555,7 @@ a { color:inherit; text-decoration:none; }
       <span class="bid-val">$87,000</span>
       <span class="fmv-pill fmv-below">▼ 11% below FMV</span>
     </div>
-    <div class="card-specs"></div>
+    <div class="card-specs"><span class="spec-pill">23,600 mi</span></div>
   </div>
   <div class="expand-panel">
     <div class="expand-inner">
@@ -2563,7 +2563,7 @@ a { color:inherit; text-decoration:none; }
         <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$90K &ndash; $104K</div></div>
         <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">53 sales</div></div>
         <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">5</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">23,600 mi</div></div>
         <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">—</div></div>
         <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
       </div>
@@ -2649,7 +2649,7 @@ a { color:inherit; text-decoration:none; }
  data-fmv-high="210500"
  data-bid="80000"
  data-lid="10359"
- data-mileage="999999"
+ data-mileage="601"
  data-trans="Manual"
  data-color=""
  data-comp-count="20"
@@ -2681,7 +2681,7 @@ a { color:inherit; text-decoration:none; }
       <span class="bid-val">$80,000</span>
       <span class="fmv-pill fmv-below">▼ 59% below FMV</span>
     </div>
-    <div class="card-specs"><span class="spec-pill">Manual</span></div>
+    <div class="card-specs"><span class="spec-pill">601 mi</span><span class="spec-pill">Manual</span></div>
   </div>
   <div class="expand-panel">
     <div class="expand-inner">
@@ -2689,7 +2689,7 @@ a { color:inherit; text-decoration:none; }
         <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$182K &ndash; $210K</div></div>
         <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">20 sales</div></div>
         <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">4</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">601 mi</div></div>
         <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">Manual</div></div>
         <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
       </div>
@@ -2712,7 +2712,7 @@ a { color:inherit; text-decoration:none; }
  data-fmv-high="17001"
  data-bid="3950"
  data-lid="10391"
- data-mileage="999999"
+ data-mileage="2700"
  data-trans=""
  data-color=""
  data-comp-count="344"
@@ -2744,7 +2744,7 @@ a { color:inherit; text-decoration:none; }
       <span class="bid-val">$3,950</span>
       <span class="fmv-pill fmv-below">▼ 72% below FMV</span>
     </div>
-    <div class="card-specs"></div>
+    <div class="card-specs"><span class="spec-pill">2,700 mi</span></div>
   </div>
   <div class="expand-panel">
     <div class="expand-inner">
@@ -2752,7 +2752,7 @@ a { color:inherit; text-decoration:none; }
         <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$12K &ndash; $17K</div></div>
         <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">344 sales</div></div>
         <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">4</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">2,700 mi</div></div>
         <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">—</div></div>
         <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
       </div>
@@ -2775,7 +2775,7 @@ a { color:inherit; text-decoration:none; }
  data-fmv-high="33583"
  data-bid="6100"
  data-lid="10747"
- data-mileage="999999"
+ data-mileage="1400"
  data-trans="Manual"
  data-color=""
  data-comp-count="410"
@@ -2807,7 +2807,7 @@ a { color:inherit; text-decoration:none; }
       <span class="bid-val">$6,100</span>
       <span class="fmv-pill fmv-below">▼ 78% below FMV</span>
     </div>
-    <div class="card-specs"><span class="spec-pill">Manual</span></div>
+    <div class="card-specs"><span class="spec-pill">1,400 mi</span><span class="spec-pill">Manual</span></div>
   </div>
   <div class="expand-panel">
     <div class="expand-inner">
@@ -2815,7 +2815,7 @@ a { color:inherit; text-decoration:none; }
         <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$22K &ndash; $34K</div></div>
         <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">410 sales</div></div>
         <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">0</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">1,400 mi</div></div>
         <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">Manual</div></div>
         <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
       </div>
@@ -2838,7 +2838,7 @@ a { color:inherit; text-decoration:none; }
  data-fmv-high="0"
  data-bid="60964"
  data-lid="10518"
- data-mileage="999999"
+ data-mileage="4700"
  data-trans="Automatic"
  data-color=""
  data-comp-count="0"
@@ -2870,7 +2870,7 @@ a { color:inherit; text-decoration:none; }
       <span class="bid-val">$60,964</span>
       
     </div>
-    <div class="card-specs"><span class="spec-pill">Automatic</span></div>
+    <div class="card-specs"><span class="spec-pill">4,700 mi</span><span class="spec-pill">Automatic</span></div>
   </div>
   <div class="expand-panel">
     <div class="expand-inner">
@@ -2878,7 +2878,7 @@ a { color:inherit; text-decoration:none; }
         <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">—</div></div>
         <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">0 sales</div></div>
         <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">3</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">4,700 mi</div></div>
         <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">Automatic</div></div>
         <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
       </div>
@@ -2901,7 +2901,7 @@ a { color:inherit; text-decoration:none; }
  data-fmv-high="450000"
  data-bid="153000"
  data-lid="10748"
- data-mileage="999999"
+ data-mileage="191"
  data-trans="Automatic"
  data-color=""
  data-comp-count="18"
@@ -2933,7 +2933,7 @@ a { color:inherit; text-decoration:none; }
       <span class="bid-val">$153,000</span>
       <span class="fmv-pill fmv-below">▼ 59% below FMV</span>
     </div>
-    <div class="card-specs"><span class="spec-pill">Automatic</span></div>
+    <div class="card-specs"><span class="spec-pill">191 mi</span><span class="spec-pill">Automatic</span></div>
   </div>
   <div class="expand-panel">
     <div class="expand-inner">
@@ -2941,7 +2941,7 @@ a { color:inherit; text-decoration:none; }
         <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$235K &ndash; $450K</div></div>
         <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">18 sales</div></div>
         <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">0</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">191 mi</div></div>
         <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">Automatic</div></div>
         <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
       </div>
@@ -2964,7 +2964,7 @@ a { color:inherit; text-decoration:none; }
  data-fmv-high="60000"
  data-bid="30000"
  data-lid="10568"
- data-mileage="999999"
+ data-mileage="4700"
  data-trans="Manual"
  data-color=""
  data-comp-count="43"
@@ -2996,7 +2996,7 @@ a { color:inherit; text-decoration:none; }
       <span class="bid-val">$30,000</span>
       <span class="fmv-pill fmv-below">▼ 42% below FMV</span>
     </div>
-    <div class="card-specs"><span class="spec-pill">Manual</span></div>
+    <div class="card-specs"><span class="spec-pill">4,700 mi</span><span class="spec-pill">Manual</span></div>
   </div>
   <div class="expand-panel">
     <div class="expand-inner">
@@ -3004,7 +3004,7 @@ a { color:inherit; text-decoration:none; }
         <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$43K &ndash; $60K</div></div>
         <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">43 sales</div></div>
         <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">2</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">4,700 mi</div></div>
         <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">Manual</div></div>
         <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
       </div>
@@ -3027,7 +3027,7 @@ a { color:inherit; text-decoration:none; }
  data-fmv-high="211000"
  data-bid="126000"
  data-lid="10593"
- data-mileage="999999"
+ data-mileage="4100"
  data-trans="Manual"
  data-color=""
  data-comp-count="34"
@@ -3059,7 +3059,7 @@ a { color:inherit; text-decoration:none; }
       <span class="bid-val">$126,000</span>
       <span class="fmv-pill fmv-below">▼ 38% below FMV</span>
     </div>
-    <div class="card-specs"><span class="spec-pill">Manual</span></div>
+    <div class="card-specs"><span class="spec-pill">4,100 mi</span><span class="spec-pill">Manual</span></div>
   </div>
   <div class="expand-panel">
     <div class="expand-inner">
@@ -3067,7 +3067,7 @@ a { color:inherit; text-decoration:none; }
         <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$188K &ndash; $211K</div></div>
         <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">34 sales</div></div>
         <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">2</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">4,100 mi</div></div>
         <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">Manual</div></div>
         <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
       </div>
@@ -3161,7 +3161,7 @@ a { color:inherit; text-decoration:none; }
  data-days-listed="2"
  data-ends="2026-05-18T18:49:29Z" data-listed="2026-05-11">
   <div class="img-wrap">
-    <img src="https://d2niwqq19lf86s.cloudfront.net/htwritable/media/prod/eyJ0aXRsZSI6IjY1NTAzIC0gMjAwNiBQb3JzY2hlIENheW1hbiBTIiwic2x1ZyI6IjY1NTAzLTIwMDYtcG9yc2NoZS1jYXltYW4tcy0yZDI3MDFlOSJ9/.thumbnails/91d8f448-db39-4ca1-b64b-55ebc14440e7.webp/91d8f448-db39-4ca1-b64b-55ebc14440e7-tiny-380x0.webp" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
+    <img src="https://d2niwqq19lf86s.cloudfront.net/htwritable/media/prod/eyJ0aXRsZSI6IjY1NTAzIC0gMjAwNiBQb3JzY2hlIENheW1hbiBTIiwic2x1ZyI6IjY1NTAzLTIwMDYtcG9yc2NoZS1jYXltYW4tcy0yZDI3MDFlOSJ9/.thumbnails/91d8f448-db39-4ca1-b64b-55ebc14440e7.webp/91d8f448-db39-4ca1-b64b-55ebc14440e7-tiny-2048x0.webp" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
     <div class="img-grad"></div>
     <span class="img-src-badge src-badge" style="background:#0A1F14;color:#4ade80">pcarmarket</span>
     <span class="img-timer countdown-timer timer-green" data-ends="2026-05-18T18:49:29Z">…</span>
@@ -3224,7 +3224,7 @@ a { color:inherit; text-decoration:none; }
  data-days-listed="2"
  data-ends="2026-05-18T19:19:29Z" data-listed="2026-05-11">
   <div class="img-wrap">
-    <img src="https://d2niwqq19lf86s.cloudfront.net/htwritable/media/uploads/dx799v53n13lp5k2xgxwu036o8aije3i-2025-06-25-V6r41tPn/.thumbnails/GT4-23.webp/GT4-23-tiny-380x0.webp" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
+    <img src="https://d2niwqq19lf86s.cloudfront.net/htwritable/media/uploads/dx799v53n13lp5k2xgxwu036o8aije3i-2025-06-25-V6r41tPn/.thumbnails/GT4-23.webp/GT4-23-tiny-2048x0.webp" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
     <div class="img-grad"></div>
     <span class="img-src-badge src-badge" style="background:#0A1F14;color:#4ade80">pcarmarket</span>
     <span class="img-timer countdown-timer timer-green" data-ends="2026-05-18T19:19:29Z">…</span>
@@ -3279,7 +3279,7 @@ a { color:inherit; text-decoration:none; }
  data-fmv-high="29500"
  data-bid="4500"
  data-lid="10574"
- data-mileage="999999"
+ data-mileage="103800"
  data-trans=""
  data-color=""
  data-comp-count="160"
@@ -3311,7 +3311,7 @@ a { color:inherit; text-decoration:none; }
       <span class="bid-val">$4,500</span>
       <span class="fmv-pill fmv-below">▼ 81% below FMV</span>
     </div>
-    <div class="card-specs"></div>
+    <div class="card-specs"><span class="spec-pill">103,800 mi</span></div>
   </div>
   <div class="expand-panel">
     <div class="expand-inner">
@@ -3319,7 +3319,7 @@ a { color:inherit; text-decoration:none; }
         <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$18K &ndash; $30K</div></div>
         <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">160 sales</div></div>
         <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">2</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">103,800 mi</div></div>
         <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">—</div></div>
         <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
       </div>
@@ -3468,7 +3468,7 @@ a { color:inherit; text-decoration:none; }
  data-fmv-high="450000"
  data-bid="101000"
  data-lid="10733"
- data-mileage="999999"
+ data-mileage="393"
  data-trans=""
  data-color=""
  data-comp-count="18"
@@ -3500,7 +3500,7 @@ a { color:inherit; text-decoration:none; }
       <span class="bid-val">$101,000</span>
       <span class="fmv-pill fmv-below">▼ 73% below FMV</span>
     </div>
-    <div class="card-specs"></div>
+    <div class="card-specs"><span class="spec-pill">393 mi</span></div>
   </div>
   <div class="expand-panel">
     <div class="expand-inner">
@@ -3508,7 +3508,7 @@ a { color:inherit; text-decoration:none; }
         <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$235K &ndash; $450K</div></div>
         <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">18 sales</div></div>
         <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">0</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">393 mi</div></div>
         <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">—</div></div>
         <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
       </div>
@@ -3594,7 +3594,7 @@ a { color:inherit; text-decoration:none; }
  data-fmv-high="80500"
  data-bid="25000"
  data-lid="10749"
- data-mileage="999999"
+ data-mileage="1400"
  data-trans="Manual"
  data-color=""
  data-comp-count="157"
@@ -3626,7 +3626,7 @@ a { color:inherit; text-decoration:none; }
       <span class="bid-val">$25,000</span>
       <span class="fmv-pill fmv-below">▼ 62% below FMV</span>
     </div>
-    <div class="card-specs"><span class="spec-pill">Manual</span></div>
+    <div class="card-specs"><span class="spec-pill">1,400 mi</span><span class="spec-pill">Manual</span></div>
   </div>
   <div class="expand-panel">
     <div class="expand-inner">
@@ -3634,7 +3634,7 @@ a { color:inherit; text-decoration:none; }
         <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$53K &ndash; $80K</div></div>
         <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">157 sales</div></div>
         <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">0</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">1,400 mi</div></div>
         <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">Manual</div></div>
         <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
       </div>
@@ -3657,7 +3657,7 @@ a { color:inherit; text-decoration:none; }
  data-fmv-high="67500"
  data-bid="40000"
  data-lid="10734"
- data-mileage="999999"
+ data-mileage="621"
  data-trans="Manual"
  data-color=""
  data-comp-count="16"
@@ -3689,7 +3689,7 @@ a { color:inherit; text-decoration:none; }
       <span class="bid-val">$40,000</span>
       <span class="fmv-pill fmv-below">▼ 32% below FMV</span>
     </div>
-    <div class="card-specs"><span class="spec-pill">Manual</span></div>
+    <div class="card-specs"><span class="spec-pill">621 mi</span><span class="spec-pill">Manual</span></div>
   </div>
   <div class="expand-panel">
     <div class="expand-inner">
@@ -3697,7 +3697,7 @@ a { color:inherit; text-decoration:none; }
         <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$52K &ndash; $68K</div></div>
         <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">16 sales</div></div>
         <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">0</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">621 mi</div></div>
         <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">Manual</div></div>
         <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
       </div>
@@ -3728,7 +3728,7 @@ a { color:inherit; text-decoration:none; }
  data-days-listed="0"
  data-ends="2026-05-19T18:59:29Z" data-listed="2026-05-13">
   <div class="img-wrap">
-    <img src="https://d2niwqq19lf86s.cloudfront.net/htwritable/media/prod/eyJ0aXRsZSI6IjY1NTAwIC0gMjAxNiBQb3JzY2hlIENheW1hbiIsInNsdWciOiI2NTUwMC0yMDE2LXBvcnNjaGUtY2F5bWFuLTQzNzNjYmIzIn0/.thumbnails/fcf0a66c-7972-4561-8224-7aedfd8e21d7.webp/fcf0a66c-7972-4561-8224-7aedfd8e21d7-tiny-380x0.webp" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
+    <img src="https://d2niwqq19lf86s.cloudfront.net/htwritable/media/prod/eyJ0aXRsZSI6IjY1NTAwIC0gMjAxNiBQb3JzY2hlIENheW1hbiIsInNsdWciOiI2NTUwMC0yMDE2LXBvcnNjaGUtY2F5bWFuLTQzNzNjYmIzIn0/.thumbnails/fcf0a66c-7972-4561-8224-7aedfd8e21d7.webp/fcf0a66c-7972-4561-8224-7aedfd8e21d7-tiny-2048x0.webp" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
     <div class="img-grad"></div>
     <span class="img-src-badge src-badge" style="background:#0A1F14;color:#4ade80">pcarmarket</span>
     <span class="img-timer countdown-timer timer-green" data-ends="2026-05-19T18:59:29Z">…</span>
@@ -3791,7 +3791,7 @@ a { color:inherit; text-decoration:none; }
  data-days-listed="0"
  data-ends="2026-05-19T18:59:29Z" data-listed="2026-05-13">
   <div class="img-wrap">
-    <img src="https://d2niwqq19lf86s.cloudfront.net/htwritable/media/prod/eyJ0aXRsZSI6IjY1NTI1IC0gMjAyMCBQb3JzY2hlIDkxMSBDYXJyZXJhIDRTIiwic2x1ZyI6IjY1NTI1LTIwMjAtcG9yc2NoZS05MTEtY2FycmVyYS00cy03MTIzZTAyYSJ9/.thumbnails/06c64ca2-0025-43fd-8d0d-6f0ceed30147.webp/06c64ca2-0025-43fd-8d0d-6f0ceed30147-tiny-380x0.webp" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
+    <img src="https://d2niwqq19lf86s.cloudfront.net/htwritable/media/prod/eyJ0aXRsZSI6IjY1NTI1IC0gMjAyMCBQb3JzY2hlIDkxMSBDYXJyZXJhIDRTIiwic2x1ZyI6IjY1NTI1LTIwMjAtcG9yc2NoZS05MTEtY2FycmVyYS00cy03MTIzZTAyYSJ9/.thumbnails/06c64ca2-0025-43fd-8d0d-6f0ceed30147.webp/06c64ca2-0025-43fd-8d0d-6f0ceed30147-tiny-2048x0.webp" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
     <div class="img-grad"></div>
     <span class="img-src-badge src-badge" style="background:#0A1F14;color:#4ade80">pcarmarket</span>
     <span class="img-timer countdown-timer timer-green" data-ends="2026-05-19T18:59:29Z">…</span>
@@ -3846,7 +3846,7 @@ a { color:inherit; text-decoration:none; }
  data-fmv-high="339993"
  data-bid="196993"
  data-lid="10735"
- data-mileage="999999"
+ data-mileage="393"
  data-trans=""
  data-color=""
  data-comp-count="34"
@@ -3878,7 +3878,7 @@ a { color:inherit; text-decoration:none; }
       <span class="bid-val">$196,993</span>
       <span class="fmv-pill fmv-below">▼ 27% below FMV</span>
     </div>
-    <div class="card-specs"></div>
+    <div class="card-specs"><span class="spec-pill">393 mi</span></div>
   </div>
   <div class="expand-panel">
     <div class="expand-inner">
@@ -3886,7 +3886,7 @@ a { color:inherit; text-decoration:none; }
         <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$220K &ndash; $340K</div></div>
         <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">34 sales</div></div>
         <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">0</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">393 mi</div></div>
         <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">—</div></div>
         <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
       </div>
@@ -3909,7 +3909,7 @@ a { color:inherit; text-decoration:none; }
  data-fmv-high="103500"
  data-bid="33250"
  data-lid="10736"
- data-mileage="999999"
+ data-mileage="393"
  data-trans="Manual"
  data-color=""
  data-comp-count="171"
@@ -3941,7 +3941,7 @@ a { color:inherit; text-decoration:none; }
       <span class="bid-val">$33,250</span>
       <span class="fmv-pill fmv-below">▼ 62% below FMV</span>
     </div>
-    <div class="card-specs"><span class="spec-pill">Manual</span></div>
+    <div class="card-specs"><span class="spec-pill">393 mi</span><span class="spec-pill">Manual</span></div>
   </div>
   <div class="expand-panel">
     <div class="expand-inner">
@@ -3949,7 +3949,7 @@ a { color:inherit; text-decoration:none; }
         <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$66K &ndash; $104K</div></div>
         <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">171 sales</div></div>
         <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">0</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">393 mi</div></div>
         <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">Manual</div></div>
         <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
       </div>
@@ -3972,7 +3972,7 @@ a { color:inherit; text-decoration:none; }
  data-fmv-high="82550"
  data-bid="45000"
  data-lid="10737"
- data-mileage="999999"
+ data-mileage="82400"
  data-trans=""
  data-color=""
  data-comp-count="189"
@@ -4004,7 +4004,7 @@ a { color:inherit; text-decoration:none; }
       <span class="bid-val">$45,000</span>
       <span class="fmv-pill fmv-below">▼ 33% below FMV</span>
     </div>
-    <div class="card-specs"></div>
+    <div class="card-specs"><span class="spec-pill">82,400 mi</span></div>
   </div>
   <div class="expand-panel">
     <div class="expand-inner">
@@ -4012,7 +4012,7 @@ a { color:inherit; text-decoration:none; }
         <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$56K &ndash; $83K</div></div>
         <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">189 sales</div></div>
         <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">0</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">82,400 mi</div></div>
         <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">—</div></div>
         <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
       </div>
@@ -4035,7 +4035,7 @@ a { color:inherit; text-decoration:none; }
  data-fmv-high="39500"
  data-bid="7200"
  data-lid="10738"
- data-mileage="999999"
+ data-mileage="80300"
  data-trans=""
  data-color=""
  data-comp-count="120"
@@ -4067,7 +4067,7 @@ a { color:inherit; text-decoration:none; }
       <span class="bid-val">$7,200</span>
       <span class="fmv-pill fmv-below">▼ 76% below FMV</span>
     </div>
-    <div class="card-specs"></div>
+    <div class="card-specs"><span class="spec-pill">80,300 mi</span></div>
   </div>
   <div class="expand-panel">
     <div class="expand-inner">
@@ -4075,7 +4075,7 @@ a { color:inherit; text-decoration:none; }
         <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$24K &ndash; $40K</div></div>
         <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">120 sales</div></div>
         <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">0</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">80,300 mi</div></div>
         <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">—</div></div>
         <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
       </div>
@@ -4161,7 +4161,7 @@ a { color:inherit; text-decoration:none; }
  data-fmv-high="34000"
  data-bid="9987"
  data-lid="10740"
- data-mileage="999999"
+ data-mileage="100600"
  data-trans=""
  data-color=""
  data-comp-count="75"
@@ -4193,7 +4193,7 @@ a { color:inherit; text-decoration:none; }
       <span class="bid-val">$9,987</span>
       <span class="fmv-pill fmv-below">▼ 63% below FMV</span>
     </div>
-    <div class="card-specs"></div>
+    <div class="card-specs"><span class="spec-pill">100,600 mi</span></div>
   </div>
   <div class="expand-panel">
     <div class="expand-inner">
@@ -4201,7 +4201,7 @@ a { color:inherit; text-decoration:none; }
         <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$22K &ndash; $34K</div></div>
         <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">75 sales</div></div>
         <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">0</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">100,600 mi</div></div>
         <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">—</div></div>
         <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
       </div>
@@ -4224,7 +4224,7 @@ a { color:inherit; text-decoration:none; }
  data-fmv-high="0"
  data-bid="55000"
  data-lid="10741"
- data-mileage="999999"
+ data-mileage="19600"
  data-trans=""
  data-color=""
  data-comp-count="0"
@@ -4256,7 +4256,7 @@ a { color:inherit; text-decoration:none; }
       <span class="bid-val">$55,000</span>
       
     </div>
-    <div class="card-specs"></div>
+    <div class="card-specs"><span class="spec-pill">19,600 mi</span></div>
   </div>
   <div class="expand-panel">
     <div class="expand-inner">
@@ -4264,7 +4264,7 @@ a { color:inherit; text-decoration:none; }
         <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">—</div></div>
         <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">0 sales</div></div>
         <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">0</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">19,600 mi</div></div>
         <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">—</div></div>
         <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
       </div>
@@ -4413,7 +4413,7 @@ a { color:inherit; text-decoration:none; }
  data-fmv-high="55500"
  data-bid="28000"
  data-lid="10742"
- data-mileage="999999"
+ data-mileage="58500"
  data-trans=""
  data-color=""
  data-comp-count="69"
@@ -4445,7 +4445,7 @@ a { color:inherit; text-decoration:none; }
       <span class="bid-val">$28,000</span>
       <span class="fmv-pill fmv-below">▼ 36% below FMV</span>
     </div>
-    <div class="card-specs"></div>
+    <div class="card-specs"><span class="spec-pill">58,500 mi</span></div>
   </div>
   <div class="expand-panel">
     <div class="expand-inner">
@@ -4453,7 +4453,7 @@ a { color:inherit; text-decoration:none; }
         <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$36K &ndash; $56K</div></div>
         <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">69 sales</div></div>
         <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">0</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">58,500 mi</div></div>
         <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">—</div></div>
         <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
       </div>
@@ -4476,7 +4476,7 @@ a { color:inherit; text-decoration:none; }
  data-fmv-high="33750"
  data-bid="9996"
  data-lid="10743"
- data-mileage="999999"
+ data-mileage="126600"
  data-trans=""
  data-color=""
  data-comp-count="410"
@@ -4508,7 +4508,7 @@ a { color:inherit; text-decoration:none; }
       <span class="bid-val">$9,996</span>
       <span class="fmv-pill fmv-below">▼ 64% below FMV</span>
     </div>
-    <div class="card-specs"></div>
+    <div class="card-specs"><span class="spec-pill">126,600 mi</span></div>
   </div>
   <div class="expand-panel">
     <div class="expand-inner">
@@ -4516,7 +4516,7 @@ a { color:inherit; text-decoration:none; }
         <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$22K &ndash; $34K</div></div>
         <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">410 sales</div></div>
         <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">0</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">126,600 mi</div></div>
         <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">—</div></div>
         <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
       </div>
@@ -4539,7 +4539,7 @@ a { color:inherit; text-decoration:none; }
  data-fmv-high="17001"
  data-bid="10986"
  data-lid="10915"
- data-mileage="999999"
+ data-mileage="21700"
  data-trans=""
  data-color=""
  data-comp-count="344"
@@ -4571,7 +4571,7 @@ a { color:inherit; text-decoration:none; }
       <span class="bid-val">$10,986</span>
       <span class="fmv-pill fmv-below">▼ 22% below FMV</span>
     </div>
-    <div class="card-specs"></div>
+    <div class="card-specs"><span class="spec-pill">21,700 mi</span></div>
   </div>
   <div class="expand-panel">
     <div class="expand-inner">
@@ -4579,7 +4579,7 @@ a { color:inherit; text-decoration:none; }
         <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$12K &ndash; $17K</div></div>
         <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">344 sales</div></div>
         <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">0</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">21,700 mi</div></div>
         <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">—</div></div>
         <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
       </div>
@@ -4602,7 +4602,7 @@ a { color:inherit; text-decoration:none; }
  data-fmv-high="91000"
  data-bid="10000"
  data-lid="10941"
- data-mileage="999999"
+ data-mileage="65200"
  data-trans=""
  data-color=""
  data-comp-count="24"
@@ -4634,7 +4634,7 @@ a { color:inherit; text-decoration:none; }
       <span class="bid-val">$10,000</span>
       <span class="fmv-pill fmv-below">▼ 87% below FMV</span>
     </div>
-    <div class="card-specs"></div>
+    <div class="card-specs"><span class="spec-pill">65,200 mi</span></div>
   </div>
   <div class="expand-panel">
     <div class="expand-inner">
@@ -4642,7 +4642,7 @@ a { color:inherit; text-decoration:none; }
         <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$73K &ndash; $91K</div></div>
         <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">24 sales</div></div>
         <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">0</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">65,200 mi</div></div>
         <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">—</div></div>
         <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
       </div>
@@ -4685,7 +4685,7 @@ a { color:inherit; text-decoration:none; }
  data-days-listed="12"
  data-ends="2026-05-13T19:19:17Z" data-listed="2026-05-01">
   <div class="img-wrap">
-    <img src="https://d2niwqq19lf86s.cloudfront.net/htwritable/media/prod/eyJ0aXRsZSI6IjY1MzU4IC0gMjAyMSBQb3JzY2hlIDkxMSBUdXJibyBTIENhYnJpb2xldCIsInNsdWciOiI2NTM1OC0yMDIxLXBvcnNjaGUtOTExLXR1cmJvLXMtY2FicmlvbGV0LWEzN2RiN2M4In0/.thumbnails/4514cbbb-1641-403f-a4a3-b480eadc403b.webp/4514cbbb-1641-403f-a4a3-b480eadc403b-tiny-380x0.webp" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
+    <img src="https://d2niwqq19lf86s.cloudfront.net/htwritable/media/prod/eyJ0aXRsZSI6IjY1MzU4IC0gMjAyMSBQb3JzY2hlIDkxMSBUdXJibyBTIENhYnJpb2xldCIsInNsdWciOiI2NTM1OC0yMDIxLXBvcnNjaGUtOTExLXR1cmJvLXMtY2FicmlvbGV0LWEzN2RiN2M4In0/.thumbnails/4514cbbb-1641-403f-a4a3-b480eadc403b.webp/4514cbbb-1641-403f-a4a3-b480eadc403b-tiny-2048x0.webp" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
     <div class="img-grad"></div>
     <span class="img-src-badge src-badge" style="background:#0A1F14;color:#4ade80">pcarmarket</span>
     <span class="img-timer countdown-timer timer-muted" data-ends="2026-05-13T19:19:17Z">…</span>
@@ -4811,7 +4811,7 @@ a { color:inherit; text-decoration:none; }
  data-days-listed="8"
  data-ends="2026-05-11T18:44:22Z" data-listed="2026-05-05">
   <div class="img-wrap">
-    <img src="https://d2niwqq19lf86s.cloudfront.net/htwritable/media/prod/eyJ0aXRsZSI6IjY1NDYzIC0gSmFwYW5lc2UtU3BlYyAyMDAwIFBvcnNjaGUgOTExIENhcnJlcmEgQ2FicmlvbGV0Iiwic2x1ZyI6IjY1NDYzLWphcGFuZXNlLXNwZWMtMjAwMC1wb3JzY2hlLTkxMS1jYXJyZXJhLWNhYnJpb2xldC05MGIzMWIxNSJ9/.thumbnails/cceb6427-de7b-40fb-997f-3143dbdaa1b0.webp/cceb6427-de7b-40fb-997f-3143dbdaa1b0-tiny-380x0.webp" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
+    <img src="https://d2niwqq19lf86s.cloudfront.net/htwritable/media/prod/eyJ0aXRsZSI6IjY1NDYzIC0gSmFwYW5lc2UtU3BlYyAyMDAwIFBvcnNjaGUgOTExIENhcnJlcmEgQ2FicmlvbGV0Iiwic2x1ZyI6IjY1NDYzLWphcGFuZXNlLXNwZWMtMjAwMC1wb3JzY2hlLTkxMS1jYXJyZXJhLWNhYnJpb2xldC05MGIzMWIxNSJ9/.thumbnails/cceb6427-de7b-40fb-997f-3143dbdaa1b0.webp/cceb6427-de7b-40fb-997f-3143dbdaa1b0-tiny-2048x0.webp" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
     <div class="img-grad"></div>
     <span class="img-src-badge src-badge" style="background:#0A1F14;color:#4ade80">pcarmarket</span>
     <span class="img-timer countdown-timer timer-muted" data-ends="2026-05-11T18:44:22Z">…</span>
@@ -4874,7 +4874,7 @@ a { color:inherit; text-decoration:none; }
  data-days-listed="8"
  data-ends="2026-05-12T18:49:18Z" data-listed="2026-05-05">
   <div class="img-wrap">
-    <img src="https://d2niwqq19lf86s.cloudfront.net/htwritable/media/.thumbnails/ca3c236f-3cf6-43d7-8264-db84207180bc-861c97d0-3cla3-446b-bc7f-14d00267e74a-tiny-2048x0.webp/ca3c236f-3cf6-43d7-8264-db84207180bc-861c97d0-3cla3-446b-bc7f-14d00267e74a-tiny-2048x0-tiny-380x0.webp" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
+    <img src="https://d2niwqq19lf86s.cloudfront.net/htwritable/media/.thumbnails/ca3c236f-3cf6-43d7-8264-db84207180bc-861c97d0-3cla3-446b-bc7f-14d00267e74a-tiny-2048x0.webp/ca3c236f-3cf6-43d7-8264-db84207180bc-861c97d0-3cla3-446b-bc7f-14d00267e74a-tiny-2048x0-tiny-2048x0.webp" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
     <div class="img-grad"></div>
     <span class="img-src-badge src-badge" style="background:#0A1F14;color:#4ade80">pcarmarket</span>
     <span class="img-timer countdown-timer timer-muted" data-ends="2026-05-12T18:49:18Z">…</span>
@@ -4937,7 +4937,7 @@ a { color:inherit; text-decoration:none; }
  data-days-listed="8"
  data-ends="2026-05-12T18:39:18Z" data-listed="2026-05-05">
   <div class="img-wrap">
-    <img src="https://d2niwqq19lf86s.cloudfront.net/htwritable/media/prod/eyJ0aXRsZSI6IjY1Mzc2IC0gMjAxNSBQb3JzY2hlIDkxMSBDYXJyZXJhIEdUUyIsInNsdWciOiI2NTM3Ni0yMDE1LXBvcnNjaGUtOTExLWNhcnJlcmEtZ3RzLTc5OGEyN2FjIn0/.thumbnails/529afe60-274c-47b2-ad1d-a338a9384cd9.webp/529afe60-274c-47b2-ad1d-a338a9384cd9-tiny-380x0.webp" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
+    <img src="https://d2niwqq19lf86s.cloudfront.net/htwritable/media/prod/eyJ0aXRsZSI6IjY1Mzc2IC0gMjAxNSBQb3JzY2hlIDkxMSBDYXJyZXJhIEdUUyIsInNsdWciOiI2NTM3Ni0yMDE1LXBvcnNjaGUtOTExLWNhcnJlcmEtZ3RzLTc5OGEyN2FjIn0/.thumbnails/529afe60-274c-47b2-ad1d-a338a9384cd9.webp/529afe60-274c-47b2-ad1d-a338a9384cd9-tiny-2048x0.webp" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
     <div class="img-grad"></div>
     <span class="img-src-badge src-badge" style="background:#0A1F14;color:#4ade80">pcarmarket</span>
     <span class="img-timer countdown-timer timer-muted" data-ends="2026-05-12T18:39:18Z">…</span>
@@ -5000,7 +5000,7 @@ a { color:inherit; text-decoration:none; }
  data-days-listed="8"
  data-ends="2026-05-13T19:39:41Z" data-listed="2026-05-05">
   <div class="img-wrap">
-    <img src="https://d2niwqq19lf86s.cloudfront.net/htwritable/media/prod/eyJ0aXRsZSI6IjY1MzU3IC0gMTk5NSBQb3JzY2hlIDkxMSBDYXJyZXJhIiwic2x1ZyI6IjY1MzU3LTE5OTUtcG9yc2NoZS05MTEtY2FycmVyYS03YjU3MDNmNCJ9/.thumbnails/44950ae2-d8d5-417b-8364-c72887cc90a6.webp/44950ae2-d8d5-417b-8364-c72887cc90a6-tiny-380x0.webp" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
+    <img src="https://d2niwqq19lf86s.cloudfront.net/htwritable/media/prod/eyJ0aXRsZSI6IjY1MzU3IC0gMTk5NSBQb3JzY2hlIDkxMSBDYXJyZXJhIiwic2x1ZyI6IjY1MzU3LTE5OTUtcG9yc2NoZS05MTEtY2FycmVyYS03YjU3MDNmNCJ9/.thumbnails/44950ae2-d8d5-417b-8364-c72887cc90a6.webp/44950ae2-d8d5-417b-8364-c72887cc90a6-tiny-2048x0.webp" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
     <div class="img-grad"></div>
     <span class="img-src-badge src-badge" style="background:#0A1F14;color:#4ade80">pcarmarket</span>
     <span class="img-timer countdown-timer timer-muted" data-ends="2026-05-13T19:39:41Z">…</span>
@@ -5315,7 +5315,7 @@ a { color:inherit; text-decoration:none; }
  data-days-listed="7"
  data-ends="2026-05-13T19:14:26Z" data-listed="2026-05-06">
   <div class="img-wrap">
-    <img src="https://d2niwqq19lf86s.cloudfront.net/htwritable/media/prod/eyJ0aXRsZSI6IjY1MDY2IC0gMjAxOSBQb3JzY2hlIDkxMSBDYXJyZXJhIFQiLCJzbHVnIjoiNjUwNjYtMjAxOS1wb3JzY2hlLTkxMS1jYXJyZXJhLXQtOTA5ZTYwMWYifQ/.thumbnails/c9e008cb-aada-4c3f-b1fd-0b8a55063a7e.webp/c9e008cb-aada-4c3f-b1fd-0b8a55063a7e-tiny-380x0.webp" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
+    <img src="https://d2niwqq19lf86s.cloudfront.net/htwritable/media/prod/eyJ0aXRsZSI6IjY1MDY2IC0gMjAxOSBQb3JzY2hlIDkxMSBDYXJyZXJhIFQiLCJzbHVnIjoiNjUwNjYtMjAxOS1wb3JzY2hlLTkxMS1jYXJyZXJhLXQtOTA5ZTYwMWYifQ/.thumbnails/c9e008cb-aada-4c3f-b1fd-0b8a55063a7e.webp/c9e008cb-aada-4c3f-b1fd-0b8a55063a7e-tiny-2048x0.webp" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
     <div class="img-grad"></div>
     <span class="img-src-badge src-badge" style="background:#0A1F14;color:#4ade80">pcarmarket</span>
     <span class="img-timer countdown-timer timer-muted" data-ends="2026-05-13T19:14:26Z">…</span>
@@ -5441,7 +5441,7 @@ a { color:inherit; text-decoration:none; }
  data-days-listed="5"
  data-ends="2026-05-12T18:29:18Z" data-listed="2026-05-08">
   <div class="img-wrap">
-    <img src="https://d2niwqq19lf86s.cloudfront.net/htwritable/media/prod/eyJ0aXRsZSI6IjY1NDYwIC0gMjAwMSBQb3JzY2hlIDkxMSBDYXJyZXJhIiwic2x1ZyI6IjY1NDYwLTIwMDEtcG9yc2NoZS05MTEtY2FycmVyYS02NjRmYWRlNSJ9/.thumbnails/ecb4de68-0502-4efd-8dc8-2882efec4308.webp/ecb4de68-0502-4efd-8dc8-2882efec4308-tiny-380x0.webp" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
+    <img src="https://d2niwqq19lf86s.cloudfront.net/htwritable/media/prod/eyJ0aXRsZSI6IjY1NDYwIC0gMjAwMSBQb3JzY2hlIDkxMSBDYXJyZXJhIiwic2x1ZyI6IjY1NDYwLTIwMDEtcG9yc2NoZS05MTEtY2FycmVyYS02NjRmYWRlNSJ9/.thumbnails/ecb4de68-0502-4efd-8dc8-2882efec4308.webp/ecb4de68-0502-4efd-8dc8-2882efec4308-tiny-2048x0.webp" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
     <div class="img-grad"></div>
     <span class="img-src-badge src-badge" style="background:#0A1F14;color:#4ade80">pcarmarket</span>
     <span class="img-timer countdown-timer timer-muted" data-ends="2026-05-12T18:29:18Z">…</span>
@@ -5504,7 +5504,7 @@ a { color:inherit; text-decoration:none; }
  data-days-listed="5"
  data-ends="2026-05-13T18:39:42Z" data-listed="2026-05-08">
   <div class="img-wrap">
-    <img src="https://d2niwqq19lf86s.cloudfront.net/htwritable/media/prod/eyJ0aXRsZSI6IjY1MzM5IC0gMjAwNiBQb3JzY2hlIDkxMSBDYXJyZXJhIFMgQ2FicmlvbGV0Iiwic2x1ZyI6IjY1MzM5LTIwMDYtcG9yc2NoZS05MTEtY2FycmVyYS1zLWNhYnJpb2xldC02MGVmNDljZCJ9/.thumbnails/a77dc21d-e2e0-449a-8829-3748ec30631e.webp/a77dc21d-e2e0-449a-8829-3748ec30631e-tiny-380x0.webp" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
+    <img src="https://d2niwqq19lf86s.cloudfront.net/htwritable/media/prod/eyJ0aXRsZSI6IjY1MzM5IC0gMjAwNiBQb3JzY2hlIDkxMSBDYXJyZXJhIFMgQ2FicmlvbGV0Iiwic2x1ZyI6IjY1MzM5LTIwMDYtcG9yc2NoZS05MTEtY2FycmVyYS1zLWNhYnJpb2xldC02MGVmNDljZCJ9/.thumbnails/a77dc21d-e2e0-449a-8829-3748ec30631e.webp/a77dc21d-e2e0-449a-8829-3748ec30631e-tiny-2048x0.webp" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
     <div class="img-grad"></div>
     <span class="img-src-badge src-badge" style="background:#0A1F14;color:#4ade80">pcarmarket</span>
     <span class="img-timer countdown-timer timer-muted" data-ends="2026-05-13T18:39:42Z">…</span>
@@ -5567,7 +5567,7 @@ a { color:inherit; text-decoration:none; }
  data-days-listed="5"
  data-ends="2026-05-13T19:23:34Z" data-listed="2026-05-08">
   <div class="img-wrap">
-    <img src="https://d2niwqq19lf86s.cloudfront.net/htwritable/media/prod/eyJ0aXRsZSI6IjY1MzU4IC0gMjAyMSBQb3JzY2hlIDkxMSBUdXJibyBTIENhYnJpb2xldCIsInNsdWciOiI2NTM1OC0yMDIxLXBvcnNjaGUtOTExLXR1cmJvLXMtY2FicmlvbGV0LWEzN2RiN2M4In0/.thumbnails/4514cbbb-1641-403f-a4a3-b480eadc403b.webp/4514cbbb-1641-403f-a4a3-b480eadc403b-tiny-380x0.webp" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
+    <img src="https://d2niwqq19lf86s.cloudfront.net/htwritable/media/prod/eyJ0aXRsZSI6IjY1MzU4IC0gMjAyMSBQb3JzY2hlIDkxMSBUdXJibyBTIENhYnJpb2xldCIsInNsdWciOiI2NTM1OC0yMDIxLXBvcnNjaGUtOTExLXR1cmJvLXMtY2FicmlvbGV0LWEzN2RiN2M4In0/.thumbnails/4514cbbb-1641-403f-a4a3-b480eadc403b.webp/4514cbbb-1641-403f-a4a3-b480eadc403b-tiny-2048x0.webp" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
     <div class="img-grad"></div>
     <span class="img-src-badge src-badge" style="background:#0A1F14;color:#4ade80">pcarmarket</span>
     <span class="img-timer countdown-timer timer-muted" data-ends="2026-05-13T19:23:34Z">…</span>
@@ -7028,7 +7028,7 @@ a { color:inherit; text-decoration:none; }
  data-days-listed="9"
  data-ends="2026-05-11T18:44:22Z" data-listed="2026-05-04">
   <div class="img-wrap">
-    <img src="https://d2niwqq19lf86s.cloudfront.net/htwritable/media/prod/eyJ0aXRsZSI6IjY1MTIwIC0gMjAxMiBQb3JzY2hlIDkxMSBDYXJyZXJhIEdUUyBDYWJyaW9sZXQiLCJzbHVnIjoiNjUxMjAtMjAxMi1wb3JzY2hlLTkxMS1jYXJyZXJhLWd0cy1jYWJyaW9sZXQtMzk1NDAyMGEifQ/.thumbnails/d57770c5-f674-4049-b236-d8179101cbd4.webp/d57770c5-f674-4049-b236-d8179101cbd4-tiny-380x0.webp" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
+    <img src="https://d2niwqq19lf86s.cloudfront.net/htwritable/media/prod/eyJ0aXRsZSI6IjY1MTIwIC0gMjAxMiBQb3JzY2hlIDkxMSBDYXJyZXJhIEdUUyBDYWJyaW9sZXQiLCJzbHVnIjoiNjUxMjAtMjAxMi1wb3JzY2hlLTkxMS1jYXJyZXJhLWd0cy1jYWJyaW9sZXQtMzk1NDAyMGEifQ/.thumbnails/d57770c5-f674-4049-b236-d8179101cbd4.webp/d57770c5-f674-4049-b236-d8179101cbd4-tiny-2048x0.webp" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
     <div class="img-grad"></div>
     <span class="img-src-badge src-badge" style="background:#0A1F14;color:#4ade80">pcarmarket</span>
     <span class="img-timer countdown-timer timer-muted" data-ends="2026-05-11T18:44:22Z">…</span>
@@ -7091,7 +7091,7 @@ a { color:inherit; text-decoration:none; }
  data-days-listed="9"
  data-ends="2026-05-11T19:23:54Z" data-listed="2026-05-04">
   <div class="img-wrap">
-    <img src="https://d2niwqq19lf86s.cloudfront.net/htwritable/media/prod/eyJ0aXRsZSI6IjY1MTAxIC0gMjAxNiBQb3JzY2hlIENheW1hbiBHVDQiLCJzbHVnIjoiNjUxMDEtMjAxNi1wb3JzY2hlLWNheW1hbi1ndDQtOWM1MWM5NzQifQ/.thumbnails/2e594754-02c1-414b-bf9f-ade60f195cf1.webp/2e594754-02c1-414b-bf9f-ade60f195cf1-tiny-380x0.webp" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
+    <img src="https://d2niwqq19lf86s.cloudfront.net/htwritable/media/prod/eyJ0aXRsZSI6IjY1MTAxIC0gMjAxNiBQb3JzY2hlIENheW1hbiBHVDQiLCJzbHVnIjoiNjUxMDEtMjAxNi1wb3JzY2hlLWNheW1hbi1ndDQtOWM1MWM5NzQifQ/.thumbnails/2e594754-02c1-414b-bf9f-ade60f195cf1.webp/2e594754-02c1-414b-bf9f-ade60f195cf1-tiny-2048x0.webp" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
     <div class="img-grad"></div>
     <span class="img-src-badge src-badge" style="background:#0A1F14;color:#4ade80">pcarmarket</span>
     <span class="img-timer countdown-timer timer-muted" data-ends="2026-05-11T19:23:54Z">…</span>
@@ -8099,7 +8099,7 @@ a { color:inherit; text-decoration:none; }
  data-days-listed="5"
  data-ends="" data-listed="2026-05-08">
   <div class="img-wrap">
-    <img src="https://d2niwqq19lf86s.cloudfront.net/htwritable/media/prod/eyJ0aXRsZSI6IjY1NDI1IC0gMjAwNyBQb3JzY2hlIDkxMSBDYXJyZXJhIFMgQ2FicmlvbGV0Iiwic2x1ZyI6IjY1NDI1LTIwMDctcG9yc2NoZS05MTEtY2FycmVyYS1zLWNhYnJpb2xldC0yODY0Yzc5YyJ9/.thumbnails/6af76705-e293-4bdb-88f7-57b202e3acd9.webp/6af76705-e293-4bdb-88f7-57b202e3acd9-tiny-380x0.webp" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
+    <img src="https://d2niwqq19lf86s.cloudfront.net/htwritable/media/prod/eyJ0aXRsZSI6IjY1NDI1IC0gMjAwNyBQb3JzY2hlIDkxMSBDYXJyZXJhIFMgQ2FicmlvbGV0Iiwic2x1ZyI6IjY1NDI1LTIwMDctcG9yc2NoZS05MTEtY2FycmVyYS1zLWNhYnJpb2xldC0yODY0Yzc5YyJ9/.thumbnails/6af76705-e293-4bdb-88f7-57b202e3acd9.webp/6af76705-e293-4bdb-88f7-57b202e3acd9-tiny-2048x0.webp" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
     <div class="img-grad"></div>
     <span class="img-src-badge src-badge" style="background:#0A1F14;color:#4ade80">pcarmarket</span>
     <span class="img-timer countdown-timer timer-muted" data-ends="">—</span>
@@ -9170,7 +9170,7 @@ a { color:inherit; text-decoration:none; }
  data-days-listed="6"
  data-ends="" data-listed="2026-05-07">
   <div class="img-wrap">
-    <img src="https://d2niwqq19lf86s.cloudfront.net/htwritable/media/prod/eyJ0aXRsZSI6IjY1MzY3IC0gMjAyNCBQb3JzY2hlIDcxOCBTcHlkZXIgUlMiLCJzbHVnIjoiNjUzNjctMjAyNC1wb3JzY2hlLTcxOC1zcHlkZXItcnMtODAxZjk0Y2IifQ/.thumbnails/c5249c72-cee9-402e-b936-0877984cfad8.webp/c5249c72-cee9-402e-b936-0877984cfad8-tiny-380x0.webp" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
+    <img src="https://d2niwqq19lf86s.cloudfront.net/htwritable/media/prod/eyJ0aXRsZSI6IjY1MzY3IC0gMjAyNCBQb3JzY2hlIDcxOCBTcHlkZXIgUlMiLCJzbHVnIjoiNjUzNjctMjAyNC1wb3JzY2hlLTcxOC1zcHlkZXItcnMtODAxZjk0Y2IifQ/.thumbnails/c5249c72-cee9-402e-b936-0877984cfad8.webp/c5249c72-cee9-402e-b936-0877984cfad8-tiny-2048x0.webp" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
     <div class="img-grad"></div>
     <span class="img-src-badge src-badge" style="background:#0A1F14;color:#4ade80">pcarmarket</span>
     <span class="img-timer countdown-timer timer-muted" data-ends="">—</span>
@@ -9233,7 +9233,7 @@ a { color:inherit; text-decoration:none; }
  data-days-listed="13"
  data-ends="2026-05-07T19:09:26Z" data-listed="2026-04-30">
   <div class="img-wrap">
-    <img src="https://d2niwqq19lf86s.cloudfront.net/htwritable/media/prod/eyJ0aXRsZSI6IjY0OTU1IC0gMTk5NiBQb3JzY2hlIDkxMSBDYXJyZXJhIDRTIiwic2x1ZyI6IjY0OTU1LTE5OTYtcG9yc2NoZS05MTEtY2FycmVyYS00cy0xMjY1ZDhlYiJ9/.thumbnails/bea894fc-3f87-4550-81e8-e58517775d43.webp/bea894fc-3f87-4550-81e8-e58517775d43-tiny-380x0.webp" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
+    <img src="https://d2niwqq19lf86s.cloudfront.net/htwritable/media/prod/eyJ0aXRsZSI6IjY0OTU1IC0gMTk5NiBQb3JzY2hlIDkxMSBDYXJyZXJhIDRTIiwic2x1ZyI6IjY0OTU1LTE5OTYtcG9yc2NoZS05MTEtY2FycmVyYS00cy0xMjY1ZDhlYiJ9/.thumbnails/bea894fc-3f87-4550-81e8-e58517775d43.webp/bea894fc-3f87-4550-81e8-e58517775d43-tiny-2048x0.webp" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
     <div class="img-grad"></div>
     <span class="img-src-badge src-badge" style="background:#0A1F14;color:#4ade80">pcarmarket</span>
     <span class="img-timer countdown-timer timer-muted" data-ends="2026-05-07T19:09:26Z">…</span>
@@ -9296,7 +9296,7 @@ a { color:inherit; text-decoration:none; }
  data-days-listed="13"
  data-ends="2026-05-07T18:59:16Z" data-listed="2026-04-30">
   <div class="img-wrap">
-    <img src="https://d2niwqq19lf86s.cloudfront.net/htwritable/media/prod/eyJ0aXRsZSI6IjY1MzY3IC0gMjAyNCBQb3JzY2hlIDcxOCBTcHlkZXIgUlMiLCJzbHVnIjoiNjUzNjctMjAyNC1wb3JzY2hlLTcxOC1zcHlkZXItcnMtODAxZjk0Y2IifQ/.thumbnails/c5249c72-cee9-402e-b936-0877984cfad8.webp/c5249c72-cee9-402e-b936-0877984cfad8-tiny-380x0.webp" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
+    <img src="https://d2niwqq19lf86s.cloudfront.net/htwritable/media/prod/eyJ0aXRsZSI6IjY1MzY3IC0gMjAyNCBQb3JzY2hlIDcxOCBTcHlkZXIgUlMiLCJzbHVnIjoiNjUzNjctMjAyNC1wb3JzY2hlLTcxOC1zcHlkZXItcnMtODAxZjk0Y2IifQ/.thumbnails/c5249c72-cee9-402e-b936-0877984cfad8.webp/c5249c72-cee9-402e-b936-0877984cfad8-tiny-2048x0.webp" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
     <div class="img-grad"></div>
     <span class="img-src-badge src-badge" style="background:#0A1F14;color:#4ade80">pcarmarket</span>
     <span class="img-timer countdown-timer timer-muted" data-ends="2026-05-07T18:59:16Z">…</span>
