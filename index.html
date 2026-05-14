@@ -84,38 +84,38 @@ a { color:inherit; text-decoration:none; }
 
 /* ── Tab strip ── */
 .tabs { display:flex; border-bottom:1px solid var(--bd); background:var(--bg1); flex-shrink:0; padding:0 12px; }
-.vtab { padding:10px 14px; font-size:12px; color:var(--tx3); cursor:pointer; border-bottom:2px solid transparent; transition:all .12s; white-space:nowrap; font-family:'JetBrains Mono',monospace; letter-spacing:.2px; background:none; border-top:none; border-left:none; border-right:none; }
+.vtab { padding:8px 11px; font-size:10px; color:var(--tx3); cursor:pointer; border-bottom:2px solid transparent; transition:all .12s; white-space:nowrap; font-family:'JetBrains Mono',monospace; letter-spacing:.2px; background:none; border-top:none; border-left:none; border-right:none; }
 .vtab:hover { color:var(--tx2); }
 .vtab.active { color:var(--text); border-bottom-color:var(--red); }
-.vtab .tab-count { font-size:10px; margin-left:3px; color:var(--tx3); }
+.vtab .tab-count { font-size:9px; margin-left:3px; color:var(--tx3); }
 .vtab.active .tab-count { color:var(--red); }
 
 /* ── Source row ── */
-.src-row { display:flex; gap:6px; padding:8px 14px; border-bottom:1px solid var(--bd); flex-shrink:0; }
-.src-card { flex:1; border:1px solid var(--bd); border-radius:6px; padding:8px 11px; background:var(--bg2); cursor:pointer; display:flex; align-items:center; gap:7px; transition:all .15s; }
+.src-row { display:flex; gap:5px; padding:7px 12px; border-bottom:1px solid var(--bd); flex-shrink:0; }
+.src-card { flex:1; border:1px solid var(--bd); border-radius:6px; padding:6px 9px; background:var(--bg2); cursor:pointer; display:flex; align-items:center; gap:6px; transition:all .15s; }
 .src-card:hover { border-color:var(--bd2); background:var(--bg3); }
 .src-card.active { border-color:var(--red3); background:var(--red2); }
-.src-ico { width:26px; height:26px; border-radius:4px; background:var(--bg4); display:flex; align-items:center; justify-content:center; font-size:12px; flex-shrink:0; }
-.src-lbl { font-size:12px; font-weight:500; color:var(--tx2); font-family:'Inter',sans-serif; }
-.src-cnt { font-size:10px; color:var(--tx3); font-family:'JetBrains Mono',monospace; }
+.src-ico { width:22px; height:22px; border-radius:4px; background:var(--bg4); display:flex; align-items:center; justify-content:center; font-size:10px; flex-shrink:0; }
+.src-lbl { font-size:10px; font-weight:500; color:var(--tx2); font-family:'Inter',sans-serif; }
+.src-cnt { font-size:8px; color:var(--tx3); font-family:'JetBrains Mono',monospace; }
 
 /* ── Filter bar ── */
-.filter-bar { display:flex; align-items:center; gap:0; padding:0 14px; border-bottom:1px solid var(--bd); flex-shrink:0; background:var(--bg1); }
-.filter-label { padding:9px 5px 9px 0; font-size:12px; color:var(--tx3); font-family:'JetBrains Mono',monospace; letter-spacing:.2px; white-space:nowrap; user-select:none; }
+.filter-bar { display:flex; align-items:center; gap:0; padding:0 12px; border-bottom:1px solid var(--bd); flex-shrink:0; background:var(--bg1); }
+.filter-label { padding:8px 4px 8px 0; font-size:10px; color:var(--tx3); font-family:'JetBrains Mono',monospace; letter-spacing:.2px; white-space:nowrap; user-select:none; }
 .cdd { position:relative; display:inline-flex; align-items:stretch; }
-.cdd-btn { background:none; border:none; border-bottom:2px solid transparent; outline:none; padding:9px 11px 9px 0; font-size:12px !important; font-family:'JetBrains Mono',monospace !important; letter-spacing:.2px; color:var(--tx3); cursor:pointer; white-space:nowrap; display:inline-flex; align-items:center; gap:4px; line-height:1; transition:color .12s,border-color .12s; }
+.cdd-btn { background:none; border:none; border-bottom:2px solid transparent; outline:none; padding:8px 10px 8px 0; font-size:10px !important; font-family:'JetBrains Mono',monospace !important; letter-spacing:.2px; color:var(--tx3); cursor:pointer; white-space:nowrap; display:inline-flex; align-items:center; gap:3px; line-height:1; transition:color .12s,border-color .12s; }
 .cdd-btn:hover { color:var(--tx2); }
 .cdd.open .cdd-btn { color:var(--tx2); border-bottom-color:var(--red); }
-.cdd-chev { display:inline-block; width:0; height:0; border-left:4px solid transparent; border-right:4px solid transparent; border-top:4px solid currentColor; opacity:.4; flex-shrink:0; margin-top:1px; }
-.cdd-menu { display:none; position:absolute; top:calc(100% + 1px); left:0; min-width:130px; background:var(--bg2); border:1px solid var(--bd2); border-radius:5px; padding:2px; z-index:200; box-shadow:0 6px 18px rgba(0,0,0,.55); }
+.cdd-chev { display:inline-block; width:0; height:0; border-left:3px solid transparent; border-right:3px solid transparent; border-top:3px solid currentColor; opacity:.4; flex-shrink:0; margin-top:1px; }
+.cdd-menu { display:none; position:absolute; top:calc(100% + 1px); left:0; min-width:110px; background:var(--bg2); border:1px solid var(--bd2); border-radius:5px; padding:2px; z-index:200; box-shadow:0 6px 18px rgba(0,0,0,.55); }
 .cdd.open .cdd-menu { display:block; }
-.cdd-item { padding:5px 10px; font-size:12px !important; font-family:'JetBrains Mono',monospace !important; letter-spacing:.2px; color:var(--tx3); border-radius:3px; cursor:pointer; white-space:nowrap; line-height:1.5; transition:background .1s,color .1s; }
+.cdd-item { padding:3px 8px; font-size:10px !important; font-family:'JetBrains Mono',monospace !important; letter-spacing:.2px; color:var(--tx3); border-radius:3px; cursor:pointer; white-space:nowrap; line-height:1.5; transition:background .1s,color .1s; }
 .cdd-item:hover { background:var(--bg3); color:var(--tx2); }
 .cdd-item.sel { color:var(--tx2); }
-.filter-sep { width:1px; height:16px; background:var(--bd); flex-shrink:0; margin:0 12px; }
-.filter-count { margin-left:auto; font-size:11px; color:var(--tx3); font-family:'JetBrains Mono',monospace; }
+.filter-sep { width:1px; height:14px; background:var(--bd); flex-shrink:0; margin:0 10px; }
+.filter-count { margin-left:auto; font-size:9px; color:var(--tx3); font-family:'JetBrains Mono',monospace; }
 .vt-toggle { display:flex; align-items:center; gap:2px; margin-left:10px; }
-.vt-btn { background:none; border:none; padding:4px 6px; cursor:pointer; color:var(--tx3); font-size:16px; border-radius:3px; transition:all .12s; }
+.vt-btn { background:none; border:none; padding:3px 5px; cursor:pointer; color:var(--tx3); font-size:14px; border-radius:3px; transition:all .12s; }
 .vt-btn:hover { color:var(--tx2); }
 .vt-btn.on { color:var(--text); background:var(--bg3); }
 
@@ -4987,16 +4987,16 @@ a { color:inherit; text-decoration:none; }
 <div class="auc-card auc-urg-noend" onclick="cardClick(event,this)"
  data-url="https://www.pcarmarket.com/auction/marketplace-2006-porsche-911-carrera-s-cabriolet-26"
  data-gen="997.1" data-src="pcarmarket" data-tier="TIER2"
- data-price="80000" data-fmv="0"
- data-fmv-low="0"
- data-fmv-high="0"
+ data-price="80000" data-fmv="52504"
+ data-fmv-low="42150"
+ data-fmv-high="63500"
  data-bid="80000"
  data-lid="10202"
  data-mileage="10157"
  data-trans="Manual"
  data-color="Arctic Silver Metallic"
- data-comp-count="0"
- data-fmv-range="—"
+ data-comp-count="203"
+ data-fmv-range="$42K &amp;ndash; $64K"
  data-days-listed="5"
  data-ends="2026-05-13T18:39:42Z" data-listed="2026-05-08">
   <div class="img-wrap">
@@ -5022,27 +5022,27 @@ a { color:inherit; text-decoration:none; }
     <div class="card-title">2006 Porsche 911 Carrera S Cabriolet 6-Speed</div>
     <div class="card-bid-row">
       <span class="bid-val">$80,000</span>
-      
+      <span class="fmv-pill fmv-above">▲ 52% above FMV</span>
     </div>
     <div class="card-specs"><span class="spec-pill">10,157 mi</span><span class="spec-pill">Manual</span></div>
   </div>
   <div class="expand-panel">
     <div class="expand-inner">
       <div class="stat-row">
-        <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">—</div></div>
-        <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">0 sales</div></div>
+        <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$42K &ndash; $64K</div></div>
+        <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">203 sales</div></div>
         <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">5</div></div>
         <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">10,157 mi</div></div>
         <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">Manual</div></div>
         <div class="estat"><div class="estat-label">Color</div><div class="estat-val">Arctic Silver Metallic</div></div>
       </div>
       <div class="graph-wrap">
-        <div class="graph-label">Sold comps vs FMV <span class="graph-sub">0 transactions</span></div>
-        <svg class="graph-svg" data-lid="10202" data-fmv="0" data-bid="80000" data-low="0" data-high="0"></svg>
+        <div class="graph-label">Sold comps vs FMV <span class="graph-sub">203 transactions</span></div>
+        <svg class="graph-svg" data-lid="10202" data-fmv="52504" data-bid="80000" data-low="42150" data-high="63500"></svg>
       </div>
       <div class="expand-footer">
         <div class="etag-row"><span class="etag">997.1</span><span class="etag">Cabriolet</span></div>
-        <div class="expand-actions"><a class="go-btn" href="https://www.pcarmarket.com/auction/marketplace-2006-porsche-911-carrera-s-cabriolet-26" target="_blank" onclick="event.stopPropagation()">&#x2197; Go to auction</a></div>
+        <div class="expand-actions"><span class="above-badge">52% above FMV</span><a class="go-btn" href="https://www.pcarmarket.com/auction/marketplace-2006-porsche-911-carrera-s-cabriolet-26" target="_blank" onclick="event.stopPropagation()">&#x2197; Go to auction</a></div>
       </div>
     </div>
   </div>
