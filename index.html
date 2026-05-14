@@ -244,35 +244,40 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
   transition:opacity .2s cubic-bezier(.4,0,.2,1), transform .22s cubic-bezier(.34,1.28,.64,1);
 }
 .ra-backdrop.open .ra-modal { opacity:1; transform:scale(1); pointer-events:all; }
-.ra-modal-img { height:280px; background:var(--bg4); position:relative; overflow:hidden; flex-shrink:0; }
+.ra-modal-img { height:300px; background:var(--bg4); position:relative; overflow:hidden; flex-shrink:0; }
 .ra-modal-img img { width:100%; height:100%; object-fit:cover; opacity:.88; }
-.ra-modal-grad { position:absolute; bottom:0; left:0; right:0; height:100px; background:linear-gradient(transparent, var(--bg1)); }
-.ra-modal-close { position:absolute; top:10px; right:10px; width:28px; height:28px; border-radius:6px; background:rgba(9,9,9,.85); border:1px solid var(--bd2); color:var(--tx2); font-size:15px; display:flex; align-items:center; justify-content:center; cursor:pointer; z-index:2; transition:all .12s; }
-.ra-modal-close:hover { background:var(--bg4); color:var(--text); }
-.ra-modal-badges { position:absolute; top:10px; left:11px; display:flex; gap:5px; }
-.ra-modal-title-wrap { position:absolute; bottom:11px; left:13px; right:42px; }
-.ra-modal-title { font-size:16px; font-weight:600; color:#fff; line-height:1.3; font-family:'Inter',sans-serif; }
-.ra-modal-subtitle { font-size:13px; color:var(--tx2); font-family:'JetBrains Mono',monospace; margin-top:2px; }
-.ra-modal-body { flex:1; overflow-y:auto; padding:13px 14px 9px; }
+
+/* ── Modal body — A3 layout ── */
+.ra-modal-body { flex:1; overflow-y:auto; display:flex; flex-direction:column; }
 .ra-modal-body::-webkit-scrollbar { width:3px; }
 .ra-modal-body::-webkit-scrollbar-thumb { background:var(--bg4); }
-.ra-kv-pair { display:grid; grid-template-columns:1fr 1fr; gap:6px; margin-bottom:11px; }
-.ra-kv { background:var(--bg2); border:1px solid var(--bd); border-radius:6px; padding:9px 11px; }
-.ra-kv-lbl { font-size:12px; color:var(--tx2); font-family:'JetBrains Mono',monospace; text-transform:uppercase; letter-spacing:.5px; margin-bottom:3px; }
-.ra-kv-val { font-family:'JetBrains Mono',monospace; font-size:23px; font-weight:500; color:#ebebeb; }
-.ra-kv-sub { font-size:13px; margin-top:2px; font-family:'JetBrains Mono',monospace; color:var(--tx2); }
-.ra-spec-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:5px; margin-bottom:11px; }
-.ra-spec { background:var(--bg2); border:1px solid var(--bd); border-radius:5px; padding:6px 8px; }
-.ra-spec-k { font-size:11px; color:var(--tx2); font-family:'JetBrains Mono',monospace; text-transform:uppercase; letter-spacing:.4px; margin-bottom:2px; }
-.ra-spec-v { font-size:13px; font-weight:500; color:var(--tx2); }
-.ra-graph-hdr { display:flex; justify-content:space-between; font-size:12px; color:var(--tx2); font-family:'JetBrains Mono',monospace; text-transform:uppercase; letter-spacing:.5px; margin-bottom:5px; }
-.ra-graph-sub { text-transform:none; letter-spacing:0; color:var(--bd3); }
+
+/* Price section */
+.ra-price-section { padding:14px 18px 10px; }
+.ra-price-val { font-size:28px; font-weight:600; font-family:'JetBrains Mono',monospace; color:#f0f0f0; line-height:1; margin:0; }
+.ra-price-deal { font-size:13px; font-family:'JetBrains Mono',monospace; margin:5px 0 13px; }
+.ra-price-deal.below { color:var(--green); }
+.ra-price-deal.above { color:#f87171; }
+.ra-price-deal.near  { color:var(--tx2); }
+.ra-pills { display:flex; gap:5px; flex-wrap:wrap; }
+.ra-pill { font-size:13px; font-family:'JetBrains Mono',monospace; color:var(--tx3); background:var(--bg3); border:1px solid var(--bd2); padding:3px 9px; border-radius:3px; }
+.ra-pill.src { color:#e8624a; border-color:rgba(232,98,74,.3); background:rgba(232,98,74,.06); cursor:pointer; display:inline-flex; align-items:center; gap:4px; text-decoration:none; }
+.ra-pill.src:hover { background:rgba(232,98,74,.12); }
+.ra-pill.src i { font-size:14px; }
+
+/* Graph — full bleed band */
+.ra-graph-band { background:var(--bg); border-top:1px solid var(--bd); border-bottom:1px solid var(--bd); padding:10px 18px 8px; margin-top:4px; }
+.ra-graph-hdr { display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px; }
+.ra-graph-lbl { font-size:12px; font-family:'JetBrains Mono',monospace; color:var(--tx3); text-transform:uppercase; letter-spacing:.5px; }
+.ra-graph-sub { font-size:12px; font-family:'JetBrains Mono',monospace; color:var(--bd3); }
 .ra-modal-svg { width:100%; height:200px; display:block; }
-.ra-modal-foot { padding:9px 14px; border-top:1px solid var(--bd); display:grid; grid-template-columns:1fr 1fr 1.5fr; gap:6px; flex-shrink:0; background:var(--bg1); }
-.ra-mfb { padding:8px; border-radius:5px; border:1px solid var(--bd2); background:var(--bg3); color:var(--tx2); font-size:12px; font-weight:500; font-family:'Inter',sans-serif; cursor:pointer; transition:all .12s; text-align:center; }
+
+/* Footer */
+.ra-modal-foot { padding:10px 14px; border-top:1px solid var(--bd); display:grid; grid-template-columns:1fr 1fr 1fr; gap:6px; flex-shrink:0; background:var(--bg1); }
+.ra-mfb { padding:9px; border-radius:6px; border:1px solid var(--bd2); background:var(--bg3); color:var(--tx2); font-size:13px; font-weight:500; font-family:'Inter',sans-serif; cursor:pointer; transition:all .12s; text-align:center; display:flex; align-items:center; justify-content:center; gap:6px; }
 .ra-mfb:hover { border-color:var(--bd3); color:var(--text); }
-.ra-mfb.pri { background:var(--red); border-color:var(--red); color:#fff; text-decoration:none; display:flex; align-items:center; justify-content:center; gap:5px; }
-.ra-mfb.pri:hover { background:#d43530; }
+.ra-mfb.saved { color:var(--red); border-color:rgba(244,67,60,.35); background:var(--red2); }
+.ra-mfb.disabled { opacity:.4; cursor:default; pointer-events:none; }
 
 /* ── Dropdown (more menu) ── */
 .dd-overlay { display:none; }
@@ -10116,6 +10121,8 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
 <div class="ra-backdrop" id="ra-backdrop" onclick="closeCardModal(event)">
   <div class="ra-modal-wrap">
     <div class="ra-modal" id="ra-modal">
+
+      <!-- Photo -->
       <div class="ra-modal-img">
         <img id="rm-img" src="" alt="">
         <div class="ra-modal-grad"></div>
@@ -10129,28 +10136,43 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
           <div class="ra-modal-subtitle" id="rm-subtitle"></div>
         </div>
       </div>
+
+      <!-- Body -->
       <div class="ra-modal-body">
-        <div class="ra-kv-pair">
-          <div class="ra-kv">
-            <div class="ra-kv-lbl">Current Bid</div>
-            <div class="ra-kv-val" id="rm-bid"></div>
-            <div class="ra-kv-sub" id="rm-deal"></div>
-          </div>
-          <div class="ra-kv">
-            <div class="ra-kv-lbl">FMV Estimate</div>
-            <div class="ra-kv-val" id="rm-fmv"></div>
-            <div class="ra-kv-sub" id="rm-comps" style="color:var(--tx3)"></div>
-          </div>
+
+        <!-- Price + deal + pills -->
+        <div class="ra-price-section">
+          <div class="ra-price-val" id="rm-bid"></div>
+          <div class="ra-price-deal" id="rm-deal"></div>
+          <div class="ra-pills" id="rm-pills"></div>
         </div>
-        <div class="ra-spec-grid" id="rm-specs"></div>
-        <div class="ra-graph-hdr">Comparable Sales<span class="ra-graph-sub" id="rm-graph-sub"></span></div>
-        <svg class="ra-modal-svg" id="rm-svg"></svg>
+
+        <!-- Graph — full bleed band -->
+        <div class="ra-graph-band">
+          <div class="ra-graph-hdr">
+            <span class="ra-graph-lbl">Comparable Sales</span>
+            <span class="ra-graph-sub" id="rm-graph-sub"></span>
+          </div>
+          <svg class="ra-modal-svg" id="rm-svg"></svg>
+        </div>
+
+        <!-- Notes (only when saved) -->
+        <div id="rm-notes-wrap" style="padding:10px 18px 4px;display:none;">
+          <textarea id="rm-notes-input" maxlength="750"
+            style="width:100%;background:var(--bg);border:1px solid var(--bd2);border-radius:6px;padding:8px 10px;color:var(--tx2);font-size:13px;font-family:'JetBrains Mono',monospace;resize:vertical;min-height:64px;outline:none;box-sizing:border-box;"
+            placeholder="Notes..."></textarea>
+          <div style="text-align:right;font-size:11px;color:var(--tx3);font-family:'JetBrains Mono',monospace;margin-top:3px;" id="rm-notes-count">0 / 750</div>
+        </div>
+
       </div>
+
+      <!-- Footer -->
       <div class="ra-modal-foot">
         <button class="ra-mfb" id="rm-save-btn" onclick="rmToggleSave()"><i class="ti ti-bookmark"></i> Save</button>
+        <button class="ra-mfb disabled" id="rm-notes-btn" onclick="rmToggleNotes()"><i class="ti ti-notes"></i> Notes</button>
         <button class="ra-mfb" onclick="rmShare()"><i class="ti ti-share"></i> Share</button>
-        <a class="ra-mfb pri" id="rm-go-link" href="#" target="_blank"><i class="ti ti-external-link"></i> Go to Auction</a>
       </div>
+
     </div>
   </div>
 </div>
@@ -10376,16 +10398,18 @@ function cardClick(evt, card) {
 
 // ── Card modal open/close ────────────────────────────────────────────────────
 var _rmUrl = '';
+var _rmNotesOpen = false;
 
 function openCardModal(card) {
   var d = card.dataset;
   _rmUrl = d.url || '#';
+  _rmNotesOpen = false;
 
   // Image
   var img = card.querySelector('.auc-img');
   document.getElementById('rm-img').src = img ? img.src : '';
 
-  // Source badge
+  // Source badge (top-left on photo)
   var srcBadge = card.querySelector('.img-src-badge');
   var rmSrc = document.getElementById('rm-src-badge');
   if (srcBadge) {
@@ -10397,64 +10421,100 @@ function openCardModal(card) {
   // Gen badge
   document.getElementById('rm-gen-badge').textContent = d.gen || '';
 
-  // Title
+  // Title + subtitle
   var titleEl = card.querySelector('.card-title');
   document.getElementById('rm-title').textContent = titleEl ? titleEl.textContent : '';
-
-  // Subtitle
-  var timer = card.querySelector('.img-timer');
-  var timerTxt = timer ? timer.textContent : '';
+  var timer = card.querySelector('.countdown-timer');
+  var timerTxt = timer ? timer.textContent.trim() : '';
   document.getElementById('rm-subtitle').textContent =
-    (d.src||'') + ' · gen ' + (d.gen||'') + (timerTxt && timerTxt !== '—' ? ' · ' + timerTxt + ' remaining' : '');
+    (d.src||'') + (d.gen ? ' · gen ' + d.gen : '') + (timerTxt && timerTxt !== 'ENDED' ? ' · ' + timerTxt + ' remaining' : '');
 
-  // Bid + FMV — all from data attributes
-  var bid  = +d.bid  || 0;
-  var fmv  = +d.fmv  || 0;
-  var low  = +d['fmv-low']  || 0;
-  var high = +d['fmv-high'] || 0;
-  var lid  = d.lid   || '';
+  // Numbers
+  var bid = +d.bid || 0;
+  var fmv = +d.fmv || 0;
+  var low = +d['fmv-low']  || 0;
+  var high= +d['fmv-high'] || 0;
+  var lid = d.lid || '';
   var compCount = +d['comp-count'] || 0;
 
-  document.getElementById('rm-bid').textContent = bid  ? '$' + bid.toLocaleString()  : '—';
-  document.getElementById('rm-fmv').textContent = fmv  ? '~$' + Math.round(fmv/1000) + 'K' : '—';
-  document.getElementById('rm-comps').textContent = compCount ? compCount + ' comps' : '';
+  // Price
+  document.getElementById('rm-bid').textContent = bid ? '$' + bid.toLocaleString() : '—';
 
-  // Deal sub
+  // Deal line — "▼ 31% below est. FMV · ~$196K"
   var dealEl = document.getElementById('rm-deal');
+  dealEl.className = 'ra-price-deal';
   if (fmv && bid) {
     var pct = (bid - fmv) / fmv;
-    if (pct <= -0.05) { dealEl.textContent = '▼ ' + Math.abs(Math.round(pct*100)) + '% below FMV'; dealEl.style.color = 'var(--green)'; }
-    else if (pct >= 0.05) { dealEl.textContent = '▲ ' + Math.round(pct*100) + '% above FMV'; dealEl.style.color = '#f87171'; }
-    else { dealEl.textContent = 'Near FMV'; dealEl.style.color = 'var(--tx2)'; }
-  } else { dealEl.textContent = ''; }
+    var fmvStr = ' · est. FMV ~$' + Math.round(fmv/1000) + 'K';
+    if (compCount) fmvStr += ' (' + compCount + ' comps)';
+    if (pct <= -0.05) {
+      dealEl.textContent = '▼ ' + Math.abs(Math.round(pct*100)) + '% below est. FMV' + fmvStr;
+      dealEl.classList.add('below');
+    } else if (pct >= 0.05) {
+      dealEl.textContent = '▲ ' + Math.round(pct*100) + '% above est. FMV' + fmvStr;
+      dealEl.classList.add('above');
+    } else {
+      dealEl.textContent = 'Near est. FMV' + fmvStr;
+      dealEl.classList.add('near');
+    }
+  } else {
+    dealEl.textContent = fmv ? 'est. FMV ~$' + Math.round(fmv/1000) + 'K' : '';
+  }
 
-  // Specs from data attributes
-  var specsGrid = document.getElementById('rm-specs');
-  specsGrid.innerHTML = '';
-  var specs = [
-    ['Mileage',    d.mileage && d.mileage !== '999999' ? Number(d.mileage).toLocaleString() + ' mi' : '—'],
-    ['Trans',      d.trans  || '—'],
-    ['Color',      d.color  || '—'],
-    ['Generation', d.gen    || '—'],
-    ['Source',     d.src    || '—'],
-    ['Time Left',  timerTxt || '—'],
+  // Pills — mileage, trans, color, gen, source+link
+  var pillsEl = document.getElementById('rm-pills');
+  pillsEl.innerHTML = '';
+  var pillDefs = [
+    d.mileage && d.mileage !== '999999' ? Number(d.mileage).toLocaleString() + ' mi' : null,
+    d.trans  || null,
+    d.color  || null,
+    d.gen    || null,
   ];
-  specs.forEach(function(s) {
-    var div = document.createElement('div');
-    div.className = 'ra-spec';
-    div.innerHTML = '<div class="ra-spec-k">' + s[0] + '</div><div class="ra-spec-v">' + s[1] + '</div>';
-    specsGrid.appendChild(div);
+  pillDefs.forEach(function(txt) {
+    if (!txt || txt === '—') return;
+    var s = document.createElement('span');
+    s.className = 'ra-pill';
+    s.textContent = txt;
+    pillsEl.appendChild(s);
   });
+  // Source pill — clickable link to the listing
+  if (_rmUrl && _rmUrl !== '#') {
+    var srcName = d.src || 'Listing';
+    var a = document.createElement('a');
+    a.className = 'ra-pill src';
+    a.href = _rmUrl;
+    a.target = '_blank';
+    a.rel = 'noopener';
+    a.innerHTML = '<i class="ti ti-external-link"></i> ' + srcName + ' listing';
+    a.addEventListener('click', function(e) { e.stopPropagation(); });
+    pillsEl.appendChild(a);
+  }
 
-  // Graph label
+  // Graph sub-label
   document.getElementById('rm-graph-sub').textContent =
     compCount ? compCount + ' transactions · gen ' + (d.gen||'') : 'no comp data';
 
   // Save button state
-  document.getElementById('rm-save-btn').classList.toggle('active', _getFavs().includes(_rmUrl));
+  var isSaved = _getFavs().includes(_rmUrl);
+  var saveBtn = document.getElementById('rm-save-btn');
+  saveBtn.classList.toggle('saved', isSaved);
+  saveBtn.innerHTML = isSaved ? '<i class="ti ti-bookmark-filled"></i> Saved' : '<i class="ti ti-bookmark"></i> Save';
 
-  // Go link
-  document.getElementById('rm-go-link').href = _rmUrl;
+  // Notes button — only enabled if saved
+  var notesBtn = document.getElementById('rm-notes-btn');
+  notesBtn.classList.toggle('disabled', !isSaved);
+
+  // Notes area — hide and load saved value
+  var notesWrap = document.getElementById('rm-notes-wrap');
+  notesWrap.style.display = 'none';
+  var notesInput = document.getElementById('rm-notes-input');
+  var notesKey = 'ra_note_' + btoa(_rmUrl).replace(/=/g,'').slice(0,32);
+  notesInput.value = localStorage.getItem(notesKey) || '';
+  document.getElementById('rm-notes-count').textContent = notesInput.value.length + ' / 750';
+  notesInput.oninput = function() {
+    localStorage.setItem(notesKey, notesInput.value);
+    document.getElementById('rm-notes-count').textContent = notesInput.value.length + ' / 750';
+  };
 
   // Open backdrop
   document.getElementById('ra-backdrop').classList.add('open');
@@ -10464,7 +10524,6 @@ function openCardModal(card) {
     var rmSvg = document.getElementById('rm-svg');
     rmSvg.innerHTML = '';
     rmSvg._drawn = false;
-    // Set dataset directly on SVG — drawDotGraph reads svg.dataset.*
     rmSvg.dataset.lid  = lid;
     rmSvg.dataset.fmv  = fmv;
     rmSvg.dataset.bid  = bid;
@@ -10472,6 +10531,15 @@ function openCardModal(card) {
     rmSvg.dataset.high = high;
     drawDotGraph(rmSvg, null);
   }, 60);
+}
+
+function rmToggleNotes() {
+  var notesWrap = document.getElementById('rm-notes-wrap');
+  var notesBtn  = document.getElementById('rm-notes-btn');
+  _rmNotesOpen  = !_rmNotesOpen;
+  notesWrap.style.display = _rmNotesOpen ? 'block' : 'none';
+  notesBtn.classList.toggle('saved', _rmNotesOpen);
+  if (_rmNotesOpen) document.getElementById('rm-notes-input').focus();
 }
 
 function closeCardModal(evt) {
@@ -10483,12 +10551,20 @@ function closeCardModal(evt) {
 function rmToggleSave() {
   var favs = _getFavs();
   var idx = favs.indexOf(_rmUrl);
-  if (idx >= 0) favs.splice(idx, 1); else favs.push(_rmUrl);
+  var adding = idx < 0;
+  if (adding) favs.push(_rmUrl); else favs.splice(idx, 1);
   _setFavs(favs);
-  document.getElementById('rm-save-btn').classList.toggle('active', favs.includes(_rmUrl));
+  var saveBtn = document.getElementById('rm-save-btn');
+  saveBtn.classList.toggle('saved', adding);
+  saveBtn.innerHTML = adding ? '<i class="ti ti-bookmark-filled"></i> Saved' : '<i class="ti ti-bookmark"></i> Save';
+  // Enable/disable notes button
+  var notesBtn = document.getElementById('rm-notes-btn');
+  notesBtn.classList.toggle('disabled', !adding);
+  // If unsaving, close notes
+  if (!adding && _rmNotesOpen) rmToggleNotes();
   // sync card fav buttons
   document.querySelectorAll('.fav-btn[data-url="' + _rmUrl + '"]').forEach(function(b) {
-    b.classList.toggle('active', favs.includes(_rmUrl));
+    b.classList.toggle('active', adding);
   });
   _updateFavCount();
 }
@@ -10739,17 +10815,17 @@ function _drawDotGraphInner(svg, dots, fmv, bid, low, high) {
       var s = 5;
       var diamond = mk('polygon', {
         points: cx+','+( cy-s)+' '+(cx+s)+','+cy+' '+cx+','+(cy+s)+' '+(cx-s)+','+cy,
-        fill:'#2a4a2a', stroke:'#4a8a4a', 'stroke-width':1, opacity:0.8, style:'cursor:pointer'
+        fill:'#1e2d4a', stroke:'#4a7abf', 'stroke-width':1, opacity:0.8, style:'cursor:pointer'
       });
-      diamond.addEventListener('mouseenter', function(e) { _showTooltip(dot, e); diamond.setAttribute('fill','#4ade80'); });
+      diamond.addEventListener('mouseenter', function(e) { _showTooltip(dot, e); diamond.setAttribute('fill','#60a5fa'); });
       diamond.addEventListener('mousemove',  function(e) { _posTooltip(e); });
-      diamond.addEventListener('mouseleave', function()  { _hideTooltip(); diamond.setAttribute('fill','#2a4a2a'); });
+      diamond.addEventListener('mouseleave', function()  { _hideTooltip(); diamond.setAttribute('fill','#1e2d4a'); });
       if (dot.url) diamond.addEventListener('click', function(e) { e.stopPropagation(); window.open(dot.url,'_blank'); });
     } else {
-      var c = mk('circle', {cx:cx, cy:cy, r:5.5, fill:'#1e3a1e', stroke:'#3a6a3a', 'stroke-width':1, opacity:0.85, style:'cursor:pointer'});
-      c.addEventListener('mouseenter', function(e) { _showTooltip(dot, e); c.setAttribute('fill','#4ade80'); c.setAttribute('r','7'); });
+      var c = mk('circle', {cx:cx, cy:cy, r:5.5, fill:'#1e2d4a', stroke:'#4a7abf', 'stroke-width':1, opacity:0.85, style:'cursor:pointer'});
+      c.addEventListener('mouseenter', function(e) { _showTooltip(dot, e); c.setAttribute('fill','#60a5fa'); c.setAttribute('r','7'); });
       c.addEventListener('mousemove',  function(e) { _posTooltip(e); });
-      c.addEventListener('mouseleave', function()  { _hideTooltip(); c.setAttribute('fill','#1e3a1e'); c.setAttribute('r','5.5'); });
+      c.addEventListener('mouseleave', function()  { _hideTooltip(); c.setAttribute('fill','#1e2d4a'); c.setAttribute('r','5.5'); });
       if (dot.url) c.addEventListener('click', function(e) { e.stopPropagation(); window.open(dot.url,'_blank'); });
     }
   });
