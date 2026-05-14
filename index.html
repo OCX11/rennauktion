@@ -40,10 +40,11 @@
 [data-theme="light"]  { --red:#e53935; --bg:#f0efed; --bg1:#e8e7e5; --bg2:#dddcda; --bg3:#d2d1cf; --bg4:#c7c6c4; --bd:#bebcba; --bd2:#aeacaa; --text:#1a1814; --tx2:#5a5855; --tx3:#999794; }
 
 *,*::before,*::after { box-sizing:border-box; margin:0; padding:0; }
+/* Scale the entire UI proportionally with viewport width.
+   Design baseline is 1300px. zoom scales ALL px values including borders,
+   icons, and hardcoded sizes — equivalent to browser zoom but automatic. */
+html { zoom: clamp(0.75, calc(100vw / 1300), 2.0); }
 html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-serif; font-size:13px; line-height:1.5; min-height:100vh; overflow:hidden; }
-a { color:inherit; text-decoration:none; }
-
-/* ── App shell ── */
 .app { display:flex; flex-direction:column; height:100vh; }
 
 /* ── Header ── */
@@ -310,7 +311,7 @@ a { color:inherit; text-decoration:none; }
     <input type="text" placeholder="Search auctions…">
   </div>
   <div class="hdr-right">
-    <span class="hdr-time"><span class="live-dot"></span>May 14 02:16 UTC</span>
+    <span class="hdr-time"><span class="live-dot"></span>May 14 02:20 UTC</span>
     <div class="hdr-avatar" onclick="toggleDD()">CL</div>
   </div>
 </div>
@@ -432,7 +433,7 @@ a { color:inherit; text-decoration:none; }
  data-fmv-high="576666"
  data-bid="508888"
  data-lid="9675"
- data-mileage="999999"
+ data-mileage="2600"
  data-trans=""
  data-color=""
  data-comp-count="8"
@@ -464,7 +465,7 @@ a { color:inherit; text-decoration:none; }
       <span class="bid-val">$508,888</span>
       
     </div>
-    <div class="card-specs"></div>
+    <div class="card-specs"><span class="spec-pill">2,600 mi</span></div>
   </div>
   <div class="expand-panel">
     <div class="expand-inner">
@@ -472,7 +473,7 @@ a { color:inherit; text-decoration:none; }
         <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$496K &ndash; $577K</div></div>
         <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">8 sales</div></div>
         <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">7</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">2,600 mi</div></div>
         <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">—</div></div>
         <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
       </div>
@@ -495,7 +496,7 @@ a { color:inherit; text-decoration:none; }
  data-fmv-high="1060000"
  data-bid="1050000"
  data-lid="9419"
- data-mileage="999999"
+ data-mileage="316"
  data-trans=""
  data-color=""
  data-comp-count="1"
@@ -527,7 +528,7 @@ a { color:inherit; text-decoration:none; }
       <span class="bid-val">$1,050,000</span>
       
     </div>
-    <div class="card-specs"></div>
+    <div class="card-specs"><span class="spec-pill">316 mi</span></div>
   </div>
   <div class="expand-panel">
     <div class="expand-inner">
@@ -535,7 +536,7 @@ a { color:inherit; text-decoration:none; }
         <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$1.1M &ndash; $1.1M</div></div>
         <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">1 sales</div></div>
         <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">8</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">316 mi</div></div>
         <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">—</div></div>
         <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
       </div>
@@ -747,7 +748,7 @@ a { color:inherit; text-decoration:none; }
  data-fmv-high="216000"
  data-bid="150000"
  data-lid="10039"
- data-mileage="999999"
+ data-mileage="12000"
  data-trans=""
  data-color=""
  data-comp-count="76"
@@ -779,7 +780,7 @@ a { color:inherit; text-decoration:none; }
       <span class="bid-val">$150,000</span>
       <span class="fmv-pill fmv-below">▼ 11% below FMV</span>
     </div>
-    <div class="card-specs"></div>
+    <div class="card-specs"><span class="spec-pill">12,000 mi</span></div>
   </div>
   <div class="expand-panel">
     <div class="expand-inner">
@@ -787,7 +788,7 @@ a { color:inherit; text-decoration:none; }
         <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$131K &ndash; $216K</div></div>
         <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">76 sales</div></div>
         <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">6</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">12,000 mi</div></div>
         <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">—</div></div>
         <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
       </div>
@@ -1062,7 +1063,7 @@ a { color:inherit; text-decoration:none; }
  data-fmv-high="70500"
  data-bid="25000"
  data-lid="10064"
- data-mileage="999999"
+ data-mileage="12000"
  data-trans="Manual"
  data-color=""
  data-comp-count="91"
@@ -1094,7 +1095,7 @@ a { color:inherit; text-decoration:none; }
       <span class="bid-val">$25,000</span>
       <span class="fmv-pill fmv-below">▼ 54% below FMV</span>
     </div>
-    <div class="card-specs"><span class="spec-pill">Manual</span></div>
+    <div class="card-specs"><span class="spec-pill">12,000 mi</span><span class="spec-pill">Manual</span></div>
   </div>
   <div class="expand-panel">
     <div class="expand-inner">
@@ -1102,7 +1103,7 @@ a { color:inherit; text-decoration:none; }
         <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$41K &ndash; $70K</div></div>
         <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">91 sales</div></div>
         <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">6</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">12,000 mi</div></div>
         <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">Manual</div></div>
         <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
       </div>
@@ -1251,7 +1252,7 @@ a { color:inherit; text-decoration:none; }
  data-fmv-high="49982"
  data-bid="38000"
  data-lid="10067"
- data-mileage="999999"
+ data-mileage="12000"
  data-trans=""
  data-color=""
  data-comp-count="9"
@@ -1283,7 +1284,7 @@ a { color:inherit; text-decoration:none; }
       <span class="bid-val">$38,000</span>
       <span class="fmv-pill fmv-below">▼ 18% below FMV</span>
     </div>
-    <div class="card-specs"></div>
+    <div class="card-specs"><span class="spec-pill">12,000 mi</span></div>
   </div>
   <div class="expand-panel">
     <div class="expand-inner">
@@ -1291,7 +1292,7 @@ a { color:inherit; text-decoration:none; }
         <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$44K &ndash; $50K</div></div>
         <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">9 sales</div></div>
         <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">6</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">12,000 mi</div></div>
         <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">—</div></div>
         <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
       </div>
@@ -1440,7 +1441,7 @@ a { color:inherit; text-decoration:none; }
  data-fmv-high="270000"
  data-bid="179911"
  data-lid="10071"
- data-mileage="999999"
+ data-mileage="12000"
  data-trans=""
  data-color=""
  data-comp-count="55"
@@ -1472,7 +1473,7 @@ a { color:inherit; text-decoration:none; }
       <span class="bid-val">$179,911</span>
       <span class="fmv-pill fmv-below">▼ 24% below FMV</span>
     </div>
-    <div class="card-specs"></div>
+    <div class="card-specs"><span class="spec-pill">12,000 mi</span></div>
   </div>
   <div class="expand-panel">
     <div class="expand-inner">
@@ -1480,7 +1481,7 @@ a { color:inherit; text-decoration:none; }
         <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$221K &ndash; $270K</div></div>
         <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">55 sales</div></div>
         <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">6</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">12,000 mi</div></div>
         <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">—</div></div>
         <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
       </div>
@@ -1692,7 +1693,7 @@ a { color:inherit; text-decoration:none; }
  data-fmv-high="64000"
  data-bid="50500"
  data-lid="10047"
- data-mileage="999999"
+ data-mileage="34200"
  data-trans=""
  data-color=""
  data-comp-count="13"
@@ -1724,7 +1725,7 @@ a { color:inherit; text-decoration:none; }
       <span class="bid-val">$50,500</span>
       <span class="fmv-pill fmv-below">▼ 15% below FMV</span>
     </div>
-    <div class="card-specs"></div>
+    <div class="card-specs"><span class="spec-pill">34,200 mi</span></div>
   </div>
   <div class="expand-panel">
     <div class="expand-inner">
@@ -1732,7 +1733,7 @@ a { color:inherit; text-decoration:none; }
         <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$49K &ndash; $64K</div></div>
         <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">13 sales</div></div>
         <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">6</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">34,200 mi</div></div>
         <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">—</div></div>
         <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
       </div>
@@ -1755,7 +1756,7 @@ a { color:inherit; text-decoration:none; }
  data-fmv-high="76000"
  data-bid="73000"
  data-lid="10730"
- data-mileage="999999"
+ data-mileage="621"
  data-trans="Manual"
  data-color=""
  data-comp-count="62"
@@ -1787,7 +1788,7 @@ a { color:inherit; text-decoration:none; }
       <span class="bid-val">$73,000</span>
       <span class="fmv-pill fmv-above">▲ 8% above FMV</span>
     </div>
-    <div class="card-specs"><span class="spec-pill">Manual</span></div>
+    <div class="card-specs"><span class="spec-pill">621 mi</span><span class="spec-pill">Manual</span></div>
   </div>
   <div class="expand-panel">
     <div class="expand-inner">
@@ -1795,7 +1796,7 @@ a { color:inherit; text-decoration:none; }
         <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$56K &ndash; $76K</div></div>
         <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">62 sales</div></div>
         <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">0</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">621 mi</div></div>
         <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">Manual</div></div>
         <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
       </div>
@@ -1881,7 +1882,7 @@ a { color:inherit; text-decoration:none; }
  data-fmv-high="128000"
  data-bid="64000"
  data-lid="10068"
- data-mileage="999999"
+ data-mileage="64200"
  data-trans=""
  data-color=""
  data-comp-count="34"
@@ -1913,7 +1914,7 @@ a { color:inherit; text-decoration:none; }
       <span class="bid-val">$64,000</span>
       <span class="fmv-pill fmv-below">▼ 11% below FMV</span>
     </div>
-    <div class="card-specs"></div>
+    <div class="card-specs"><span class="spec-pill">64,200 mi</span></div>
   </div>
   <div class="expand-panel">
     <div class="expand-inner">
@@ -1921,7 +1922,7 @@ a { color:inherit; text-decoration:none; }
         <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$61K &ndash; $128K</div></div>
         <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">34 sales</div></div>
         <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">6</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">64,200 mi</div></div>
         <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">—</div></div>
         <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
       </div>
@@ -1944,7 +1945,7 @@ a { color:inherit; text-decoration:none; }
  data-fmv-high="82500"
  data-bid="37500"
  data-lid="10247"
- data-mileage="999999"
+ data-mileage="60400"
  data-trans=""
  data-color=""
  data-comp-count="25"
@@ -1976,7 +1977,7 @@ a { color:inherit; text-decoration:none; }
       <span class="bid-val">$37,500</span>
       <span class="fmv-pill fmv-below">▼ 49% below FMV</span>
     </div>
-    <div class="card-specs"></div>
+    <div class="card-specs"><span class="spec-pill">60,400 mi</span></div>
   </div>
   <div class="expand-panel">
     <div class="expand-inner">
@@ -1984,7 +1985,7 @@ a { color:inherit; text-decoration:none; }
         <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$69K &ndash; $82K</div></div>
         <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">25 sales</div></div>
         <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">5</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">60,400 mi</div></div>
         <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">—</div></div>
         <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
       </div>
@@ -2007,7 +2008,7 @@ a { color:inherit; text-decoration:none; }
  data-fmv-high="80500"
  data-bid="41750"
  data-lid="10249"
- data-mileage="999999"
+ data-mileage="63600"
  data-trans=""
  data-color=""
  data-comp-count="158"
@@ -2039,7 +2040,7 @@ a { color:inherit; text-decoration:none; }
       <span class="bid-val">$41,750</span>
       <span class="fmv-pill fmv-below">▼ 36% below FMV</span>
     </div>
-    <div class="card-specs"></div>
+    <div class="card-specs"><span class="spec-pill">63,600 mi</span></div>
   </div>
   <div class="expand-panel">
     <div class="expand-inner">
@@ -2047,7 +2048,7 @@ a { color:inherit; text-decoration:none; }
         <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$53K &ndash; $80K</div></div>
         <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">158 sales</div></div>
         <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">5</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">63,600 mi</div></div>
         <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">—</div></div>
         <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
       </div>
@@ -2070,7 +2071,7 @@ a { color:inherit; text-decoration:none; }
  data-fmv-high="103500"
  data-bid="87000"
  data-lid="10251"
- data-mileage="999999"
+ data-mileage="23600"
  data-trans=""
  data-color=""
  data-comp-count="53"
@@ -2102,7 +2103,7 @@ a { color:inherit; text-decoration:none; }
       <span class="bid-val">$87,000</span>
       <span class="fmv-pill fmv-below">▼ 11% below FMV</span>
     </div>
-    <div class="card-specs"></div>
+    <div class="card-specs"><span class="spec-pill">23,600 mi</span></div>
   </div>
   <div class="expand-panel">
     <div class="expand-inner">
@@ -2110,7 +2111,7 @@ a { color:inherit; text-decoration:none; }
         <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$90K &ndash; $104K</div></div>
         <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">53 sales</div></div>
         <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">5</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">23,600 mi</div></div>
         <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">—</div></div>
         <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
       </div>
@@ -2208,7 +2209,7 @@ a { color:inherit; text-decoration:none; }
  data-fmv-high="128500"
  data-bid="103000"
  data-lid="6683"
- data-mileage="999999"
+ data-mileage="725"
  data-trans=""
  data-color=""
  data-comp-count="33"
@@ -2240,7 +2241,7 @@ a { color:inherit; text-decoration:none; }
       <span class="bid-val">$103,000</span>
       <span class="fmv-pill fmv-below">▼ 16% below FMV</span>
     </div>
-    <div class="card-specs"></div>
+    <div class="card-specs"><span class="spec-pill">725 mi</span></div>
   </div>
   <div class="expand-panel">
     <div class="expand-inner">
@@ -2248,7 +2249,7 @@ a { color:inherit; text-decoration:none; }
         <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$112K &ndash; $128K</div></div>
         <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">33 sales</div></div>
         <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">22</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">725 mi</div></div>
         <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">—</div></div>
         <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
       </div>
@@ -2271,7 +2272,7 @@ a { color:inherit; text-decoration:none; }
  data-fmv-high="161000"
  data-bid="130000"
  data-lid="10244"
- data-mileage="999999"
+ data-mileage="12000"
  data-trans=""
  data-color=""
  data-comp-count="11"
@@ -2303,7 +2304,7 @@ a { color:inherit; text-decoration:none; }
       <span class="bid-val">$130,000</span>
       <span class="fmv-pill fmv-below">▼ 15% below FMV</span>
     </div>
-    <div class="card-specs"></div>
+    <div class="card-specs"><span class="spec-pill">12,000 mi</span></div>
   </div>
   <div class="expand-panel">
     <div class="expand-inner">
@@ -2311,7 +2312,7 @@ a { color:inherit; text-decoration:none; }
         <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$134K &ndash; $161K</div></div>
         <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">11 sales</div></div>
         <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">5</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">12,000 mi</div></div>
         <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">—</div></div>
         <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
       </div>
@@ -2334,7 +2335,7 @@ a { color:inherit; text-decoration:none; }
  data-fmv-high="136000"
  data-bid="95500"
  data-lid="10746"
- data-mileage="999999"
+ data-mileage="621"
  data-trans="Manual"
  data-color=""
  data-comp-count="20"
@@ -2366,7 +2367,7 @@ a { color:inherit; text-decoration:none; }
       <span class="bid-val">$95,500</span>
       <span class="fmv-pill fmv-below">▼ 27% below FMV</span>
     </div>
-    <div class="card-specs"><span class="spec-pill">Manual</span></div>
+    <div class="card-specs"><span class="spec-pill">621 mi</span><span class="spec-pill">Manual</span></div>
   </div>
   <div class="expand-panel">
     <div class="expand-inner">
@@ -2374,7 +2375,7 @@ a { color:inherit; text-decoration:none; }
         <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$126K &ndash; $136K</div></div>
         <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">20 sales</div></div>
         <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">0</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">621 mi</div></div>
         <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">Manual</div></div>
         <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
       </div>
@@ -2649,7 +2650,7 @@ a { color:inherit; text-decoration:none; }
  data-fmv-high="210500"
  data-bid="81000"
  data-lid="10359"
- data-mileage="999999"
+ data-mileage="601"
  data-trans="Manual"
  data-color=""
  data-comp-count="20"
@@ -2681,7 +2682,7 @@ a { color:inherit; text-decoration:none; }
       <span class="bid-val">$81,000</span>
       <span class="fmv-pill fmv-below">▼ 58% below FMV</span>
     </div>
-    <div class="card-specs"><span class="spec-pill">Manual</span></div>
+    <div class="card-specs"><span class="spec-pill">601 mi</span><span class="spec-pill">Manual</span></div>
   </div>
   <div class="expand-panel">
     <div class="expand-inner">
@@ -2689,7 +2690,7 @@ a { color:inherit; text-decoration:none; }
         <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$182K &ndash; $210K</div></div>
         <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">20 sales</div></div>
         <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">4</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">601 mi</div></div>
         <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">Manual</div></div>
         <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
       </div>
@@ -2712,7 +2713,7 @@ a { color:inherit; text-decoration:none; }
  data-fmv-high="17001"
  data-bid="3950"
  data-lid="10391"
- data-mileage="999999"
+ data-mileage="2700"
  data-trans=""
  data-color=""
  data-comp-count="344"
@@ -2744,7 +2745,7 @@ a { color:inherit; text-decoration:none; }
       <span class="bid-val">$3,950</span>
       <span class="fmv-pill fmv-below">▼ 72% below FMV</span>
     </div>
-    <div class="card-specs"></div>
+    <div class="card-specs"><span class="spec-pill">2,700 mi</span></div>
   </div>
   <div class="expand-panel">
     <div class="expand-inner">
@@ -2752,7 +2753,7 @@ a { color:inherit; text-decoration:none; }
         <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$12K &ndash; $17K</div></div>
         <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">344 sales</div></div>
         <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">4</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">2,700 mi</div></div>
         <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">—</div></div>
         <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
       </div>
@@ -2775,7 +2776,7 @@ a { color:inherit; text-decoration:none; }
  data-fmv-high="33750"
  data-bid="10911"
  data-lid="10747"
- data-mileage="999999"
+ data-mileage="1400"
  data-trans="Manual"
  data-color=""
  data-comp-count="411"
@@ -2807,7 +2808,7 @@ a { color:inherit; text-decoration:none; }
       <span class="bid-val">$10,911</span>
       <span class="fmv-pill fmv-below">▼ 60% below FMV</span>
     </div>
-    <div class="card-specs"><span class="spec-pill">Manual</span></div>
+    <div class="card-specs"><span class="spec-pill">1,400 mi</span><span class="spec-pill">Manual</span></div>
   </div>
   <div class="expand-panel">
     <div class="expand-inner">
@@ -2815,7 +2816,7 @@ a { color:inherit; text-decoration:none; }
         <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$22K &ndash; $34K</div></div>
         <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">411 sales</div></div>
         <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">0</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">1,400 mi</div></div>
         <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">Manual</div></div>
         <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
       </div>
@@ -2838,7 +2839,7 @@ a { color:inherit; text-decoration:none; }
  data-fmv-high="0"
  data-bid="60964"
  data-lid="10518"
- data-mileage="999999"
+ data-mileage="4700"
  data-trans="Automatic"
  data-color=""
  data-comp-count="0"
@@ -2870,7 +2871,7 @@ a { color:inherit; text-decoration:none; }
       <span class="bid-val">$60,964</span>
       
     </div>
-    <div class="card-specs"><span class="spec-pill">Automatic</span></div>
+    <div class="card-specs"><span class="spec-pill">4,700 mi</span><span class="spec-pill">Automatic</span></div>
   </div>
   <div class="expand-panel">
     <div class="expand-inner">
@@ -2878,7 +2879,7 @@ a { color:inherit; text-decoration:none; }
         <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">—</div></div>
         <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">0 sales</div></div>
         <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">3</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">4,700 mi</div></div>
         <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">Automatic</div></div>
         <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
       </div>
@@ -2901,7 +2902,7 @@ a { color:inherit; text-decoration:none; }
  data-fmv-high="29500"
  data-bid="4500"
  data-lid="10574"
- data-mileage="999999"
+ data-mileage="103800"
  data-trans=""
  data-color=""
  data-comp-count="160"
@@ -2933,7 +2934,7 @@ a { color:inherit; text-decoration:none; }
       <span class="bid-val">$4,500</span>
       <span class="fmv-pill fmv-below">▼ 81% below FMV</span>
     </div>
-    <div class="card-specs"></div>
+    <div class="card-specs"><span class="spec-pill">103,800 mi</span></div>
   </div>
   <div class="expand-panel">
     <div class="expand-inner">
@@ -2941,7 +2942,7 @@ a { color:inherit; text-decoration:none; }
         <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$18K &ndash; $30K</div></div>
         <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">160 sales</div></div>
         <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">2</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">103,800 mi</div></div>
         <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">—</div></div>
         <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
       </div>
@@ -3027,7 +3028,7 @@ a { color:inherit; text-decoration:none; }
  data-fmv-high="450000"
  data-bid="153000"
  data-lid="10748"
- data-mileage="999999"
+ data-mileage="191"
  data-trans="Automatic"
  data-color=""
  data-comp-count="18"
@@ -3059,7 +3060,7 @@ a { color:inherit; text-decoration:none; }
       <span class="bid-val">$153,000</span>
       <span class="fmv-pill fmv-below">▼ 59% below FMV</span>
     </div>
-    <div class="card-specs"><span class="spec-pill">Automatic</span></div>
+    <div class="card-specs"><span class="spec-pill">191 mi</span><span class="spec-pill">Automatic</span></div>
   </div>
   <div class="expand-panel">
     <div class="expand-inner">
@@ -3067,7 +3068,7 @@ a { color:inherit; text-decoration:none; }
         <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$235K &ndash; $450K</div></div>
         <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">18 sales</div></div>
         <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">0</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">191 mi</div></div>
         <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">Automatic</div></div>
         <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
       </div>
@@ -3090,7 +3091,7 @@ a { color:inherit; text-decoration:none; }
  data-fmv-high="60000"
  data-bid="30000"
  data-lid="10568"
- data-mileage="999999"
+ data-mileage="4700"
  data-trans="Manual"
  data-color=""
  data-comp-count="43"
@@ -3122,7 +3123,7 @@ a { color:inherit; text-decoration:none; }
       <span class="bid-val">$30,000</span>
       <span class="fmv-pill fmv-below">▼ 42% below FMV</span>
     </div>
-    <div class="card-specs"><span class="spec-pill">Manual</span></div>
+    <div class="card-specs"><span class="spec-pill">4,700 mi</span><span class="spec-pill">Manual</span></div>
   </div>
   <div class="expand-panel">
     <div class="expand-inner">
@@ -3130,7 +3131,7 @@ a { color:inherit; text-decoration:none; }
         <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$43K &ndash; $60K</div></div>
         <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">43 sales</div></div>
         <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">2</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">4,700 mi</div></div>
         <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">Manual</div></div>
         <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
       </div>
@@ -3153,7 +3154,7 @@ a { color:inherit; text-decoration:none; }
  data-fmv-high="211000"
  data-bid="127000"
  data-lid="10593"
- data-mileage="999999"
+ data-mileage="4100"
  data-trans="Manual"
  data-color=""
  data-comp-count="34"
@@ -3185,7 +3186,7 @@ a { color:inherit; text-decoration:none; }
       <span class="bid-val">$127,000</span>
       <span class="fmv-pill fmv-below">▼ 37% below FMV</span>
     </div>
-    <div class="card-specs"><span class="spec-pill">Manual</span></div>
+    <div class="card-specs"><span class="spec-pill">4,100 mi</span><span class="spec-pill">Manual</span></div>
   </div>
   <div class="expand-panel">
     <div class="expand-inner">
@@ -3193,7 +3194,7 @@ a { color:inherit; text-decoration:none; }
         <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$188K &ndash; $211K</div></div>
         <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">34 sales</div></div>
         <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">2</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">4,100 mi</div></div>
         <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">Manual</div></div>
         <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
       </div>
@@ -3405,7 +3406,7 @@ a { color:inherit; text-decoration:none; }
  data-fmv-high="82500"
  data-bid="45000"
  data-lid="10737"
- data-mileage="999999"
+ data-mileage="82400"
  data-trans=""
  data-color=""
  data-comp-count="190"
@@ -3437,7 +3438,7 @@ a { color:inherit; text-decoration:none; }
       <span class="bid-val">$45,000</span>
       <span class="fmv-pill fmv-below">▼ 33% below FMV</span>
     </div>
-    <div class="card-specs"></div>
+    <div class="card-specs"><span class="spec-pill">82,400 mi</span></div>
   </div>
   <div class="expand-panel">
     <div class="expand-inner">
@@ -3445,7 +3446,7 @@ a { color:inherit; text-decoration:none; }
         <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$56K &ndash; $82K</div></div>
         <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">190 sales</div></div>
         <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">0</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">82,400 mi</div></div>
         <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">—</div></div>
         <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
       </div>
@@ -3468,7 +3469,7 @@ a { color:inherit; text-decoration:none; }
  data-fmv-high="39500"
  data-bid="7200"
  data-lid="10738"
- data-mileage="999999"
+ data-mileage="80300"
  data-trans=""
  data-color=""
  data-comp-count="120"
@@ -3500,7 +3501,7 @@ a { color:inherit; text-decoration:none; }
       <span class="bid-val">$7,200</span>
       <span class="fmv-pill fmv-below">▼ 76% below FMV</span>
     </div>
-    <div class="card-specs"></div>
+    <div class="card-specs"><span class="spec-pill">80,300 mi</span></div>
   </div>
   <div class="expand-panel">
     <div class="expand-inner">
@@ -3508,7 +3509,7 @@ a { color:inherit; text-decoration:none; }
         <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$24K &ndash; $40K</div></div>
         <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">120 sales</div></div>
         <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">0</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">80,300 mi</div></div>
         <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">—</div></div>
         <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
       </div>
@@ -3594,7 +3595,7 @@ a { color:inherit; text-decoration:none; }
  data-fmv-high="34000"
  data-bid="9987"
  data-lid="10740"
- data-mileage="999999"
+ data-mileage="100600"
  data-trans=""
  data-color=""
  data-comp-count="75"
@@ -3626,7 +3627,7 @@ a { color:inherit; text-decoration:none; }
       <span class="bid-val">$9,987</span>
       <span class="fmv-pill fmv-below">▼ 63% below FMV</span>
     </div>
-    <div class="card-specs"></div>
+    <div class="card-specs"><span class="spec-pill">100,600 mi</span></div>
   </div>
   <div class="expand-panel">
     <div class="expand-inner">
@@ -3634,7 +3635,7 @@ a { color:inherit; text-decoration:none; }
         <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$22K &ndash; $34K</div></div>
         <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">75 sales</div></div>
         <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">0</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">100,600 mi</div></div>
         <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">—</div></div>
         <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
       </div>
@@ -3657,7 +3658,7 @@ a { color:inherit; text-decoration:none; }
  data-fmv-high="0"
  data-bid="55000"
  data-lid="10741"
- data-mileage="999999"
+ data-mileage="19600"
  data-trans=""
  data-color=""
  data-comp-count="0"
@@ -3689,7 +3690,7 @@ a { color:inherit; text-decoration:none; }
       <span class="bid-val">$55,000</span>
       
     </div>
-    <div class="card-specs"></div>
+    <div class="card-specs"><span class="spec-pill">19,600 mi</span></div>
   </div>
   <div class="expand-panel">
     <div class="expand-inner">
@@ -3697,7 +3698,7 @@ a { color:inherit; text-decoration:none; }
         <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">—</div></div>
         <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">0 sales</div></div>
         <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">0</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">19,600 mi</div></div>
         <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">—</div></div>
         <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
       </div>
@@ -3783,7 +3784,7 @@ a { color:inherit; text-decoration:none; }
  data-fmv-high="450000"
  data-bid="101000"
  data-lid="10733"
- data-mileage="999999"
+ data-mileage="393"
  data-trans=""
  data-color=""
  data-comp-count="18"
@@ -3815,7 +3816,7 @@ a { color:inherit; text-decoration:none; }
       <span class="bid-val">$101,000</span>
       <span class="fmv-pill fmv-below">▼ 73% below FMV</span>
     </div>
-    <div class="card-specs"></div>
+    <div class="card-specs"><span class="spec-pill">393 mi</span></div>
   </div>
   <div class="expand-panel">
     <div class="expand-inner">
@@ -3823,7 +3824,7 @@ a { color:inherit; text-decoration:none; }
         <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$235K &ndash; $450K</div></div>
         <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">18 sales</div></div>
         <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">0</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">393 mi</div></div>
         <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">—</div></div>
         <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
       </div>
@@ -3909,7 +3910,7 @@ a { color:inherit; text-decoration:none; }
  data-fmv-high="80500"
  data-bid="25000"
  data-lid="10749"
- data-mileage="999999"
+ data-mileage="1400"
  data-trans="Manual"
  data-color=""
  data-comp-count="158"
@@ -3941,7 +3942,7 @@ a { color:inherit; text-decoration:none; }
       <span class="bid-val">$25,000</span>
       <span class="fmv-pill fmv-below">▼ 62% below FMV</span>
     </div>
-    <div class="card-specs"><span class="spec-pill">Manual</span></div>
+    <div class="card-specs"><span class="spec-pill">1,400 mi</span><span class="spec-pill">Manual</span></div>
   </div>
   <div class="expand-panel">
     <div class="expand-inner">
@@ -3949,7 +3950,7 @@ a { color:inherit; text-decoration:none; }
         <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$53K &ndash; $80K</div></div>
         <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">158 sales</div></div>
         <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">0</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">1,400 mi</div></div>
         <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">Manual</div></div>
         <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
       </div>
@@ -3972,7 +3973,7 @@ a { color:inherit; text-decoration:none; }
  data-fmv-high="67500"
  data-bid="41997"
  data-lid="10734"
- data-mileage="999999"
+ data-mileage="621"
  data-trans="Manual"
  data-color=""
  data-comp-count="16"
@@ -4004,7 +4005,7 @@ a { color:inherit; text-decoration:none; }
       <span class="bid-val">$41,997</span>
       <span class="fmv-pill fmv-below">▼ 29% below FMV</span>
     </div>
-    <div class="card-specs"><span class="spec-pill">Manual</span></div>
+    <div class="card-specs"><span class="spec-pill">621 mi</span><span class="spec-pill">Manual</span></div>
   </div>
   <div class="expand-panel">
     <div class="expand-inner">
@@ -4012,7 +4013,7 @@ a { color:inherit; text-decoration:none; }
         <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$52K &ndash; $68K</div></div>
         <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">16 sales</div></div>
         <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">0</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">621 mi</div></div>
         <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">Manual</div></div>
         <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
       </div>
@@ -4161,7 +4162,7 @@ a { color:inherit; text-decoration:none; }
  data-fmv-high="339993"
  data-bid="199993"
  data-lid="10735"
- data-mileage="999999"
+ data-mileage="393"
  data-trans=""
  data-color=""
  data-comp-count="34"
@@ -4193,7 +4194,7 @@ a { color:inherit; text-decoration:none; }
       <span class="bid-val">$199,993</span>
       <span class="fmv-pill fmv-below">▼ 25% below FMV</span>
     </div>
-    <div class="card-specs"></div>
+    <div class="card-specs"><span class="spec-pill">393 mi</span></div>
   </div>
   <div class="expand-panel">
     <div class="expand-inner">
@@ -4201,7 +4202,7 @@ a { color:inherit; text-decoration:none; }
         <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$220K &ndash; $340K</div></div>
         <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">34 sales</div></div>
         <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">0</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">393 mi</div></div>
         <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">—</div></div>
         <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
       </div>
@@ -4224,7 +4225,7 @@ a { color:inherit; text-decoration:none; }
  data-fmv-high="104000"
  data-bid="33250"
  data-lid="10736"
- data-mileage="999999"
+ data-mileage="393"
  data-trans="Manual"
  data-color=""
  data-comp-count="173"
@@ -4256,7 +4257,7 @@ a { color:inherit; text-decoration:none; }
       <span class="bid-val">$33,250</span>
       <span class="fmv-pill fmv-below">▼ 62% below FMV</span>
     </div>
-    <div class="card-specs"><span class="spec-pill">Manual</span></div>
+    <div class="card-specs"><span class="spec-pill">393 mi</span><span class="spec-pill">Manual</span></div>
   </div>
   <div class="expand-panel">
     <div class="expand-inner">
@@ -4264,7 +4265,7 @@ a { color:inherit; text-decoration:none; }
         <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$66K &ndash; $104K</div></div>
         <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">173 sales</div></div>
         <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">0</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">393 mi</div></div>
         <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">Manual</div></div>
         <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
       </div>
@@ -4287,7 +4288,7 @@ a { color:inherit; text-decoration:none; }
  data-fmv-high="55500"
  data-bid="28000"
  data-lid="10742"
- data-mileage="999999"
+ data-mileage="58500"
  data-trans=""
  data-color=""
  data-comp-count="69"
@@ -4319,7 +4320,7 @@ a { color:inherit; text-decoration:none; }
       <span class="bid-val">$28,000</span>
       <span class="fmv-pill fmv-below">▼ 36% below FMV</span>
     </div>
-    <div class="card-specs"></div>
+    <div class="card-specs"><span class="spec-pill">58,500 mi</span></div>
   </div>
   <div class="expand-panel">
     <div class="expand-inner">
@@ -4327,7 +4328,7 @@ a { color:inherit; text-decoration:none; }
         <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$36K &ndash; $56K</div></div>
         <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">69 sales</div></div>
         <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">0</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">58,500 mi</div></div>
         <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">—</div></div>
         <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
       </div>
@@ -4350,7 +4351,7 @@ a { color:inherit; text-decoration:none; }
  data-fmv-high="34000"
  data-bid="9996"
  data-lid="10743"
- data-mileage="999999"
+ data-mileage="126600"
  data-trans=""
  data-color=""
  data-comp-count="411"
@@ -4382,7 +4383,7 @@ a { color:inherit; text-decoration:none; }
       <span class="bid-val">$9,996</span>
       <span class="fmv-pill fmv-below">▼ 64% below FMV</span>
     </div>
-    <div class="card-specs"></div>
+    <div class="card-specs"><span class="spec-pill">126,600 mi</span></div>
   </div>
   <div class="expand-panel">
     <div class="expand-inner">
@@ -4390,7 +4391,7 @@ a { color:inherit; text-decoration:none; }
         <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$22K &ndash; $34K</div></div>
         <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">411 sales</div></div>
         <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">0</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">126,600 mi</div></div>
         <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">—</div></div>
         <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
       </div>
@@ -4413,7 +4414,7 @@ a { color:inherit; text-decoration:none; }
  data-fmv-high="17001"
  data-bid="10986"
  data-lid="10915"
- data-mileage="999999"
+ data-mileage="21700"
  data-trans=""
  data-color=""
  data-comp-count="344"
@@ -4445,7 +4446,7 @@ a { color:inherit; text-decoration:none; }
       <span class="bid-val">$10,986</span>
       <span class="fmv-pill fmv-below">▼ 22% below FMV</span>
     </div>
-    <div class="card-specs"></div>
+    <div class="card-specs"><span class="spec-pill">21,700 mi</span></div>
   </div>
   <div class="expand-panel">
     <div class="expand-inner">
@@ -4453,7 +4454,7 @@ a { color:inherit; text-decoration:none; }
         <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$12K &ndash; $17K</div></div>
         <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">344 sales</div></div>
         <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">0</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">21,700 mi</div></div>
         <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">—</div></div>
         <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
       </div>
@@ -4476,7 +4477,7 @@ a { color:inherit; text-decoration:none; }
  data-fmv-high="91000"
  data-bid="28000"
  data-lid="10941"
- data-mileage="999999"
+ data-mileage="65200"
  data-trans=""
  data-color=""
  data-comp-count="24"
@@ -4508,7 +4509,7 @@ a { color:inherit; text-decoration:none; }
       <span class="bid-val">$28,000</span>
       <span class="fmv-pill fmv-below">▼ 64% below FMV</span>
     </div>
-    <div class="card-specs"></div>
+    <div class="card-specs"><span class="spec-pill">65,200 mi</span></div>
   </div>
   <div class="expand-panel">
     <div class="expand-inner">
@@ -4516,7 +4517,7 @@ a { color:inherit; text-decoration:none; }
         <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$73K &ndash; $91K</div></div>
         <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">24 sales</div></div>
         <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">0</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">65,200 mi</div></div>
         <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">—</div></div>
         <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
       </div>
