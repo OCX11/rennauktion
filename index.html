@@ -245,7 +245,8 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
 }
 .ra-backdrop.open .ra-modal { opacity:1; transform:scale(1); pointer-events:all; }
 .ra-modal-img { height:300px; background:var(--bg4); position:relative; overflow:hidden; flex-shrink:0; }
-.ra-modal-img img { width:100%; height:calc(100% + 10px); object-fit:cover; object-position:center 20%; opacity:.92; margin-top:-10px; }
+.ra-modal-img img { width:100%; height:100%; object-fit:cover; object-position:center center; opacity:.95; display:block; }
+.ra-modal-img-fade { position:absolute; bottom:0; left:0; right:0; height:15px; background:linear-gradient(transparent, var(--bg1)); pointer-events:none; }
 
 /* ── Modal body — A3 layout ── */
 .ra-modal-body { flex:1; overflow-y:auto; display:flex; flex-direction:column; }
@@ -319,7 +320,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
     <input type="text" placeholder="Search auctions…">
   </div>
   <div class="hdr-right">
-    <span class="hdr-time"><span class="live-dot"></span>May 14 05:30 UTC</span>
+    <span class="hdr-time"><span class="live-dot"></span>May 14 05:31 UTC</span>
     <div class="hdr-avatar" onclick="toggleDD()">CL</div>
   </div>
 </div>
@@ -10125,6 +10126,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
       <!-- Photo -->
       <div class="ra-modal-img">
         <img id="rm-img" src="" alt="">
+        <div class="ra-modal-img-fade"></div>
         <div class="ra-modal-grad"></div>
         <div class="ra-modal-close" onclick="closeCardModal()"><i class="ti ti-x"></i></div>
         <div class="ra-modal-badges">
@@ -10405,9 +10407,11 @@ function openCardModal(card) {
   _rmUrl = d.url || '#';
   _rmNotesOpen = false;
 
-  // Image
+  // Image — match exact crop from card thumbnail
   var img = card.querySelector('.auc-img');
-  document.getElementById('rm-img').src = img ? img.src : '';
+  var rmImg = document.getElementById('rm-img');
+  rmImg.src = img ? img.src : '';
+  rmImg.style.objectPosition = (img && img.style.objectPosition) ? img.style.objectPosition : 'center center';
 
   // Source badge (top-left on photo)
   var srcBadge = card.querySelector('.img-src-badge');
