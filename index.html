@@ -244,8 +244,8 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
   transition:opacity .2s cubic-bezier(.4,0,.2,1), transform .22s cubic-bezier(.34,1.28,.64,1);
 }
 .ra-backdrop.open .ra-modal { opacity:1; transform:scale(1); pointer-events:all; }
-.ra-modal-img { height:300px; background:var(--bg4); position:relative; overflow:hidden; flex-shrink:0; }
-.ra-modal-img img { width:100%; height:100%; object-fit:cover; object-position:center center; opacity:.95; display:block; }
+.ra-modal-img { height:clamp(260px,38vw,420px); background:var(--bg); position:relative; overflow:hidden; flex-shrink:0; }
+.ra-modal-img img { width:100%; height:100%; object-fit:contain; object-position:center center; opacity:.95; display:block; background:var(--bg); }
 .ra-modal-img-fade { position:absolute; bottom:0; left:0; right:0; height:15px; background:linear-gradient(transparent, var(--bg1)); pointer-events:none; }
 
 /* ── Modal body — A3 layout ── */
@@ -320,7 +320,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
     <input type="text" placeholder="Search auctions…">
   </div>
   <div class="hdr-right">
-    <span class="hdr-time"><span class="live-dot"></span>May 14 05:54 UTC</span>
+    <span class="hdr-time"><span class="live-dot"></span>May 14 05:56 UTC</span>
     <div class="hdr-avatar" onclick="toggleDD()">CL</div>
   </div>
 </div>
