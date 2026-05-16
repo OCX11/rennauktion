@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover">
+<meta name="theme-color" content="#0e0e0e">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Fee Calc">
+<link rel="manifest" href="manifest-calc.json">
+<title>RennAuktion Fee Calculator</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#0e0e0e;
+  --surface:#141414;
+  --surface-2:#1a1a1a;
+  --border:#2a2a2a;
+  --border-strong:#383838;
+  --text:#eee;
+  --text-2:#999;
+  --text-muted:#555;
+  --teal:#1a9e8f;
+  --teal-bright:#22bfae;
+  --teal-dim:#0d3b37;
+  --blue:#2563c4;
+  --blue-bright:#3b7de8;
+  --blue-dim:#102050;
+}
+
+html,body{height:100%;-webkit-text-size-adjust:100%}
+body{
+  background:var(--bg);
+  color:var(--text);
+  font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;
+  -webkit-font-smoothing:antialiased;
+  min-height:100dvh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:env(safe-area-inset-top,1.5rem) 1.5rem env(safe-area-inset-bottom,1.5rem);
+}
+
+.card{
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:14px;
+  padding:28px 24px 24px;
+  width:100%;
+  max-width:380px;
+}
+
+.brand{
+  font-family:'DM Mono',monospace;
+  font-size:10px;
+  letter-spacing:2.5px;
+  text-transform:uppercase;
+  color:var(--teal);
+  margin-bottom:5px;
+}
+.title{
+  font-size:20px;
+  font-weight:700;
+  letter-spacing:-.02em;
+  margin-bottom:26px;
+  color:var(--text);
+}
+
+.field{
+  display:flex;
+  align-items:baseline;
+  gap:.4rem;
+  padding:13px 0;
+}
+.field .sym{
+  font-family:'DM Mono',monospace;
+  font-size:18px;
+  color:var(--text-muted);
+  font-weight:500;
+  transition:color .2s;
+}
+.field.input-field:focus-within .sym{color:var(--teal-bright)}
+
+.field .line{
+  flex:1;
+  border-bottom:1.5px solid var(--border-strong);
+  min-height:30px;
+  display:flex;
+  align-items:baseline;
+  transition:border-color .2s;
+}
+.field.input-field .line:focus-within{border-bottom-color:var(--teal-bright)}
+
+input.amount{
+  background:none;
+  border:none;
+  outline:none;
+  font-family:'Inter',sans-serif;
+  font-size:22px;
+  font-weight:600;
+  color:var(--text);
+  width:100%;
+  caret-color:var(--teal-bright);
+  letter-spacing:-.01em;
+  padding-bottom:4px;
+}
+input.amount::placeholder{color:#252525}
+input.amount::-webkit-outer-spin-button,
+input.amount::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
+
+.output{
+  font-family:'Inter',sans-serif;
+  font-size:22px;
+  font-weight:600;
+  color:var(--text-muted);
+  letter-spacing:-.01em;
+  padding-bottom:4px;
+  width:100%;
+  transition:color .15s;
+  font-variant-numeric:tabular-nums;
+}
+.output.live{color:var(--text)}
+.field.total-field .output.live{color:var(--teal-bright)}
+
+.field .tag{
+  font-family:'DM Mono',monospace;
+  font-size:10px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  color:var(--text-2);
+  align-self:flex-end;
+  padding-bottom:6px;
+}
+
+.presets{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+  margin:18px 0 8px;
+}
+.preset{
+  background:var(--surface-2);
+  border:1px solid var(--border);
+  border-radius:10px;
+  padding:14px 12px;
+  cursor:pointer;
+  text-align:center;
+  transition:all .15s;
+  font-family:'Inter',sans-serif;
+  color:var(--text-2);
+  -webkit-tap-highlight-color:transparent;
+  user-select:none;
+}
+.preset:hover{border-color:var(--border-strong);color:var(--text)}
+.preset .rate{
+  font-size:16px;
+  font-weight:700;
+  letter-spacing:-.01em;
+  margin-bottom:3px;
+}
+.preset .houses{
+  font-family:'DM Mono',monospace;
+  font-size:10px;
+  letter-spacing:1.5px;
+  text-transform:uppercase;
+  color:var(--text-muted);
+  transition:color .15s;
+}
+.preset[data-preset="pct"].active{background:var(--teal-dim);border-color:var(--teal);color:var(--text)}
+.preset[data-preset="pct"].active .houses{color:#6dddd4}
+.preset[data-preset="maa"].active{background:var(--blue-dim);border-color:var(--blue-bright);color:var(--text)}
+.preset[data-preset="maa"].active .houses{color:#93bbf5}
+.preset:active{transform:scale(.97)}
+.preset:focus-visible{outline:2px solid var(--teal-bright);outline-offset:2px}
+
+.divider{height:1px;background:var(--border);margin:6px -24px}
+
+.formula{
+  font-family:'DM Mono',monospace;
+  font-size:10px;
+  letter-spacing:1px;
+  text-transform:uppercase;
+  color:var(--text-muted);
+  text-align:center;
+  margin-top:14px;
+  min-height:14px;
+  transition:color .2s;
+}
+.formula.live{color:var(--teal)}
+
+.pull-hint{
+  text-align:center;
+  font-family:'DM Mono',monospace;
+  font-size:10px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  color:var(--text-muted);
+  padding:10px 0 0;
+  opacity:0;
+  transform:translateY(-6px);
+  transition:opacity .2s, transform .2s, color .15s;
+  user-select:none;
+  pointer-events:none;
+}
+.pull-hint.visible{opacity:1;transform:translateY(0)}
+.pull-hint.ready{color:var(--teal-bright)}
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="brand">RennAuktion</div>
+  <div class="title">Fee Calculator</div>
+
+  <div class="field input-field">
+    <span class="sym">$</span>
+    <div class="line">
+      <input type="text" class="amount" id="bid" inputmode="decimal" placeholder="0" autocomplete="off" spellcheck="false" autofocus>
+    </div>
+    <span class="tag">Bid</span>
+  </div>
+
+  <div class="presets">
+    <button class="preset active" data-preset="pct" data-rate="0.05" data-flat="0">
+      <div class="rate">5%</div>
+      <div class="houses">BAT · C&amp;B · PCar</div>
+    </button>
+    <button class="preset" data-preset="maa" data-rate="0.015" data-flat="650">
+      <div class="rate">1.5% + $650</div>
+      <div class="houses">MAA</div>
+    </button>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="field">
+    <span class="sym">$</span>
+    <div class="line"><span class="output" id="fee">0.00</span></div>
+    <span class="tag">Fee</span>
+  </div>
+
+  <div class="field total-field">
+    <span class="sym">$</span>
+    <div class="line"><span class="output" id="tot">0.00</span></div>
+    <span class="tag">Total</span>
+  </div>
+
+  <div class="formula" id="formula">Bid × 1.05 = Total</div>
+  <div class="pull-hint" id="pullHint">↓ pull to reset</div>
+</div>
+
+<script>
+const bidEl     = document.getElementById('bid');
+const feeEl     = document.getElementById('fee');
+const totEl     = document.getElementById('tot');
+const formulaEl = document.getElementById('formula');
+const pullHint  = document.getElementById('pullHint');
+const presets   = document.querySelectorAll('.preset');
+
+let activeRate  = 0.05;
+let activeFlat  = 0;
+let activeLabel = 'Bid × 1.05 = Total';
+
+const fmt = n => n.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2});
+
+function compute() {
+  const raw = bidEl.value.replace(/[^\d]/g,'');
+  const v   = parseFloat(raw);
+  if (!raw || isNaN(v)) {
+    feeEl.textContent = '0.00'; feeEl.classList.remove('live');
+    totEl.textContent = '0.00'; totEl.classList.remove('live');
+    formulaEl.textContent = activeLabel; formulaEl.classList.remove('live');
+    return;
+  }
+  let fee = v * activeRate + activeFlat;
+  if (activeRate === 0.05 && fee > 7500) fee = 7500;
+  const total = v + fee;
+  feeEl.textContent = fmt(fee);   feeEl.classList.add('live');
+  totEl.textContent = fmt(total); totEl.classList.add('live');
+  const capNote = (activeRate === 0.05 && v >= 150000) ? ' (capped)' : '';
+  formulaEl.textContent = `$${fmt(v)} + $${fmt(fee)}${capNote} = $${fmt(total)}`;
+  formulaEl.classList.add('live');
+}
+
+presets.forEach(btn => {
+  btn.addEventListener('click', () => {
+    presets.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    activeRate  = parseFloat(btn.dataset.rate);
+    activeFlat  = parseFloat(btn.dataset.flat);
+    activeLabel = btn.dataset.preset === 'pct'
+      ? 'Bid × 1.05 = Total'
+      : 'Bid × 1.015 + $650 = Total';
+    compute();
+  });
+});
+
+bidEl.addEventListener('input', () => {
+  const raw = bidEl.value.replace(/[^\d]/g,'');
+  if (raw) {
+    const pos    = bidEl.selectionStart;
+    const oldLen = bidEl.value.length;
+    bidEl.value  = parseInt(raw, 10).toLocaleString('en-US');
+    const diff   = bidEl.value.length - oldLen;
+    bidEl.setSelectionRange(pos + diff, pos + diff);
+  }
+  compute();
+});
+
+function doReset() {
+  bidEl.value = '';
+  compute();
+  bidEl.focus();
+}
+
+const PULL_THRESHOLD = 72;
+let touchStartY = 0;
+let pulling = false;
+
+document.addEventListener('touchstart', e => {
+  if (window.scrollY === 0) { touchStartY = e.touches[0].clientY; pulling = true; }
+}, { passive: true });
+
+document.addEventListener('touchmove', e => {
+  if (!pulling) return;
+  const dy = e.touches[0].clientY - touchStartY;
+  if (dy > 20) {
+    pullHint.classList.add('visible');
+    pullHint.classList.toggle('ready', dy >= PULL_THRESHOLD);
+    pullHint.textContent = dy >= PULL_THRESHOLD ? '↑ release to reset' : '↓ pull to reset';
+  } else {
+    pullHint.classList.remove('visible','ready');
+  }
+}, { passive: true });
+
+document.addEventListener('touchend', e => {
+  if (!pulling) return;
+  const dy = e.changedTouches[0].clientY - touchStartY;
+  if (dy >= PULL_THRESHOLD) doReset();
+  pullHint.classList.remove('visible','ready');
+  pullHint.textContent = '↓ pull to reset';
+  pulling = false;
+}, { passive: true });
+
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('./sw-calc.js').catch(() => {});
+}
+</script>
+</body>
+</html>
