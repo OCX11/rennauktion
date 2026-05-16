@@ -238,18 +238,20 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
 .ra-modal-wrap { position:fixed; inset:0; z-index:501; display:flex; align-items:center; justify-content:center; pointer-events:none; }
 .ra-modal {
   background:var(--bg1); border:1px solid var(--bd2); border-radius:11px;
-  width:min(720px,95vw); height:96vh; max-height:96vh; display:flex; flex-direction:column; overflow:hidden;
+  width:min(720px,95vw); max-height:92vh; display:flex; flex-direction:column; overflow:hidden;
   pointer-events:none;
   opacity:0; transform:scale(.87); transform-origin:center center;
   transition:opacity .2s cubic-bezier(.4,0,.2,1), transform .22s cubic-bezier(.34,1.28,.64,1);
 }
 .ra-backdrop.open .ra-modal { opacity:1; transform:scale(1); pointer-events:all; }
-.ra-modal-img { height:clamp(180px,26vh,320px); background:var(--bg); position:relative; overflow:hidden; flex-shrink:0; }
+.ra-modal-img { height:clamp(260px,38vw,420px); background:var(--bg); position:relative; overflow:hidden; flex-shrink:0; }
 .ra-modal-img img { width:100%; height:100%; object-fit:contain; object-position:center center; opacity:.95; display:block; background:var(--bg); }
 .ra-modal-img-fade { position:absolute; bottom:0; left:0; right:0; height:15px; background:linear-gradient(transparent, var(--bg1)); pointer-events:none; }
 
 /* ── Modal body — A3 layout ── */
-.ra-modal-body { flex:1; overflow-y:hidden; display:flex; flex-direction:column; min-height:0; }
+.ra-modal-body { flex:1; overflow-y:auto; display:flex; flex-direction:column; }
+.ra-modal-body::-webkit-scrollbar { width:3px; }
+.ra-modal-body::-webkit-scrollbar-thumb { background:var(--bg4); }
 
 /* Price section */
 .ra-price-section { padding:14px 18px 10px; }
@@ -265,11 +267,11 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
 .ra-pill.src i { font-size:14px; }
 
 /* Graph — full bleed band */
-.ra-graph-band { background:var(--bg); border-top:1px solid var(--bd); border-bottom:1px solid var(--bd); padding:10px 18px 8px; margin-top:4px; flex:1; display:flex; flex-direction:column; min-height:0; }
-.ra-graph-hdr { display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px; flex-shrink:0; }
+.ra-graph-band { background:var(--bg); border-top:1px solid var(--bd); border-bottom:1px solid var(--bd); padding:10px 18px 8px; margin-top:4px; }
+.ra-graph-hdr { display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px; }
 .ra-graph-lbl { font-size:12px; font-family:'JetBrains Mono',monospace; color:var(--tx3); text-transform:uppercase; letter-spacing:.5px; }
 .ra-graph-sub { font-size:12px; font-family:'JetBrains Mono',monospace; color:var(--bd3); }
-.ra-modal-svg { width:100%; flex:1; display:block; min-height:160px; }
+.ra-modal-svg { width:100%; height:200px; display:block; }
 
 /* Footer */
 .ra-modal-foot { padding:10px 14px; border-top:1px solid var(--bd); display:grid; grid-template-columns:1fr 1fr 1fr; gap:6px; flex-shrink:0; background:var(--bg1); }
@@ -318,7 +320,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
     <input type="text" placeholder="Search auctions…">
   </div>
   <div class="hdr-right">
-    <span class="hdr-time"><span class="live-dot"></span>May 16 02:53 UTC</span>
+    <span class="hdr-time"><span class="live-dot"></span>May 16 02:54 UTC</span>
     <div class="hdr-avatar" onclick="toggleDD()">CL</div>
   </div>
 </div>
@@ -10978,7 +10980,7 @@ function _drawDotGraphInner(svg, dots, fmv, bid, low, high) {
   }
 
   var W = svg.parentElement.getBoundingClientRect().width || 700;
-  var H = Math.max(160, svg.getBoundingClientRect().height || 200);
+  var H = 160;
   svg.setAttribute('viewBox', '0 0 ' + W + ' ' + H);
   svg.setAttribute('width', W);
   svg.setAttribute('height', H);
