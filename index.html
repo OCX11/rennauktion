@@ -244,39 +244,11 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
   transition:opacity .2s cubic-bezier(.4,0,.2,1), transform .22s cubic-bezier(.34,1.28,.64,1);
 }
 .ra-backdrop.open .ra-modal { opacity:1; transform:scale(1); pointer-events:all; }
-.ra-modal-img { height:clamp(180px,26vh,320px); background:var(--bg); position:relative; overflow:hidden; flex-shrink:0; }
-.ra-modal-img img { width:100%; height:100%; object-fit:contain; object-position:center center; opacity:.95; display:block; background:var(--bg); }
-.ra-modal-img-fade { position:absolute; bottom:0; left:0; right:0; height:15px; background:linear-gradient(transparent, var(--bg1)); pointer-events:none; }
-
-/* ── Modal body — A3 layout ── */
-.ra-modal-body { flex:1; overflow-y:hidden; display:flex; flex-direction:column; min-height:0; }
-
-/* Price section */
-.ra-price-section { padding:14px 18px 10px; }
-.ra-price-val { font-size:28px; font-weight:600; font-family:'JetBrains Mono',monospace; color:#f0f0f0; line-height:1; margin:0; }
-.ra-price-deal { font-size:13px; font-family:'JetBrains Mono',monospace; margin:5px 0 13px; }
-.ra-price-deal.below { color:var(--green); }
-.ra-price-deal.above { color:#f87171; }
-.ra-price-deal.near  { color:var(--tx2); }
-.ra-pills { display:flex; gap:5px; flex-wrap:wrap; }
 .ra-pill { font-size:13px; font-family:'JetBrains Mono',monospace; color:var(--tx3); background:var(--bg3); border:1px solid var(--bd2); padding:3px 9px; border-radius:3px; }
 .ra-pill.src { color:#e8624a; border-color:rgba(232,98,74,.3); background:rgba(232,98,74,.06); cursor:pointer; display:inline-flex; align-items:center; gap:4px; text-decoration:none; }
 .ra-pill.src:hover { background:rgba(232,98,74,.12); }
 .ra-pill.src i { font-size:14px; }
-
-/* Graph — full bleed band */
-.ra-graph-band { background:var(--bg); border-top:1px solid var(--bd); border-bottom:1px solid var(--bd); padding:10px 18px 8px; margin-top:4px; flex:1; display:flex; flex-direction:column; min-height:0; }
-.ra-graph-hdr { display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px; flex-shrink:0; }
-.ra-graph-lbl { font-size:12px; font-family:'JetBrains Mono',monospace; color:var(--tx3); text-transform:uppercase; letter-spacing:.5px; }
-.ra-graph-sub { font-size:12px; font-family:'JetBrains Mono',monospace; color:var(--bd3); }
 .ra-modal-svg { width:100%; flex:1; display:block; min-height:160px; }
-
-/* Footer */
-.ra-modal-foot { padding:10px 14px; border-top:1px solid var(--bd); display:grid; grid-template-columns:1fr 1fr 1fr; gap:6px; flex-shrink:0; background:var(--bg1); }
-.ra-mfb { padding:9px; border-radius:6px; border:1px solid var(--bd2); background:var(--bg3); color:var(--tx2); font-size:13px; font-weight:500; font-family:'Inter',sans-serif; cursor:pointer; transition:all .12s; text-align:center; display:flex; align-items:center; justify-content:center; gap:6px; }
-.ra-mfb:hover { border-color:var(--bd3); color:var(--text); }
-.ra-mfb.saved { color:var(--red); border-color:rgba(244,67,60,.35); background:var(--red2); }
-.ra-mfb.disabled { opacity:.4; cursor:default; pointer-events:none; }
 
 /* ── Dropdown (more menu) ── */
 .dd-overlay { display:none; }
@@ -452,7 +424,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
     <input type="text" placeholder="Search auctions…">
   </div>
   <div class="hdr-right">
-    <span class="hdr-time"><span class="live-dot"></span>May 17 02:07 UTC</span>
+    <span class="hdr-time"><span class="live-dot"></span>May 17 02:11 UTC</span>
     <div class="hdr-avatar" onclick="toggleDD()">CL</div>
   </div>
 </div>
@@ -576,7 +548,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
  data-fmv-high="134000"
  data-bid="63000"
  data-lid="10518"
- data-mileage="999999"
+ data-mileage="4700"
  data-trans="Automatic"
  data-color=""
  data-comp-count="107"
@@ -608,7 +580,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
       <span class="bid-val">$63,000</span>
       <span class="fmv-pill fmv-below">▼ 33% below FMV</span>
     </div>
-    <div class="card-specs"><span class="spec-pill">Automatic</span></div>
+    <div class="card-specs"><span class="spec-pill">4,700 mi</span><span class="spec-pill">Automatic</span></div>
   </div>
   <div class="expand-panel">
     <div class="expand-inner">
@@ -616,7 +588,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
         <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$72K &ndash; $134K</div></div>
         <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">107 sales</div></div>
         <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">6</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">4,700 mi</div></div>
         <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">Automatic</div></div>
         <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
       </div>
@@ -639,7 +611,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
  data-fmv-high="93000"
  data-bid="90000"
  data-lid="11104"
- data-mileage="999999"
+ data-mileage="3800"
  data-trans=""
  data-color=""
  data-comp-count="333"
@@ -671,7 +643,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
       <span class="bid-val">$90,000</span>
       <span class="fmv-pill fmv-above">▲ 23% above FMV</span>
     </div>
-    <div class="card-specs"></div>
+    <div class="card-specs"><span class="spec-pill">3,800 mi</span></div>
   </div>
   <div class="expand-panel">
     <div class="expand-inner">
@@ -679,7 +651,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
         <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$59K &ndash; $93K</div></div>
         <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">333 sales</div></div>
         <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">2</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">3,800 mi</div></div>
         <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">—</div></div>
         <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
       </div>
@@ -765,7 +737,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
  data-fmv-high="29250"
  data-bid="9500"
  data-lid="10574"
- data-mileage="999999"
+ data-mileage="103800"
  data-trans=""
  data-color=""
  data-comp-count="184"
@@ -797,7 +769,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
       <span class="bid-val">$9,500</span>
       <span class="fmv-pill fmv-below">▼ 60% below FMV</span>
     </div>
-    <div class="card-specs"></div>
+    <div class="card-specs"><span class="spec-pill">103,800 mi</span></div>
   </div>
   <div class="expand-panel">
     <div class="expand-inner">
@@ -805,7 +777,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
         <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$18K &ndash; $29K</div></div>
         <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">184 sales</div></div>
         <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">5</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">103,800 mi</div></div>
         <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">—</div></div>
         <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
       </div>
@@ -903,7 +875,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
  data-fmv-high="216000"
  data-bid="200000"
  data-lid="10748"
- data-mileage="999999"
+ data-mileage="191"
  data-trans="Automatic"
  data-color=""
  data-comp-count="94"
@@ -935,7 +907,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
       <span class="bid-val">$200,000</span>
       <span class="fmv-pill fmv-above">▲ 18% above FMV</span>
     </div>
-    <div class="card-specs"><span class="spec-pill">Automatic</span></div>
+    <div class="card-specs"><span class="spec-pill">191 mi</span><span class="spec-pill">Automatic</span></div>
   </div>
   <div class="expand-panel">
     <div class="expand-inner">
@@ -943,7 +915,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
         <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$131K &ndash; $216K</div></div>
         <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">94 sales</div></div>
         <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">3</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">191 mi</div></div>
         <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">Automatic</div></div>
         <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
       </div>
@@ -966,7 +938,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
  data-fmv-high="60000"
  data-bid="32000"
  data-lid="10568"
- data-mileage="999999"
+ data-mileage="4700"
  data-trans="Manual"
  data-color=""
  data-comp-count="47"
@@ -998,7 +970,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
       <span class="bid-val">$32,000</span>
       <span class="fmv-pill fmv-below">▼ 38% below FMV</span>
     </div>
-    <div class="card-specs"><span class="spec-pill">Manual</span></div>
+    <div class="card-specs"><span class="spec-pill">4,700 mi</span><span class="spec-pill">Manual</span></div>
   </div>
   <div class="expand-panel">
     <div class="expand-inner">
@@ -1006,7 +978,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
         <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$43K &ndash; $60K</div></div>
         <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">47 sales</div></div>
         <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">5</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">4,700 mi</div></div>
         <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">Manual</div></div>
         <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
       </div>
@@ -1029,7 +1001,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
  data-fmv-high="63500"
  data-bid="50997"
  data-lid="11120"
- data-mileage="999999"
+ data-mileage="2700"
  data-trans="Manual"
  data-color=""
  data-comp-count="235"
@@ -1061,7 +1033,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
       <span class="bid-val">$50,997</span>
       
     </div>
-    <div class="card-specs"><span class="spec-pill">Manual</span></div>
+    <div class="card-specs"><span class="spec-pill">2,700 mi</span><span class="spec-pill">Manual</span></div>
   </div>
   <div class="expand-panel">
     <div class="expand-inner">
@@ -1069,7 +1041,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
         <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$42K &ndash; $64K</div></div>
         <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">235 sales</div></div>
         <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">2</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">2,700 mi</div></div>
         <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">Manual</div></div>
         <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
       </div>
@@ -1155,7 +1127,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
  data-fmv-high="211000"
  data-bid="149000"
  data-lid="10593"
- data-mileage="999999"
+ data-mileage="4100"
  data-trans="Manual"
  data-color=""
  data-comp-count="40"
@@ -1187,7 +1159,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
       <span class="bid-val">$149,000</span>
       <span class="fmv-pill fmv-below">▼ 26% below FMV</span>
     </div>
-    <div class="card-specs"><span class="spec-pill">Manual</span></div>
+    <div class="card-specs"><span class="spec-pill">4,100 mi</span><span class="spec-pill">Manual</span></div>
   </div>
   <div class="expand-panel">
     <div class="expand-inner">
@@ -1195,7 +1167,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
         <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$188K &ndash; $211K</div></div>
         <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">40 sales</div></div>
         <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">5</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">4,100 mi</div></div>
         <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">Manual</div></div>
         <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
       </div>
@@ -1533,7 +1505,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
  data-fmv-high="67500"
  data-bid="46250"
  data-lid="10737"
- data-mileage="999999"
+ data-mileage="82400"
  data-trans=""
  data-color=""
  data-comp-count="19"
@@ -1565,7 +1537,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
       <span class="bid-val">$46,250</span>
       <span class="fmv-pill fmv-below">▼ 22% below FMV</span>
     </div>
-    <div class="card-specs"></div>
+    <div class="card-specs"><span class="spec-pill">82,400 mi</span></div>
   </div>
   <div class="expand-panel">
     <div class="expand-inner">
@@ -1573,7 +1545,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
         <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$52K &ndash; $68K</div></div>
         <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">19 sales</div></div>
         <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">3</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">82,400 mi</div></div>
         <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">—</div></div>
         <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
       </div>
@@ -1596,7 +1568,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
  data-fmv-high="38000"
  data-bid="20000"
  data-lid="10738"
- data-mileage="999999"
+ data-mileage="80300"
  data-trans=""
  data-color=""
  data-comp-count="136"
@@ -1628,7 +1600,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
       <span class="bid-val">$20,000</span>
       <span class="fmv-pill fmv-below">▼ 31% below FMV</span>
     </div>
-    <div class="card-specs"></div>
+    <div class="card-specs"><span class="spec-pill">80,300 mi</span></div>
   </div>
   <div class="expand-panel">
     <div class="expand-inner">
@@ -1636,7 +1608,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
         <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$24K &ndash; $38K</div></div>
         <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">136 sales</div></div>
         <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">3</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">80,300 mi</div></div>
         <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">—</div></div>
         <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
       </div>
@@ -1722,7 +1694,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
  data-fmv-high="33333"
  data-bid="14000"
  data-lid="10740"
- data-mileage="999999"
+ data-mileage="100600"
  data-trans=""
  data-color=""
  data-comp-count="85"
@@ -1754,7 +1726,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
       <span class="bid-val">$14,000</span>
       <span class="fmv-pill fmv-below">▼ 48% below FMV</span>
     </div>
-    <div class="card-specs"></div>
+    <div class="card-specs"><span class="spec-pill">100,600 mi</span></div>
   </div>
   <div class="expand-panel">
     <div class="expand-inner">
@@ -1762,7 +1734,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
         <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$22K &ndash; $33K</div></div>
         <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">85 sales</div></div>
         <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">3</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">100,600 mi</div></div>
         <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">—</div></div>
         <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
       </div>
@@ -1785,7 +1757,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
  data-fmv-high="105481"
  data-bid="76000"
  data-lid="10741"
- data-mileage="999999"
+ data-mileage="19600"
  data-trans=""
  data-color=""
  data-comp-count="18"
@@ -1817,7 +1789,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
       <span class="bid-val">$76,000</span>
       <span class="fmv-pill fmv-below">▼ 20% below FMV</span>
     </div>
-    <div class="card-specs"></div>
+    <div class="card-specs"><span class="spec-pill">19,600 mi</span></div>
   </div>
   <div class="expand-panel">
     <div class="expand-inner">
@@ -1825,7 +1797,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
         <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$92K &ndash; $105K</div></div>
         <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">18 sales</div></div>
         <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">3</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">19,600 mi</div></div>
         <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">—</div></div>
         <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
       </div>
@@ -1911,7 +1883,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
  data-fmv-high="216000"
  data-bid="101000"
  data-lid="10733"
- data-mileage="999999"
+ data-mileage="393"
  data-trans=""
  data-color=""
  data-comp-count="94"
@@ -1943,7 +1915,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
       <span class="bid-val">$101,000</span>
       <span class="fmv-pill fmv-below">▼ 40% below FMV</span>
     </div>
-    <div class="card-specs"></div>
+    <div class="card-specs"><span class="spec-pill">393 mi</span></div>
   </div>
   <div class="expand-panel">
     <div class="expand-inner">
@@ -1951,7 +1923,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
         <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$131K &ndash; $216K</div></div>
         <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">94 sales</div></div>
         <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">3</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">393 mi</div></div>
         <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">—</div></div>
         <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
       </div>
@@ -2100,7 +2072,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
  data-fmv-high="80496"
  data-bid="37996"
  data-lid="10749"
- data-mileage="999999"
+ data-mileage="1400"
  data-trans="Manual"
  data-color=""
  data-comp-count="185"
@@ -2132,7 +2104,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
       <span class="bid-val">$37,996</span>
       <span class="fmv-pill fmv-below">▼ 42% below FMV</span>
     </div>
-    <div class="card-specs"><span class="spec-pill">Manual</span></div>
+    <div class="card-specs"><span class="spec-pill">1,400 mi</span><span class="spec-pill">Manual</span></div>
   </div>
   <div class="expand-panel">
     <div class="expand-inner">
@@ -2140,7 +2112,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
         <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$53K &ndash; $80K</div></div>
         <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">185 sales</div></div>
         <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">3</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">1,400 mi</div></div>
         <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">Manual</div></div>
         <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
       </div>
@@ -2163,7 +2135,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
  data-fmv-high="67500"
  data-bid="56000"
  data-lid="10734"
- data-mileage="999999"
+ data-mileage="621"
  data-trans="Manual"
  data-color=""
  data-comp-count="19"
@@ -2195,7 +2167,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
       <span class="bid-val">$56,000</span>
       <span class="fmv-pill fmv-below">▼ 5% below FMV</span>
     </div>
-    <div class="card-specs"><span class="spec-pill">Manual</span></div>
+    <div class="card-specs"><span class="spec-pill">621 mi</span><span class="spec-pill">Manual</span></div>
   </div>
   <div class="expand-panel">
     <div class="expand-inner">
@@ -2203,7 +2175,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
         <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$52K &ndash; $68K</div></div>
         <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">19 sales</div></div>
         <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">3</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">621 mi</div></div>
         <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">Manual</div></div>
         <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
       </div>
@@ -2289,7 +2261,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
  data-fmv-high="140000"
  data-bid="70000"
  data-lid="11122"
- data-mileage="999999"
+ data-mileage="514"
  data-trans=""
  data-color=""
  data-comp-count="30"
@@ -2321,7 +2293,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
       <span class="bid-val">$70,000</span>
       <span class="fmv-pill fmv-below">▼ 40% below FMV</span>
     </div>
-    <div class="card-specs"></div>
+    <div class="card-specs"><span class="spec-pill">514 mi</span></div>
   </div>
   <div class="expand-panel">
     <div class="expand-inner">
@@ -2329,7 +2301,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
         <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$97K &ndash; $140K</div></div>
         <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">30 sales</div></div>
         <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">2</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">514 mi</div></div>
         <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">—</div></div>
         <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
       </div>
@@ -2478,7 +2450,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
  data-fmv-high="307500"
  data-bid="201000"
  data-lid="10735"
- data-mileage="999999"
+ data-mileage="393"
  data-trans=""
  data-color=""
  data-comp-count="42"
@@ -2510,7 +2482,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
       <span class="bid-val">$201,000</span>
       <span class="fmv-pill fmv-below">▼ 25% below FMV</span>
     </div>
-    <div class="card-specs"></div>
+    <div class="card-specs"><span class="spec-pill">393 mi</span></div>
   </div>
   <div class="expand-panel">
     <div class="expand-inner">
@@ -2518,7 +2490,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
         <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$220K &ndash; $308K</div></div>
         <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">42 sales</div></div>
         <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">3</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">393 mi</div></div>
         <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">—</div></div>
         <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
       </div>
@@ -2541,7 +2513,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
  data-fmv-high="104000"
  data-bid="58000"
  data-lid="10736"
- data-mileage="999999"
+ data-mileage="393"
  data-trans="Manual"
  data-color=""
  data-comp-count="210"
@@ -2573,7 +2545,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
       <span class="bid-val">$58,000</span>
       <span class="fmv-pill fmv-below">▼ 33% below FMV</span>
     </div>
-    <div class="card-specs"><span class="spec-pill">Manual</span></div>
+    <div class="card-specs"><span class="spec-pill">393 mi</span><span class="spec-pill">Manual</span></div>
   </div>
   <div class="expand-panel">
     <div class="expand-inner">
@@ -2581,7 +2553,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
         <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$66K &ndash; $104K</div></div>
         <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">210 sales</div></div>
         <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">3</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">393 mi</div></div>
         <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">Manual</div></div>
         <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
       </div>
@@ -2604,7 +2576,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
  data-fmv-high="55500"
  data-bid="37000"
  data-lid="10742"
- data-mileage="999999"
+ data-mileage="58500"
  data-trans=""
  data-color=""
  data-comp-count="75"
@@ -2636,7 +2608,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
       <span class="bid-val">$37,000</span>
       <span class="fmv-pill fmv-below">▼ 16% below FMV</span>
     </div>
-    <div class="card-specs"></div>
+    <div class="card-specs"><span class="spec-pill">58,500 mi</span></div>
   </div>
   <div class="expand-panel">
     <div class="expand-inner">
@@ -2644,7 +2616,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
         <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$36K &ndash; $56K</div></div>
         <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">75 sales</div></div>
         <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">3</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">58,500 mi</div></div>
         <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">—</div></div>
         <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
       </div>
@@ -2667,7 +2639,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
  data-fmv-high="34000"
  data-bid="15000"
  data-lid="10743"
- data-mileage="999999"
+ data-mileage="126600"
  data-trans=""
  data-color=""
  data-comp-count="482"
@@ -2699,7 +2671,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
       <span class="bid-val">$15,000</span>
       <span class="fmv-pill fmv-below">▼ 45% below FMV</span>
     </div>
-    <div class="card-specs"></div>
+    <div class="card-specs"><span class="spec-pill">126,600 mi</span></div>
   </div>
   <div class="expand-panel">
     <div class="expand-inner">
@@ -2707,7 +2679,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
         <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$22K &ndash; $34K</div></div>
         <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">482 sales</div></div>
         <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">3</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">126,600 mi</div></div>
         <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">—</div></div>
         <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
       </div>
@@ -2730,7 +2702,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
  data-fmv-high="17001"
  data-bid="10986"
  data-lid="10915"
- data-mileage="999999"
+ data-mileage="21700"
  data-trans=""
  data-color=""
  data-comp-count="413"
@@ -2762,7 +2734,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
       <span class="bid-val">$10,986</span>
       <span class="fmv-pill fmv-below">▼ 22% below FMV</span>
     </div>
-    <div class="card-specs"></div>
+    <div class="card-specs"><span class="spec-pill">21,700 mi</span></div>
   </div>
   <div class="expand-panel">
     <div class="expand-inner">
@@ -2770,7 +2742,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
         <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$12K &ndash; $17K</div></div>
         <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">413 sales</div></div>
         <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">3</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">21,700 mi</div></div>
         <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">—</div></div>
         <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
       </div>
@@ -2793,7 +2765,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
  data-fmv-high="91000"
  data-bid="45000"
  data-lid="10941"
- data-mileage="999999"
+ data-mileage="65200"
  data-trans=""
  data-color=""
  data-comp-count="27"
@@ -2825,7 +2797,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
       <span class="bid-val">$45,000</span>
       <span class="fmv-pill fmv-below">▼ 43% below FMV</span>
     </div>
-    <div class="card-specs"></div>
+    <div class="card-specs"><span class="spec-pill">65,200 mi</span></div>
   </div>
   <div class="expand-panel">
     <div class="expand-inner">
@@ -2833,7 +2805,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
         <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$73K &ndash; $91K</div></div>
         <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">27 sales</div></div>
         <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">3</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">65,200 mi</div></div>
         <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">—</div></div>
         <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
       </div>
@@ -3108,7 +3080,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
  data-fmv-high="33750"
  data-bid="11200"
  data-lid="11148"
- data-mileage="999999"
+ data-mileage="56500"
  data-trans=""
  data-color=""
  data-comp-count="482"
@@ -3140,7 +3112,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
       <span class="bid-val">$11,200</span>
       <span class="fmv-pill fmv-below">▼ 59% below FMV</span>
     </div>
-    <div class="card-specs"></div>
+    <div class="card-specs"><span class="spec-pill">56,500 mi</span></div>
   </div>
   <div class="expand-panel">
     <div class="expand-inner">
@@ -3148,7 +3120,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
         <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$22K &ndash; $34K</div></div>
         <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">482 sales</div></div>
         <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">2</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">56,500 mi</div></div>
         <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">—</div></div>
         <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
       </div>
@@ -3234,7 +3206,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
  data-fmv-high="132000"
  data-bid="8100"
  data-lid="11123"
- data-mileage="999999"
+ data-mileage="514"
  data-trans=""
  data-color=""
  data-comp-count="107"
@@ -3266,7 +3238,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
       <span class="bid-val">$8,100</span>
       <span class="fmv-pill fmv-below">▼ 91% below FMV</span>
     </div>
-    <div class="card-specs"></div>
+    <div class="card-specs"><span class="spec-pill">514 mi</span></div>
   </div>
   <div class="expand-panel">
     <div class="expand-inner">
@@ -3274,7 +3246,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
         <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$72K &ndash; $132K</div></div>
         <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">107 sales</div></div>
         <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">2</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">514 mi</div></div>
         <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">—</div></div>
         <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
       </div>
@@ -11043,7 +11015,7 @@ function cardClick(evt, card) {
   openCardModal(card);
 }
 
-// ── Card modal open/close ────────────────────────────────────────────────────
+// ── Card modal open/close — POLISH design ───────────────────────────────────
 var _rmUrl = '';
 var _rmNotesOpen = false;
 
@@ -11052,110 +11024,117 @@ function openCardModal(card) {
   _rmUrl = d.url || '#';
   _rmNotesOpen = false;
 
-  // Image — match exact crop from card thumbnail
+  // Photo
   var img = card.querySelector('.auc-img');
-  var rmImg = document.getElementById('rm-img');
-  rmImg.src = img ? img.src : '';
-  rmImg.style.objectPosition = (img && img.style.objectPosition) ? img.style.objectPosition : 'center center';
+  document.getElementById('rm-img').src = img ? img.src : '';
 
-  // Source badge (top-left on photo)
-  var srcBadge = card.querySelector('.img-src-badge');
-  var rmSrc = document.getElementById('rm-src-badge');
-  if (srcBadge) {
-    rmSrc.textContent = srcBadge.textContent;
-    rmSrc.style.cssText = srcBadge.style.cssText;
-    rmSrc.className = srcBadge.className;
-  }
-
-  // Gen badge
-  document.getElementById('rm-gen-badge').textContent = d.gen || '';
-
-  // Title + subtitle
+  // Title
   var titleEl = card.querySelector('.card-title');
   document.getElementById('rm-title').textContent = titleEl ? titleEl.textContent : '';
-  var timer = card.querySelector('.countdown-timer');
-  var timerTxt = timer ? timer.textContent.trim() : '';
-  document.getElementById('rm-subtitle').textContent =
-    (d.src||'') + (d.gen ? ' · gen ' + d.gen : '') + (timerTxt && timerTxt !== 'ENDED' ? ' · ' + timerTxt + ' remaining' : '');
 
-  // Numbers
-  var bid = +d.bid || 0;
-  var fmv = +d.fmv || 0;
-  var low = +d['fmv-low']  || 0;
-  var high= +d['fmv-high'] || 0;
-  var lid = d.lid || '';
-  var compCount = +d['comp-count'] || 0;
-
-  // Price
-  document.getElementById('rm-bid').textContent = bid ? '$' + bid.toLocaleString() : '—';
-
-  // Deal line — "▼ 31% below est. FMV · ~$196K"
-  var dealEl = document.getElementById('rm-deal');
-  dealEl.className = 'ra-price-deal';
-  if (fmv && bid) {
-    var pct = (bid - fmv) / fmv;
-    var fmvStr = ' · est. FMV ~$' + Math.round(fmv/1000) + 'K';
-    if (compCount) fmvStr += ' (' + compCount + ' comps)';
-    if (pct <= -0.05) {
-      dealEl.textContent = '▼ ' + Math.abs(Math.round(pct*100)) + '% below est. FMV' + fmvStr;
-      dealEl.classList.add('below');
-    } else if (pct >= 0.05) {
-      dealEl.textContent = '▲ ' + Math.round(pct*100) + '% above est. FMV' + fmvStr;
-      dealEl.classList.add('above');
-    } else {
-      dealEl.textContent = 'Near est. FMV' + fmvStr;
-      dealEl.classList.add('near');
-    }
+  // Countdown timer chip (top-right of photo)
+  var timerEl = document.getElementById('rm-timer');
+  var endsAt = d.ends || '';
+  if (endsAt) {
+    timerEl.style.display = '';
+    timerEl.dataset.ends = endsAt;
+    // Set urgency color once on open (tickAll keeps text live)
+    var secsLeft = Math.floor((new Date(endsAt).getTime() - Date.now()) / 1000);
+    timerEl.style.color = secsLeft <= 0 ? '#6e6e6e'
+      : secsLeft < 10800  ? '#ef4444'
+      : secsLeft < 86400  ? '#f59e0b'
+      : '#4ade80';
   } else {
-    dealEl.textContent = fmv ? 'est. FMV ~$' + Math.round(fmv/1000) + 'K' : '';
+    timerEl.style.display = 'none';
+    timerEl.dataset.ends = '';
   }
 
-  // Pills — mileage, trans, color, gen, source+link
+  // Numbers
+  var bid       = +d.bid || 0;
+  var fmv       = +d.fmv || 0;
+  var low       = +d['fmv-low']  || 0;
+  var high      = +d['fmv-high'] || 0;
+  var lid       = d.lid || '';
+  var compCount = +d['comp-count'] || 0;
+
+  // ── Fee math (5% capped at $7,500 — same rule as core/fees.py) ──────────
+  if (bid) {
+    var fee   = Math.min(bid * 0.05, 7500);
+    var total = bid + fee;
+    var capped = fee >= 7499.99;
+    document.getElementById('rm-bid-val').textContent   = bid.toLocaleString();
+    document.getElementById('rm-fee-val').textContent   = fee.toLocaleString();
+    document.getElementById('rm-total-val').textContent = total.toLocaleString();
+    document.getElementById('rm-fee-label').textContent = capped
+      ? 'Buyer fee · 5% capped' : 'Buyer fee · 5%';
+
+    // ── Delta vs FMV ───────────────────────────────────────────────────────
+    var deltaWrap = document.getElementById('rm-delta-wrap');
+    if (fmv) {
+      var bidPct   = (bid   - fmv) / fmv * 100;
+      var allinPct = (total - fmv) / fmv * 100;
+      var deltaTag  = document.getElementById('rm-delta-tag');
+      var deltaNote = document.getElementById('rm-delta-note');
+      deltaWrap.style.display = '';
+      if (bidPct < -5) {
+        deltaTag.className = 'delta-tag';
+        deltaTag.textContent = '▼ ' + Math.abs(Math.round(bidPct)) + '% below FMV (bid)';
+      } else if (bidPct > 5) {
+        deltaTag.className = 'delta-tag above';
+        deltaTag.textContent = '▲ ' + Math.round(bidPct) + '% above FMV (bid)';
+      } else {
+        deltaTag.className = 'delta-tag even';
+        deltaTag.textContent = 'Near FMV';
+      }
+      if (Math.abs(allinPct) < 1) {
+        deltaNote.textContent = 'All-in at FMV';
+      } else if (allinPct < 0) {
+        deltaNote.textContent = 'All-in ' + Math.abs(Math.round(allinPct)) + '% below FMV';
+      } else {
+        deltaNote.textContent = 'All-in ' + Math.round(allinPct) + '% above FMV';
+      }
+    } else {
+      deltaWrap.style.display = 'none';
+    }
+  } else {
+    document.getElementById('rm-bid-val').textContent   = '—';
+    document.getElementById('rm-fee-val').textContent   = '—';
+    document.getElementById('rm-total-val').textContent = '—';
+    document.getElementById('rm-delta-wrap').style.display = 'none';
+  }
+
+  // ── Pill row ──────────────────────────────────────────────────────────────
   var pillsEl = document.getElementById('rm-pills');
   pillsEl.innerHTML = '';
-  var pillDefs = [
+  [
     d.mileage && d.mileage !== '999999' ? Number(d.mileage).toLocaleString() + ' mi' : null,
-    d.trans  || null,
-    d.color  || null,
-    d.gen    || null,
-  ];
-  pillDefs.forEach(function(txt) {
+    d.trans || null,
+    d.color || null,
+    d.gen   || null,
+  ].forEach(function(txt) {
     if (!txt || txt === '—') return;
     var s = document.createElement('span');
     s.className = 'ra-pill';
     s.textContent = txt;
     pillsEl.appendChild(s);
   });
-  // Source pill — clickable link to the listing
   if (_rmUrl && _rmUrl !== '#') {
-    var srcName = d.src || 'Listing';
     var a = document.createElement('a');
     a.className = 'ra-pill src';
-    a.href = _rmUrl;
-    a.target = '_blank';
-    a.rel = 'noopener';
-    a.innerHTML = '<i class="ti ti-external-link"></i> ' + srcName + ' listing';
+    a.href = _rmUrl; a.target = '_blank'; a.rel = 'noopener';
+    a.textContent = '↗ ' + (d.src || 'Listing') + ' listing';
     a.addEventListener('click', function(e) { e.stopPropagation(); });
     pillsEl.appendChild(a);
   }
 
   // Graph sub-label
   document.getElementById('rm-graph-sub').textContent =
-    compCount ? compCount + ' transactions · gen ' + (d.gen||'') : 'no comp data';
+    compCount ? compCount + ' comps · 24 mo' : 'no comp data';
 
-  // Save button state
+  // ── Save / notes state ────────────────────────────────────────────────────
   var isSaved = _getFavs().includes(_rmUrl);
-  var saveBtn = document.getElementById('rm-save-btn');
-  saveBtn.classList.toggle('saved', isSaved);
-  saveBtn.innerHTML = isSaved ? '<i class="ti ti-bookmark-filled"></i> Saved' : '<i class="ti ti-bookmark"></i> Save';
+  _syncSaveBtn(isSaved);
 
-  // Notes button — only enabled if saved
-  var notesBtn = document.getElementById('rm-notes-btn');
-  notesBtn.classList.toggle('disabled', !isSaved);
-
-  // Notes area — hide and load saved value
-  var notesWrap = document.getElementById('rm-notes-wrap');
-  notesWrap.style.display = 'none';
   var notesInput = document.getElementById('rm-notes-input');
   var notesKey = 'ra_note_' + btoa(_rmUrl).replace(/=/g,'').slice(0,32);
   notesInput.value = localStorage.getItem(notesKey) || '';
@@ -11164,6 +11143,7 @@ function openCardModal(card) {
     localStorage.setItem(notesKey, notesInput.value);
     document.getElementById('rm-notes-count').textContent = notesInput.value.length + ' / 750';
   };
+  document.getElementById('rm-notes-wrap').style.display = 'none';
 
   // Open backdrop
   document.getElementById('ra-backdrop').classList.add('open');
@@ -11182,12 +11162,20 @@ function openCardModal(card) {
   }, 60);
 }
 
+function _syncSaveBtn(isSaved) {
+  var btn = document.getElementById('rm-save-btn');
+  btn.classList.toggle('active', isSaved);
+  document.getElementById('rm-save-lbl').textContent = isSaved ? 'Saved' : 'Save';
+  btn.querySelector('.fb-icon').textContent = isSaved ? '★' : '☆';
+  // Notes button: enable only when saved
+  document.getElementById('rm-notes-btn').classList.toggle('fb-disabled', !isSaved);
+}
+
 function rmToggleNotes() {
-  var notesWrap = document.getElementById('rm-notes-wrap');
-  var notesBtn  = document.getElementById('rm-notes-btn');
-  _rmNotesOpen  = !_rmNotesOpen;
-  notesWrap.style.display = _rmNotesOpen ? 'block' : 'none';
-  notesBtn.classList.toggle('saved', _rmNotesOpen);
+  if (document.getElementById('rm-notes-btn').classList.contains('fb-disabled')) return;
+  _rmNotesOpen = !_rmNotesOpen;
+  document.getElementById('rm-notes-wrap').style.display = _rmNotesOpen ? 'block' : 'none';
+  document.getElementById('rm-notes-btn').classList.toggle('active', _rmNotesOpen);
   if (_rmNotesOpen) document.getElementById('rm-notes-input').focus();
 }
 
@@ -11203,15 +11191,8 @@ function rmToggleSave() {
   var adding = idx < 0;
   if (adding) favs.push(_rmUrl); else favs.splice(idx, 1);
   _setFavs(favs);
-  var saveBtn = document.getElementById('rm-save-btn');
-  saveBtn.classList.toggle('saved', adding);
-  saveBtn.innerHTML = adding ? '<i class="ti ti-bookmark-filled"></i> Saved' : '<i class="ti ti-bookmark"></i> Save';
-  // Enable/disable notes button
-  var notesBtn = document.getElementById('rm-notes-btn');
-  notesBtn.classList.toggle('disabled', !adding);
-  // If unsaving, close notes
+  _syncSaveBtn(adding);
   if (!adding && _rmNotesOpen) rmToggleNotes();
-  // sync card fav buttons
   document.querySelectorAll('.fav-btn[data-url="' + _rmUrl + '"]').forEach(function(b) {
     b.classList.toggle('active', adding);
   });
