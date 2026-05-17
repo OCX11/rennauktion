@@ -452,7 +452,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
     <input type="text" placeholder="Search auctions…">
   </div>
   <div class="hdr-right">
-    <span class="hdr-time"><span class="live-dot"></span>May 17 02:06 UTC</span>
+    <span class="hdr-time"><span class="live-dot"></span>May 17 02:07 UTC</span>
     <div class="hdr-avatar" onclick="toggleDD()">CL</div>
   </div>
 </div>
@@ -11043,7 +11043,7 @@ function cardClick(evt, card) {
   openCardModal(card);
 }
 
-// ── Card modal open/close — POLISH design ───────────────────────────────────
+// ── Card modal open/close ────────────────────────────────────────────────────
 var _rmUrl = '';
 var _rmNotesOpen = false;
 
@@ -11052,117 +11052,110 @@ function openCardModal(card) {
   _rmUrl = d.url || '#';
   _rmNotesOpen = false;
 
-  // Photo
+  // Image — match exact crop from card thumbnail
   var img = card.querySelector('.auc-img');
-  document.getElementById('rm-img').src = img ? img.src : '';
+  var rmImg = document.getElementById('rm-img');
+  rmImg.src = img ? img.src : '';
+  rmImg.style.objectPosition = (img && img.style.objectPosition) ? img.style.objectPosition : 'center center';
 
-  // Title
+  // Source badge (top-left on photo)
+  var srcBadge = card.querySelector('.img-src-badge');
+  var rmSrc = document.getElementById('rm-src-badge');
+  if (srcBadge) {
+    rmSrc.textContent = srcBadge.textContent;
+    rmSrc.style.cssText = srcBadge.style.cssText;
+    rmSrc.className = srcBadge.className;
+  }
+
+  // Gen badge
+  document.getElementById('rm-gen-badge').textContent = d.gen || '';
+
+  // Title + subtitle
   var titleEl = card.querySelector('.card-title');
   document.getElementById('rm-title').textContent = titleEl ? titleEl.textContent : '';
-
-  // Countdown timer chip (top-right of photo)
-  var timerEl = document.getElementById('rm-timer');
-  var endsAt = d.ends || '';
-  if (endsAt) {
-    timerEl.style.display = '';
-    timerEl.dataset.ends = endsAt;
-    // Set urgency color once on open (tickAll keeps text live)
-    var secsLeft = Math.floor((new Date(endsAt).getTime() - Date.now()) / 1000);
-    timerEl.style.color = secsLeft <= 0 ? '#6e6e6e'
-      : secsLeft < 10800  ? '#ef4444'
-      : secsLeft < 86400  ? '#f59e0b'
-      : '#4ade80';
-  } else {
-    timerEl.style.display = 'none';
-    timerEl.dataset.ends = '';
-  }
+  var timer = card.querySelector('.countdown-timer');
+  var timerTxt = timer ? timer.textContent.trim() : '';
+  document.getElementById('rm-subtitle').textContent =
+    (d.src||'') + (d.gen ? ' · gen ' + d.gen : '') + (timerTxt && timerTxt !== 'ENDED' ? ' · ' + timerTxt + ' remaining' : '');
 
   // Numbers
-  var bid       = +d.bid || 0;
-  var fmv       = +d.fmv || 0;
-  var low       = +d['fmv-low']  || 0;
-  var high      = +d['fmv-high'] || 0;
-  var lid       = d.lid || '';
+  var bid = +d.bid || 0;
+  var fmv = +d.fmv || 0;
+  var low = +d['fmv-low']  || 0;
+  var high= +d['fmv-high'] || 0;
+  var lid = d.lid || '';
   var compCount = +d['comp-count'] || 0;
 
-  // ── Fee math (5% capped at $7,500 — same rule as core/fees.py) ──────────
-  if (bid) {
-    var fee   = Math.min(bid * 0.05, 7500);
-    var total = bid + fee;
-    var capped = fee >= 7499.99;
-    document.getElementById('rm-bid-val').textContent   = bid.toLocaleString();
-    document.getElementById('rm-fee-val').textContent   = fee.toLocaleString();
-    document.getElementById('rm-total-val').textContent = total.toLocaleString();
-    document.getElementById('rm-fee-label').textContent = capped
-      ? 'Buyer fee · 5% capped' : 'Buyer fee · 5%';
+  // Price
+  document.getElementById('rm-bid').textContent = bid ? '$' + bid.toLocaleString() : '—';
 
-    // ── Delta vs FMV ───────────────────────────────────────────────────────
-    var deltaWrap = document.getElementById('rm-delta-wrap');
-    if (fmv) {
-      var bidPct   = (bid   - fmv) / fmv * 100;
-      var allinPct = (total - fmv) / fmv * 100;
-      var deltaTag  = document.getElementById('rm-delta-tag');
-      var deltaNote = document.getElementById('rm-delta-note');
-      deltaWrap.style.display = '';
-      if (bidPct < -5) {
-        deltaTag.className = 'delta-tag';
-        deltaTag.textContent = '▼ ' + Math.abs(Math.round(bidPct)) + '% below FMV (bid)';
-      } else if (bidPct > 5) {
-        deltaTag.className = 'delta-tag above';
-        deltaTag.textContent = '▲ ' + Math.round(bidPct) + '% above FMV (bid)';
-      } else {
-        deltaTag.className = 'delta-tag even';
-        deltaTag.textContent = 'Near FMV';
-      }
-      if (Math.abs(allinPct) < 1) {
-        deltaNote.textContent = 'All-in at FMV';
-      } else if (allinPct < 0) {
-        deltaNote.textContent = 'All-in ' + Math.abs(Math.round(allinPct)) + '% below FMV';
-      } else {
-        deltaNote.textContent = 'All-in ' + Math.round(allinPct) + '% above FMV';
-      }
+  // Deal line — "▼ 31% below est. FMV · ~$196K"
+  var dealEl = document.getElementById('rm-deal');
+  dealEl.className = 'ra-price-deal';
+  if (fmv && bid) {
+    var pct = (bid - fmv) / fmv;
+    var fmvStr = ' · est. FMV ~$' + Math.round(fmv/1000) + 'K';
+    if (compCount) fmvStr += ' (' + compCount + ' comps)';
+    if (pct <= -0.05) {
+      dealEl.textContent = '▼ ' + Math.abs(Math.round(pct*100)) + '% below est. FMV' + fmvStr;
+      dealEl.classList.add('below');
+    } else if (pct >= 0.05) {
+      dealEl.textContent = '▲ ' + Math.round(pct*100) + '% above est. FMV' + fmvStr;
+      dealEl.classList.add('above');
     } else {
-      deltaWrap.style.display = 'none';
+      dealEl.textContent = 'Near est. FMV' + fmvStr;
+      dealEl.classList.add('near');
     }
   } else {
-    document.getElementById('rm-bid-val').textContent   = '—';
-    document.getElementById('rm-fee-val').textContent   = '—';
-    document.getElementById('rm-total-val').textContent = '—';
-    document.getElementById('rm-delta-wrap').style.display = 'none';
+    dealEl.textContent = fmv ? 'est. FMV ~$' + Math.round(fmv/1000) + 'K' : '';
   }
 
-  // ── Pill row ──────────────────────────────────────────────────────────────
+  // Pills — mileage, trans, color, gen, source+link
   var pillsEl = document.getElementById('rm-pills');
   pillsEl.innerHTML = '';
-  [
+  var pillDefs = [
     d.mileage && d.mileage !== '999999' ? Number(d.mileage).toLocaleString() + ' mi' : null,
-    d.trans || null,
-    d.color || null,
-    d.gen   || null,
-  ].forEach(function(txt) {
+    d.trans  || null,
+    d.color  || null,
+    d.gen    || null,
+  ];
+  pillDefs.forEach(function(txt) {
     if (!txt || txt === '—') return;
     var s = document.createElement('span');
     s.className = 'ra-pill';
     s.textContent = txt;
     pillsEl.appendChild(s);
   });
+  // Source pill — clickable link to the listing
   if (_rmUrl && _rmUrl !== '#') {
+    var srcName = d.src || 'Listing';
     var a = document.createElement('a');
     a.className = 'ra-pill src';
-    a.href = _rmUrl; a.target = '_blank'; a.rel = 'noopener';
-    a.textContent = '↗ ' + (d.src || 'Listing') + ' listing';
+    a.href = _rmUrl;
+    a.target = '_blank';
+    a.rel = 'noopener';
+    a.innerHTML = '<i class="ti ti-external-link"></i> ' + srcName + ' listing';
     a.addEventListener('click', function(e) { e.stopPropagation(); });
     pillsEl.appendChild(a);
   }
 
   // Graph sub-label
   document.getElementById('rm-graph-sub').textContent =
-    compCount ? compCount + ' comps · 24 mo' : 'no comp data';
+    compCount ? compCount + ' transactions · gen ' + (d.gen||'') : 'no comp data';
 
-  // ── Save / notes state ────────────────────────────────────────────────────
+  // Save button state
   var isSaved = _getFavs().includes(_rmUrl);
-  _syncSaveBtn(isSaved);
+  var saveBtn = document.getElementById('rm-save-btn');
+  saveBtn.classList.toggle('saved', isSaved);
+  saveBtn.innerHTML = isSaved ? '<i class="ti ti-bookmark-filled"></i> Saved' : '<i class="ti ti-bookmark"></i> Save';
 
+  // Notes button — only enabled if saved
+  var notesBtn = document.getElementById('rm-notes-btn');
+  notesBtn.classList.toggle('disabled', !isSaved);
+
+  // Notes area — hide and load saved value
+  var notesWrap = document.getElementById('rm-notes-wrap');
+  notesWrap.style.display = 'none';
   var notesInput = document.getElementById('rm-notes-input');
   var notesKey = 'ra_note_' + btoa(_rmUrl).replace(/=/g,'').slice(0,32);
   notesInput.value = localStorage.getItem(notesKey) || '';
@@ -11171,7 +11164,6 @@ function openCardModal(card) {
     localStorage.setItem(notesKey, notesInput.value);
     document.getElementById('rm-notes-count').textContent = notesInput.value.length + ' / 750';
   };
-  document.getElementById('rm-notes-wrap').style.display = 'none';
 
   // Open backdrop
   document.getElementById('ra-backdrop').classList.add('open');
@@ -11190,20 +11182,12 @@ function openCardModal(card) {
   }, 60);
 }
 
-function _syncSaveBtn(isSaved) {
-  var btn = document.getElementById('rm-save-btn');
-  btn.classList.toggle('active', isSaved);
-  document.getElementById('rm-save-lbl').textContent = isSaved ? 'Saved' : 'Save';
-  btn.querySelector('.fb-icon').textContent = isSaved ? '★' : '☆';
-  // Notes button: enable only when saved
-  document.getElementById('rm-notes-btn').classList.toggle('fb-disabled', !isSaved);
-}
-
 function rmToggleNotes() {
-  if (document.getElementById('rm-notes-btn').classList.contains('fb-disabled')) return;
-  _rmNotesOpen = !_rmNotesOpen;
-  document.getElementById('rm-notes-wrap').style.display = _rmNotesOpen ? 'block' : 'none';
-  document.getElementById('rm-notes-btn').classList.toggle('active', _rmNotesOpen);
+  var notesWrap = document.getElementById('rm-notes-wrap');
+  var notesBtn  = document.getElementById('rm-notes-btn');
+  _rmNotesOpen  = !_rmNotesOpen;
+  notesWrap.style.display = _rmNotesOpen ? 'block' : 'none';
+  notesBtn.classList.toggle('saved', _rmNotesOpen);
   if (_rmNotesOpen) document.getElementById('rm-notes-input').focus();
 }
 
@@ -11219,8 +11203,15 @@ function rmToggleSave() {
   var adding = idx < 0;
   if (adding) favs.push(_rmUrl); else favs.splice(idx, 1);
   _setFavs(favs);
-  _syncSaveBtn(adding);
+  var saveBtn = document.getElementById('rm-save-btn');
+  saveBtn.classList.toggle('saved', adding);
+  saveBtn.innerHTML = adding ? '<i class="ti ti-bookmark-filled"></i> Saved' : '<i class="ti ti-bookmark"></i> Save';
+  // Enable/disable notes button
+  var notesBtn = document.getElementById('rm-notes-btn');
+  notesBtn.classList.toggle('disabled', !adding);
+  // If unsaving, close notes
   if (!adding && _rmNotesOpen) rmToggleNotes();
+  // sync card fav buttons
   document.querySelectorAll('.fav-btn[data-url="' + _rmUrl + '"]').forEach(function(b) {
     b.classList.toggle('active', adding);
   });
