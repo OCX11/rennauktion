@@ -318,7 +318,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
     <input type="text" placeholder="Search auctions…">
   </div>
   <div class="hdr-right">
-    <span class="hdr-time"><span class="live-dot"></span>May 21 23:10 UTC</span>
+    <span class="hdr-time"><span class="live-dot"></span>May 21 23:12 UTC</span>
     <div class="hdr-avatar" onclick="toggleDD()">CL</div>
   </div>
 </div>
@@ -1930,7 +1930,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
         </svg>
       </button>
     </div>
-    <div class="card-title">1989 Porsche 911 Narrow-Body Speedster</div>
+    <div class="card-title">1989 Porsche 911 Speedster</div>
     <div class="card-bid-row">
       <span class="bid-val">$40,000</span>
       <span class="fmv-pill fmv-below">▼ 54% below FMV</span>
@@ -4891,7 +4891,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
         </svg>
       </button>
     </div>
-    <div class="card-title">1994 Porsche 911 Carrera RS America</div>
+    <div class="card-title">1994 Porsche 911 RS America</div>
     <div class="card-bid-row">
       <span class="bid-val">$99,000</span>
       
@@ -4954,7 +4954,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
         </svg>
       </button>
     </div>
-    <div class="card-title">1989 Porsche 911 Narrow Body Speedster</div>
+    <div class="card-title">1989 Porsche 911 Speedster</div>
     <div class="card-bid-row">
       <span class="bid-val">$35,250</span>
       <span class="fmv-pill fmv-below">▼ 59% below FMV</span>
@@ -11644,14 +11644,18 @@ function fmtSecs(secs) {
 
 function tickAll() {
   var now = Date.now();
+  var _refilter = false;
   document.querySelectorAll('.countdown-timer[data-ends]').forEach(function(el) {
     var secs = Math.floor((new Date(el.dataset.ends).getTime() - now) / 1000);
+    var wasLive = !el._expired;
     el.textContent = fmtSecs(secs);
     if (!el._titled) {
       el.title = 'Ends ' + new Date(el.dataset.ends).toLocaleString([],{weekday:'short',month:'short',day:'numeric',hour:'numeric',minute:'2-digit'});
       el._titled = true;
     }
+    if (secs <= 0 && wasLive) { el._expired = true; _refilter = true; }
   });
+  if (_refilter) applyFilters();
 }
 // Aligned tick — fires exactly on each wall-clock second boundary to stay sync'd with auction clocks
 function scheduleTick() {
@@ -11661,6 +11665,116 @@ function scheduleTick() {
   setTimeout(scheduleTick, msToNextSecond);
 }
 scheduleTick();
+
+// ── Live data polling — updates bids, end times, and card positions ───────────
+(function() {
+  var DATA_URL = 'auctions-data.json';
+  var POLL_NORMAL_MS  = 5  * 60 * 1000;  // 5 min — standard cadence
+  var POLL_URGENT_MS  = 2  * 60 * 1000;  // 2 min — any car ending within 10 min
+  var _pollTimer = null;
+  var _lastGenerated = null;
+
+  function _fmt(n) {
+    if (!n) return '—';
+    return '$' + Number(n).toLocaleString();
+  }
+
+  function _urgentActive() {
+    var min = Infinity;
+    document.querySelectorAll('.auc-card[data-ends]').forEach(function(el) {
+      var t = new Date(el.dataset.ends).getTime();
+      var diff = t - Date.now();
+      if (diff > 0 && diff < min) min = diff;
+    });
+    return min < 10 * 60 * 1000;
+  }
+
+  function _applyUpdate(data) {
+    if (!data || !data.cars) return;
+    if (data.generated === _lastGenerated) return;
+    _lastGenerated = data.generated;
+
+    var endedSet = new Set(data.ended_ids || []);
+    var byId = {};
+    data.cars.forEach(function(c) { byId[c.id] = c; });
+
+    var refilterNeeded = false;
+
+    document.querySelectorAll('.auc-card[data-lid]').forEach(function(card) {
+      var lid = parseInt(card.dataset.lid, 10);
+      var d = byId[lid];
+
+      if (endedSet.has(lid)) {
+        if (!card.closest('.sec-ended')) refilterNeeded = true;
+        return;
+      }
+      if (!d) return;
+
+      // Update bid price
+      if (d.price && d.price !== parseInt(card.dataset.price, 10)) {
+        card.dataset.price = d.price;
+        card.dataset.bid   = d.price;
+        var bidEl = card.querySelector('.bid-val');
+        if (bidEl) bidEl.textContent = _fmt(d.price);
+        var fmvPill = card.querySelector('.fmv-pill');
+        if (d.fmv && d.price && d.conf !== 'NONE') {
+          var pct = (d.price - d.fmv) / d.fmv;
+          var pillHtml = '';
+          if (pct <= -0.05)     pillHtml = '<span class="fmv-pill fmv-below">▼ ' + Math.abs(Math.round(pct*100)) + '% below FMV</span>';
+          else if (pct >= 0.05) pillHtml = '<span class="fmv-pill fmv-above">▲ ' + Math.round(pct*100) + '% above FMV</span>';
+          var bidRow = card.querySelector('.card-bid-row');
+          if (bidRow) {
+            if (fmvPill) fmvPill.remove();
+            if (pillHtml) bidRow.insertAdjacentHTML('beforeend', pillHtml);
+          }
+        } else if (fmvPill) {
+          fmvPill.remove();
+        }
+        refilterNeeded = true;
+      }
+
+      // Update end time (anti-snipe extension)
+      if (d.ends_at && d.ends_at !== card.dataset.ends) {
+        card.dataset.ends = d.ends_at;
+        card.querySelectorAll('.countdown-timer[data-ends]').forEach(function(el) {
+          el.dataset.ends = d.ends_at;
+          el._expired = false;
+        });
+        refilterNeeded = true;
+      }
+    });
+
+    if (refilterNeeded) applyFilters();
+  }
+
+  function poll() {
+    fetch(DATA_URL + '?t=' + Date.now(), {cache: 'no-store'})
+      .then(function(r) { return r.ok ? r.json() : null; })
+      .then(function(data) { _applyUpdate(data); })
+      .catch(function() {/* silent */})
+      .finally(function() { schedulePoll(); });
+  }
+
+  function schedulePoll() {
+    if (_pollTimer) clearTimeout(_pollTimer);
+    _pollTimer = setTimeout(poll, _urgentActive() ? POLL_URGENT_MS : POLL_NORMAL_MS);
+  }
+
+  setTimeout(schedulePoll, 5000);
+
+  var _hiddenAt = null;
+  document.addEventListener('visibilitychange', function() {
+    if (document.visibilityState === 'hidden') {
+      _hiddenAt = Date.now();
+    } else {
+      if (_hiddenAt && Date.now() - _hiddenAt > 60000) {
+        if (_pollTimer) clearTimeout(_pollTimer);
+        poll();
+      }
+      _hiddenAt = null;
+    }
+  });
+})();
 
 // ── Custom dropdowns ─────────────────────────────────────────────────────────
 function toggleCdd(id) {
