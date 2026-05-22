@@ -455,7 +455,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
     <input type="text" placeholder="Search auctions…">
   </div>
   <div class="hdr-right">
-    <span class="hdr-time"><span class="live-dot"></span>May 22 23:38 UTC</span>
+    <span class="hdr-time"><span class="live-dot"></span>May 22 23:39 UTC</span>
     <div class="hdr-avatar" onclick="toggleDD()">CL</div>
   </div>
 </div>
@@ -10379,61 +10379,67 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
   </div><!-- /main -->
 </div><!-- /body-row -->
 
-<!-- Bloom modal -->
+<!-- Bloom modal — PERFECT-VERSION -->
 <div class="ra-backdrop" id="ra-backdrop" onclick="closeCardModal(event)">
   <div class="ra-modal-wrap">
     <div class="ra-modal" id="ra-modal">
 
-      <!-- Photo -->
-      <div class="ra-modal-img">
+      <!-- Photo: car name top-left, countdown top-right, fee stack bottom -->
+      <div class="rm-photo">
         <img id="rm-img" src="" alt="">
-        <div class="ra-modal-img-fade"></div>
-        <div class="ra-modal-grad"></div>
-        <div class="ra-modal-close" onclick="closeCardModal()"><i class="ti ti-x"></i></div>
-        <div class="ra-modal-badges">
-          <span id="rm-src-badge" class="src-badge"></span>
-          <span id="rm-gen-badge" style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);padding:1px 6px;border-radius:3px;font-family:'JetBrains Mono',monospace;font-size:12px;color:#aaa;"></span>
-        </div>
-        <div class="ra-modal-title-wrap">
-          <div class="ra-modal-title" id="rm-title"></div>
-          <div class="ra-modal-subtitle" id="rm-subtitle"></div>
-        </div>
-      </div>
-
-      <!-- Body -->
-      <div class="ra-modal-body">
-
-        <!-- Price + deal + pills -->
-        <div class="ra-price-section">
-          <div class="ra-price-val" id="rm-bid"></div>
-          <div class="ra-price-deal" id="rm-deal"></div>
-          <div class="ra-pills" id="rm-pills"></div>
-        </div>
-
-        <!-- Graph — full bleed band -->
-        <div class="ra-graph-band">
-          <div class="ra-graph-hdr">
-            <span class="ra-graph-lbl">Comparable Sales</span>
-            <span class="ra-graph-sub" id="rm-graph-sub"></span>
+        <div class="rm-close" onclick="closeCardModal()"><i class="ti ti-x"></i></div>
+        <div class="rm-car-name" id="rm-car-name"></div>
+        <div class="rm-countdown countdown-timer timer-green" id="rm-countdown">—</div>
+        <div class="rm-fee-stack">
+          <div class="rm-fee-row">
+            <div class="rm-fee-label">Current bid</div>
+            <div class="rm-fee-amount" id="rm-bid"><span class="dlr">$</span><span id="rm-bid-val">—</span></div>
           </div>
-          <svg class="ra-modal-svg" id="rm-svg"></svg>
+          <div class="rm-fee-row fee-line">
+            <div class="rm-fee-label" id="rm-fee-label">Buyer fee · 5% capped</div>
+            <div class="rm-fee-amount" id="rm-fee"><span class="dlr">$</span><span id="rm-fee-val">—</span></div>
+          </div>
+          <div class="rm-fee-divider"></div>
+          <div class="rm-fee-row total">
+            <div class="rm-fee-label">Total all-in</div>
+            <div class="rm-fee-amount" id="rm-total"><span class="dlr">$</span><span id="rm-total-val">—</span></div>
+          </div>
         </div>
-
-        <!-- Notes (only when saved) -->
-        <div id="rm-notes-wrap" style="padding:10px 18px 4px;display:none;">
-          <textarea id="rm-notes-input" maxlength="750"
-            style="width:100%;background:var(--bg);border:1px solid var(--bd2);border-radius:6px;padding:8px 10px;color:var(--tx2);font-size:13px;font-family:'JetBrains Mono',monospace;resize:vertical;min-height:64px;outline:none;box-sizing:border-box;"
-            placeholder="Notes..."></textarea>
-          <div style="text-align:right;font-size:11px;color:var(--tx3);font-family:'JetBrains Mono',monospace;margin-top:3px;" id="rm-notes-count">0 / 750</div>
-        </div>
-
       </div>
 
-      <!-- Footer -->
+      <!-- Delta bar -->
+      <div class="rm-delta">
+        <span class="rm-delta-tag" id="rm-delta-tag">—</span>
+        <span class="rm-delta-note" id="rm-delta-note"></span>
+      </div>
+
+      <!-- Spec grid: Miles / Trans / Color / ↗ Source -->
+      <div class="rm-spec-grid">
+        <div class="rm-sg"><div class="rm-sg-v" id="rm-miles">—</div><div class="rm-sg-l">Miles</div></div>
+        <div class="rm-sg"><div class="rm-sg-v" id="rm-trans">—</div><div class="rm-sg-l">Trans</div></div>
+        <div class="rm-sg"><div class="rm-sg-v" id="rm-color">—</div><div class="rm-sg-l">Color</div></div>
+        <div class="rm-sg"><a class="rm-sg-v link" id="rm-src-link" href="#" target="_blank" rel="noopener" onclick="event.stopPropagation()">↗ —</a><div class="rm-sg-l">View Auction</div></div>
+      </div>
+
+      <!-- Graph -->
+      <div class="rm-graph">
+        <div class="rm-graph-hdr">
+          <span class="rm-graph-lbl" id="rm-graph-lbl">Sale history</span>
+          <span class="rm-graph-sub" id="rm-graph-sub"></span>
+        </div>
+        <svg class="ra-modal-svg" id="rm-svg"></svg>
+      </div>
+
+      <!-- Notes (only when saved) -->
+      <div class="rm-notes-wrap" id="rm-notes-wrap">
+        <textarea id="rm-notes-input" maxlength="750" placeholder="Notes..."></textarea>
+        <div class="rm-notes-count" id="rm-notes-count">0 / 750</div>
+      </div>
+
+      <!-- Footer: Save + Notes only -->
       <div class="ra-modal-foot">
-        <button class="ra-mfb" id="rm-save-btn" onclick="rmToggleSave()"><i class="ti ti-bookmark"></i> Save</button>
-        <button class="ra-mfb disabled" id="rm-notes-btn" onclick="rmToggleNotes()"><i class="ti ti-notes"></i> Notes</button>
-        <button class="ra-mfb" onclick="rmShare()"><i class="ti ti-share"></i> Share</button>
+        <button class="ra-mfb" id="rm-save-btn" onclick="rmToggleSave()">☆ Save</button>
+        <button class="ra-mfb disabled" id="rm-notes-btn" onclick="rmToggleNotes()">≡ Notes</button>
       </div>
 
     </div>
@@ -10787,108 +10793,91 @@ function openCardModal(card) {
   _rmUrl = d.url || '#';
   _rmNotesOpen = false;
 
-  // Image — match exact crop from card thumbnail
+  // Image
   var img = card.querySelector('.auc-img');
   var rmImg = document.getElementById('rm-img');
   rmImg.src = img ? img.src : '';
-  rmImg.style.objectPosition = (img && img.style.objectPosition) ? img.style.objectPosition : 'center center';
+  rmImg.style.objectPosition = (img && img.style.objectPosition) ? img.style.objectPosition : 'center 38%';
 
-  // Source badge (top-left on photo)
-  var srcBadge = card.querySelector('.img-src-badge');
-  var rmSrc = document.getElementById('rm-src-badge');
-  if (srcBadge) {
-    rmSrc.textContent = srcBadge.textContent;
-    rmSrc.style.cssText = srcBadge.style.cssText;
-    rmSrc.className = srcBadge.className;
-  }
-
-  // Gen badge
-  document.getElementById('rm-gen-badge').textContent = d.gen || '';
-
-  // Title + subtitle
+  // Car name (top-left)
   var titleEl = card.querySelector('.card-title');
-  document.getElementById('rm-title').textContent = titleEl ? titleEl.textContent : '';
-  var timer = card.querySelector('.countdown-timer');
-  var timerTxt = timer ? timer.textContent.trim() : '';
-  document.getElementById('rm-subtitle').textContent =
-    (d.src||'') + (d.gen ? ' · gen ' + d.gen : '') + (timerTxt && timerTxt !== 'ENDED' ? ' · ' + timerTxt + ' remaining' : '');
+  document.getElementById('rm-car-name').textContent = titleEl ? titleEl.textContent : '';
+
+  // Countdown (top-right) — clone from card
+  var cardTimer = card.querySelector('.countdown-timer');
+  var rmCd = document.getElementById('rm-countdown');
+  rmCd.textContent = cardTimer ? cardTimer.textContent : '—';
+  rmCd.className = 'rm-countdown countdown-timer ' + (cardTimer ? (cardTimer.className.split(' ').find(function(c){return c.startsWith('timer-');}) || 'timer-green') : 'timer-muted');
+  if (d.ends) rmCd.dataset.ends = d.ends;
 
   // Numbers
-  var bid = +d.bid || 0;
-  var fmv = +d.fmv || 0;
-  var low = +d['fmv-low']  || 0;
-  var high= +d['fmv-high'] || 0;
-  var lid = d.lid || '';
-  var compCount = +d['comp-count'] || 0;
+  var bid        = +d.bid || 0;
+  var fmv        = +d.fmv || 0;
+  var low        = +d['fmv-low'] || 0;
+  var high       = +d['fmv-high'] || 0;
+  var lid        = d.lid || '';
+  var compCount  = +d['comp-count'] || 0;
 
-  // Price
-  document.getElementById('rm-bid').textContent = bid ? '$' + bid.toLocaleString() : '—';
+  // Fee math: 5% capped at $7,500
+  var fee   = bid ? Math.min(bid * 0.05, 7500) : 0;
+  var total = bid + fee;
+  var feeCapped = (bid * 0.05 > 7500);
 
-  // Deal line — "▼ 31% below est. FMV · ~$196K"
-  var dealEl = document.getElementById('rm-deal');
-  dealEl.className = 'ra-price-deal';
+  document.getElementById('rm-bid-val').textContent   = bid ? bid.toLocaleString() : '—';
+  document.getElementById('rm-fee-val').textContent   = fee ? fee.toLocaleString() : '—';
+  document.getElementById('rm-total-val').textContent = total ? total.toLocaleString() : '—';
+  document.getElementById('rm-fee-label').textContent = feeCapped ? 'Buyer fee · 5% capped at $7,500' : 'Buyer fee · 5%';
+
+  // Delta bar
+  var deltaTag  = document.getElementById('rm-delta-tag');
+  var deltaNote = document.getElementById('rm-delta-note');
+  deltaTag.className = 'rm-delta-tag';
   if (fmv && bid) {
     var pct = (bid - fmv) / fmv;
-    var fmvStr = ' · est. FMV ~$' + Math.round(fmv/1000) + 'K';
-    if (compCount) fmvStr += ' (' + compCount + ' comps)';
+    var fmvStr = 'est. FMV ~$' + Math.round(fmv/1000) + 'K';
+    if (compCount) fmvStr += ' · ' + compCount + ' comps';
+    if (d.gen) fmvStr += ' · ' + d.gen;
+    deltaNote.textContent = fmvStr.toUpperCase();
     if (pct <= -0.05) {
-      dealEl.textContent = '▼ ' + Math.abs(Math.round(pct*100)) + '% below est. FMV' + fmvStr;
-      dealEl.classList.add('below');
+      deltaTag.textContent = Math.abs(Math.round(pct*100)) + '% below FMV';
+      deltaTag.classList.add('below');
     } else if (pct >= 0.05) {
-      dealEl.textContent = '▲ ' + Math.round(pct*100) + '% above est. FMV' + fmvStr;
-      dealEl.classList.add('above');
+      deltaTag.textContent = Math.round(pct*100) + '% above FMV';
+      deltaTag.classList.add('above');
     } else {
-      dealEl.textContent = 'Near est. FMV' + fmvStr;
-      dealEl.classList.add('near');
+      deltaTag.textContent = 'Near FMV';
+      deltaTag.classList.add('near');
     }
   } else {
-    dealEl.textContent = fmv ? 'est. FMV ~$' + Math.round(fmv/1000) + 'K' : '';
+    deltaTag.textContent = fmv ? '~$' + Math.round(fmv/1000) + 'K FMV' : 'No FMV data';
+    deltaTag.classList.add('near');
+    deltaNote.textContent = compCount ? compCount + ' COMPS' : '';
   }
 
-  // Pills — mileage, trans, color, gen, source+link
-  var pillsEl = document.getElementById('rm-pills');
-  pillsEl.innerHTML = '';
-  var pillDefs = [
-    d.mileage && d.mileage !== '999999' ? Number(d.mileage).toLocaleString() + ' mi' : null,
-    d.trans  || null,
-    d.color  || null,
-    d.gen    || null,
-  ];
-  pillDefs.forEach(function(txt) {
-    if (!txt || txt === '—') return;
-    var s = document.createElement('span');
-    s.className = 'ra-pill';
-    s.textContent = txt;
-    pillsEl.appendChild(s);
-  });
-  // Source pill — clickable link to the listing
-  if (_rmUrl && _rmUrl !== '#') {
-    var srcName = d.src || 'Listing';
-    var a = document.createElement('a');
-    a.className = 'ra-pill src';
-    a.href = _rmUrl;
-    a.target = '_blank';
-    a.rel = 'noopener';
-    a.innerHTML = '<i class="ti ti-external-link"></i> ' + srcName + ' listing';
-    a.addEventListener('click', function(e) { e.stopPropagation(); });
-    pillsEl.appendChild(a);
-  }
+  // Spec grid
+  var mi = d.mileage && d.mileage !== '999999' ? Number(d.mileage).toLocaleString() : '—';
+  document.getElementById('rm-miles').textContent = mi;
+  document.getElementById('rm-trans').textContent = d.trans || '—';
+  document.getElementById('rm-color').textContent = d.color || '—';
+  var srcLink = document.getElementById('rm-src-link');
+  srcLink.textContent = '↗ ' + (d.src || 'Listing');
+  srcLink.href = _rmUrl !== '#' ? _rmUrl : '#';
 
-  // Graph sub-label
+  // Graph header
+  var genLabel = d.gen ? d.gen + ' · sale history' : 'Sale history';
+  document.getElementById('rm-graph-lbl').textContent = genLabel;
   document.getElementById('rm-graph-sub').textContent =
-    compCount ? compCount + ' transactions · gen ' + (d.gen||'') : 'no comp data';
+    compCount ? compCount + ' comps · BaT / C&B' : 'no comp data';
 
-  // Save button state
+  // Save state
   var isSaved = _getFavs().includes(_rmUrl);
   var saveBtn = document.getElementById('rm-save-btn');
   saveBtn.classList.toggle('saved', isSaved);
-  saveBtn.innerHTML = isSaved ? '<i class="ti ti-bookmark-filled"></i> Saved' : '<i class="ti ti-bookmark"></i> Save';
+  saveBtn.textContent = isSaved ? '★ Saved' : '☆ Save';
 
-  // Notes button — only enabled if saved
+  // Notes — only active when saved
   var notesBtn = document.getElementById('rm-notes-btn');
   notesBtn.classList.toggle('disabled', !isSaved);
-
-  // Notes area — hide and load saved value
   var notesWrap = document.getElementById('rm-notes-wrap');
   notesWrap.style.display = 'none';
   var notesInput = document.getElementById('rm-notes-input');
@@ -10900,11 +10889,10 @@ function openCardModal(card) {
     document.getElementById('rm-notes-count').textContent = notesInput.value.length + ' / 750';
   };
 
-  // Open backdrop
+  // Open
   document.getElementById('ra-backdrop').classList.add('open');
 
-  // Draw dot graph — use requestAnimationFrame after a short delay so the
-  // modal is visible and has real dimensions before we measure width.
+  // Draw dot graph
   setTimeout(function() {
     var rmSvg = document.getElementById('rm-svg');
     rmSvg.innerHTML = '';
@@ -10914,7 +10902,6 @@ function openCardModal(card) {
     rmSvg.dataset.bid  = bid;
     rmSvg.dataset.low  = low;
     rmSvg.dataset.high = high;
-    // Retry up to 5× (50ms apart) until parent has real width
     var attempts = 0;
     function tryDraw() {
       var w = rmSvg.parentElement ? rmSvg.parentElement.getBoundingClientRect().width : 0;
@@ -10952,7 +10939,7 @@ function rmToggleSave() {
   _setFavs(favs);
   var saveBtn = document.getElementById('rm-save-btn');
   saveBtn.classList.toggle('saved', adding);
-  saveBtn.innerHTML = adding ? '<i class="ti ti-bookmark-filled"></i> Saved' : '<i class="ti ti-bookmark"></i> Save';
+  saveBtn.textContent = adding ? '★ Saved' : '☆ Save';
   // Enable/disable notes button
   var notesBtn = document.getElementById('rm-notes-btn');
   notesBtn.classList.toggle('disabled', !adding);
@@ -10967,7 +10954,7 @@ function rmToggleSave() {
 
 function rmShare() {
   if (navigator.share) {
-    navigator.share({ title: document.getElementById('rm-title').textContent, url: _rmUrl });
+    navigator.share({ title: document.getElementById('rm-car-name').textContent, url: _rmUrl });
   } else {
     navigator.clipboard && navigator.clipboard.writeText(_rmUrl);
   }
