@@ -234,7 +234,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
 .ra-backdrop.open { background:rgba(0,0,0,.78); backdrop-filter:blur(4px); pointer-events:all; }
 .ra-modal-wrap { position:fixed; inset:0; z-index:501; display:flex; align-items:center; justify-content:center; pointer-events:none; }
 .ra-modal {
-  width:min(660px,95vw); max-height:96vh;
+  width:min(726px,95vw); max-height:96vh;
   background:#111; border:1px solid rgba(255,255,255,.07); border-radius:8px;
   box-shadow:0 8px 0 #040404, 0 20px 60px rgba(0,0,0,.75), 0 40px 90px rgba(0,0,0,.55);
   overflow:auto; overflow-x:hidden;
@@ -246,7 +246,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
 .ra-backdrop.open .ra-modal { opacity:1; transform:scale(1); pointer-events:all; }
 
 /* Photo — NO overflow:hidden so title can bleed out */
-.ra-modal .rm-photo { height:390px; position:relative; background:#0a0a0a; flex-shrink:0; }
+.ra-modal .rm-photo { height:429px; position:relative; background:#0a0a0a; flex-shrink:0; }
 .ra-modal .rm-photo > img { width:100%; height:100%; object-fit:cover; object-position:center 38%; display:block; filter:saturate(.85) contrast(1.08) brightness(.97); }
 .ra-modal .rm-photo::after { content:''; position:absolute; inset:0; pointer-events:none;
   background:linear-gradient(180deg, rgba(0,0,0,.45) 0%, rgba(0,0,0,.12) 28%, transparent 48%, rgba(10,10,10,.75) 78%, rgba(10,10,10,1) 100%); }
@@ -455,7 +455,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
     <input type="text" placeholder="Search auctions…">
   </div>
   <div class="hdr-right">
-    <span class="hdr-time"><span class="live-dot"></span>May 22 23:39 UTC</span>
+    <span class="hdr-time"><span class="live-dot"></span>May 22 23:44 UTC</span>
     <div class="hdr-avatar" onclick="toggleDD()">CL</div>
   </div>
 </div>
