@@ -10727,8 +10727,7 @@ function openCardModal(card) {
   // Open backdrop
   document.getElementById('ra-backdrop').classList.add('open');
 
-  // Draw dot graph — use requestAnimationFrame after a short delay so the
-  // modal is visible and has real dimensions before we measure width.
+  // Draw dot graph
   setTimeout(function() {
     var rmSvg = document.getElementById('rm-svg');
     rmSvg.innerHTML = '';
@@ -10738,19 +10737,8 @@ function openCardModal(card) {
     rmSvg.dataset.bid  = bid;
     rmSvg.dataset.low  = low;
     rmSvg.dataset.high = high;
-    // Retry up to 5× (50ms apart) until parent has real width
-    var attempts = 0;
-    function tryDraw() {
-      var w = rmSvg.parentElement ? rmSvg.parentElement.getBoundingClientRect().width : 0;
-      if (w > 10 || attempts >= 5) {
-        drawDotGraph(rmSvg, null);
-      } else {
-        attempts++;
-        setTimeout(tryDraw, 50);
-      }
-    }
-    tryDraw();
-  }, 80);
+    drawDotGraph(rmSvg, null);
+  }, 60);
 }
 
 function rmToggleNotes() {
@@ -10943,8 +10931,7 @@ function _drawDotGraphInner(svg, dots, fmv, bid, low, high) {
     return;
   }
 
-  var W = (svg.parentElement && svg.parentElement.getBoundingClientRect().width > 10)
-    ? svg.parentElement.getBoundingClientRect().width : 700;
+  var W = svg.parentElement.getBoundingClientRect().width || 700;
   var H = Math.max(160, svg.getBoundingClientRect().height || 200);
   svg.setAttribute('viewBox', '0 0 ' + W + ' ' + H);
   svg.setAttribute('width', W);
