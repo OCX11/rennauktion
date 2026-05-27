@@ -10,7 +10,18 @@ const SUPABASE_URL      = 'https://kulgecvykrhfalvvyeru.supabase.co';
 const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imt1bGdlY3Z5a3JoZmFsdnZ5ZXJ1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzc2NDkyODcsImV4cCI6MjA5MzIyNTI4N30.xvylwBUU-Tt7-dbUUe68o2RZCIBtZrnspMconUFgqH4';
 
 // ── Init Supabase client ──────────────────────────────────────────────────────
-const _sb = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+// Guard: if Supabase CDN failed to load (ad blocker, network issue), don't
+// throw a ReferenceError that kills all JS on the page.
+let _sb = null;
+try {
+  if (typeof supabase !== 'undefined') {
+    _sb = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+  } else {
+    console.warn('auth.js: Supabase CDN not loaded — auth features disabled.');
+  }
+} catch(e) {
+  console.warn('auth.js: Supabase init failed —', e.message);
+}
 
 // ── State ─────────────────────────────────────────────────────────────────────
 let _user = null;
@@ -21,6 +32,7 @@ const _TABLE = document.location.hostname.includes('rennauktion')
 
 // ── Session ───────────────────────────────────────────────────────────────────
 async function initAuth() {
+  if (!_sb) return;  // Supabase unavailable — auth disabled
   const { data: { session } } = await _sb.auth.getSession();
   if (session) {
     _user = session.user;
@@ -42,7 +54,7 @@ async function initAuth() {
 }
 
 async function _loadSaved() {
-  if (!_user) return;
+  if (!_sb || !_user) return;
   const { data } = await _sb.from(_TABLE)
     .select('listing_id')
     .eq('user_id', _user.id);
@@ -51,7 +63,7 @@ async function _loadSaved() {
 
 // ── Save / unsave ─────────────────────────────────────────────────────────────
 async function toggleSave(listingId, meta = {}) {
-  if (!_user) { openLoginModal(); return; }
+  if (!_sb || !_user) { openLoginModal(); return; }
 
   if (_savedIds.has(listingId)) {
     await _sb.from(_TABLE).delete()
@@ -60,12 +72,13 @@ async function toggleSave(listingId, meta = {}) {
     _savedIds.delete(listingId);
   } else {
     await _sb.from(_TABLE).insert({
-      user_id:     _user.id,
-      listing_id:  listingId,
-      source:      meta.source || null,
-      title:       meta.title  || null,
-      listing_url: meta.url    || null,
-      image_url:   meta.img    || null,
+      user_id:       _user.id,
+      listing_id:    listingId,
+      source:        meta.source       || null,
+      title:         meta.title        || null,
+      listing_url:   meta.listing_url  || meta.url || null,
+      image_url:     meta.img          || null,
+      price_at_save: meta.price        || null,
     });
     _savedIds.add(listingId);
   }
@@ -253,6 +266,7 @@ function _createLoginModal() {
 
   // Google OAuth
   document.getElementById('auth-google-btn').addEventListener('click', async () => {
+    if (!_sb) return;
     await _sb.auth.signInWithOAuth({ provider: 'google',
       options: { redirectTo: window.location.href } });
   });
@@ -264,6 +278,7 @@ function _createLoginModal() {
     if (!email || !password) { _msg('Please enter email and password.', true); return; }
     const btn = document.getElementById('auth-signin-btn');
     btn.textContent = 'Signing in…'; btn.disabled = true;
+    if (!_sb) { _msg('Auth unavailable.', true); btn.textContent='Sign In'; btn.disabled=false; return; }
     const { error } = await _sb.auth.signInWithPassword({ email, password });
     btn.textContent = 'Sign In'; btn.disabled = false;
     if (error) _msg(error.message, true);
@@ -278,6 +293,7 @@ function _createLoginModal() {
     if (password.length < 6) { _msg('Password must be at least 6 characters.', true); return; }
     const btn = document.getElementById('auth-signup-btn');
     btn.textContent = 'Creating…'; btn.disabled = true;
+    if (!_sb) { _msg('Auth unavailable.', true); btn.textContent='Create Account'; btn.disabled=false; return; }
     const { error } = await _sb.auth.signUp({ email, password,
       options: { emailRedirectTo: window.location.href } });
     btn.textContent = 'Create Account'; btn.disabled = false;
@@ -291,6 +307,7 @@ function _createLoginModal() {
     if (!email) return;
     const btn = document.getElementById('auth-magic-btn');
     btn.textContent = 'Sending…'; btn.disabled = true;
+    if (!_sb) { _msg('Auth unavailable.', true); btn.textContent='Send magic link'; btn.disabled=false; return; }
     const { error } = await _sb.auth.signInWithOtp({ email,
       options: { emailRedirectTo: window.location.href } });
     btn.textContent = 'Send magic link'; btn.disabled = false;
@@ -313,6 +330,7 @@ function _togglePw(inputId, btn) {
 
 // ── Logout ────────────────────────────────────────────────────────────────────
 async function signOut() {
+  if (!_sb) return;
   await _sb.auth.signOut();
 }
 
