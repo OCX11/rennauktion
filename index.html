@@ -449,7 +449,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
 
 <!-- Header -->
 <div class="hdr">
-  <a class="logo" href="index.html">
+  <a class="logo" href="/">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 270 40"><g transform="translate(4,4)"><circle cx="16" cy="16" r="13" fill="none" stroke="#2a2a2a" stroke-width="1.8"/><path d="M4,23 A13,13 0 0,1 26,5" fill="none" stroke="#f4433c" stroke-width="1.8" stroke-linecap="round"/><line x1="16" y1="16" x2="26" y2="5" stroke="white" stroke-width="1.2" stroke-linecap="round"/><circle cx="16" cy="16" r="2.5" fill="#f4433c"/><circle cx="16" cy="16" r="1" fill="#0f0f0f"/><text x="36" y="22" font-family="'Helvetica Neue',Arial,sans-serif" font-size="20" letter-spacing="-0.3"><tspan font-weight="700" fill="white">Renn</tspan><tspan font-weight="300" fill="#f4433c">Auktion</tspan></text></g></svg>
   </a>
   <div class="hdr-search">
@@ -458,7 +458,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
   </div>
   <div class="hdr-right">
     <a class="rm-xlink" href="https://rennmarkt.net" target="_blank" rel="noopener">RennMarkt &#x2197;</a>
-    <span class="hdr-time"><span class="live-dot"></span>Jun 09 23:22 UTC</span>
+    <span class="hdr-time"><span class="live-dot"></span>Jun 09 23:28 UTC</span>
     <div class="hdr-avatar" onclick="toggleDD()">CL</div>
   </div>
 </div>
@@ -467,13 +467,13 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
 <div class="dd-overlay" id="dd-overlay">
   <div class="dd-backdrop" onclick="closeDD()"></div>
   <div class="dd">
-    <a class="dd-item" href="index.html"><i class="ti ti-car"></i> Market</a>
+    <a class="dd-item" href="/"><i class="ti ti-car"></i> Market</a>
     <a class="dd-item" href="saved.html"><i class="ti ti-heart"></i> Saved</a>
-    <a class="dd-item" href="search.html"><i class="ti ti-search"></i> Search</a>
+    <a class="dd-item" href="https://rennmarkt.net/search.html"><i class="ti ti-search"></i> Search</a>
     <div class="dd-divider"></div>
-    <a class="dd-item" href="calculator.html"><i class="ti ti-calculator"></i> Fee Calculator</a>
-    <a class="dd-item" href="market_report.html"><i class="ti ti-chart-line"></i> Market Report</a>
-    <a class="dd-item" href="notify.html"><i class="ti ti-bell"></i> Notifications</a>
+    <a class="dd-item" href="https://rennmarkt.net/calculator.html"><i class="ti ti-calculator"></i> Fee Calculator</a>
+    <a class="dd-item" href="https://rennmarkt.net/market_report.html"><i class="ti ti-chart-line"></i> Market Report</a>
+    <a class="dd-item" href="https://rennmarkt.net/notify.html"><i class="ti ti-bell"></i> Notifications</a>
     <div class="dd-divider"></div>
     <div class="dd-item" onclick="cycleTheme()"><i class="ti ti-palette"></i> Theme</div>
     <div class="dd-divider"></div>
@@ -492,11 +492,11 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
     </div>
     <div class="sb-nav on"><i class="ti ti-car"></i><span class="sb-lbl">Market</span></div>
     <a class="sb-nav" href="saved.html"><i class="ti ti-heart"></i><span class="sb-lbl">Saved</span></a>
-    <a class="sb-nav" href="search.html"><i class="ti ti-search"></i><span class="sb-lbl">Search</span></a>
-    <a class="sb-nav" href="calculator.html"><i class="ti ti-calculator"></i><span class="sb-lbl">Fee Calc</span></a>
-    <a class="sb-nav" href="market_report.html"><i class="ti ti-chart-line"></i><span class="sb-lbl">Market Report</span></a>
+    <a class="sb-nav" href="https://rennmarkt.net/search.html"><i class="ti ti-search"></i><span class="sb-lbl">Search</span></a>
+    <a class="sb-nav" href="https://rennmarkt.net/calculator.html"><i class="ti ti-calculator"></i><span class="sb-lbl">Fee Calc</span></a>
+    <a class="sb-nav" href="https://rennmarkt.net/market_report.html"><i class="ti ti-chart-line"></i><span class="sb-lbl">Market Report</span></a>
     <div class="sb-bot">
-      <a class="sb-nav" href="notify.html"><i class="ti ti-bell"></i><span class="sb-lbl">Notifications</span></a>
+      <a class="sb-nav" href="https://rennmarkt.net/notify.html"><i class="ti ti-bell"></i><span class="sb-lbl">Notifications</span></a>
       <div class="sb-nav" onclick="cycleTheme()"><i class="ti ti-palette"></i><span class="sb-lbl">Theme</span></div>
       <div class="sb-nav auth-logout-btn" style="display:none" onclick="window.RA&&window.RA.signOut()"><i class="ti ti-logout"></i><span class="sb-lbl">Log out</span></div>
     </div>
@@ -507,7 +507,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
 
     <!-- Tabs -->
     <div class="tabs">
-      <button class="vtab active" data-view="live" onclick="switchView('live',this)">Live<span class="tab-count" id="tab-count-live">69</span></button>
+      <button class="vtab active" data-view="live" onclick="switchView('live',this)">Live<span class="tab-count" id="tab-count-live">71</span></button>
       <button class="vtab" data-view="ended" onclick="switchView('ended',this)">Ended<span class="tab-count" id="tab-count-ended">69</span></button>
       <button class="vtab" data-view="favs" onclick="switchView('favs',this)">Saved<span class="tab-count" id="tab-count-favs">0</span></button>
     </div>
@@ -840,12 +840,12 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
  data-comp-count="112"
  data-fmv-range="$30K &amp;ndash; $48K"
  data-days-listed="6"
- data-ends="2026-06-10T17:48:00Z" data-listed="2026-06-03">
+ data-ends="2026-06-10T17:47:59Z" data-listed="2026-06-03">
   <div class="img-wrap">
     <img src="https://media.carsandbids.com/cdn-cgi/image/width=768,quality=70/39ba75f9b610a05237adc3ca976891cd48f5832c/photos/application/s-EgzMZta/edit/8mBzj.jpg?t=178040908831" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
     <div class="img-grad"></div>
     <span class="img-src-badge src-badge" style="background:#1F0D03;color:#fb923c">C&amp;B</span>
-    <span class="img-timer countdown-timer timer-amber" data-ends="2026-06-10T17:48:00Z">…</span>
+    <span class="img-timer countdown-timer timer-amber" data-ends="2026-06-10T17:47:59Z">…</span>
   </div>
   <div class="card-body">
     <div class="card-top">
@@ -966,12 +966,12 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
  data-comp-count="434"
  data-fmv-range="$11K &amp;ndash; $17K"
  data-days-listed="6"
- data-ends="2026-06-10T18:12:00Z" data-listed="2026-06-03">
+ data-ends="2026-06-10T18:11:59Z" data-listed="2026-06-03">
   <div class="img-wrap">
     <img src="https://media.carsandbids.com/cdn-cgi/image/width=768,quality=70/1477bbe21e8d6b5e719c7c3ccab577fd47dd8cc3/photos/rbyMvn0k-aVJinkU/edit/fDBVs.jpg?t=178021142805" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
     <div class="img-grad"></div>
     <span class="img-src-badge src-badge" style="background:#1F0D03;color:#fb923c">C&amp;B</span>
-    <span class="img-timer countdown-timer timer-amber" data-ends="2026-06-10T18:12:00Z">…</span>
+    <span class="img-timer countdown-timer timer-amber" data-ends="2026-06-10T18:11:59Z">…</span>
   </div>
   <div class="card-body">
     <div class="card-top">
@@ -1029,12 +1029,12 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
  data-comp-count="0"
  data-fmv-range="—"
  data-days-listed="6"
- data-ends="2026-06-10T18:39:55Z" data-listed="2026-06-03">
+ data-ends="2026-06-10T18:39:42Z" data-listed="2026-06-03">
   <div class="img-wrap">
     <img src="https://d2niwqq19lf86s.cloudfront.net/htwritable/media/.thumbnails/ffd660c9-71d5-41a9-a67c-a020ddd46d39-IMG_1191.webp/ffd660c9-71d5-41a9-a67c-a020ddd46d39-IMG_1191-tiny-380x0.webp" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
     <div class="img-grad"></div>
     <span class="img-src-badge src-badge" style="background:#0A1F14;color:#4ade80">pcarmarket</span>
-    <span class="img-timer countdown-timer timer-amber" data-ends="2026-06-10T18:39:55Z">…</span>
+    <span class="img-timer countdown-timer timer-amber" data-ends="2026-06-10T18:39:42Z">…</span>
   </div>
   <div class="card-body">
     <div class="card-top">
@@ -1086,18 +1086,18 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
  data-fmv-high="144001"
  data-bid="80000"
  data-lid="13812"
- data-mileage="9178"
+ data-mileage="999999"
  data-trans="Automatic"
  data-color="Carrara White Metallic"
  data-comp-count="49"
  data-fmv-range="$116K &amp;ndash; $144K"
  data-days-listed="6"
- data-ends="2026-06-10T18:49:55Z" data-listed="2026-06-03">
+ data-ends="2026-06-10T18:49:42Z" data-listed="2026-06-03">
   <div class="img-wrap">
     <img src="https://d2niwqq19lf86s.cloudfront.net/htwritable/media/.thumbnails/bc40f7ea-13c8-4d1c-a337-2fa814d9f52f-475b2484-0a33-4fe3-b472-bcdcc0e8e1ed-tiny-2048x0.webp/bc40f7ea-13c8-4d1c-a337-2fa814d9f52f-475b2484-0a33-4fe3-b472-bcdcc0e8e1ed-tiny-2048x0-tiny-380x0.webp" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
     <div class="img-grad"></div>
     <span class="img-src-badge src-badge" style="background:#0A1F14;color:#4ade80">pcarmarket</span>
-    <span class="img-timer countdown-timer timer-amber" data-ends="2026-06-10T18:49:55Z">…</span>
+    <span class="img-timer countdown-timer timer-amber" data-ends="2026-06-10T18:49:42Z">…</span>
   </div>
   <div class="card-body">
     <div class="card-top">
@@ -1118,7 +1118,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
       <span class="bid-val">$80,000</span>
       <span class="fmv-pill fmv-below">▼ 39% below FMV</span>
     </div>
-    <div class="card-specs"><span class="spec-pill">9,178 mi</span><span class="spec-pill">Automatic</span></div>
+    <div class="card-specs"><span class="spec-pill">Automatic</span></div>
   </div>
   <div class="expand-panel">
     <div class="expand-inner">
@@ -1126,7 +1126,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
         <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$116K &ndash; $144K</div></div>
         <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">49 sales</div></div>
         <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">6</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">9,178 mi</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
         <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">Automatic</div></div>
         <div class="estat"><div class="estat-label">Color</div><div class="estat-val">Carrara White Metallic</div></div>
       </div>
@@ -1155,12 +1155,12 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
  data-comp-count="13"
  data-fmv-range="$119K &amp;ndash; $180K"
  data-days-listed="6"
- data-ends="2026-06-10T18:59:55Z" data-listed="2026-06-03">
+ data-ends="2026-06-10T18:59:42Z" data-listed="2026-06-03">
   <div class="img-wrap">
     <img src="https://d2niwqq19lf86s.cloudfront.net/htwritable/media/.thumbnails/abe368f6-a351-41f1-a105-5ecdd31d6301-a0b8eda9-9337-47fa-a5fe-5ab7cf717225-tiny-2048x0.webp/abe368f6-a351-41f1-a105-5ecdd31d6301-a0b8eda9-9337-47fa-a5fe-5ab7cf717225-tiny-2048x0-tiny-380x0.webp" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
     <div class="img-grad"></div>
     <span class="img-src-badge src-badge" style="background:#0A1F14;color:#4ade80">pcarmarket</span>
-    <span class="img-timer countdown-timer timer-amber" data-ends="2026-06-10T18:59:55Z">…</span>
+    <span class="img-timer countdown-timer timer-amber" data-ends="2026-06-10T18:59:42Z">…</span>
   </div>
   <div class="card-body">
     <div class="card-top">
@@ -1281,12 +1281,12 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
  data-comp-count="87"
  data-fmv-range="$260K &amp;ndash; $305K"
  data-days-listed="6"
- data-ends="2026-06-10T19:09:55Z" data-listed="2026-06-03">
+ data-ends="2026-06-10T19:09:42Z" data-listed="2026-06-03">
   <div class="img-wrap">
     <img src="https://d2niwqq19lf86s.cloudfront.net/htwritable/media/.thumbnails/c265b892-33cf-40c6-94fb-18f31ce90497-81c59aa2-7f70-44f4-aaa2-9062c14f5179-tiny-2048x0.webp/c265b892-33cf-40c6-94fb-18f31ce90497-81c59aa2-7f70-44f4-aaa2-9062c14f5179-tiny-2048x0-tiny-380x0.webp" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
     <div class="img-grad"></div>
     <span class="img-src-badge src-badge" style="background:#0A1F14;color:#4ade80">pcarmarket</span>
-    <span class="img-timer countdown-timer timer-amber" data-ends="2026-06-10T19:09:55Z">…</span>
+    <span class="img-timer countdown-timer timer-amber" data-ends="2026-06-10T19:09:42Z">…</span>
   </div>
   <div class="card-body">
     <div class="card-top">
@@ -1841,7 +1841,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
     <div class="section-hdr-left">
       <span class="section-icon">&#x25CB;</span>
       <span class="section-title">Live Auctions</span>
-      <span class="section-count">49</span>
+      <span class="section-count">51</span>
     </div>
     <div class="section-sub">Ending beyond 24h</div>
   </div>
@@ -1986,12 +1986,12 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
  data-comp-count="6"
  data-fmv-range="$62K &amp;ndash; $86K"
  data-days-listed="5"
- data-ends="2026-06-11T18:29:55Z" data-listed="2026-06-04">
+ data-ends="2026-06-11T18:29:42Z" data-listed="2026-06-04">
   <div class="img-wrap">
     <img src="https://d2niwqq19lf86s.cloudfront.net/htwritable/media/prod/eyJ0aXRsZSI6IjY1ODkzIC0gMjAxNSBQb3JzY2hlIDkxMSBDYXJyZXJhIDQiLCJzbHVnIjoiNjU4OTMtMjAxNS1wb3JzY2hlLTkxMS1jYXJyZXJhLTQtMjIxZjdjZTQifQ/.thumbnails/1abd8395-3e36-42af-b0d3-76ca16f397de.webp/1abd8395-3e36-42af-b0d3-76ca16f397de-tiny-380x0.webp" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
     <div class="img-grad"></div>
     <span class="img-src-badge src-badge" style="background:#0A1F14;color:#4ade80">pcarmarket</span>
-    <span class="img-timer countdown-timer timer-green" data-ends="2026-06-11T18:29:55Z">…</span>
+    <span class="img-timer countdown-timer timer-green" data-ends="2026-06-11T18:29:42Z">…</span>
   </div>
   <div class="card-body">
     <div class="card-top">
@@ -2112,12 +2112,12 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
  data-comp-count="87"
  data-fmv-range="$260K &amp;ndash; $305K"
  data-days-listed="5"
- data-ends="2026-06-11T19:09:55Z" data-listed="2026-06-04">
+ data-ends="2026-06-11T19:09:42Z" data-listed="2026-06-04">
   <div class="img-wrap">
     <img src="https://d2niwqq19lf86s.cloudfront.net/htwritable/media/prod/eyJ0aXRsZSI6IjY1OTY1IC0gMjAyMyBQb3JzY2hlIDkxMSBHVDMgVG91cmluZyIsInNsdWciOiI2NTk2NS0yMDIzLXBvcnNjaGUtOTExLWd0My10b3VyaW5nLWNkMzM1NzRhIn0/.thumbnails/f7540aea-ce41-4169-84fe-4ee0227ecf04.webp/f7540aea-ce41-4169-84fe-4ee0227ecf04-tiny-380x0.webp" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
     <div class="img-grad"></div>
     <span class="img-src-badge src-badge" style="background:#0A1F14;color:#4ade80">pcarmarket</span>
-    <span class="img-timer countdown-timer timer-green" data-ends="2026-06-11T19:09:55Z">…</span>
+    <span class="img-timer countdown-timer timer-green" data-ends="2026-06-11T19:09:42Z">…</span>
   </div>
   <div class="card-body">
     <div class="card-top">
@@ -2364,12 +2364,12 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
  data-comp-count="94"
  data-fmv-range="$35K &amp;ndash; $47K"
  data-days-listed="5"
- data-ends="2026-06-11T23:20:50Z" data-listed="2026-06-04">
+ data-ends="2026-06-11T23:27:36Z" data-listed="2026-06-04">
   <div class="img-wrap">
     <img src="https://media.carsandbids.com/cdn-cgi/image/width=768,quality=70/c90d8216a8bf103048db7cf88cd07946ede17b22/photos/exterior/KZAQzpjN-IpBujGS/edit/eWTjc.jpg?t=178003099525" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
     <div class="img-grad"></div>
     <span class="img-src-badge src-badge" style="background:#1F0D03;color:#fb923c">C&amp;B</span>
-    <span class="img-timer countdown-timer timer-green" data-ends="2026-06-11T23:20:50Z">…</span>
+    <span class="img-timer countdown-timer timer-green" data-ends="2026-06-11T23:27:36Z">…</span>
   </div>
   <div class="card-body">
     <div class="card-top">
@@ -2427,12 +2427,12 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
  data-comp-count="505"
  data-fmv-range="$22K &amp;ndash; $34K"
  data-days-listed="5"
- data-ends="2026-06-11T23:20:50Z" data-listed="2026-06-04">
+ data-ends="2026-06-11T23:27:36Z" data-listed="2026-06-04">
   <div class="img-wrap">
     <img src="https://media.carsandbids.com/cdn-cgi/image/width=768,quality=70/39ba75f9b610a05237adc3ca976891cd48f5832c/photos/exterior/3vG27Eqj-1tagvgv/edit/hHckc.jpg?t=177999461730" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
     <div class="img-grad"></div>
     <span class="img-src-badge src-badge" style="background:#1F0D03;color:#fb923c">C&amp;B</span>
-    <span class="img-timer countdown-timer timer-green" data-ends="2026-06-11T23:20:50Z">…</span>
+    <span class="img-timer countdown-timer timer-green" data-ends="2026-06-11T23:27:36Z">…</span>
   </div>
   <div class="card-body">
     <div class="card-top">
@@ -2490,12 +2490,12 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
  data-comp-count="62"
  data-fmv-range="$51K &amp;ndash; $65K"
  data-days-listed="5"
- data-ends="2026-06-11T23:20:50Z" data-listed="2026-06-04">
+ data-ends="2026-06-11T23:27:36Z" data-listed="2026-06-04">
   <div class="img-wrap">
     <img src="https://media.carsandbids.com/cdn-cgi/image/width=768,quality=70/3e87ff5a36bb8ebdf99fa53a6602464ae2f6c5b2/photos/Porsche911CarreraCabriolet2009009.jpg?t=178034045961" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
     <div class="img-grad"></div>
     <span class="img-src-badge src-badge" style="background:#1F0D03;color:#fb923c">C&amp;B</span>
-    <span class="img-timer countdown-timer timer-green" data-ends="2026-06-11T23:20:50Z">…</span>
+    <span class="img-timer countdown-timer timer-green" data-ends="2026-06-11T23:27:36Z">…</span>
   </div>
   <div class="card-body">
     <div class="card-top">
@@ -2553,12 +2553,12 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
  data-comp-count="17"
  data-fmv-range="$68K &amp;ndash; $84K"
  data-days-listed="5"
- data-ends="2026-06-11T23:20:50Z" data-listed="2026-06-04">
+ data-ends="2026-06-11T23:27:36Z" data-listed="2026-06-04">
   <div class="img-wrap">
     <img src="https://media.carsandbids.com/cdn-cgi/image/width=768,quality=70/438ad923cef6d8239e95d61e7d6849486bae11d9/photos/exterior/3g17QgLP-qYd-8nT/edit/qSHqk.jpg?t=178051803693" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
     <div class="img-grad"></div>
     <span class="img-src-badge src-badge" style="background:#1F0D03;color:#fb923c">C&amp;B</span>
-    <span class="img-timer countdown-timer timer-green" data-ends="2026-06-11T23:20:50Z">…</span>
+    <span class="img-timer countdown-timer timer-green" data-ends="2026-06-11T23:27:36Z">…</span>
   </div>
   <div class="card-body">
     <div class="card-top">
@@ -2616,12 +2616,12 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
  data-comp-count="67"
  data-fmv-range="$90K &amp;ndash; $104K"
  data-days-listed="5"
- data-ends="2026-06-11T23:20:50Z" data-listed="2026-06-04">
+ data-ends="2026-06-11T23:27:36Z" data-listed="2026-06-04">
   <div class="img-wrap">
     <img src="https://media.carsandbids.com/cdn-cgi/image/width=768,quality=70/c90d8216a8bf103048db7cf88cd07946ede17b22/photos/rJ5qG4dz-z0ZAEBSrHk/edit/zSGFM.jpg?t=177999232091" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
     <div class="img-grad"></div>
     <span class="img-src-badge src-badge" style="background:#1F0D03;color:#fb923c">C&amp;B</span>
-    <span class="img-timer countdown-timer timer-green" data-ends="2026-06-11T23:20:50Z">…</span>
+    <span class="img-timer countdown-timer timer-green" data-ends="2026-06-11T23:27:36Z">…</span>
   </div>
   <div class="card-body">
     <div class="card-top">
@@ -2868,12 +2868,12 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
  data-comp-count="0"
  data-fmv-range="—"
  data-days-listed="4"
- data-ends="2026-06-12T19:09:59Z" data-listed="2026-06-05">
+ data-ends="2026-06-12T19:09:45Z" data-listed="2026-06-05">
   <div class="img-wrap">
     <img src="https://d2niwqq19lf86s.cloudfront.net/htwritable/media/prod/eyJ0aXRsZSI6IjY1OTU1IC0gR1Q0Iiwic2x1ZyI6IjY1OTU1LWd0NC04NGFkZjA4MSJ9/.thumbnails/e687203c-c7c1-4c33-8179-94dc6d06979a.webp/e687203c-c7c1-4c33-8179-94dc6d06979a-tiny-380x0.webp" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
     <div class="img-grad"></div>
     <span class="img-src-badge src-badge" style="background:#0A1F14;color:#4ade80">pcarmarket</span>
-    <span class="img-timer countdown-timer timer-green" data-ends="2026-06-12T19:09:59Z">…</span>
+    <span class="img-timer countdown-timer timer-green" data-ends="2026-06-12T19:09:45Z">…</span>
   </div>
   <div class="card-body">
     <div class="card-top">
@@ -3120,12 +3120,12 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
  data-comp-count="69"
  data-fmv-range="$222K &amp;ndash; $265K"
  data-days-listed="4"
- data-ends="2026-06-12T23:20:50Z" data-listed="2026-06-05">
+ data-ends="2026-06-12T23:27:36Z" data-listed="2026-06-05">
   <div class="img-wrap">
     <img src="https://media.carsandbids.com/cdn-cgi/image/width=768,quality=70/1477bbe21e8d6b5e719c7c3ccab577fd47dd8cc3/photos/exterior/rEBlnbwe-hPkYy9T/edit/aQY8t.jpg?t=177994267834" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
     <div class="img-grad"></div>
     <span class="img-src-badge src-badge" style="background:#1F0D03;color:#fb923c">C&amp;B</span>
-    <span class="img-timer countdown-timer timer-green" data-ends="2026-06-12T23:20:50Z">…</span>
+    <span class="img-timer countdown-timer timer-green" data-ends="2026-06-12T23:27:36Z">…</span>
   </div>
   <div class="card-body">
     <div class="card-top">
@@ -3183,12 +3183,12 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
  data-comp-count="195"
  data-fmv-range="$18K &amp;ndash; $29K"
  data-days-listed="4"
- data-ends="2026-06-12T23:20:50Z" data-listed="2026-06-05">
+ data-ends="2026-06-12T23:27:36Z" data-listed="2026-06-05">
   <div class="img-wrap">
     <img src="https://media.carsandbids.com/cdn-cgi/image/width=768,quality=70/c90d8216a8bf103048db7cf88cd07946ede17b22/photos/exterior/KVQgzQaM-I_s990O/edit/j7W8J.jpg?t=178032591535" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
     <div class="img-grad"></div>
     <span class="img-src-badge src-badge" style="background:#1F0D03;color:#fb923c">C&amp;B</span>
-    <span class="img-timer countdown-timer timer-green" data-ends="2026-06-12T23:20:50Z">…</span>
+    <span class="img-timer countdown-timer timer-green" data-ends="2026-06-12T23:27:36Z">…</span>
   </div>
   <div class="card-body">
     <div class="card-top">
@@ -3246,12 +3246,12 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
  data-comp-count="28"
  data-fmv-range="$34K &amp;ndash; $50K"
  data-days-listed="4"
- data-ends="2026-06-12T23:20:50Z" data-listed="2026-06-05">
+ data-ends="2026-06-12T23:27:36Z" data-listed="2026-06-05">
   <div class="img-wrap">
     <img src="https://media.carsandbids.com/cdn-cgi/image/width=768,quality=70/bdcfbf95b79719e774b0de2550f317b3ce47ddd5/photos/application/s-arCyXsQ/edit/v7VRl.jpg?t=178069108728" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
     <div class="img-grad"></div>
     <span class="img-src-badge src-badge" style="background:#1F0D03;color:#fb923c">C&amp;B</span>
-    <span class="img-timer countdown-timer timer-green" data-ends="2026-06-12T23:20:50Z">…</span>
+    <span class="img-timer countdown-timer timer-green" data-ends="2026-06-12T23:27:36Z">…</span>
   </div>
   <div class="card-body">
     <div class="card-top">
@@ -3309,12 +3309,12 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
  data-comp-count="134"
  data-fmv-range="$32K &amp;ndash; $49K"
  data-days-listed="4"
- data-ends="2026-06-12T23:20:50Z" data-listed="2026-06-05">
+ data-ends="2026-06-12T23:27:36Z" data-listed="2026-06-05">
   <div class="img-wrap">
     <img src="https://media.carsandbids.com/cdn-cgi/image/width=768,quality=70/39ba75f9b610a05237adc3ca976891cd48f5832c/photos/Porsche911Carrera4SCabriolet2004008/edit/fO1Wa.jpg?t=178041889510" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
     <div class="img-grad"></div>
     <span class="img-src-badge src-badge" style="background:#1F0D03;color:#fb923c">C&amp;B</span>
-    <span class="img-timer countdown-timer timer-green" data-ends="2026-06-12T23:20:50Z">…</span>
+    <span class="img-timer countdown-timer timer-green" data-ends="2026-06-12T23:27:36Z">…</span>
   </div>
   <div class="card-body">
     <div class="card-top">
@@ -3624,12 +3624,12 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
  data-comp-count="6"
  data-fmv-range="$62K &amp;ndash; $86K"
  data-days-listed="1"
- data-ends="2026-06-15T18:39:59Z" data-listed="2026-06-08">
+ data-ends="2026-06-15T18:39:45Z" data-listed="2026-06-08">
   <div class="img-wrap">
     <img src="https://d2niwqq19lf86s.cloudfront.net/htwritable/media/prod/eyJ0aXRsZSI6IjY1ODUyIC0gMjAxMyBQb3JzY2hlIDkxMSBDYXJyZXJhIDQgQ291cGUgNy1TcGVlZCBNYW51YWwiLCJzbHVnIjoiNjU4NTItMjAxMy1wb3JzY2hlLTkxMS1jYXJyZXJhLTQtY291cGUtNy1zcGVlZC1tYW51YWwtOGYxOWNhYmIifQ/.thumbnails/3afae76a-2b91-4bec-8470-6c597fae7d15.webp/3afae76a-2b91-4bec-8470-6c597fae7d15-tiny-380x0.webp" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
     <div class="img-grad"></div>
     <span class="img-src-badge src-badge" style="background:#0A1F14;color:#4ade80">pcarmarket</span>
-    <span class="img-timer countdown-timer timer-green" data-ends="2026-06-15T18:39:59Z">…</span>
+    <span class="img-timer countdown-timer timer-green" data-ends="2026-06-15T18:39:45Z">…</span>
   </div>
   <div class="card-body">
     <div class="card-top">
@@ -3687,12 +3687,12 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
  data-comp-count="0"
  data-fmv-range="—"
  data-days-listed="1"
- data-ends="2026-06-15T18:59:59Z" data-listed="2026-06-08">
+ data-ends="2026-06-15T18:59:45Z" data-listed="2026-06-08">
   <div class="img-wrap">
     <img src="https://d2niwqq19lf86s.cloudfront.net/htwritable/media/.thumbnails/98541181-bf8a-453b-9b05-1e2c63fbe2e8-79f201ba-91ad-40e5-bfdf-6bad8385effb-tiny-2048x0.webp/98541181-bf8a-453b-9b05-1e2c63fbe2e8-79f201ba-91ad-40e5-bfdf-6bad8385effb-tiny-2048x0-tiny-380x0.webp" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
     <div class="img-grad"></div>
     <span class="img-src-badge src-badge" style="background:#0A1F14;color:#4ade80">pcarmarket</span>
-    <span class="img-timer countdown-timer timer-green" data-ends="2026-06-15T18:59:59Z">…</span>
+    <span class="img-timer countdown-timer timer-green" data-ends="2026-06-15T18:59:45Z">…</span>
   </div>
   <div class="card-body">
     <div class="card-top">
@@ -4002,12 +4002,12 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
  data-comp-count="29"
  data-fmv-range="$66K &amp;ndash; $92K"
  data-days-listed="1"
- data-ends="2026-06-15T23:20:50Z" data-listed="2026-06-08">
+ data-ends="2026-06-15T23:27:36Z" data-listed="2026-06-08">
   <div class="img-wrap">
     <img src="https://media.carsandbids.com/cdn-cgi/image/width=768,quality=70/1477bbe21e8d6b5e719c7c3ccab577fd47dd8cc3/photos/application/s-FA5ZTso/edit/q5Neh.jpg?t=178020269776" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
     <div class="img-grad"></div>
     <span class="img-src-badge src-badge" style="background:#1F0D03;color:#fb923c">C&amp;B</span>
-    <span class="img-timer countdown-timer timer-green" data-ends="2026-06-15T23:20:50Z">…</span>
+    <span class="img-timer countdown-timer timer-green" data-ends="2026-06-15T23:27:36Z">…</span>
   </div>
   <div class="card-body">
     <div class="card-top">
@@ -4065,12 +4065,12 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
  data-comp-count="112"
  data-fmv-range="$30K &amp;ndash; $48K"
  data-days-listed="1"
- data-ends="2026-06-15T23:20:50Z" data-listed="2026-06-08">
+ data-ends="2026-06-15T23:27:36Z" data-listed="2026-06-08">
   <div class="img-wrap">
     <img src="https://media.carsandbids.com/cdn-cgi/image/width=768,quality=70/6ad081ef30e4c8bab886cb5bff4070007aa023d3/photos/exterior/K1d1B1Gn-k0UH3vK.jpg?t=178034920303" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
     <div class="img-grad"></div>
     <span class="img-src-badge src-badge" style="background:#1F0D03;color:#fb923c">C&amp;B</span>
-    <span class="img-timer countdown-timer timer-green" data-ends="2026-06-15T23:20:50Z">…</span>
+    <span class="img-timer countdown-timer timer-green" data-ends="2026-06-15T23:27:36Z">…</span>
   </div>
   <div class="card-body">
     <div class="card-top">
@@ -4128,12 +4128,12 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
  data-comp-count="49"
  data-fmv-range="$116K &amp;ndash; $144K"
  data-days-listed="1"
- data-ends="2026-06-15T23:20:50Z" data-listed="2026-06-08">
+ data-ends="2026-06-15T23:27:36Z" data-listed="2026-06-08">
   <div class="img-wrap">
     <img src="https://media.carsandbids.com/cdn-cgi/image/width=768,quality=70/39ba75f9b610a05237adc3ca976891cd48f5832c/photos/3OBzqvGm-yVvWnk6/edit/Jmj-z.jpg?t=178041045387" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
     <div class="img-grad"></div>
     <span class="img-src-badge src-badge" style="background:#1F0D03;color:#fb923c">C&amp;B</span>
-    <span class="img-timer countdown-timer timer-green" data-ends="2026-06-15T23:20:50Z">…</span>
+    <span class="img-timer countdown-timer timer-green" data-ends="2026-06-15T23:27:36Z">…</span>
   </div>
   <div class="card-body">
     <div class="card-top">
@@ -4191,12 +4191,12 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
  data-comp-count="207"
  data-fmv-range="$13K &amp;ndash; $19K"
  data-days-listed="1"
- data-ends="2026-06-15T23:20:50Z" data-listed="2026-06-08">
+ data-ends="2026-06-15T23:27:36Z" data-listed="2026-06-08">
   <div class="img-wrap">
     <img src="https://media.carsandbids.com/cdn-cgi/image/width=768,quality=70/438ad923cef6d8239e95d61e7d6849486bae11d9/photos/3BEj0bGE-ELAOri4/edit/y6hk1.jpg?t=178060690156" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
     <div class="img-grad"></div>
     <span class="img-src-badge src-badge" style="background:#1F0D03;color:#fb923c">C&amp;B</span>
-    <span class="img-timer countdown-timer timer-green" data-ends="2026-06-15T23:20:50Z">…</span>
+    <span class="img-timer countdown-timer timer-green" data-ends="2026-06-15T23:27:36Z">…</span>
   </div>
   <div class="card-body">
     <div class="card-top">
@@ -4254,12 +4254,12 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
  data-comp-count="505"
  data-fmv-range="$22K &amp;ndash; $34K"
  data-days-listed="1"
- data-ends="2026-06-15T23:20:50Z" data-listed="2026-06-08">
+ data-ends="2026-06-15T23:27:36Z" data-listed="2026-06-08">
   <div class="img-wrap">
     <img src="https://media.carsandbids.com/cdn-cgi/image/width=768,quality=70/ea8b191002c8e208588ed361b4bdf19360139493/photos/3Lvb7PnW-6NqNqATGIM.jpg?t=178008323551" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
     <div class="img-grad"></div>
     <span class="img-src-badge src-badge" style="background:#1F0D03;color:#fb923c">C&amp;B</span>
-    <span class="img-timer countdown-timer timer-green" data-ends="2026-06-15T23:20:50Z">…</span>
+    <span class="img-timer countdown-timer timer-green" data-ends="2026-06-15T23:27:36Z">…</span>
   </div>
   <div class="card-body">
     <div class="card-top">
@@ -4493,6 +4493,69 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
   </div>
 </div>
 <div class="auc-card auc-urg-live" onclick="cardClick(event,this)"
+ data-url="https://www.pcarmarket.com/auction/2012-porsche-cayman-3"
+ data-gen="987" data-src="pcarmarket" data-tier="TIER2"
+ data-price="0" data-fmv="0"
+ data-fmv-low="0"
+ data-fmv-high="0"
+ data-bid="0"
+ data-lid="14524"
+ data-mileage="3000"
+ data-trans="Manual"
+ data-color="Red"
+ data-comp-count="0"
+ data-fmv-range="—"
+ data-days-listed="0"
+ data-ends="2026-06-16T18:59:49Z" data-listed="2026-06-09">
+  <div class="img-wrap">
+    <img src="https://d2niwqq19lf86s.cloudfront.net/htwritable/media/prod/eyJ0aXRsZSI6IjY2MDA0IC0gMjAxMCBQb3JzY2hlIENheW1hbiB0cmFjayBjYXIiLCJzbHVnIjoiNjYwMDQtMjAxMC1wb3JzY2hlLWNheW1hbi10cmFjay1jYXItNjE5NmRjZTkifQ/.thumbnails/71b26166-af84-412f-a60f-668e0c388691.webp/71b26166-af84-412f-a60f-668e0c388691-tiny-380x0.webp" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
+    <div class="img-grad"></div>
+    <span class="img-src-badge src-badge" style="background:#0A1F14;color:#4ade80">pcarmarket</span>
+    <span class="img-timer countdown-timer timer-green" data-ends="2026-06-16T18:59:49Z">…</span>
+  </div>
+  <div class="card-body">
+    <div class="card-top">
+      <span class="gen-tag">987</span>
+      
+      <button class="fav-btn" data-url="https://www.pcarmarket.com/auction/2012-porsche-cayman-3" onclick="toggleFav(event,this)" title="Save" style="margin-left:auto">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="8" cy="8" r="4.5"/>
+          <circle cx="8" cy="8" r="1.8" fill="var(--bg2)" stroke="none"/>
+          <rect x="11.5" y="7" width="9" height="2.5" rx="1.25"/>
+          <rect x="17" y="9.5" width="2.5" height="2.5" rx="0.8"/>
+          <rect x="13.5" y="9.5" width="2.5" height="3.5" rx="0.8"/>
+        </svg>
+      </button>
+    </div>
+    <div class="card-title">2012 Porsche Boxster Cayman S 6-speed Interseries Race Car</div>
+    <div class="card-bid-row">
+      <span class="bid-val">$0</span>
+      
+    </div>
+    <div class="card-specs"><span class="spec-pill">3,000 mi</span><span class="spec-pill">Manual</span></div>
+  </div>
+  <div class="expand-panel">
+    <div class="expand-inner">
+      <div class="stat-row">
+        <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">—</div></div>
+        <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">0 sales</div></div>
+        <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">0</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">3,000 mi</div></div>
+        <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">Manual</div></div>
+        <div class="estat"><div class="estat-label">Color</div><div class="estat-val">Red</div></div>
+      </div>
+      <div class="graph-wrap">
+        <div class="graph-label">Sold comps vs FMV <span class="graph-sub">0 transactions</span></div>
+        <svg class="graph-svg" data-lid="14524" data-fmv="0" data-bid="0" data-low="0" data-high="0"></svg>
+      </div>
+      <div class="expand-footer">
+        <div class="etag-row"><span class="etag">987</span><span class="etag">Coupe</span></div>
+        <div class="expand-actions"><a class="go-btn" href="https://www.pcarmarket.com/auction/2012-porsche-cayman-3" target="_blank" onclick="event.stopPropagation()">&#x2197; Go to auction</a></div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="auc-card auc-urg-live" onclick="cardClick(event,this)"
  data-url="https://bringatrailer.com/listing/2006-porsche-cayman-s-287/"
  data-gen="987" data-src="BaT" data-tier="TIER2"
  data-price="2006" data-fmv="29500"
@@ -4569,12 +4632,12 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
  data-comp-count="92"
  data-fmv-range="$22K &amp;ndash; $32K"
  data-days-listed="0"
- data-ends="2026-06-16T23:20:50Z" data-listed="2026-06-09">
+ data-ends="2026-06-16T23:27:36Z" data-listed="2026-06-09">
   <div class="img-wrap">
     <img src="https://media.carsandbids.com/cdn-cgi/image/width=768,quality=70/1477bbe21e8d6b5e719c7c3ccab577fd47dd8cc3/photos/KYzv4NDE-8gEAFfHXgw/edit/-k1it.jpg?t=178064841505" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
     <div class="img-grad"></div>
     <span class="img-src-badge src-badge" style="background:#1F0D03;color:#fb923c">C&amp;B</span>
-    <span class="img-timer countdown-timer timer-green" data-ends="2026-06-16T23:20:50Z">…</span>
+    <span class="img-timer countdown-timer timer-green" data-ends="2026-06-16T23:27:36Z">…</span>
   </div>
   <div class="card-body">
     <div class="card-top">
@@ -4632,12 +4695,12 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
  data-comp-count="505"
  data-fmv-range="$22K &amp;ndash; $34K"
  data-days-listed="0"
- data-ends="2026-06-16T23:20:50Z" data-listed="2026-06-09">
+ data-ends="2026-06-16T23:27:36Z" data-listed="2026-06-09">
   <div class="img-wrap">
     <img src="https://media.carsandbids.com/cdn-cgi/image/width=768,quality=70/a181b7b003dc249abab465e9619ca4200c39b0f4/photos/Porsche911Carrera1999002.jpg?t=178051584419" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
     <div class="img-grad"></div>
     <span class="img-src-badge src-badge" style="background:#1F0D03;color:#fb923c">C&amp;B</span>
-    <span class="img-timer countdown-timer timer-green" data-ends="2026-06-16T23:20:50Z">…</span>
+    <span class="img-timer countdown-timer timer-green" data-ends="2026-06-16T23:27:36Z">…</span>
   </div>
   <div class="card-body">
     <div class="card-top">
@@ -4695,12 +4758,12 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
  data-comp-count="221"
  data-fmv-range="$66K &amp;ndash; $104K"
  data-days-listed="0"
- data-ends="2026-06-16T23:20:50Z" data-listed="2026-06-09">
+ data-ends="2026-06-16T23:27:36Z" data-listed="2026-06-09">
   <div class="img-wrap">
     <img src="https://media.carsandbids.com/cdn-cgi/image/width=768,quality=70/1477bbe21e8d6b5e719c7c3ccab577fd47dd8cc3/photos/9lYlvMZM-nEQoZk8/edit/ZSdar.jpg?t=178047499469" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
     <div class="img-grad"></div>
     <span class="img-src-badge src-badge" style="background:#1F0D03;color:#fb923c">C&amp;B</span>
-    <span class="img-timer countdown-timer timer-green" data-ends="2026-06-16T23:20:50Z">…</span>
+    <span class="img-timer countdown-timer timer-green" data-ends="2026-06-16T23:27:36Z">…</span>
   </div>
   <div class="card-body">
     <div class="card-top">
@@ -4758,12 +4821,12 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
  data-comp-count="143"
  data-fmv-range="$24K &amp;ndash; $38K"
  data-days-listed="0"
- data-ends="2026-06-16T23:20:50Z" data-listed="2026-06-09">
+ data-ends="2026-06-16T23:27:36Z" data-listed="2026-06-09">
   <div class="img-wrap">
     <img src="https://media.carsandbids.com/cdn-cgi/image/width=768,quality=70/39ba75f9b610a05237adc3ca976891cd48f5832c/photos/rkGdOxvR-jr25l4y/edit/hBlgu.jpg?t=178051412226" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
     <div class="img-grad"></div>
     <span class="img-src-badge src-badge" style="background:#1F0D03;color:#fb923c">C&amp;B</span>
-    <span class="img-timer countdown-timer timer-green" data-ends="2026-06-16T23:20:50Z">…</span>
+    <span class="img-timer countdown-timer timer-green" data-ends="2026-06-16T23:27:36Z">…</span>
   </div>
   <div class="card-body">
     <div class="card-top">
@@ -4821,12 +4884,12 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
  data-comp-count="23"
  data-fmv-range="$184K &amp;ndash; $212K"
  data-days-listed="0"
- data-ends="2026-06-16T23:20:50Z" data-listed="2026-06-09">
+ data-ends="2026-06-16T23:27:36Z" data-listed="2026-06-09">
   <div class="img-wrap">
     <img src="https://media.carsandbids.com/cdn-cgi/image/width=768,quality=70/c45ecac73883c11332e6ff94ff950380424f5140/photos/2024Porsche911Targa4GTS006.jpg?t=178050318867" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
     <div class="img-grad"></div>
     <span class="img-src-badge src-badge" style="background:#1F0D03;color:#fb923c">C&amp;B</span>
-    <span class="img-timer countdown-timer timer-green" data-ends="2026-06-16T23:20:50Z">…</span>
+    <span class="img-timer countdown-timer timer-green" data-ends="2026-06-16T23:27:36Z">…</span>
   </div>
   <div class="card-body">
     <div class="card-top">
@@ -4929,6 +4992,69 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
       <div class="expand-footer">
         <div class="etag-row"><span class="etag">G-Series</span></div>
         <div class="expand-actions"><span class="deal-badge">70% below FMV</span><a class="go-btn" href="https://bringatrailer.com/listing/1987-porsche-911-turbo-cabriolet-24/" target="_blank" onclick="event.stopPropagation()">&#x2197; Go to auction</a></div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="auc-card auc-urg-live" onclick="cardClick(event,this)"
+ data-url="https://www.pcarmarket.com/auction/2001-porsche-boxster-s-10"
+ data-gen="986" data-src="pcarmarket" data-tier="TIER2"
+ data-price="0" data-fmv="0"
+ data-fmv-low="0"
+ data-fmv-high="0"
+ data-bid="0"
+ data-lid="14525"
+ data-mileage="87000"
+ data-trans=""
+ data-color=""
+ data-comp-count="0"
+ data-fmv-range="—"
+ data-days-listed="0"
+ data-ends="2026-09-23T16:59:49Z" data-listed="2026-06-09">
+  <div class="img-wrap">
+    <img src="https://d2niwqq19lf86s.cloudfront.net/htwritable/media/prod/eyJ0aXRsZSI6IjY2MDUyIC0gMjAwMSBQb3JzY2hlIEJveHN0ZXIgUyIsInNsdWciOiI2NjA1Mi0yMDAxLXBvcnNjaGUtYm94c3Rlci1zLTA4ZTA3NTUxIn0/.thumbnails/7ea104c0-f603-4bf3-acac-262823d604f7.webp/7ea104c0-f603-4bf3-acac-262823d604f7-tiny-380x0.webp" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
+    <div class="img-grad"></div>
+    <span class="img-src-badge src-badge" style="background:#0A1F14;color:#4ade80">pcarmarket</span>
+    <span class="img-timer countdown-timer timer-green" data-ends="2026-09-23T16:59:49Z">…</span>
+  </div>
+  <div class="card-body">
+    <div class="card-top">
+      <span class="gen-tag">986</span>
+      
+      <button class="fav-btn" data-url="https://www.pcarmarket.com/auction/2001-porsche-boxster-s-10" onclick="toggleFav(event,this)" title="Save" style="margin-left:auto">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="8" cy="8" r="4.5"/>
+          <circle cx="8" cy="8" r="1.8" fill="var(--bg2)" stroke="none"/>
+          <rect x="11.5" y="7" width="9" height="2.5" rx="1.25"/>
+          <rect x="17" y="9.5" width="2.5" height="2.5" rx="0.8"/>
+          <rect x="13.5" y="9.5" width="2.5" height="3.5" rx="0.8"/>
+        </svg>
+      </button>
+    </div>
+    <div class="card-title">2001 Porsche Boxster S</div>
+    <div class="card-bid-row">
+      <span class="bid-val">$0</span>
+      
+    </div>
+    <div class="card-specs"><span class="spec-pill">87,000 mi</span></div>
+  </div>
+  <div class="expand-panel">
+    <div class="expand-inner">
+      <div class="stat-row">
+        <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">—</div></div>
+        <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">0 sales</div></div>
+        <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">0</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">87,000 mi</div></div>
+        <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">—</div></div>
+        <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
+      </div>
+      <div class="graph-wrap">
+        <div class="graph-label">Sold comps vs FMV <span class="graph-sub">0 transactions</span></div>
+        <svg class="graph-svg" data-lid="14525" data-fmv="0" data-bid="0" data-low="0" data-high="0"></svg>
+      </div>
+      <div class="expand-footer">
+        <div class="etag-row"><span class="etag">986</span><span class="etag">Cabriolet</span></div>
+        <div class="expand-actions"><a class="go-btn" href="https://www.pcarmarket.com/auction/2001-porsche-boxster-s-10" target="_blank" onclick="event.stopPropagation()">&#x2197; Go to auction</a></div>
       </div>
     </div>
   </div>
@@ -10167,6 +10293,19 @@ function cycleTheme() {
   localStorage.setItem('ptox_theme', next);
   closeDD();
 }
+</script>
+<!-- Mobile bottom nav — hidden on desktop via @media(min-width:769px) -->
+<nav class="mob-bottom-nav" id="mob-bottom-nav">
+  <a class="mob-nav-item on" href="auctions.html"><i class="ti ti-car"></i><span>Market</span></a>
+  <a class="mob-nav-item" href="saved.html"><i class="ti ti-heart"></i><span>Saved</span></a>
+  <a class="mob-nav-item" href="search.html"><i class="ti ti-search"></i><span>Search</span></a>
+  <a class="mob-nav-item" href="market_report.html"><i class="ti ti-chart-line"></i><span>Report</span></a>
+  <div class="mob-nav-item" onclick="toggleDD()"><i class="ti ti-dots"></i><span>More</span></div>
+</nav>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="/auth.js"></script>
+<script>
+(async()=>{try{const r=await fetch('https://raw.githubusercontent.com/OCX11/rennmarkt/main/docs/stats.json',{cache:'no-store'});if(!r.ok)return;const s=await r.json();const fmt=n=>n>=1000?n.toLocaleString():String(n);const set=(id,v)=>{const el=document.getElementById(id);if(el&&v!=null)el.textContent=fmt(v);};set('s-active',s.n_active);set('s-new',s.n_new);set('s-auctions',s.n_auctions);set('s-comps',s.n_comps);set('s-deals',s.n_deals);}catch(e){}})();
 </script>
 </body>
 
