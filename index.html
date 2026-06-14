@@ -449,7 +449,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
 
 <!-- Header -->
 <div class="hdr">
-  <a class="logo" href="index.html">
+  <a class="logo" href="/">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 270 40"><g transform="translate(4,4)"><circle cx="16" cy="16" r="13" fill="none" stroke="#2a2a2a" stroke-width="1.8"/><path d="M4,23 A13,13 0 0,1 26,5" fill="none" stroke="#f4433c" stroke-width="1.8" stroke-linecap="round"/><line x1="16" y1="16" x2="26" y2="5" stroke="white" stroke-width="1.2" stroke-linecap="round"/><circle cx="16" cy="16" r="2.5" fill="#f4433c"/><circle cx="16" cy="16" r="1" fill="#0f0f0f"/><text x="36" y="22" font-family="'Helvetica Neue',Arial,sans-serif" font-size="20" letter-spacing="-0.3"><tspan font-weight="700" fill="white">Renn</tspan><tspan font-weight="300" fill="#f4433c">Auktion</tspan></text></g></svg>
   </a>
   <div class="hdr-search">
@@ -458,7 +458,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
   </div>
   <div class="hdr-right">
     <a class="rm-xlink" href="https://rennmarkt.net" target="_blank" rel="noopener">RennMarkt &#x2197;</a>
-    <span class="hdr-time"><span class="live-dot"></span>Jun 14 17:39 UTC</span>
+    <span class="hdr-time"><span class="live-dot"></span>Jun 14 17:46 UTC</span>
     <div class="hdr-avatar" onclick="toggleDD()">CL</div>
   </div>
 </div>
@@ -467,13 +467,13 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
 <div class="dd-overlay" id="dd-overlay">
   <div class="dd-backdrop" onclick="closeDD()"></div>
   <div class="dd">
-    <a class="dd-item" href="index.html"><i class="ti ti-car"></i> Market</a>
+    <a class="dd-item" href="/"><i class="ti ti-car"></i> Market</a>
     <a class="dd-item" href="saved.html"><i class="ti ti-heart"></i> Saved</a>
-    <a class="dd-item" href="search.html"><i class="ti ti-search"></i> Search</a>
+    <a class="dd-item" href="https://rennmarkt.net/search.html"><i class="ti ti-search"></i> Search</a>
     <div class="dd-divider"></div>
-    <a class="dd-item" href="calculator.html"><i class="ti ti-calculator"></i> Fee Calculator</a>
-    <a class="dd-item" href="market_report.html"><i class="ti ti-chart-line"></i> Market Report</a>
-    <a class="dd-item" href="notify.html"><i class="ti ti-bell"></i> Notifications</a>
+    <a class="dd-item" href="https://rennmarkt.net/calculator.html"><i class="ti ti-calculator"></i> Fee Calculator</a>
+    <a class="dd-item" href="https://rennmarkt.net/market_report.html"><i class="ti ti-chart-line"></i> Market Report</a>
+    <a class="dd-item" href="https://rennmarkt.net/notify.html"><i class="ti ti-bell"></i> Notifications</a>
     <div class="dd-divider"></div>
     <div class="dd-item" onclick="cycleTheme()"><i class="ti ti-palette"></i> Theme</div>
     <div class="dd-divider"></div>
@@ -492,11 +492,11 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
     </div>
     <div class="sb-nav on"><i class="ti ti-car"></i><span class="sb-lbl">Market</span></div>
     <a class="sb-nav" href="saved.html"><i class="ti ti-heart"></i><span class="sb-lbl">Saved</span></a>
-    <a class="sb-nav" href="search.html"><i class="ti ti-search"></i><span class="sb-lbl">Search</span></a>
-    <a class="sb-nav" href="calculator.html"><i class="ti ti-calculator"></i><span class="sb-lbl">Fee Calc</span></a>
-    <a class="sb-nav" href="market_report.html"><i class="ti ti-chart-line"></i><span class="sb-lbl">Market Report</span></a>
+    <a class="sb-nav" href="https://rennmarkt.net/search.html"><i class="ti ti-search"></i><span class="sb-lbl">Search</span></a>
+    <a class="sb-nav" href="https://rennmarkt.net/calculator.html"><i class="ti ti-calculator"></i><span class="sb-lbl">Fee Calc</span></a>
+    <a class="sb-nav" href="https://rennmarkt.net/market_report.html"><i class="ti ti-chart-line"></i><span class="sb-lbl">Market Report</span></a>
     <div class="sb-bot">
-      <a class="sb-nav" href="notify.html"><i class="ti ti-bell"></i><span class="sb-lbl">Notifications</span></a>
+      <a class="sb-nav" href="https://rennmarkt.net/notify.html"><i class="ti ti-bell"></i><span class="sb-lbl">Notifications</span></a>
       <div class="sb-nav" onclick="cycleTheme()"><i class="ti ti-palette"></i><span class="sb-lbl">Theme</span></div>
       <div class="sb-nav auth-logout-btn" style="display:none" onclick="window.RA&&window.RA.signOut()"><i class="ti ti-logout"></i><span class="sb-lbl">Log out</span></div>
     </div>
@@ -569,7 +569,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
     <div class="section-hdr-left">
       <span class="section-icon">&#x25CF;</span>
       <span class="section-title">Ending Today</span>
-      <span class="section-count">6</span>
+      <span class="section-count">7</span>
     </div>
     <div class="section-sub">3 &ndash; 24 hours</div>
   </div>
@@ -582,7 +582,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
  data-fmv-high="200000"
  data-bid="145000"
  data-lid="14340"
- data-mileage="200"
+ data-mileage="999999"
  data-trans="Manual"
  data-color=""
  data-comp-count="58"
@@ -614,7 +614,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
       <span class="bid-val">$145,000</span>
       <span class="fmv-pill fmv-below">▼ 12% below FMV</span>
     </div>
-    <div class="card-specs"><span class="spec-pill">200 mi</span><span class="spec-pill">Manual</span></div>
+    <div class="card-specs"><span class="spec-pill">Manual</span></div>
   </div>
   <div class="expand-panel">
     <div class="expand-inner">
@@ -622,7 +622,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
         <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$130K &ndash; $200K</div></div>
         <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">58 sales</div></div>
         <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">6</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">200 mi</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
         <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">Manual</div></div>
         <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
       </div>
@@ -645,7 +645,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
  data-fmv-high="92000"
  data-bid="80000"
  data-lid="14351"
- data-mileage="16500"
+ data-mileage="999999"
  data-trans=""
  data-color=""
  data-comp-count="29"
@@ -677,7 +677,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
       <span class="bid-val">$80,000</span>
       
     </div>
-    <div class="card-specs"><span class="spec-pill">16,500 mi</span></div>
+    <div class="card-specs"></div>
   </div>
   <div class="expand-panel">
     <div class="expand-inner">
@@ -685,7 +685,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
         <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$66K &ndash; $92K</div></div>
         <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">29 sales</div></div>
         <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">6</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">16,500 mi</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
         <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">—</div></div>
         <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
       </div>
@@ -701,6 +701,69 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
   </div>
 </div>
 <div class="auc-card auc-urg-soon" onclick="cardClick(event,this)"
+ data-url="https://bringatrailer.com/listing/2022-porsche-911-gt3-touring-154/"
+ data-gen="992" data-src="BaT" data-tier="TIER1"
+ data-price="239999" data-fmv="276500"
+ data-fmv-low="260000"
+ data-fmv-high="305000"
+ data-bid="239999"
+ data-lid="14655"
+ data-mileage="999999"
+ data-trans="Manual"
+ data-color=""
+ data-comp-count="91"
+ data-fmv-range="$260K &amp;ndash; $305K"
+ data-days-listed="4"
+ data-ends="2026-06-15T17:41:00Z" data-listed="2026-06-10">
+  <div class="img-wrap">
+    <img src="https://bringatrailer.com/wp-content/uploads/2026/05/2022_porsche_911-gt3-touring_2022-porsche-gt3-touring-bat-resolution-images-1-05930.jpg" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
+    <div class="img-grad"></div>
+    <span class="img-src-badge src-badge" style="background:#0D1F35;color:#60a5fa">BaT</span>
+    <span class="img-timer countdown-timer timer-amber" data-ends="2026-06-15T17:41:00Z">…</span>
+  </div>
+  <div class="card-body">
+    <div class="card-top">
+      <span class="gen-tag">992</span>
+      <span class="urg-tag urg-soon">ENDING TODAY</span>
+      <button class="fav-btn" data-url="https://bringatrailer.com/listing/2022-porsche-911-gt3-touring-154/" onclick="toggleFav(event,this)" title="Save" style="margin-left:auto">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="8" cy="8" r="4.5"/>
+          <circle cx="8" cy="8" r="1.8" fill="var(--bg2)" stroke="none"/>
+          <rect x="11.5" y="7" width="9" height="2.5" rx="1.25"/>
+          <rect x="17" y="9.5" width="2.5" height="2.5" rx="0.8"/>
+          <rect x="13.5" y="9.5" width="2.5" height="3.5" rx="0.8"/>
+        </svg>
+      </button>
+    </div>
+    <div class="card-title">2022 Porsche 911 GT3 Touring 6-Speed</div>
+    <div class="card-bid-row">
+      <span class="bid-val">$239,999</span>
+      <span class="fmv-pill fmv-below">▼ 13% below FMV</span>
+    </div>
+    <div class="card-specs"><span class="spec-pill">Manual</span></div>
+  </div>
+  <div class="expand-panel">
+    <div class="expand-inner">
+      <div class="stat-row">
+        <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$260K &ndash; $305K</div></div>
+        <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">91 sales</div></div>
+        <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">4</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
+        <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">Manual</div></div>
+        <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
+      </div>
+      <div class="graph-wrap">
+        <div class="graph-label">Sold comps vs FMV <span class="graph-sub">91 transactions</span></div>
+        <svg class="graph-svg" data-lid="14655" data-fmv="276500" data-bid="239999" data-low="260000" data-high="305000"></svg>
+      </div>
+      <div class="expand-footer">
+        <div class="etag-row"><span class="etag">992</span><span class="etag">Coupe</span></div>
+        <div class="expand-actions"><span class="deal-badge">13% below FMV</span><a class="go-btn" href="https://bringatrailer.com/listing/2022-porsche-911-gt3-touring-154/" target="_blank" onclick="event.stopPropagation()">&#x2197; Go to auction</a></div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="auc-card auc-urg-soon" onclick="cardClick(event,this)"
  data-url="https://carsandbids.com/auctions/3gy0X6J1/2006-porsche-911-carrera-coupe"
  data-gen="997.1" data-src="C&amp;B" data-tier="TIER2"
  data-price="42500" data-fmv="40000"
@@ -708,18 +771,18 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
  data-fmv-high="47000"
  data-bid="42500"
  data-lid="14354"
- data-mileage="13800"
+ data-mileage="999999"
  data-trans=""
  data-color=""
  data-comp-count="115"
  data-fmv-range="$30K &amp;ndash; $47K"
  data-days-listed="6"
- data-ends="2026-06-15T17:38:14Z" data-listed="2026-06-08">
+ data-ends="2026-06-15T17:41:59Z" data-listed="2026-06-08">
   <div class="img-wrap">
     <img src="https://media.carsandbids.com/cdn-cgi/image/width=768,quality=70/6ad081ef30e4c8bab886cb5bff4070007aa023d3/photos/exterior/K1d1B1Gn-k0UH3vK.jpg?t=178034920303" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
     <div class="img-grad"></div>
     <span class="img-src-badge src-badge" style="background:#1F0D03;color:#fb923c">C&amp;B</span>
-    <span class="img-timer countdown-timer timer-amber" data-ends="2026-06-15T17:38:14Z">…</span>
+    <span class="img-timer countdown-timer timer-amber" data-ends="2026-06-15T17:41:59Z">…</span>
   </div>
   <div class="card-body">
     <div class="card-top">
@@ -740,7 +803,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
       <span class="bid-val">$42,500</span>
       <span class="fmv-pill fmv-above">▲ 6% above FMV</span>
     </div>
-    <div class="card-specs"><span class="spec-pill">13,800 mi</span></div>
+    <div class="card-specs"></div>
   </div>
   <div class="expand-panel">
     <div class="expand-inner">
@@ -748,7 +811,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
         <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$30K &ndash; $47K</div></div>
         <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">115 sales</div></div>
         <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">6</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">13,800 mi</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
         <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">—</div></div>
         <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
       </div>
@@ -771,18 +834,18 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
  data-fmv-high="142000"
  data-bid="92000"
  data-lid="14370"
- data-mileage="17600"
+ data-mileage="999999"
  data-trans=""
  data-color=""
  data-comp-count="51"
  data-fmv-range="$115K &amp;ndash; $142K"
  data-days-listed="6"
- data-ends="2026-06-15T17:38:14Z" data-listed="2026-06-08">
+ data-ends="2026-06-15T17:44:59Z" data-listed="2026-06-08">
   <div class="img-wrap">
     <img src="https://media.carsandbids.com/cdn-cgi/image/width=768,quality=70/39ba75f9b610a05237adc3ca976891cd48f5832c/photos/3OBzqvGm-yVvWnk6/edit/Jmj-z.jpg?t=178041045387" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
     <div class="img-grad"></div>
     <span class="img-src-badge src-badge" style="background:#1F0D03;color:#fb923c">C&amp;B</span>
-    <span class="img-timer countdown-timer timer-amber" data-ends="2026-06-15T17:38:14Z">…</span>
+    <span class="img-timer countdown-timer timer-amber" data-ends="2026-06-15T17:44:59Z">…</span>
   </div>
   <div class="card-body">
     <div class="card-top">
@@ -803,7 +866,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
       <span class="bid-val">$92,000</span>
       <span class="fmv-pill fmv-below">▼ 29% below FMV</span>
     </div>
-    <div class="card-specs"><span class="spec-pill">17,600 mi</span></div>
+    <div class="card-specs"></div>
   </div>
   <div class="expand-panel">
     <div class="expand-inner">
@@ -811,7 +874,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
         <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$115K &ndash; $142K</div></div>
         <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">51 sales</div></div>
         <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">6</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">17,600 mi</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
         <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">—</div></div>
         <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
       </div>
@@ -834,18 +897,18 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
  data-fmv-high="19000"
  data-bid="10500"
  data-lid="14382"
- data-mileage="62400"
+ data-mileage="999999"
  data-trans=""
  data-color=""
  data-comp-count="206"
  data-fmv-range="$13K &amp;ndash; $19K"
  data-days-listed="6"
- data-ends="2026-06-15T17:38:14Z" data-listed="2026-06-08">
+ data-ends="2026-06-15T17:44:59Z" data-listed="2026-06-08">
   <div class="img-wrap">
     <img src="https://media.carsandbids.com/cdn-cgi/image/width=768,quality=70/438ad923cef6d8239e95d61e7d6849486bae11d9/photos/3BEj0bGE-ELAOri4/edit/y6hk1.jpg?t=178060690156" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
     <div class="img-grad"></div>
     <span class="img-src-badge src-badge" style="background:#1F0D03;color:#fb923c">C&amp;B</span>
-    <span class="img-timer countdown-timer timer-amber" data-ends="2026-06-15T17:38:14Z">…</span>
+    <span class="img-timer countdown-timer timer-amber" data-ends="2026-06-15T17:44:59Z">…</span>
   </div>
   <div class="card-body">
     <div class="card-top">
@@ -866,7 +929,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
       <span class="bid-val">$10,500</span>
       <span class="fmv-pill fmv-below">▼ 34% below FMV</span>
     </div>
-    <div class="card-specs"><span class="spec-pill">62,400 mi</span></div>
+    <div class="card-specs"></div>
   </div>
   <div class="expand-panel">
     <div class="expand-inner">
@@ -874,7 +937,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
         <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$13K &ndash; $19K</div></div>
         <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">206 sales</div></div>
         <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">6</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">62,400 mi</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
         <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">—</div></div>
         <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
       </div>
@@ -897,18 +960,18 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
  data-fmv-high="33750"
  data-bid="18000"
  data-lid="14399"
- data-mileage="118400"
+ data-mileage="999999"
  data-trans=""
  data-color=""
  data-comp-count="504"
  data-fmv-range="$22K &amp;ndash; $34K"
  data-days-listed="6"
- data-ends="2026-06-15T17:38:14Z" data-listed="2026-06-08">
+ data-ends="2026-06-15T17:44:59Z" data-listed="2026-06-08">
   <div class="img-wrap">
     <img src="https://media.carsandbids.com/cdn-cgi/image/width=768,quality=70/ea8b191002c8e208588ed361b4bdf19360139493/photos/3Lvb7PnW-6NqNqATGIM.jpg?t=178008323551" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
     <div class="img-grad"></div>
     <span class="img-src-badge src-badge" style="background:#1F0D03;color:#fb923c">C&amp;B</span>
-    <span class="img-timer countdown-timer timer-amber" data-ends="2026-06-15T17:38:14Z">…</span>
+    <span class="img-timer countdown-timer timer-amber" data-ends="2026-06-15T17:44:59Z">…</span>
   </div>
   <div class="card-body">
     <div class="card-top">
@@ -929,7 +992,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
       <span class="bid-val">$18,000</span>
       <span class="fmv-pill fmv-below">▼ 35% below FMV</span>
     </div>
-    <div class="card-specs"><span class="spec-pill">118,400 mi</span></div>
+    <div class="card-specs"></div>
   </div>
   <div class="expand-panel">
     <div class="expand-inner">
@@ -937,7 +1000,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
         <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$22K &ndash; $34K</div></div>
         <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">504 sales</div></div>
         <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">6</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">118,400 mi</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
         <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">—</div></div>
         <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
       </div>
@@ -959,75 +1022,12 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
     <div class="section-hdr-left">
       <span class="section-icon">&#x25CB;</span>
       <span class="section-title">Live Auctions</span>
-      <span class="section-count">58</span>
+      <span class="section-count">57</span>
     </div>
     <div class="section-sub">Ending beyond 24h</div>
   </div>
   <div class="cards-list">
     <div class="auc-card auc-urg-live" onclick="cardClick(event,this)"
- data-url="https://bringatrailer.com/listing/2022-porsche-911-gt3-touring-154/"
- data-gen="992" data-src="BaT" data-tier="TIER1"
- data-price="239999" data-fmv="276500"
- data-fmv-low="260000"
- data-fmv-high="305000"
- data-bid="239999"
- data-lid="14655"
- data-mileage="1900"
- data-trans="Manual"
- data-color=""
- data-comp-count="91"
- data-fmv-range="$260K &amp;ndash; $305K"
- data-days-listed="4"
- data-ends="2026-06-15T17:41:00Z" data-listed="2026-06-10">
-  <div class="img-wrap">
-    <img src="https://bringatrailer.com/wp-content/uploads/2026/05/2022_porsche_911-gt3-touring_2022-porsche-gt3-touring-bat-resolution-images-1-05930.jpg" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
-    <div class="img-grad"></div>
-    <span class="img-src-badge src-badge" style="background:#0D1F35;color:#60a5fa">BaT</span>
-    <span class="img-timer countdown-timer timer-green" data-ends="2026-06-15T17:41:00Z">…</span>
-  </div>
-  <div class="card-body">
-    <div class="card-top">
-      <span class="gen-tag">992</span>
-      
-      <button class="fav-btn" data-url="https://bringatrailer.com/listing/2022-porsche-911-gt3-touring-154/" onclick="toggleFav(event,this)" title="Save" style="margin-left:auto">
-        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="8" cy="8" r="4.5"/>
-          <circle cx="8" cy="8" r="1.8" fill="var(--bg2)" stroke="none"/>
-          <rect x="11.5" y="7" width="9" height="2.5" rx="1.25"/>
-          <rect x="17" y="9.5" width="2.5" height="2.5" rx="0.8"/>
-          <rect x="13.5" y="9.5" width="2.5" height="3.5" rx="0.8"/>
-        </svg>
-      </button>
-    </div>
-    <div class="card-title">2022 Porsche 911 GT3 Touring 6-Speed</div>
-    <div class="card-bid-row">
-      <span class="bid-val">$239,999</span>
-      <span class="fmv-pill fmv-below">▼ 13% below FMV</span>
-    </div>
-    <div class="card-specs"><span class="spec-pill">1,900 mi</span><span class="spec-pill">Manual</span></div>
-  </div>
-  <div class="expand-panel">
-    <div class="expand-inner">
-      <div class="stat-row">
-        <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$260K &ndash; $305K</div></div>
-        <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">91 sales</div></div>
-        <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">4</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">1,900 mi</div></div>
-        <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">Manual</div></div>
-        <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
-      </div>
-      <div class="graph-wrap">
-        <div class="graph-label">Sold comps vs FMV <span class="graph-sub">91 transactions</span></div>
-        <svg class="graph-svg" data-lid="14655" data-fmv="276500" data-bid="239999" data-low="260000" data-high="305000"></svg>
-      </div>
-      <div class="expand-footer">
-        <div class="etag-row"><span class="etag">992</span><span class="etag">Coupe</span></div>
-        <div class="expand-actions"><span class="deal-badge">13% below FMV</span><a class="go-btn" href="https://bringatrailer.com/listing/2022-porsche-911-gt3-touring-154/" target="_blank" onclick="event.stopPropagation()">&#x2197; Go to auction</a></div>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="auc-card auc-urg-live" onclick="cardClick(event,this)"
  data-url="https://bringatrailer.com/listing/1988-porsche-911-carrera-cabriolet-103/"
  data-gen="G-Series" data-src="BaT" data-tier="TIER1"
  data-price="24000" data-fmv="72500"
@@ -1035,7 +1035,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
  data-fmv-high="93000"
  data-bid="24000"
  data-lid="14836"
- data-mileage="530"
+ data-mileage="999999"
  data-trans=""
  data-color=""
  data-comp-count="354"
@@ -1067,7 +1067,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
       <span class="bid-val">$24,000</span>
       <span class="fmv-pill fmv-below">▼ 67% below FMV</span>
     </div>
-    <div class="card-specs"><span class="spec-pill">530 mi</span></div>
+    <div class="card-specs"></div>
   </div>
   <div class="expand-panel">
     <div class="expand-inner">
@@ -1075,7 +1075,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
         <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$57K &ndash; $93K</div></div>
         <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">354 sales</div></div>
         <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">3</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">530 mi</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
         <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">—</div></div>
         <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
       </div>
@@ -1104,12 +1104,12 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
  data-comp-count="7"
  data-fmv-range="$62K &amp;ndash; $86K"
  data-days-listed="6"
- data-ends="2026-06-15T18:39:19Z" data-listed="2026-06-08">
+ data-ends="2026-06-15T18:39:04Z" data-listed="2026-06-08">
   <div class="img-wrap">
     <img src="https://d2niwqq19lf86s.cloudfront.net/htwritable/media/prod/eyJ0aXRsZSI6IjY1ODUyIC0gMjAxMyBQb3JzY2hlIDkxMSBDYXJyZXJhIDQgQ291cGUgNy1TcGVlZCBNYW51YWwiLCJzbHVnIjoiNjU4NTItMjAxMy1wb3JzY2hlLTkxMS1jYXJyZXJhLTQtY291cGUtNy1zcGVlZC1tYW51YWwtOGYxOWNhYmIifQ/.thumbnails/3afae76a-2b91-4bec-8470-6c597fae7d15.webp/3afae76a-2b91-4bec-8470-6c597fae7d15-tiny-380x0.webp" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
     <div class="img-grad"></div>
     <span class="img-src-badge src-badge" style="background:#0A1F14;color:#4ade80">pcarmarket</span>
-    <span class="img-timer countdown-timer timer-green" data-ends="2026-06-15T18:39:19Z">…</span>
+    <span class="img-timer countdown-timer timer-green" data-ends="2026-06-15T18:39:04Z">…</span>
   </div>
   <div class="card-body">
     <div class="card-top">
@@ -1167,12 +1167,12 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
  data-comp-count="157"
  data-fmv-range="$80K &amp;ndash; $129K"
  data-days-listed="6"
- data-ends="2026-06-15T18:59:19Z" data-listed="2026-06-08">
+ data-ends="2026-06-15T18:59:04Z" data-listed="2026-06-08">
   <div class="img-wrap">
     <img src="https://d2niwqq19lf86s.cloudfront.net/htwritable/media/.thumbnails/98541181-bf8a-453b-9b05-1e2c63fbe2e8-79f201ba-91ad-40e5-bfdf-6bad8385effb-tiny-2048x0.webp/98541181-bf8a-453b-9b05-1e2c63fbe2e8-79f201ba-91ad-40e5-bfdf-6bad8385effb-tiny-2048x0-tiny-380x0.webp" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
     <div class="img-grad"></div>
     <span class="img-src-badge src-badge" style="background:#0A1F14;color:#4ade80">pcarmarket</span>
-    <span class="img-timer countdown-timer timer-green" data-ends="2026-06-15T18:59:19Z">…</span>
+    <span class="img-timer countdown-timer timer-green" data-ends="2026-06-15T18:59:04Z">…</span>
   </div>
   <div class="card-body">
     <div class="card-top">
@@ -1287,7 +1287,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
  data-fmv-high="147111"
  data-bid="199999"
  data-lid="14409"
- data-mileage="333"
+ data-mileage="999999"
  data-trans=""
  data-color=""
  data-comp-count="51"
@@ -1319,7 +1319,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
       <span class="bid-val">$199,999</span>
       <span class="fmv-pill fmv-above">▲ 108% above FMV</span>
     </div>
-    <div class="card-specs"><span class="spec-pill">333 mi</span></div>
+    <div class="card-specs"></div>
   </div>
   <div class="expand-panel">
     <div class="expand-inner">
@@ -1327,7 +1327,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
         <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$80K &ndash; $147K</div></div>
         <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">51 sales</div></div>
         <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">6</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">333 mi</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
         <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">—</div></div>
         <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
       </div>
@@ -1350,7 +1350,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
  data-fmv-high="134500"
  data-bid="37000"
  data-lid="14410"
- data-mileage="333"
+ data-mileage="999999"
  data-trans=""
  data-color=""
  data-comp-count="45"
@@ -1382,7 +1382,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
       <span class="bid-val">$37,000</span>
       <span class="fmv-pill fmv-below">▼ 46% below FMV</span>
     </div>
-    <div class="card-specs"><span class="spec-pill">333 mi</span></div>
+    <div class="card-specs"></div>
   </div>
   <div class="expand-panel">
     <div class="expand-inner">
@@ -1390,7 +1390,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
         <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$60K &ndash; $134K</div></div>
         <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">45 sales</div></div>
         <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">6</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">333 mi</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
         <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">—</div></div>
         <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
       </div>
@@ -1413,7 +1413,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
  data-fmv-high="33583"
  data-bid="18500"
  data-lid="14506"
- data-mileage="3200"
+ data-mileage="999999"
  data-trans="Manual"
  data-color=""
  data-comp-count="504"
@@ -1445,7 +1445,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
       <span class="bid-val">$18,500</span>
       <span class="fmv-pill fmv-below">▼ 33% below FMV</span>
     </div>
-    <div class="card-specs"><span class="spec-pill">3,200 mi</span><span class="spec-pill">Manual</span></div>
+    <div class="card-specs"><span class="spec-pill">Manual</span></div>
   </div>
   <div class="expand-panel">
     <div class="expand-inner">
@@ -1453,7 +1453,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
         <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$22K &ndash; $34K</div></div>
         <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">504 sales</div></div>
         <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">5</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">3,200 mi</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
         <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">Manual</div></div>
         <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
       </div>
@@ -1476,7 +1476,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
  data-fmv-high="93000"
  data-bid="7200"
  data-lid="14476"
- data-mileage="333"
+ data-mileage="999999"
  data-trans=""
  data-color=""
  data-comp-count="354"
@@ -1508,7 +1508,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
       <span class="bid-val">$7,200</span>
       <span class="fmv-pill fmv-below">▼ 90% below FMV</span>
     </div>
-    <div class="card-specs"><span class="spec-pill">333 mi</span></div>
+    <div class="card-specs"></div>
   </div>
   <div class="expand-panel">
     <div class="expand-inner">
@@ -1516,7 +1516,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
         <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$57K &ndash; $93K</div></div>
         <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">354 sales</div></div>
         <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">5</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">333 mi</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
         <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">—</div></div>
         <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
       </div>
@@ -1539,7 +1539,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
  data-fmv-high="47000"
  data-bid="33000"
  data-lid="14514"
- data-mileage="2600"
+ data-mileage="999999"
  data-trans="Manual"
  data-color=""
  data-comp-count="115"
@@ -1571,7 +1571,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
       <span class="bid-val">$33,000</span>
       <span class="fmv-pill fmv-below">▼ 18% below FMV</span>
     </div>
-    <div class="card-specs"><span class="spec-pill">2,600 mi</span><span class="spec-pill">Manual</span></div>
+    <div class="card-specs"><span class="spec-pill">Manual</span></div>
   </div>
   <div class="expand-panel">
     <div class="expand-inner">
@@ -1579,7 +1579,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
         <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$30K &ndash; $47K</div></div>
         <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">115 sales</div></div>
         <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">5</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">2,600 mi</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
         <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">Manual</div></div>
         <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
       </div>
@@ -1602,7 +1602,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
  data-fmv-high="19000"
  data-bid="2001"
  data-lid="14674"
- data-mileage="281"
+ data-mileage="999999"
  data-trans="Manual"
  data-color=""
  data-comp-count="206"
@@ -1634,7 +1634,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
       <span class="bid-val">$2,001</span>
       <span class="fmv-pill fmv-below">▼ 87% below FMV</span>
     </div>
-    <div class="card-specs"><span class="spec-pill">281 mi</span><span class="spec-pill">Manual</span></div>
+    <div class="card-specs"><span class="spec-pill">Manual</span></div>
   </div>
   <div class="expand-panel">
     <div class="expand-inner">
@@ -1642,7 +1642,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
         <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$13K &ndash; $19K</div></div>
         <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">206 sales</div></div>
         <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">4</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">281 mi</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
         <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">Manual</div></div>
         <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
       </div>
@@ -1665,18 +1665,18 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
  data-fmv-high="33333"
  data-bid="18001"
  data-lid="14500"
- data-mileage="39700"
+ data-mileage="999999"
  data-trans=""
  data-color=""
  data-comp-count="92"
  data-fmv-range="$22K &amp;ndash; $33K"
  data-days-listed="5"
- data-ends="2026-06-16T17:38:14Z" data-listed="2026-06-09">
+ data-ends="2026-06-16T17:44:59Z" data-listed="2026-06-09">
   <div class="img-wrap">
     <img src="https://media.carsandbids.com/cdn-cgi/image/width=768,quality=70/1477bbe21e8d6b5e719c7c3ccab577fd47dd8cc3/photos/KYzv4NDE-8gEAFfHXgw/edit/-k1it.jpg?t=178064841505" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
     <div class="img-grad"></div>
     <span class="img-src-badge src-badge" style="background:#1F0D03;color:#fb923c">C&amp;B</span>
-    <span class="img-timer countdown-timer timer-green" data-ends="2026-06-16T17:38:14Z">…</span>
+    <span class="img-timer countdown-timer timer-green" data-ends="2026-06-16T17:44:59Z">…</span>
   </div>
   <div class="card-body">
     <div class="card-top">
@@ -1697,7 +1697,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
       <span class="bid-val">$18,001</span>
       <span class="fmv-pill fmv-below">▼ 33% below FMV</span>
     </div>
-    <div class="card-specs"><span class="spec-pill">39,700 mi</span></div>
+    <div class="card-specs"></div>
   </div>
   <div class="expand-panel">
     <div class="expand-inner">
@@ -1705,7 +1705,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
         <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$22K &ndash; $33K</div></div>
         <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">92 sales</div></div>
         <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">5</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">39,700 mi</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
         <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">—</div></div>
         <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
       </div>
@@ -1728,18 +1728,18 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
  data-fmv-high="33583"
  data-bid="10500"
  data-lid="14505"
- data-mileage="49500"
+ data-mileage="999999"
  data-trans=""
  data-color=""
  data-comp-count="504"
  data-fmv-range="$22K &amp;ndash; $34K"
  data-days-listed="5"
- data-ends="2026-06-16T17:38:14Z" data-listed="2026-06-09">
+ data-ends="2026-06-16T17:44:59Z" data-listed="2026-06-09">
   <div class="img-wrap">
     <img src="https://media.carsandbids.com/cdn-cgi/image/width=768,quality=70/a181b7b003dc249abab465e9619ca4200c39b0f4/photos/Porsche911Carrera1999002.jpg?t=178051584419" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
     <div class="img-grad"></div>
     <span class="img-src-badge src-badge" style="background:#1F0D03;color:#fb923c">C&amp;B</span>
-    <span class="img-timer countdown-timer timer-green" data-ends="2026-06-16T17:38:14Z">…</span>
+    <span class="img-timer countdown-timer timer-green" data-ends="2026-06-16T17:44:59Z">…</span>
   </div>
   <div class="card-body">
     <div class="card-top">
@@ -1760,7 +1760,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
       <span class="bid-val">$10,500</span>
       <span class="fmv-pill fmv-below">▼ 62% below FMV</span>
     </div>
-    <div class="card-specs"><span class="spec-pill">49,500 mi</span></div>
+    <div class="card-specs"></div>
   </div>
   <div class="expand-panel">
     <div class="expand-inner">
@@ -1768,7 +1768,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
         <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$22K &ndash; $34K</div></div>
         <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">504 sales</div></div>
         <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">5</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">49,500 mi</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
         <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">—</div></div>
         <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
       </div>
@@ -1791,18 +1791,18 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
  data-fmv-high="103500"
  data-bid="34243"
  data-lid="14513"
- data-mileage="59600"
+ data-mileage="999999"
  data-trans=""
  data-color=""
  data-comp-count="223"
  data-fmv-range="$66K &amp;ndash; $104K"
  data-days-listed="5"
- data-ends="2026-06-16T17:38:14Z" data-listed="2026-06-09">
+ data-ends="2026-06-16T17:44:59Z" data-listed="2026-06-09">
   <div class="img-wrap">
     <img src="https://media.carsandbids.com/cdn-cgi/image/width=768,quality=70/1477bbe21e8d6b5e719c7c3ccab577fd47dd8cc3/photos/9lYlvMZM-nEQoZk8/edit/ZSdar.jpg?t=178047499469" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
     <div class="img-grad"></div>
     <span class="img-src-badge src-badge" style="background:#1F0D03;color:#fb923c">C&amp;B</span>
-    <span class="img-timer countdown-timer timer-green" data-ends="2026-06-16T17:38:14Z">…</span>
+    <span class="img-timer countdown-timer timer-green" data-ends="2026-06-16T17:44:59Z">…</span>
   </div>
   <div class="card-body">
     <div class="card-top">
@@ -1823,7 +1823,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
       <span class="bid-val">$34,243</span>
       <span class="fmv-pill fmv-below">▼ 60% below FMV</span>
     </div>
-    <div class="card-specs"><span class="spec-pill">59,600 mi</span></div>
+    <div class="card-specs"></div>
   </div>
   <div class="expand-panel">
     <div class="expand-inner">
@@ -1831,7 +1831,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
         <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$66K &ndash; $104K</div></div>
         <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">223 sales</div></div>
         <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">5</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">59,600 mi</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
         <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">—</div></div>
         <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
       </div>
@@ -1854,18 +1854,18 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
  data-fmv-high="38000"
  data-bid="13500"
  data-lid="14517"
- data-mileage="75100"
+ data-mileage="999999"
  data-trans=""
  data-color=""
  data-comp-count="143"
  data-fmv-range="$24K &amp;ndash; $38K"
  data-days-listed="5"
- data-ends="2026-06-16T17:38:14Z" data-listed="2026-06-09">
+ data-ends="2026-06-16T17:44:59Z" data-listed="2026-06-09">
   <div class="img-wrap">
     <img src="https://media.carsandbids.com/cdn-cgi/image/width=768,quality=70/39ba75f9b610a05237adc3ca976891cd48f5832c/photos/rkGdOxvR-jr25l4y/edit/hBlgu.jpg?t=178051412226" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
     <div class="img-grad"></div>
     <span class="img-src-badge src-badge" style="background:#1F0D03;color:#fb923c">C&amp;B</span>
-    <span class="img-timer countdown-timer timer-green" data-ends="2026-06-16T17:38:14Z">…</span>
+    <span class="img-timer countdown-timer timer-green" data-ends="2026-06-16T17:44:59Z">…</span>
   </div>
   <div class="card-body">
     <div class="card-top">
@@ -1886,7 +1886,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
       <span class="bid-val">$13,500</span>
       <span class="fmv-pill fmv-below">▼ 54% below FMV</span>
     </div>
-    <div class="card-specs"><span class="spec-pill">75,100 mi</span></div>
+    <div class="card-specs"></div>
   </div>
   <div class="expand-panel">
     <div class="expand-inner">
@@ -1894,7 +1894,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
         <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$24K &ndash; $38K</div></div>
         <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">143 sales</div></div>
         <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">5</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">75,100 mi</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
         <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">—</div></div>
         <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
       </div>
@@ -1917,18 +1917,18 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
  data-fmv-high="212000"
  data-bid="191000"
  data-lid="14523"
- data-mileage="1300"
+ data-mileage="999999"
  data-trans=""
  data-color=""
  data-comp-count="22"
  data-fmv-range="$184K &amp;ndash; $212K"
  data-days-listed="5"
- data-ends="2026-06-16T17:38:14Z" data-listed="2026-06-09">
+ data-ends="2026-06-16T17:44:59Z" data-listed="2026-06-09">
   <div class="img-wrap">
     <img src="https://media.carsandbids.com/cdn-cgi/image/width=768,quality=70/c45ecac73883c11332e6ff94ff950380424f5140/photos/2024Porsche911Targa4GTS006.jpg?t=178050318867" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
     <div class="img-grad"></div>
     <span class="img-src-badge src-badge" style="background:#1F0D03;color:#fb923c">C&amp;B</span>
-    <span class="img-timer countdown-timer timer-green" data-ends="2026-06-16T17:38:14Z">…</span>
+    <span class="img-timer countdown-timer timer-green" data-ends="2026-06-16T17:44:59Z">…</span>
   </div>
   <div class="card-body">
     <div class="card-top">
@@ -1949,7 +1949,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
       <span class="bid-val">$191,000</span>
       <span class="fmv-pill fmv-below">▼ 6% below FMV</span>
     </div>
-    <div class="card-specs"><span class="spec-pill">1,300 mi</span></div>
+    <div class="card-specs"></div>
   </div>
   <div class="expand-panel">
     <div class="expand-inner">
@@ -1957,7 +1957,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
         <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$184K &ndash; $212K</div></div>
         <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">22 sales</div></div>
         <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">5</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">1,300 mi</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
         <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">—</div></div>
         <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
       </div>
@@ -2049,12 +2049,12 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
  data-comp-count="0"
  data-fmv-range="—"
  data-days-listed="5"
- data-ends="2026-06-16T18:29:19Z" data-listed="2026-06-09">
+ data-ends="2026-06-16T18:29:04Z" data-listed="2026-06-09">
   <div class="img-wrap">
     <img src="https://d2niwqq19lf86s.cloudfront.net/htwritable/media/.thumbnails/d348cdd6-edaf-4ac3-9865-a88cef434ced-f147b450-c4fk4-4449-a27a-1f8d90f93a99-tiny-2048x0.webp/d348cdd6-edaf-4ac3-9865-a88cef434ced-f147b450-c4fk4-4449-a27a-1f8d90f93a99-tiny-2048x0-tiny-380x0.webp" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
     <div class="img-grad"></div>
     <span class="img-src-badge src-badge" style="background:#0A1F14;color:#4ade80">pcarmarket</span>
-    <span class="img-timer countdown-timer timer-green" data-ends="2026-06-16T18:29:19Z">…</span>
+    <span class="img-timer countdown-timer timer-green" data-ends="2026-06-16T18:29:04Z">…</span>
   </div>
   <div class="card-body">
     <div class="card-top">
@@ -2112,12 +2112,12 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
  data-comp-count="206"
  data-fmv-range="$13K &amp;ndash; $19K"
  data-days-listed="5"
- data-ends="2026-06-16T18:49:19Z" data-listed="2026-06-09">
+ data-ends="2026-06-16T18:49:04Z" data-listed="2026-06-09">
   <div class="img-wrap">
     <img src="https://d2niwqq19lf86s.cloudfront.net/htwritable/media/.thumbnails/6d5ef05c-1e45-4fda-b23f-7d5e3815980e-7ea104c0-f603-4bf3-acac-262823d604f7-tiny-2048x0.webp/6d5ef05c-1e45-4fda-b23f-7d5e3815980e-7ea104c0-f603-4bf3-acac-262823d604f7-tiny-2048x0-tiny-380x0.webp" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
     <div class="img-grad"></div>
     <span class="img-src-badge src-badge" style="background:#0A1F14;color:#4ade80">pcarmarket</span>
-    <span class="img-timer countdown-timer timer-green" data-ends="2026-06-16T18:49:19Z">…</span>
+    <span class="img-timer countdown-timer timer-green" data-ends="2026-06-16T18:49:04Z">…</span>
   </div>
   <div class="card-body">
     <div class="card-top">
@@ -2169,7 +2169,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
  data-fmv-high="38000"
  data-bid="6500"
  data-lid="14510"
- data-mileage="2600"
+ data-mileage="999999"
  data-trans="Manual"
  data-color=""
  data-comp-count="143"
@@ -2201,7 +2201,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
       <span class="bid-val">$6,500</span>
       <span class="fmv-pill fmv-below">▼ 78% below FMV</span>
     </div>
-    <div class="card-specs"><span class="spec-pill">2,600 mi</span><span class="spec-pill">Manual</span></div>
+    <div class="card-specs"><span class="spec-pill">Manual</span></div>
   </div>
   <div class="expand-panel">
     <div class="expand-inner">
@@ -2209,7 +2209,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
         <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$24K &ndash; $38K</div></div>
         <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">143 sales</div></div>
         <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">5</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">2,600 mi</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
         <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">Manual</div></div>
         <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
       </div>
@@ -2358,7 +2358,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
  data-fmv-high="49000"
  data-bid="18500"
  data-lid="14826"
- data-mileage="4800"
+ data-mileage="999999"
  data-trans="Manual"
  data-color=""
  data-comp-count="134"
@@ -2390,7 +2390,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
       <span class="bid-val">$18,500</span>
       <span class="fmv-pill fmv-below">▼ 53% below FMV</span>
     </div>
-    <div class="card-specs"><span class="spec-pill">4,800 mi</span><span class="spec-pill">Manual</span></div>
+    <div class="card-specs"><span class="spec-pill">Manual</span></div>
   </div>
   <div class="expand-panel">
     <div class="expand-inner">
@@ -2398,7 +2398,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
         <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$32K &ndash; $49K</div></div>
         <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">134 sales</div></div>
         <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">3</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">4,800 mi</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
         <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">Manual</div></div>
         <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
       </div>
@@ -2477,195 +2477,6 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
   </div>
 </div>
 <div class="auc-card auc-urg-live" onclick="cardClick(event,this)"
- data-url="https://carsandbids.com/auctions/3yAOBmJp/2000-porsche-911-carrera-4-cabriolet"
- data-gen="996" data-src="C&amp;B" data-tier="TIER2"
- data-price="13410" data-fmv="26500"
- data-fmv-low="22249"
- data-fmv-high="32500"
- data-bid="13410"
- data-lid="14651"
- data-mileage="93000"
- data-trans=""
- data-color=""
- data-comp-count="120"
- data-fmv-range="$22K &amp;ndash; $32K"
- data-days-listed="4"
- data-ends="2026-06-17T17:38:14Z" data-listed="2026-06-10">
-  <div class="img-wrap">
-    <img src="https://media.carsandbids.com/cdn-cgi/image/width=768,quality=70/6b270f0a18af9c2624b10c95e54999af7f1fce3d/photos/Porsche911Carerra4Cabriolet2000002.jpg?t=178057625613" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
-    <div class="img-grad"></div>
-    <span class="img-src-badge src-badge" style="background:#1F0D03;color:#fb923c">C&amp;B</span>
-    <span class="img-timer countdown-timer timer-green" data-ends="2026-06-17T17:38:14Z">…</span>
-  </div>
-  <div class="card-body">
-    <div class="card-top">
-      <span class="gen-tag">996</span>
-      
-      <button class="fav-btn" data-url="https://carsandbids.com/auctions/3yAOBmJp/2000-porsche-911-carrera-4-cabriolet" onclick="toggleFav(event,this)" title="Save" style="margin-left:auto">
-        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="8" cy="8" r="4.5"/>
-          <circle cx="8" cy="8" r="1.8" fill="var(--bg2)" stroke="none"/>
-          <rect x="11.5" y="7" width="9" height="2.5" rx="1.25"/>
-          <rect x="17" y="9.5" width="2.5" height="2.5" rx="0.8"/>
-          <rect x="13.5" y="9.5" width="2.5" height="3.5" rx="0.8"/>
-        </svg>
-      </button>
-    </div>
-    <div class="card-title">2000 Porsche 911 Carrera 4 Cabriolet</div>
-    <div class="card-bid-row">
-      <span class="bid-val">$13,410</span>
-      <span class="fmv-pill fmv-below">▼ 49% below FMV</span>
-    </div>
-    <div class="card-specs"><span class="spec-pill">93,000 mi</span></div>
-  </div>
-  <div class="expand-panel">
-    <div class="expand-inner">
-      <div class="stat-row">
-        <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$22K &ndash; $32K</div></div>
-        <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">120 sales</div></div>
-        <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">4</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">93,000 mi</div></div>
-        <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">—</div></div>
-        <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
-      </div>
-      <div class="graph-wrap">
-        <div class="graph-label">Sold comps vs FMV <span class="graph-sub">120 transactions</span></div>
-        <svg class="graph-svg" data-lid="14651" data-fmv="26500" data-bid="13410" data-low="22249" data-high="32500"></svg>
-      </div>
-      <div class="expand-footer">
-        <div class="etag-row"><span class="etag">996</span><span class="etag">Cabriolet</span></div>
-        <div class="expand-actions"><span class="deal-badge">49% below FMV</span><a class="go-btn" href="https://carsandbids.com/auctions/3yAOBmJp/2000-porsche-911-carrera-4-cabriolet" target="_blank" onclick="event.stopPropagation()">&#x2197; Go to auction</a></div>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="auc-card auc-urg-live" onclick="cardClick(event,this)"
- data-url="https://carsandbids.com/auctions/3O7wmym6/2015-porsche-911-carrera-4s-cabriolet"
- data-gen="991.1" data-src="C&amp;B" data-tier="TIER2"
- data-price="55000" data-fmv="82500"
- data-fmv-low="71000"
- data-fmv-high="87067"
- data-bid="55000"
- data-lid="14668"
- data-mileage="59000"
- data-trans=""
- data-color=""
- data-comp-count="32"
- data-fmv-range="$71K &amp;ndash; $87K"
- data-days-listed="4"
- data-ends="2026-06-17T17:38:14Z" data-listed="2026-06-10">
-  <div class="img-wrap">
-    <img src="https://media.carsandbids.com/cdn-cgi/image/width=768,quality=70/8e6341e27a680ffab7d98e42bef83b0dd1b0fb94/photos/Porsche911Carrera2015016/edit/I1qBR.jpg?t=177585180295" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
-    <div class="img-grad"></div>
-    <span class="img-src-badge src-badge" style="background:#1F0D03;color:#fb923c">C&amp;B</span>
-    <span class="img-timer countdown-timer timer-green" data-ends="2026-06-17T17:38:14Z">…</span>
-  </div>
-  <div class="card-body">
-    <div class="card-top">
-      <span class="gen-tag">991.1</span>
-      
-      <button class="fav-btn" data-url="https://carsandbids.com/auctions/3O7wmym6/2015-porsche-911-carrera-4s-cabriolet" onclick="toggleFav(event,this)" title="Save" style="margin-left:auto">
-        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="8" cy="8" r="4.5"/>
-          <circle cx="8" cy="8" r="1.8" fill="var(--bg2)" stroke="none"/>
-          <rect x="11.5" y="7" width="9" height="2.5" rx="1.25"/>
-          <rect x="17" y="9.5" width="2.5" height="2.5" rx="0.8"/>
-          <rect x="13.5" y="9.5" width="2.5" height="3.5" rx="0.8"/>
-        </svg>
-      </button>
-    </div>
-    <div class="card-title">2015 Porsche 911 Carrera 4S Cabriolet</div>
-    <div class="card-bid-row">
-      <span class="bid-val">$55,000</span>
-      <span class="fmv-pill fmv-below">▼ 33% below FMV</span>
-    </div>
-    <div class="card-specs"><span class="spec-pill">59,000 mi</span></div>
-  </div>
-  <div class="expand-panel">
-    <div class="expand-inner">
-      <div class="stat-row">
-        <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$71K &ndash; $87K</div></div>
-        <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">32 sales</div></div>
-        <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">4</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">59,000 mi</div></div>
-        <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">—</div></div>
-        <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
-      </div>
-      <div class="graph-wrap">
-        <div class="graph-label">Sold comps vs FMV <span class="graph-sub">32 transactions</span></div>
-        <svg class="graph-svg" data-lid="14668" data-fmv="82500" data-bid="55000" data-low="71000" data-high="87067"></svg>
-      </div>
-      <div class="expand-footer">
-        <div class="etag-row"><span class="etag">991.1</span><span class="etag">Cabriolet</span></div>
-        <div class="expand-actions"><span class="deal-badge">33% below FMV</span><a class="go-btn" href="https://carsandbids.com/auctions/3O7wmym6/2015-porsche-911-carrera-4s-cabriolet" target="_blank" onclick="event.stopPropagation()">&#x2197; Go to auction</a></div>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="auc-card auc-urg-live" onclick="cardClick(event,this)"
- data-url="https://carsandbids.com/auctions/30x55lQV/2001-porsche-911-carrera-4-coupe"
- data-gen="996" data-src="C&amp;B" data-tier="TIER2"
- data-price="12000" data-fmv="26500"
- data-fmv-low="22249"
- data-fmv-high="32500"
- data-bid="12000"
- data-lid="14688"
- data-mileage="89900"
- data-trans=""
- data-color=""
- data-comp-count="120"
- data-fmv-range="$22K &amp;ndash; $32K"
- data-days-listed="4"
- data-ends="2026-06-17T17:38:14Z" data-listed="2026-06-10">
-  <div class="img-wrap">
-    <img src="https://media.carsandbids.com/cdn-cgi/image/width=768,quality=70/b39a44f305ebdd9deab9e0d03ab553aa50a0ec3e/photos/Porsche911Carrera42001008/edit/m5B7J.jpg?t=178050287007" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
-    <div class="img-grad"></div>
-    <span class="img-src-badge src-badge" style="background:#1F0D03;color:#fb923c">C&amp;B</span>
-    <span class="img-timer countdown-timer timer-green" data-ends="2026-06-17T17:38:14Z">…</span>
-  </div>
-  <div class="card-body">
-    <div class="card-top">
-      <span class="gen-tag">996</span>
-      
-      <button class="fav-btn" data-url="https://carsandbids.com/auctions/30x55lQV/2001-porsche-911-carrera-4-coupe" onclick="toggleFav(event,this)" title="Save" style="margin-left:auto">
-        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="8" cy="8" r="4.5"/>
-          <circle cx="8" cy="8" r="1.8" fill="var(--bg2)" stroke="none"/>
-          <rect x="11.5" y="7" width="9" height="2.5" rx="1.25"/>
-          <rect x="17" y="9.5" width="2.5" height="2.5" rx="0.8"/>
-          <rect x="13.5" y="9.5" width="2.5" height="3.5" rx="0.8"/>
-        </svg>
-      </button>
-    </div>
-    <div class="card-title">2001 Porsche 911 Carrera 4 Coupe</div>
-    <div class="card-bid-row">
-      <span class="bid-val">$12,000</span>
-      <span class="fmv-pill fmv-below">▼ 55% below FMV</span>
-    </div>
-    <div class="card-specs"><span class="spec-pill">89,900 mi</span></div>
-  </div>
-  <div class="expand-panel">
-    <div class="expand-inner">
-      <div class="stat-row">
-        <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$22K &ndash; $32K</div></div>
-        <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">120 sales</div></div>
-        <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">4</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">89,900 mi</div></div>
-        <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">—</div></div>
-        <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
-      </div>
-      <div class="graph-wrap">
-        <div class="graph-label">Sold comps vs FMV <span class="graph-sub">120 transactions</span></div>
-        <svg class="graph-svg" data-lid="14688" data-fmv="26500" data-bid="12000" data-low="22249" data-high="32500"></svg>
-      </div>
-      <div class="expand-footer">
-        <div class="etag-row"><span class="etag">996</span><span class="etag">Coupe</span></div>
-        <div class="expand-actions"><span class="deal-badge">55% below FMV</span><a class="go-btn" href="https://carsandbids.com/auctions/30x55lQV/2001-porsche-911-carrera-4-coupe" target="_blank" onclick="event.stopPropagation()">&#x2197; Go to auction</a></div>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="auc-card auc-urg-live" onclick="cardClick(event,this)"
  data-url="https://bringatrailer.com/listing/1994-porsche-911-carrera-2-cabriolet-10/"
  data-gen="964" data-src="BaT" data-tier="TIER1"
  data-price="51500" data-fmv="0"
@@ -2724,6 +2535,195 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
       <div class="expand-footer">
         <div class="etag-row"><span class="etag">964</span><span class="etag">Cabriolet</span></div>
         <div class="expand-actions"><a class="go-btn" href="https://bringatrailer.com/listing/1994-porsche-911-carrera-2-cabriolet-10/" target="_blank" onclick="event.stopPropagation()">&#x2197; Go to auction</a></div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="auc-card auc-urg-live" onclick="cardClick(event,this)"
+ data-url="https://carsandbids.com/auctions/3yAOBmJp/2000-porsche-911-carrera-4-cabriolet"
+ data-gen="996" data-src="C&amp;B" data-tier="TIER2"
+ data-price="13510" data-fmv="26500"
+ data-fmv-low="22249"
+ data-fmv-high="32500"
+ data-bid="13510"
+ data-lid="14651"
+ data-mileage="999999"
+ data-trans=""
+ data-color=""
+ data-comp-count="120"
+ data-fmv-range="$22K &amp;ndash; $32K"
+ data-days-listed="4"
+ data-ends="2026-06-17T17:44:59Z" data-listed="2026-06-10">
+  <div class="img-wrap">
+    <img src="https://media.carsandbids.com/cdn-cgi/image/width=768,quality=70/6b270f0a18af9c2624b10c95e54999af7f1fce3d/photos/Porsche911Carerra4Cabriolet2000002.jpg?t=178057625613" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
+    <div class="img-grad"></div>
+    <span class="img-src-badge src-badge" style="background:#1F0D03;color:#fb923c">C&amp;B</span>
+    <span class="img-timer countdown-timer timer-green" data-ends="2026-06-17T17:44:59Z">…</span>
+  </div>
+  <div class="card-body">
+    <div class="card-top">
+      <span class="gen-tag">996</span>
+      
+      <button class="fav-btn" data-url="https://carsandbids.com/auctions/3yAOBmJp/2000-porsche-911-carrera-4-cabriolet" onclick="toggleFav(event,this)" title="Save" style="margin-left:auto">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="8" cy="8" r="4.5"/>
+          <circle cx="8" cy="8" r="1.8" fill="var(--bg2)" stroke="none"/>
+          <rect x="11.5" y="7" width="9" height="2.5" rx="1.25"/>
+          <rect x="17" y="9.5" width="2.5" height="2.5" rx="0.8"/>
+          <rect x="13.5" y="9.5" width="2.5" height="3.5" rx="0.8"/>
+        </svg>
+      </button>
+    </div>
+    <div class="card-title">2000 Porsche 911 Carrera 4 Cabriolet</div>
+    <div class="card-bid-row">
+      <span class="bid-val">$13,510</span>
+      <span class="fmv-pill fmv-below">▼ 49% below FMV</span>
+    </div>
+    <div class="card-specs"></div>
+  </div>
+  <div class="expand-panel">
+    <div class="expand-inner">
+      <div class="stat-row">
+        <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$22K &ndash; $32K</div></div>
+        <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">120 sales</div></div>
+        <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">4</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
+        <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">—</div></div>
+        <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
+      </div>
+      <div class="graph-wrap">
+        <div class="graph-label">Sold comps vs FMV <span class="graph-sub">120 transactions</span></div>
+        <svg class="graph-svg" data-lid="14651" data-fmv="26500" data-bid="13510" data-low="22249" data-high="32500"></svg>
+      </div>
+      <div class="expand-footer">
+        <div class="etag-row"><span class="etag">996</span><span class="etag">Cabriolet</span></div>
+        <div class="expand-actions"><span class="deal-badge">49% below FMV</span><a class="go-btn" href="https://carsandbids.com/auctions/3yAOBmJp/2000-porsche-911-carrera-4-cabriolet" target="_blank" onclick="event.stopPropagation()">&#x2197; Go to auction</a></div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="auc-card auc-urg-live" onclick="cardClick(event,this)"
+ data-url="https://carsandbids.com/auctions/3O7wmym6/2015-porsche-911-carrera-4s-cabriolet"
+ data-gen="991.1" data-src="C&amp;B" data-tier="TIER2"
+ data-price="55000" data-fmv="82500"
+ data-fmv-low="71000"
+ data-fmv-high="87067"
+ data-bid="55000"
+ data-lid="14668"
+ data-mileage="59000"
+ data-trans=""
+ data-color=""
+ data-comp-count="32"
+ data-fmv-range="$71K &amp;ndash; $87K"
+ data-days-listed="4"
+ data-ends="2026-06-17T17:44:59Z" data-listed="2026-06-10">
+  <div class="img-wrap">
+    <img src="https://media.carsandbids.com/cdn-cgi/image/width=768,quality=70/8e6341e27a680ffab7d98e42bef83b0dd1b0fb94/photos/Porsche911Carrera2015016/edit/I1qBR.jpg?t=177585180295" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
+    <div class="img-grad"></div>
+    <span class="img-src-badge src-badge" style="background:#1F0D03;color:#fb923c">C&amp;B</span>
+    <span class="img-timer countdown-timer timer-green" data-ends="2026-06-17T17:44:59Z">…</span>
+  </div>
+  <div class="card-body">
+    <div class="card-top">
+      <span class="gen-tag">991.1</span>
+      
+      <button class="fav-btn" data-url="https://carsandbids.com/auctions/3O7wmym6/2015-porsche-911-carrera-4s-cabriolet" onclick="toggleFav(event,this)" title="Save" style="margin-left:auto">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="8" cy="8" r="4.5"/>
+          <circle cx="8" cy="8" r="1.8" fill="var(--bg2)" stroke="none"/>
+          <rect x="11.5" y="7" width="9" height="2.5" rx="1.25"/>
+          <rect x="17" y="9.5" width="2.5" height="2.5" rx="0.8"/>
+          <rect x="13.5" y="9.5" width="2.5" height="3.5" rx="0.8"/>
+        </svg>
+      </button>
+    </div>
+    <div class="card-title">2015 Porsche 911 Carrera 4S Cabriolet</div>
+    <div class="card-bid-row">
+      <span class="bid-val">$55,000</span>
+      <span class="fmv-pill fmv-below">▼ 33% below FMV</span>
+    </div>
+    <div class="card-specs"><span class="spec-pill">59,000 mi</span></div>
+  </div>
+  <div class="expand-panel">
+    <div class="expand-inner">
+      <div class="stat-row">
+        <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$71K &ndash; $87K</div></div>
+        <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">32 sales</div></div>
+        <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">4</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">59,000 mi</div></div>
+        <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">—</div></div>
+        <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
+      </div>
+      <div class="graph-wrap">
+        <div class="graph-label">Sold comps vs FMV <span class="graph-sub">32 transactions</span></div>
+        <svg class="graph-svg" data-lid="14668" data-fmv="82500" data-bid="55000" data-low="71000" data-high="87067"></svg>
+      </div>
+      <div class="expand-footer">
+        <div class="etag-row"><span class="etag">991.1</span><span class="etag">Cabriolet</span></div>
+        <div class="expand-actions"><span class="deal-badge">33% below FMV</span><a class="go-btn" href="https://carsandbids.com/auctions/3O7wmym6/2015-porsche-911-carrera-4s-cabriolet" target="_blank" onclick="event.stopPropagation()">&#x2197; Go to auction</a></div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="auc-card auc-urg-live" onclick="cardClick(event,this)"
+ data-url="https://carsandbids.com/auctions/30x55lQV/2001-porsche-911-carrera-4-coupe"
+ data-gen="996" data-src="C&amp;B" data-tier="TIER2"
+ data-price="12000" data-fmv="26500"
+ data-fmv-low="22249"
+ data-fmv-high="32500"
+ data-bid="12000"
+ data-lid="14688"
+ data-mileage="999999"
+ data-trans=""
+ data-color=""
+ data-comp-count="120"
+ data-fmv-range="$22K &amp;ndash; $32K"
+ data-days-listed="4"
+ data-ends="2026-06-17T17:44:59Z" data-listed="2026-06-10">
+  <div class="img-wrap">
+    <img src="https://media.carsandbids.com/cdn-cgi/image/width=768,quality=70/b39a44f305ebdd9deab9e0d03ab553aa50a0ec3e/photos/Porsche911Carrera42001008/edit/m5B7J.jpg?t=178050287007" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
+    <div class="img-grad"></div>
+    <span class="img-src-badge src-badge" style="background:#1F0D03;color:#fb923c">C&amp;B</span>
+    <span class="img-timer countdown-timer timer-green" data-ends="2026-06-17T17:44:59Z">…</span>
+  </div>
+  <div class="card-body">
+    <div class="card-top">
+      <span class="gen-tag">996</span>
+      
+      <button class="fav-btn" data-url="https://carsandbids.com/auctions/30x55lQV/2001-porsche-911-carrera-4-coupe" onclick="toggleFav(event,this)" title="Save" style="margin-left:auto">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="8" cy="8" r="4.5"/>
+          <circle cx="8" cy="8" r="1.8" fill="var(--bg2)" stroke="none"/>
+          <rect x="11.5" y="7" width="9" height="2.5" rx="1.25"/>
+          <rect x="17" y="9.5" width="2.5" height="2.5" rx="0.8"/>
+          <rect x="13.5" y="9.5" width="2.5" height="3.5" rx="0.8"/>
+        </svg>
+      </button>
+    </div>
+    <div class="card-title">2001 Porsche 911 Carrera 4 Coupe</div>
+    <div class="card-bid-row">
+      <span class="bid-val">$12,000</span>
+      <span class="fmv-pill fmv-below">▼ 55% below FMV</span>
+    </div>
+    <div class="card-specs"></div>
+  </div>
+  <div class="expand-panel">
+    <div class="expand-inner">
+      <div class="stat-row">
+        <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$22K &ndash; $32K</div></div>
+        <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">120 sales</div></div>
+        <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">4</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
+        <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">—</div></div>
+        <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
+      </div>
+      <div class="graph-wrap">
+        <div class="graph-label">Sold comps vs FMV <span class="graph-sub">120 transactions</span></div>
+        <svg class="graph-svg" data-lid="14688" data-fmv="26500" data-bid="12000" data-low="22249" data-high="32500"></svg>
+      </div>
+      <div class="expand-footer">
+        <div class="etag-row"><span class="etag">996</span><span class="etag">Coupe</span></div>
+        <div class="expand-actions"><span class="deal-badge">55% below FMV</span><a class="go-btn" href="https://carsandbids.com/auctions/30x55lQV/2001-porsche-911-carrera-4-coupe" target="_blank" onclick="event.stopPropagation()">&#x2197; Go to auction</a></div>
       </div>
     </div>
   </div>
@@ -2799,7 +2799,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
  data-fmv-high="93000"
  data-bid="20000"
  data-lid="14687"
- data-mileage="106"
+ data-mileage="999999"
  data-trans=""
  data-color=""
  data-comp-count="354"
@@ -2831,7 +2831,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
       <span class="bid-val">$20,000</span>
       <span class="fmv-pill fmv-below">▼ 72% below FMV</span>
     </div>
-    <div class="card-specs"><span class="spec-pill">106 mi</span></div>
+    <div class="card-specs"></div>
   </div>
   <div class="expand-panel">
     <div class="expand-inner">
@@ -2839,7 +2839,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
         <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$57K &ndash; $93K</div></div>
         <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">354 sales</div></div>
         <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">4</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">106 mi</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
         <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">—</div></div>
         <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
       </div>
@@ -2931,12 +2931,12 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
  data-comp-count="0"
  data-fmv-range="—"
  data-days-listed="4"
- data-ends="2026-06-17T18:59:22Z" data-listed="2026-06-10">
+ data-ends="2026-06-17T18:59:07Z" data-listed="2026-06-10">
   <div class="img-wrap">
     <img src="https://d2niwqq19lf86s.cloudfront.net/htwritable/media/.thumbnails/2efd6394-916d-4607-b8c8-56749a2906a4-fc6bd77e-1345-4ab3-bc8a-c3a67e1154d0-Copy-of-RISO-964-Cab-3-tiny-2048x0.webp/2efd6394-916d-4607-b8c8-56749a2906a4-fc6bd77e-1345-4ab3-bc8a-c3a67e1154d0-Copy-of-RISO-964-Cab-3-tiny-2048x0-tiny-380x0.webp" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
     <div class="img-grad"></div>
     <span class="img-src-badge src-badge" style="background:#0A1F14;color:#4ade80">pcarmarket</span>
-    <span class="img-timer countdown-timer timer-green" data-ends="2026-06-17T18:59:22Z">…</span>
+    <span class="img-timer countdown-timer timer-green" data-ends="2026-06-17T18:59:07Z">…</span>
   </div>
   <div class="card-body">
     <div class="card-top">
@@ -3051,7 +3051,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
  data-fmv-high="209000"
  data-bid="165000"
  data-lid="14516"
- data-mileage="8500"
+ data-mileage="999999"
  data-trans=""
  data-color=""
  data-comp-count="104"
@@ -3083,7 +3083,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
       <span class="bid-val">$165,000</span>
       
     </div>
-    <div class="card-specs"><span class="spec-pill">8,500 mi</span></div>
+    <div class="card-specs"></div>
   </div>
   <div class="expand-panel">
     <div class="expand-inner">
@@ -3091,7 +3091,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
         <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$131K &ndash; $209K</div></div>
         <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">104 sales</div></div>
         <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">5</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">8,500 mi</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
         <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">—</div></div>
         <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
       </div>
@@ -3177,7 +3177,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
  data-fmv-high="33750"
  data-bid="6000"
  data-lid="14783"
- data-mileage="4100"
+ data-mileage="999999"
  data-trans="Manual"
  data-color=""
  data-comp-count="504"
@@ -3209,7 +3209,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
       <span class="bid-val">$6,000</span>
       <span class="fmv-pill fmv-below">▼ 78% below FMV</span>
     </div>
-    <div class="card-specs"><span class="spec-pill">4,100 mi</span><span class="spec-pill">Manual</span></div>
+    <div class="card-specs"><span class="spec-pill">Manual</span></div>
   </div>
   <div class="expand-panel">
     <div class="expand-inner">
@@ -3217,7 +3217,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
         <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$22K &ndash; $34K</div></div>
         <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">504 sales</div></div>
         <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">3</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">4,100 mi</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
         <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">Manual</div></div>
         <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
       </div>
@@ -3240,18 +3240,18 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
  data-fmv-high="38000"
  data-bid="15250"
  data-lid="14804"
- data-mileage="151300"
+ data-mileage="999999"
  data-trans=""
  data-color=""
  data-comp-count="143"
  data-fmv-range="$24K &amp;ndash; $38K"
  data-days-listed="3"
- data-ends="2026-06-18T17:38:14Z" data-listed="2026-06-11">
+ data-ends="2026-06-18T17:44:59Z" data-listed="2026-06-11">
   <div class="img-wrap">
     <img src="https://media.carsandbids.com/cdn-cgi/image/width=768,quality=70/f0faa1a281c127bd3a9f4d667ce87d33a512e14a/photos/PorscheCaymanS2007008.jpg?t=178067379935" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
     <div class="img-grad"></div>
     <span class="img-src-badge src-badge" style="background:#1F0D03;color:#fb923c">C&amp;B</span>
-    <span class="img-timer countdown-timer timer-green" data-ends="2026-06-18T17:38:14Z">…</span>
+    <span class="img-timer countdown-timer timer-green" data-ends="2026-06-18T17:44:59Z">…</span>
   </div>
   <div class="card-body">
     <div class="card-top">
@@ -3272,7 +3272,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
       <span class="bid-val">$15,250</span>
       <span class="fmv-pill fmv-below">▼ 48% below FMV</span>
     </div>
-    <div class="card-specs"><span class="spec-pill">151,300 mi</span></div>
+    <div class="card-specs"></div>
   </div>
   <div class="expand-panel">
     <div class="expand-inner">
@@ -3280,7 +3280,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
         <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$24K &ndash; $38K</div></div>
         <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">143 sales</div></div>
         <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">3</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">151,300 mi</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
         <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">—</div></div>
         <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
       </div>
@@ -3303,18 +3303,18 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
  data-fmv-high="47000"
  data-bid="30000"
  data-lid="14812"
- data-mileage="92800"
+ data-mileage="999999"
  data-trans=""
  data-color=""
  data-comp-count="115"
  data-fmv-range="$30K &amp;ndash; $47K"
  data-days-listed="3"
- data-ends="2026-06-18T17:38:14Z" data-listed="2026-06-11">
+ data-ends="2026-06-18T17:44:59Z" data-listed="2026-06-11">
   <div class="img-wrap">
     <img src="https://media.carsandbids.com/cdn-cgi/image/width=768,quality=70/c7387fa5557775cb743f87fc02d6cb831afb20b2/photos/exterior/rbl75ePl-leNuYAF/edit/-Pf1Q.jpg?t=178087979343" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
     <div class="img-grad"></div>
     <span class="img-src-badge src-badge" style="background:#1F0D03;color:#fb923c">C&amp;B</span>
-    <span class="img-timer countdown-timer timer-green" data-ends="2026-06-18T17:38:14Z">…</span>
+    <span class="img-timer countdown-timer timer-green" data-ends="2026-06-18T17:44:59Z">…</span>
   </div>
   <div class="card-body">
     <div class="card-top">
@@ -3335,7 +3335,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
       <span class="bid-val">$30,000</span>
       <span class="fmv-pill fmv-below">▼ 25% below FMV</span>
     </div>
-    <div class="card-specs"><span class="spec-pill">92,800 mi</span></div>
+    <div class="card-specs"></div>
   </div>
   <div class="expand-panel">
     <div class="expand-inner">
@@ -3343,7 +3343,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
         <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$30K &ndash; $47K</div></div>
         <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">115 sales</div></div>
         <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">3</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">92,800 mi</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
         <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">—</div></div>
         <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
       </div>
@@ -3366,18 +3366,18 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
  data-fmv-high="32500"
  data-bid="9000"
  data-lid="14830"
- data-mileage="57200"
+ data-mileage="999999"
  data-trans=""
  data-color=""
  data-comp-count="120"
  data-fmv-range="$22K &amp;ndash; $32K"
  data-days-listed="3"
- data-ends="2026-06-18T17:38:14Z" data-listed="2026-06-11">
+ data-ends="2026-06-18T17:44:59Z" data-listed="2026-06-11">
   <div class="img-wrap">
     <img src="https://media.carsandbids.com/cdn-cgi/image/width=768,quality=70/f50baa0fded5bb62b35f8553a743bb81347efcf4/photos/KVzk66yl-VoGesL1/edit/D8GmN.jpg?t=178035144098" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
     <div class="img-grad"></div>
     <span class="img-src-badge src-badge" style="background:#1F0D03;color:#fb923c">C&amp;B</span>
-    <span class="img-timer countdown-timer timer-green" data-ends="2026-06-18T17:38:14Z">…</span>
+    <span class="img-timer countdown-timer timer-green" data-ends="2026-06-18T17:44:59Z">…</span>
   </div>
   <div class="card-body">
     <div class="card-top">
@@ -3398,7 +3398,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
       <span class="bid-val">$9,000</span>
       <span class="fmv-pill fmv-below">▼ 66% below FMV</span>
     </div>
-    <div class="card-specs"><span class="spec-pill">57,200 mi</span></div>
+    <div class="card-specs"></div>
   </div>
   <div class="expand-panel">
     <div class="expand-inner">
@@ -3406,7 +3406,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
         <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$22K &ndash; $32K</div></div>
         <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">120 sales</div></div>
         <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">3</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">57,200 mi</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
         <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">—</div></div>
         <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
       </div>
@@ -3429,18 +3429,18 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
  data-fmv-high="134500"
  data-bid="8647"
  data-lid="14838"
- data-mileage="69900"
+ data-mileage="999999"
  data-trans=""
  data-color=""
  data-comp-count="45"
  data-fmv-range="$60K &amp;ndash; $134K"
  data-days-listed="3"
- data-ends="2026-06-18T17:38:14Z" data-listed="2026-06-11">
+ data-ends="2026-06-18T17:44:59Z" data-listed="2026-06-11">
   <div class="img-wrap">
     <img src="https://media.carsandbids.com/cdn-cgi/image/width=768,quality=70/438ad923cef6d8239e95d61e7d6849486bae11d9/photos/KYaBoVEx-SGooKWZ(1)-xy9NDLv20E.jpeg?t=178122225146" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
     <div class="img-grad"></div>
     <span class="img-src-badge src-badge" style="background:#1F0D03;color:#fb923c">C&amp;B</span>
-    <span class="img-timer countdown-timer timer-green" data-ends="2026-06-18T17:38:14Z">…</span>
+    <span class="img-timer countdown-timer timer-green" data-ends="2026-06-18T17:44:59Z">…</span>
   </div>
   <div class="card-body">
     <div class="card-top">
@@ -3461,7 +3461,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
       <span class="bid-val">$8,647</span>
       <span class="fmv-pill fmv-below">▼ 87% below FMV</span>
     </div>
-    <div class="card-specs"><span class="spec-pill">69,900 mi</span></div>
+    <div class="card-specs"></div>
   </div>
   <div class="expand-panel">
     <div class="expand-inner">
@@ -3469,7 +3469,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
         <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$60K &ndash; $134K</div></div>
         <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">45 sales</div></div>
         <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">3</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">69,900 mi</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
         <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">—</div></div>
         <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
       </div>
@@ -3492,18 +3492,18 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
  data-fmv-high="112500"
  data-bid="79000"
  data-lid="14842"
- data-mileage="30400"
+ data-mileage="999999"
  data-trans=""
  data-color=""
  data-comp-count="25"
  data-fmv-range="$91K &amp;ndash; $112K"
  data-days-listed="3"
- data-ends="2026-06-18T17:38:14Z" data-listed="2026-06-11">
+ data-ends="2026-06-18T17:44:59Z" data-listed="2026-06-11">
   <div class="img-wrap">
     <img src="https://media.carsandbids.com/cdn-cgi/image/width=768,quality=70/1477bbe21e8d6b5e719c7c3ccab577fd47dd8cc3/photos/9Abxny2z-leu0UU_/edit/aGb8t.jpg?t=178065309940" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
     <div class="img-grad"></div>
     <span class="img-src-badge src-badge" style="background:#1F0D03;color:#fb923c">C&amp;B</span>
-    <span class="img-timer countdown-timer timer-green" data-ends="2026-06-18T17:38:14Z">…</span>
+    <span class="img-timer countdown-timer timer-green" data-ends="2026-06-18T17:44:59Z">…</span>
   </div>
   <div class="card-body">
     <div class="card-top">
@@ -3524,7 +3524,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
       <span class="bid-val">$79,000</span>
       <span class="fmv-pill fmv-below">▼ 17% below FMV</span>
     </div>
-    <div class="card-specs"><span class="spec-pill">30,400 mi</span></div>
+    <div class="card-specs"></div>
   </div>
   <div class="expand-panel">
     <div class="expand-inner">
@@ -3532,7 +3532,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
         <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$91K &ndash; $112K</div></div>
         <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">25 sales</div></div>
         <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">3</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">30,400 mi</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
         <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">—</div></div>
         <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
       </div>
@@ -3561,12 +3561,12 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
  data-comp-count="27"
  data-fmv-range="$34K &amp;ndash; $50K"
  data-days-listed="3"
- data-ends="2026-06-18T18:59:22Z" data-listed="2026-06-11">
+ data-ends="2026-06-18T18:59:07Z" data-listed="2026-06-11">
   <div class="img-wrap">
     <img src="https://d2niwqq19lf86s.cloudfront.net/htwritable/media/.thumbnails/7e818070-56a7-44aa-995b-6f3836bd6033-2008_porsche_911-carrera-4-cabriolet_speedyellow-137-17411-scaled.webp/7e818070-56a7-44aa-995b-6f3836bd6033-2008_porsche_911-carrera-4-cabriolet_speedyellow-137-17411-scaled-tiny-380x0.webp" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
     <div class="img-grad"></div>
     <span class="img-src-badge src-badge" style="background:#0A1F14;color:#4ade80">pcarmarket</span>
-    <span class="img-timer countdown-timer timer-green" data-ends="2026-06-18T18:59:22Z">…</span>
+    <span class="img-timer countdown-timer timer-green" data-ends="2026-06-18T18:59:07Z">…</span>
   </div>
   <div class="card-body">
     <div class="card-top">
@@ -3681,7 +3681,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
  data-fmv-high="198000"
  data-bid="178992"
  data-lid="15054"
- data-mileage="300"
+ data-mileage="999999"
  data-trans="Manual"
  data-color=""
  data-comp-count="21"
@@ -3713,7 +3713,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
       <span class="bid-val">$178,992</span>
       
     </div>
-    <div class="card-specs"><span class="spec-pill">300 mi</span><span class="spec-pill">Manual</span></div>
+    <div class="card-specs"><span class="spec-pill">Manual</span></div>
   </div>
   <div class="expand-panel">
     <div class="expand-inner">
@@ -3721,7 +3721,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
         <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$167K &ndash; $198K</div></div>
         <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">21 sales</div></div>
         <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">1</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">300 mi</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
         <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">Manual</div></div>
         <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
       </div>
@@ -3750,12 +3750,12 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
  data-comp-count="91"
  data-fmv-range="$260K &amp;ndash; $305K"
  data-days-listed="3"
- data-ends="2026-06-18T19:19:22Z" data-listed="2026-06-11">
+ data-ends="2026-06-18T19:19:07Z" data-listed="2026-06-11">
   <div class="img-wrap">
     <img src="https://d2niwqq19lf86s.cloudfront.net/htwritable/media/prod/eyJ0aXRsZSI6IjY2MDgyIC0gMjAyMiBQb3JzY2hlIDkxMSBHVDMgVG91cmluZyIsInNsdWciOiI2NjA4Mi0yMDIyLXBvcnNjaGUtOTExLWd0My10b3VyaW5nLWNkZGU4Yzc0In0/.thumbnails/b830a94a-a73c-4377-9f2d-9ce0c9d6291c.webp/b830a94a-a73c-4377-9f2d-9ce0c9d6291c-tiny-380x0.webp" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
     <div class="img-grad"></div>
     <span class="img-src-badge src-badge" style="background:#0A1F14;color:#4ade80">pcarmarket</span>
-    <span class="img-timer countdown-timer timer-green" data-ends="2026-06-18T19:19:22Z">…</span>
+    <span class="img-timer countdown-timer timer-green" data-ends="2026-06-18T19:19:07Z">…</span>
   </div>
   <div class="card-body">
     <div class="card-top">
@@ -3807,7 +3807,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
  data-fmv-high="212000"
  data-bid="193000"
  data-lid="15063"
- data-mileage="3500"
+ data-mileage="999999"
  data-trans=""
  data-color=""
  data-comp-count="22"
@@ -3839,7 +3839,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
       <span class="bid-val">$193,000</span>
       <span class="fmv-pill fmv-below">▼ 5% below FMV</span>
     </div>
-    <div class="card-specs"><span class="spec-pill">3,500 mi</span></div>
+    <div class="card-specs"></div>
   </div>
   <div class="expand-panel">
     <div class="expand-inner">
@@ -3847,7 +3847,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
         <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$184K &ndash; $212K</div></div>
         <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">22 sales</div></div>
         <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">1</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">3,500 mi</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
         <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">—</div></div>
         <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
       </div>
@@ -3933,18 +3933,18 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
  data-fmv-high="48000"
  data-bid="15555"
  data-lid="14925"
- data-mileage="85000"
+ data-mileage="999999"
  data-trans=""
  data-color=""
  data-comp-count="16"
  data-fmv-range="$45K &amp;ndash; $48K"
  data-days-listed="2"
- data-ends="2026-06-19T17:38:14Z" data-listed="2026-06-12">
+ data-ends="2026-06-19T17:44:59Z" data-listed="2026-06-12">
   <div class="img-wrap">
     <img src="https://media.carsandbids.com/cdn-cgi/image/width=768,quality=70/ed57b8dccf832d9565ed11fb19a44df52fc03135/photos/Porsche718Cayman2018026.jpg?t=178050034496" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
     <div class="img-grad"></div>
     <span class="img-src-badge src-badge" style="background:#1F0D03;color:#fb923c">C&amp;B</span>
-    <span class="img-timer countdown-timer timer-green" data-ends="2026-06-19T17:38:14Z">…</span>
+    <span class="img-timer countdown-timer timer-green" data-ends="2026-06-19T17:44:59Z">…</span>
   </div>
   <div class="card-body">
     <div class="card-top">
@@ -3965,7 +3965,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
       <span class="bid-val">$15,555</span>
       <span class="fmv-pill fmv-below">▼ 66% below FMV</span>
     </div>
-    <div class="card-specs"><span class="spec-pill">85,000 mi</span></div>
+    <div class="card-specs"></div>
   </div>
   <div class="expand-panel">
     <div class="expand-inner">
@@ -3973,7 +3973,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
         <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$45K &ndash; $48K</div></div>
         <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">16 sales</div></div>
         <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">2</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">85,000 mi</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
         <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">—</div></div>
         <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
       </div>
@@ -3996,18 +3996,18 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
  data-fmv-high="47000"
  data-bid="2500"
  data-lid="14930"
- data-mileage="113900"
+ data-mileage="999999"
  data-trans=""
  data-color=""
  data-comp-count="115"
  data-fmv-range="$30K &amp;ndash; $47K"
  data-days-listed="2"
- data-ends="2026-06-19T17:38:14Z" data-listed="2026-06-12">
+ data-ends="2026-06-19T17:44:59Z" data-listed="2026-06-12">
   <div class="img-wrap">
     <img src="https://media.carsandbids.com/cdn-cgi/image/width=768,quality=70/7a0a3c6148108c9c64425dd85e0181fa3cccb652/photos/KdVed68x-eDFquth/edit/ACwtk.jpg?t=178111093198" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
     <div class="img-grad"></div>
     <span class="img-src-badge src-badge" style="background:#1F0D03;color:#fb923c">C&amp;B</span>
-    <span class="img-timer countdown-timer timer-green" data-ends="2026-06-19T17:38:14Z">…</span>
+    <span class="img-timer countdown-timer timer-green" data-ends="2026-06-19T17:44:59Z">…</span>
   </div>
   <div class="card-body">
     <div class="card-top">
@@ -4028,7 +4028,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
       <span class="bid-val">$2,500</span>
       <span class="fmv-pill fmv-below">▼ 94% below FMV</span>
     </div>
-    <div class="card-specs"><span class="spec-pill">113,900 mi</span></div>
+    <div class="card-specs"></div>
   </div>
   <div class="expand-panel">
     <div class="expand-inner">
@@ -4036,7 +4036,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
         <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$30K &ndash; $47K</div></div>
         <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">115 sales</div></div>
         <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">2</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">113,900 mi</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
         <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">—</div></div>
         <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
       </div>
@@ -4059,18 +4059,18 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
  data-fmv-high="135000"
  data-bid="60000"
  data-lid="14935"
- data-mileage="32700"
+ data-mileage="999999"
  data-trans=""
  data-color=""
  data-comp-count="19"
  data-fmv-range="$104K &amp;ndash; $135K"
  data-days-listed="2"
- data-ends="2026-06-19T17:38:14Z" data-listed="2026-06-12">
+ data-ends="2026-06-19T17:44:59Z" data-listed="2026-06-12">
   <div class="img-wrap">
     <img src="https://media.carsandbids.com/cdn-cgi/image/width=768,quality=70/ab7dc6e8af346b9fc74261b2f8f56bdf4c0d6236/photos/Porsche911GTS2016002.jpg?t=178094166196" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
     <div class="img-grad"></div>
     <span class="img-src-badge src-badge" style="background:#1F0D03;color:#fb923c">C&amp;B</span>
-    <span class="img-timer countdown-timer timer-green" data-ends="2026-06-19T17:38:14Z">…</span>
+    <span class="img-timer countdown-timer timer-green" data-ends="2026-06-19T17:44:59Z">…</span>
   </div>
   <div class="card-body">
     <div class="card-top">
@@ -4091,7 +4091,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
       <span class="bid-val">$60,000</span>
       <span class="fmv-pill fmv-below">▼ 50% below FMV</span>
     </div>
-    <div class="card-specs"><span class="spec-pill">32,700 mi</span></div>
+    <div class="card-specs"></div>
   </div>
   <div class="expand-panel">
     <div class="expand-inner">
@@ -4099,7 +4099,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
         <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$104K &ndash; $135K</div></div>
         <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">19 sales</div></div>
         <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">2</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">32,700 mi</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
         <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">—</div></div>
         <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
       </div>
@@ -4178,6 +4178,69 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
   </div>
 </div>
 <div class="auc-card auc-urg-live" onclick="cardClick(event,this)"
+ data-url="https://www.pcarmarket.com/auction/2024-porsche-911-gt3-1"
+ data-gen="992" data-src="pcarmarket" data-tier="TIER1"
+ data-price="175000" data-fmv="252000"
+ data-fmv-low="238000"
+ data-fmv-high="265000"
+ data-bid="175000"
+ data-lid="14953"
+ data-mileage="639"
+ data-trans="Automatic"
+ data-color="Gentian Blue Metallic"
+ data-comp-count="55"
+ data-fmv-range="$238K &amp;ndash; $265K"
+ data-days-listed="2"
+ data-ends="2026-06-19T18:59:07Z" data-listed="2026-06-12">
+  <div class="img-wrap">
+    <img src="https://d2niwqq19lf86s.cloudfront.net/htwritable/media/prod/eyJ0aXRsZSI6IjY2MDAzIC0gMjAyNCBQb3JzY2hlIDkxMSBHVDMiLCJzbHVnIjoiNjYwMDMtMjAyNC1wb3JzY2hlLTkxMS1ndDMtNDk1YWEzZWIifQ/.thumbnails/38383245-f316-4078-a024-1c59cddcd34a.webp/38383245-f316-4078-a024-1c59cddcd34a-tiny-380x0.webp" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
+    <div class="img-grad"></div>
+    <span class="img-src-badge src-badge" style="background:#0A1F14;color:#4ade80">pcarmarket</span>
+    <span class="img-timer countdown-timer timer-green" data-ends="2026-06-19T18:59:07Z">…</span>
+  </div>
+  <div class="card-body">
+    <div class="card-top">
+      <span class="gen-tag">992</span>
+      
+      <button class="fav-btn" data-url="https://www.pcarmarket.com/auction/2024-porsche-911-gt3-1" onclick="toggleFav(event,this)" title="Save" style="margin-left:auto">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="8" cy="8" r="4.5"/>
+          <circle cx="8" cy="8" r="1.8" fill="var(--bg2)" stroke="none"/>
+          <rect x="11.5" y="7" width="9" height="2.5" rx="1.25"/>
+          <rect x="17" y="9.5" width="2.5" height="2.5" rx="0.8"/>
+          <rect x="13.5" y="9.5" width="2.5" height="3.5" rx="0.8"/>
+        </svg>
+      </button>
+    </div>
+    <div class="card-title">2024 Porsche 911 GT3</div>
+    <div class="card-bid-row">
+      <span class="bid-val">$175,000</span>
+      <span class="fmv-pill fmv-below">▼ 31% below FMV</span>
+    </div>
+    <div class="card-specs"><span class="spec-pill">639 mi</span><span class="spec-pill">Automatic</span></div>
+  </div>
+  <div class="expand-panel">
+    <div class="expand-inner">
+      <div class="stat-row">
+        <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$238K &ndash; $265K</div></div>
+        <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">55 sales</div></div>
+        <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">2</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">639 mi</div></div>
+        <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">Automatic</div></div>
+        <div class="estat"><div class="estat-label">Color</div><div class="estat-val">Gentian Blue Metallic</div></div>
+      </div>
+      <div class="graph-wrap">
+        <div class="graph-label">Sold comps vs FMV <span class="graph-sub">55 transactions</span></div>
+        <svg class="graph-svg" data-lid="14953" data-fmv="252000" data-bid="175000" data-low="238000" data-high="265000"></svg>
+      </div>
+      <div class="expand-footer">
+        <div class="etag-row"><span class="etag">992</span><span class="etag">Coupe</span></div>
+        <div class="expand-actions"><span class="deal-badge">31% below FMV</span><a class="go-btn" href="https://www.pcarmarket.com/auction/2024-porsche-911-gt3-1" target="_blank" onclick="event.stopPropagation()">&#x2197; Go to auction</a></div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="auc-card auc-urg-live" onclick="cardClick(event,this)"
  data-url="https://www.pcarmarket.com/auction/2006-porsche-cayman-s-62"
  data-gen="987" data-src="pcarmarket" data-tier="TIER2"
  data-price="250" data-fmv="0"
@@ -4241,69 +4304,6 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
   </div>
 </div>
 <div class="auc-card auc-urg-live" onclick="cardClick(event,this)"
- data-url="https://www.pcarmarket.com/auction/2024-porsche-911-gt3-1"
- data-gen="992" data-src="pcarmarket" data-tier="TIER1"
- data-price="175000" data-fmv="252000"
- data-fmv-low="238000"
- data-fmv-high="265000"
- data-bid="175000"
- data-lid="14953"
- data-mileage="639"
- data-trans="Automatic"
- data-color="Gentian Blue Metallic"
- data-comp-count="55"
- data-fmv-range="$238K &amp;ndash; $265K"
- data-days-listed="2"
- data-ends="2026-06-19T18:59:22Z" data-listed="2026-06-12">
-  <div class="img-wrap">
-    <img src="https://d2niwqq19lf86s.cloudfront.net/htwritable/media/prod/eyJ0aXRsZSI6IjY2MDAzIC0gMjAyNCBQb3JzY2hlIDkxMSBHVDMiLCJzbHVnIjoiNjYwMDMtMjAyNC1wb3JzY2hlLTkxMS1ndDMtNDk1YWEzZWIifQ/.thumbnails/38383245-f316-4078-a024-1c59cddcd34a.webp/38383245-f316-4078-a024-1c59cddcd34a-tiny-380x0.webp" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
-    <div class="img-grad"></div>
-    <span class="img-src-badge src-badge" style="background:#0A1F14;color:#4ade80">pcarmarket</span>
-    <span class="img-timer countdown-timer timer-green" data-ends="2026-06-19T18:59:22Z">…</span>
-  </div>
-  <div class="card-body">
-    <div class="card-top">
-      <span class="gen-tag">992</span>
-      
-      <button class="fav-btn" data-url="https://www.pcarmarket.com/auction/2024-porsche-911-gt3-1" onclick="toggleFav(event,this)" title="Save" style="margin-left:auto">
-        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="8" cy="8" r="4.5"/>
-          <circle cx="8" cy="8" r="1.8" fill="var(--bg2)" stroke="none"/>
-          <rect x="11.5" y="7" width="9" height="2.5" rx="1.25"/>
-          <rect x="17" y="9.5" width="2.5" height="2.5" rx="0.8"/>
-          <rect x="13.5" y="9.5" width="2.5" height="3.5" rx="0.8"/>
-        </svg>
-      </button>
-    </div>
-    <div class="card-title">2024 Porsche 911 GT3</div>
-    <div class="card-bid-row">
-      <span class="bid-val">$175,000</span>
-      <span class="fmv-pill fmv-below">▼ 31% below FMV</span>
-    </div>
-    <div class="card-specs"><span class="spec-pill">639 mi</span><span class="spec-pill">Automatic</span></div>
-  </div>
-  <div class="expand-panel">
-    <div class="expand-inner">
-      <div class="stat-row">
-        <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$238K &ndash; $265K</div></div>
-        <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">55 sales</div></div>
-        <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">2</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">639 mi</div></div>
-        <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">Automatic</div></div>
-        <div class="estat"><div class="estat-label">Color</div><div class="estat-val">Gentian Blue Metallic</div></div>
-      </div>
-      <div class="graph-wrap">
-        <div class="graph-label">Sold comps vs FMV <span class="graph-sub">55 transactions</span></div>
-        <svg class="graph-svg" data-lid="14953" data-fmv="252000" data-bid="175000" data-low="238000" data-high="265000"></svg>
-      </div>
-      <div class="expand-footer">
-        <div class="etag-row"><span class="etag">992</span><span class="etag">Coupe</span></div>
-        <div class="expand-actions"><span class="deal-badge">31% below FMV</span><a class="go-btn" href="https://www.pcarmarket.com/auction/2024-porsche-911-gt3-1" target="_blank" onclick="event.stopPropagation()">&#x2197; Go to auction</a></div>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="auc-card auc-urg-live" onclick="cardClick(event,this)"
  data-url="https://bringatrailer.com/listing/1992-porsche-911-carrera-2-targa-11/"
  data-gen="964" data-src="BaT" data-tier="TIER1"
  data-price="89964" data-fmv="0"
@@ -4311,7 +4311,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
  data-fmv-high="0"
  data-bid="89964"
  data-lid="14955"
- data-mileage="300"
+ data-mileage="999999"
  data-trans="Automatic"
  data-color=""
  data-comp-count="0"
@@ -4343,7 +4343,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
       <span class="bid-val">$89,964</span>
       
     </div>
-    <div class="card-specs"><span class="spec-pill">300 mi</span><span class="spec-pill">Automatic</span></div>
+    <div class="card-specs"><span class="spec-pill">Automatic</span></div>
   </div>
   <div class="expand-panel">
     <div class="expand-inner">
@@ -4351,7 +4351,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
         <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">—</div></div>
         <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">0 sales</div></div>
         <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">2</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">300 mi</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
         <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">Automatic</div></div>
         <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
       </div>
@@ -4374,7 +4374,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
  data-fmv-high="103500"
  data-bid="35000"
  data-lid="14956"
- data-mileage="300"
+ data-mileage="999999"
  data-trans="Manual"
  data-color=""
  data-comp-count="223"
@@ -4406,7 +4406,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
       <span class="bid-val">$35,000</span>
       <span class="fmv-pill fmv-below">▼ 59% below FMV</span>
     </div>
-    <div class="card-specs"><span class="spec-pill">300 mi</span><span class="spec-pill">Manual</span></div>
+    <div class="card-specs"><span class="spec-pill">Manual</span></div>
   </div>
   <div class="expand-panel">
     <div class="expand-inner">
@@ -4414,7 +4414,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
         <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$66K &ndash; $104K</div></div>
         <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">223 sales</div></div>
         <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">2</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">300 mi</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
         <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">Manual</div></div>
         <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
       </div>
@@ -4437,7 +4437,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
  data-fmv-high="29250"
  data-bid="5235"
  data-lid="14958"
- data-mileage="300"
+ data-mileage="999999"
  data-trans="Automatic"
  data-color=""
  data-comp-count="196"
@@ -4469,7 +4469,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
       <span class="bid-val">$5,235</span>
       <span class="fmv-pill fmv-below">▼ 78% below FMV</span>
     </div>
-    <div class="card-specs"><span class="spec-pill">300 mi</span><span class="spec-pill">Automatic</span></div>
+    <div class="card-specs"><span class="spec-pill">Automatic</span></div>
   </div>
   <div class="expand-panel">
     <div class="expand-inner">
@@ -4477,7 +4477,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
         <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$17K &ndash; $29K</div></div>
         <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">196 sales</div></div>
         <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">2</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">300 mi</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
         <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">Automatic</div></div>
         <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
       </div>
@@ -4563,7 +4563,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
  data-fmv-high="128911"
  data-bid="35000"
  data-lid="15069"
- data-mileage="649"
+ data-mileage="999999"
  data-trans=""
  data-color=""
  data-comp-count="44"
@@ -4595,7 +4595,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
       <span class="bid-val">$35,000</span>
       <span class="fmv-pill fmv-below">▼ 72% below FMV</span>
     </div>
-    <div class="card-specs"><span class="spec-pill">649 mi</span></div>
+    <div class="card-specs"></div>
   </div>
   <div class="expand-panel">
     <div class="expand-inner">
@@ -4603,7 +4603,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
         <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$112K &ndash; $129K</div></div>
         <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">44 sales</div></div>
         <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">1</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">649 mi</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
         <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">—</div></div>
         <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
       </div>
@@ -11238,6 +11238,19 @@ function cycleTheme() {
   localStorage.setItem('ptox_theme', next);
   closeDD();
 }
+</script>
+<!-- Mobile bottom nav — hidden on desktop via @media(min-width:769px) -->
+<nav class="mob-bottom-nav" id="mob-bottom-nav">
+  <a class="mob-nav-item on" href="auctions.html"><i class="ti ti-car"></i><span>Market</span></a>
+  <a class="mob-nav-item" href="saved.html"><i class="ti ti-heart"></i><span>Saved</span></a>
+  <a class="mob-nav-item" href="search.html"><i class="ti ti-search"></i><span>Search</span></a>
+  <a class="mob-nav-item" href="market_report.html"><i class="ti ti-chart-line"></i><span>Report</span></a>
+  <div class="mob-nav-item" onclick="toggleDD()"><i class="ti ti-dots"></i><span>More</span></div>
+</nav>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="/auth.js"></script>
+<script>
+(async()=>{try{const r=await fetch('https://raw.githubusercontent.com/OCX11/rennmarkt/main/docs/stats.json',{cache:'no-store'});if(!r.ok)return;const s=await r.json();const fmt=n=>n>=1000?n.toLocaleString():String(n);const set=(id,v)=>{const el=document.getElementById(id);if(el&&v!=null)el.textContent=fmt(v);};set('s-active',s.n_active);set('s-new',s.n_new);set('s-auctions',s.n_auctions);set('s-comps',s.n_comps);set('s-deals',s.n_deals);}catch(e){}})();
 </script>
 </body>
 
