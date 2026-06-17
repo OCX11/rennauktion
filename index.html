@@ -449,7 +449,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
 
 <!-- Header -->
 <div class="hdr">
-  <a class="logo" href="index.html">
+  <a class="logo" href="/">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 270 40"><g transform="translate(4,4)"><circle cx="16" cy="16" r="13" fill="none" stroke="#2a2a2a" stroke-width="1.8"/><path d="M4,23 A13,13 0 0,1 26,5" fill="none" stroke="#f4433c" stroke-width="1.8" stroke-linecap="round"/><line x1="16" y1="16" x2="26" y2="5" stroke="white" stroke-width="1.2" stroke-linecap="round"/><circle cx="16" cy="16" r="2.5" fill="#f4433c"/><circle cx="16" cy="16" r="1" fill="#0f0f0f"/><text x="36" y="22" font-family="'Helvetica Neue',Arial,sans-serif" font-size="20" letter-spacing="-0.3"><tspan font-weight="700" fill="white">Renn</tspan><tspan font-weight="300" fill="#f4433c">Auktion</tspan></text></g></svg>
   </a>
   <div class="hdr-search">
@@ -458,7 +458,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
   </div>
   <div class="hdr-right">
     <a class="rm-xlink" href="https://rennmarkt.net" target="_blank" rel="noopener">RennMarkt &#x2197;</a>
-    <span class="hdr-time"><span class="live-dot"></span>Jun 17 19:13 UTC</span>
+    <span class="hdr-time"><span class="live-dot"></span>Jun 17 19:20 UTC</span>
     <div class="hdr-avatar" onclick="toggleDD()">CL</div>
   </div>
 </div>
@@ -467,13 +467,13 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
 <div class="dd-overlay" id="dd-overlay">
   <div class="dd-backdrop" onclick="closeDD()"></div>
   <div class="dd">
-    <a class="dd-item" href="index.html"><i class="ti ti-car"></i> Market</a>
+    <a class="dd-item" href="/"><i class="ti ti-car"></i> Market</a>
     <a class="dd-item" href="saved.html"><i class="ti ti-heart"></i> Saved</a>
-    <a class="dd-item" href="search.html"><i class="ti ti-search"></i> Search</a>
+    <a class="dd-item" href="https://rennmarkt.net/search.html"><i class="ti ti-search"></i> Search</a>
     <div class="dd-divider"></div>
-    <a class="dd-item" href="calculator.html"><i class="ti ti-calculator"></i> Fee Calculator</a>
-    <a class="dd-item" href="market_report.html"><i class="ti ti-chart-line"></i> Market Report</a>
-    <a class="dd-item" href="notify.html"><i class="ti ti-bell"></i> Notifications</a>
+    <a class="dd-item" href="https://rennmarkt.net/calculator.html"><i class="ti ti-calculator"></i> Fee Calculator</a>
+    <a class="dd-item" href="https://rennmarkt.net/market_report.html"><i class="ti ti-chart-line"></i> Market Report</a>
+    <a class="dd-item" href="https://rennmarkt.net/notify.html"><i class="ti ti-bell"></i> Notifications</a>
     <div class="dd-divider"></div>
     <div class="dd-item" onclick="cycleTheme()"><i class="ti ti-palette"></i> Theme</div>
     <div class="dd-divider"></div>
@@ -492,11 +492,11 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
     </div>
     <div class="sb-nav on"><i class="ti ti-car"></i><span class="sb-lbl">Market</span></div>
     <a class="sb-nav" href="saved.html"><i class="ti ti-heart"></i><span class="sb-lbl">Saved</span></a>
-    <a class="sb-nav" href="search.html"><i class="ti ti-search"></i><span class="sb-lbl">Search</span></a>
-    <a class="sb-nav" href="calculator.html"><i class="ti ti-calculator"></i><span class="sb-lbl">Fee Calc</span></a>
-    <a class="sb-nav" href="market_report.html"><i class="ti ti-chart-line"></i><span class="sb-lbl">Market Report</span></a>
+    <a class="sb-nav" href="https://rennmarkt.net/search.html"><i class="ti ti-search"></i><span class="sb-lbl">Search</span></a>
+    <a class="sb-nav" href="https://rennmarkt.net/calculator.html"><i class="ti ti-calculator"></i><span class="sb-lbl">Fee Calc</span></a>
+    <a class="sb-nav" href="https://rennmarkt.net/market_report.html"><i class="ti ti-chart-line"></i><span class="sb-lbl">Market Report</span></a>
     <div class="sb-bot">
-      <a class="sb-nav" href="notify.html"><i class="ti ti-bell"></i><span class="sb-lbl">Notifications</span></a>
+      <a class="sb-nav" href="https://rennmarkt.net/notify.html"><i class="ti ti-bell"></i><span class="sb-lbl">Notifications</span></a>
       <div class="sb-nav" onclick="cycleTheme()"><i class="ti ti-palette"></i><span class="sb-lbl">Theme</span></div>
       <div class="sb-nav auth-logout-btn" style="display:none" onclick="window.RA&&window.RA.signOut()"><i class="ti ti-logout"></i><span class="sb-lbl">Log out</span></div>
     </div>
@@ -643,7 +643,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
     <div class="section-hdr-left">
       <span class="section-icon">&#x25CF;</span>
       <span class="section-title">Ending Today</span>
-      <span class="section-count">12</span>
+      <span class="section-count">14</span>
     </div>
     <div class="section-sub">3 &ndash; 24 hours</div>
   </div>
@@ -1103,12 +1103,12 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
  data-comp-count="27"
  data-fmv-range="$34K &amp;ndash; $50K"
  data-days-listed="6"
- data-ends="2026-06-18T18:59:41Z" data-listed="2026-06-11">
+ data-ends="2026-06-18T18:59:26Z" data-listed="2026-06-11">
   <div class="img-wrap">
     <img src="https://d2niwqq19lf86s.cloudfront.net/htwritable/media/.thumbnails/7e818070-56a7-44aa-995b-6f3836bd6033-2008_porsche_911-carrera-4-cabriolet_speedyellow-137-17411-scaled.webp/7e818070-56a7-44aa-995b-6f3836bd6033-2008_porsche_911-carrera-4-cabriolet_speedyellow-137-17411-scaled-tiny-380x0.webp" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
     <div class="img-grad"></div>
     <span class="img-src-badge src-badge" style="background:#0A1F14;color:#4ade80">pcarmarket</span>
-    <span class="img-timer countdown-timer timer-amber" data-ends="2026-06-18T18:59:41Z">…</span>
+    <span class="img-timer countdown-timer timer-amber" data-ends="2026-06-18T18:59:26Z">…</span>
   </div>
   <div class="card-body">
     <div class="card-top">
@@ -1229,12 +1229,12 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
  data-comp-count="121"
  data-fmv-range="$22K &amp;ndash; $32K"
  data-days-listed="6"
- data-ends="2026-06-18T19:11:59Z" data-listed="2026-06-11">
+ data-ends="2026-06-18T19:12:00Z" data-listed="2026-06-11">
   <div class="img-wrap">
     <img src="https://media.carsandbids.com/cdn-cgi/image/width=768,quality=70/f50baa0fded5bb62b35f8553a743bb81347efcf4/photos/KVzk66yl-VoGesL1/edit/D8GmN.jpg?t=178035144098" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
     <div class="img-grad"></div>
     <span class="img-src-badge src-badge" style="background:#1F0D03;color:#fb923c">C&amp;B</span>
-    <span class="img-timer countdown-timer timer-amber" data-ends="2026-06-18T19:11:59Z">…</span>
+    <span class="img-timer countdown-timer timer-amber" data-ends="2026-06-18T19:12:00Z">…</span>
   </div>
   <div class="card-body">
     <div class="card-top">
@@ -1279,6 +1279,69 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
   </div>
 </div>
 <div class="auc-card auc-urg-soon" onclick="cardClick(event,this)"
+ data-url="https://bringatrailer.com/listing/2021-porsche-911-targa-4s-44-2/"
+ data-gen="992" data-src="BaT" data-tier="TIER2"
+ data-price="178992" data-fmv="173321"
+ data-fmv-low="167000"
+ data-fmv-high="198000"
+ data-bid="178992"
+ data-lid="15054"
+ data-mileage="999999"
+ data-trans="Manual"
+ data-color=""
+ data-comp-count="21"
+ data-fmv-range="$167K &amp;ndash; $198K"
+ data-days-listed="4"
+ data-ends="2026-06-18T19:18:00Z" data-listed="2026-06-13">
+  <div class="img-wrap">
+    <img src="https://bringatrailer.com/wp-content/uploads/2026/06/36A6493-62696-scaled-1YRuuQ.jpg" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
+    <div class="img-grad"></div>
+    <span class="img-src-badge src-badge" style="background:#0D1F35;color:#60a5fa">BaT</span>
+    <span class="img-timer countdown-timer timer-amber" data-ends="2026-06-18T19:18:00Z">…</span>
+  </div>
+  <div class="card-body">
+    <div class="card-top">
+      <span class="gen-tag">992</span>
+      <span class="urg-tag urg-soon">ENDING TODAY</span>
+      <button class="fav-btn" data-url="https://bringatrailer.com/listing/2021-porsche-911-targa-4s-44-2/" onclick="toggleFav(event,this)" title="Save" style="margin-left:auto">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="8" cy="8" r="4.5"/>
+          <circle cx="8" cy="8" r="1.8" fill="var(--bg2)" stroke="none"/>
+          <rect x="11.5" y="7" width="9" height="2.5" rx="1.25"/>
+          <rect x="17" y="9.5" width="2.5" height="2.5" rx="0.8"/>
+          <rect x="13.5" y="9.5" width="2.5" height="3.5" rx="0.8"/>
+        </svg>
+      </button>
+    </div>
+    <div class="card-title">2021 Porsche 911 Targa 4S Heritage Design Edition 7-Speed</div>
+    <div class="card-bid-row">
+      <span class="bid-val">$178,992</span>
+      
+    </div>
+    <div class="card-specs"><span class="spec-pill">Manual</span></div>
+  </div>
+  <div class="expand-panel">
+    <div class="expand-inner">
+      <div class="stat-row">
+        <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$167K &ndash; $198K</div></div>
+        <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">21 sales</div></div>
+        <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">4</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
+        <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">Manual</div></div>
+        <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
+      </div>
+      <div class="graph-wrap">
+        <div class="graph-label">Sold comps vs FMV <span class="graph-sub">21 transactions</span></div>
+        <svg class="graph-svg" data-lid="15054" data-fmv="173321" data-bid="178992" data-low="167000" data-high="198000"></svg>
+      </div>
+      <div class="expand-footer">
+        <div class="etag-row"><span class="etag">992</span><span class="etag">Targa</span></div>
+        <div class="expand-actions"><a class="go-btn" href="https://bringatrailer.com/listing/2021-porsche-911-targa-4s-44-2/" target="_blank" onclick="event.stopPropagation()">&#x2197; Go to auction</a></div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="auc-card auc-urg-soon" onclick="cardClick(event,this)"
  data-url="https://carsandbids.com/auctions/rG1Ykzod/2013-porsche-911-carrera-cabriolet"
  data-gen="991.1" data-src="C&amp;B" data-tier="TIER2"
  data-price="15250" data-fmv="69019"
@@ -1292,12 +1355,12 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
  data-comp-count="45"
  data-fmv-range="$60K &amp;ndash; $134K"
  data-days-listed="6"
- data-ends="2026-06-18T19:12:36Z" data-listed="2026-06-11">
+ data-ends="2026-06-18T19:19:21Z" data-listed="2026-06-11">
   <div class="img-wrap">
     <img src="https://media.carsandbids.com/cdn-cgi/image/width=768,quality=70/438ad923cef6d8239e95d61e7d6849486bae11d9/photos/KYaBoVEx-SGooKWZ(1)-xy9NDLv20E.jpeg?t=178122225146" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
     <div class="img-grad"></div>
     <span class="img-src-badge src-badge" style="background:#1F0D03;color:#fb923c">C&amp;B</span>
-    <span class="img-timer countdown-timer timer-amber" data-ends="2026-06-18T19:12:36Z">…</span>
+    <span class="img-timer countdown-timer timer-amber" data-ends="2026-06-18T19:19:21Z">…</span>
   </div>
   <div class="card-body">
     <div class="card-top">
@@ -1355,12 +1418,12 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
  data-comp-count="25"
  data-fmv-range="$91K &amp;ndash; $112K"
  data-days-listed="6"
- data-ends="2026-06-18T19:12:36Z" data-listed="2026-06-11">
+ data-ends="2026-06-18T19:19:21Z" data-listed="2026-06-11">
   <div class="img-wrap">
     <img src="https://media.carsandbids.com/cdn-cgi/image/width=768,quality=70/1477bbe21e8d6b5e719c7c3ccab577fd47dd8cc3/photos/9Abxny2z-leu0UU_/edit/aGb8t.jpg?t=178065309940" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
     <div class="img-grad"></div>
     <span class="img-src-badge src-badge" style="background:#1F0D03;color:#fb923c">C&amp;B</span>
-    <span class="img-timer countdown-timer timer-amber" data-ends="2026-06-18T19:12:36Z">…</span>
+    <span class="img-timer countdown-timer timer-amber" data-ends="2026-06-18T19:19:21Z">…</span>
   </div>
   <div class="card-body">
     <div class="card-top">
@@ -1404,82 +1467,7 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
     </div>
   </div>
 </div>
-  </div>
-</div>
-      <div class="auc-section">
-  <div class="section-hdr">
-    <div class="section-hdr-left">
-      <span class="section-icon">&#x25CB;</span>
-      <span class="section-title">Live Auctions</span>
-      <span class="section-count">49</span>
-    </div>
-    <div class="section-sub">Ending beyond 24h</div>
-  </div>
-  <div class="cards-list">
-    <div class="auc-card auc-urg-live" onclick="cardClick(event,this)"
- data-url="https://bringatrailer.com/listing/2021-porsche-911-targa-4s-44-2/"
- data-gen="992" data-src="BaT" data-tier="TIER2"
- data-price="178992" data-fmv="173321"
- data-fmv-low="167000"
- data-fmv-high="198000"
- data-bid="178992"
- data-lid="15054"
- data-mileage="999999"
- data-trans="Manual"
- data-color=""
- data-comp-count="21"
- data-fmv-range="$167K &amp;ndash; $198K"
- data-days-listed="4"
- data-ends="2026-06-18T19:18:00Z" data-listed="2026-06-13">
-  <div class="img-wrap">
-    <img src="https://bringatrailer.com/wp-content/uploads/2026/06/36A6493-62696-scaled-1YRuuQ.jpg" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
-    <div class="img-grad"></div>
-    <span class="img-src-badge src-badge" style="background:#0D1F35;color:#60a5fa">BaT</span>
-    <span class="img-timer countdown-timer timer-green" data-ends="2026-06-18T19:18:00Z">…</span>
-  </div>
-  <div class="card-body">
-    <div class="card-top">
-      <span class="gen-tag">992</span>
-      
-      <button class="fav-btn" data-url="https://bringatrailer.com/listing/2021-porsche-911-targa-4s-44-2/" onclick="toggleFav(event,this)" title="Save" style="margin-left:auto">
-        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="8" cy="8" r="4.5"/>
-          <circle cx="8" cy="8" r="1.8" fill="var(--bg2)" stroke="none"/>
-          <rect x="11.5" y="7" width="9" height="2.5" rx="1.25"/>
-          <rect x="17" y="9.5" width="2.5" height="2.5" rx="0.8"/>
-          <rect x="13.5" y="9.5" width="2.5" height="3.5" rx="0.8"/>
-        </svg>
-      </button>
-    </div>
-    <div class="card-title">2021 Porsche 911 Targa 4S Heritage Design Edition 7-Speed</div>
-    <div class="card-bid-row">
-      <span class="bid-val">$178,992</span>
-      
-    </div>
-    <div class="card-specs"><span class="spec-pill">Manual</span></div>
-  </div>
-  <div class="expand-panel">
-    <div class="expand-inner">
-      <div class="stat-row">
-        <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$167K &ndash; $198K</div></div>
-        <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">21 sales</div></div>
-        <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">4</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
-        <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">Manual</div></div>
-        <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
-      </div>
-      <div class="graph-wrap">
-        <div class="graph-label">Sold comps vs FMV <span class="graph-sub">21 transactions</span></div>
-        <svg class="graph-svg" data-lid="15054" data-fmv="173321" data-bid="178992" data-low="167000" data-high="198000"></svg>
-      </div>
-      <div class="expand-footer">
-        <div class="etag-row"><span class="etag">992</span><span class="etag">Targa</span></div>
-        <div class="expand-actions"><a class="go-btn" href="https://bringatrailer.com/listing/2021-porsche-911-targa-4s-44-2/" target="_blank" onclick="event.stopPropagation()">&#x2197; Go to auction</a></div>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="auc-card auc-urg-live" onclick="cardClick(event,this)"
+<div class="auc-card auc-urg-soon" onclick="cardClick(event,this)"
  data-url="https://www.pcarmarket.com/auction/2022-porsche-911-gt3-touring-15"
  data-gen="992" data-src="pcarmarket" data-tier="TIER1"
  data-price="250000" data-fmv="275000"
@@ -1493,17 +1481,17 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
  data-comp-count="91"
  data-fmv-range="$258K &amp;ndash; $305K"
  data-days-listed="6"
- data-ends="2026-06-18T19:19:41Z" data-listed="2026-06-11">
+ data-ends="2026-06-18T19:19:26Z" data-listed="2026-06-11">
   <div class="img-wrap">
     <img src="https://d2niwqq19lf86s.cloudfront.net/htwritable/media/prod/eyJ0aXRsZSI6IjY2MDgyIC0gMjAyMiBQb3JzY2hlIDkxMSBHVDMgVG91cmluZyIsInNsdWciOiI2NjA4Mi0yMDIyLXBvcnNjaGUtOTExLWd0My10b3VyaW5nLWNkZGU4Yzc0In0/.thumbnails/b830a94a-a73c-4377-9f2d-9ce0c9d6291c.webp/b830a94a-a73c-4377-9f2d-9ce0c9d6291c-tiny-380x0.webp" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
     <div class="img-grad"></div>
     <span class="img-src-badge src-badge" style="background:#0A1F14;color:#4ade80">pcarmarket</span>
-    <span class="img-timer countdown-timer timer-green" data-ends="2026-06-18T19:19:41Z">…</span>
+    <span class="img-timer countdown-timer timer-amber" data-ends="2026-06-18T19:19:26Z">…</span>
   </div>
   <div class="card-body">
     <div class="card-top">
       <span class="gen-tag">992</span>
-      
+      <span class="urg-tag urg-soon">ENDING TODAY</span>
       <button class="fav-btn" data-url="https://www.pcarmarket.com/auction/2022-porsche-911-gt3-touring-15" onclick="toggleFav(event,this)" title="Save" style="margin-left:auto">
         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <circle cx="8" cy="8" r="4.5"/>
@@ -1542,7 +1530,19 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
     </div>
   </div>
 </div>
-<div class="auc-card auc-urg-live" onclick="cardClick(event,this)"
+  </div>
+</div>
+      <div class="auc-section">
+  <div class="section-hdr">
+    <div class="section-hdr-left">
+      <span class="section-icon">&#x25CB;</span>
+      <span class="section-title">Live Auctions</span>
+      <span class="section-count">47</span>
+    </div>
+    <div class="section-sub">Ending beyond 24h</div>
+  </div>
+  <div class="cards-list">
+    <div class="auc-card auc-urg-live" onclick="cardClick(event,this)"
  data-url="https://bringatrailer.com/listing/2024-porsche-911-targa-4-gts-22/"
  data-gen="992" data-src="BaT" data-tier="TIER2"
  data-price="193000" data-fmv="204204"
@@ -2186,12 +2186,12 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
  data-comp-count="16"
  data-fmv-range="$45K &amp;ndash; $48K"
  data-days-listed="5"
- data-ends="2026-06-19T19:12:36Z" data-listed="2026-06-12">
+ data-ends="2026-06-19T19:19:21Z" data-listed="2026-06-12">
   <div class="img-wrap">
     <img src="https://media.carsandbids.com/cdn-cgi/image/width=768,quality=70/ed57b8dccf832d9565ed11fb19a44df52fc03135/photos/Porsche718Cayman2018026.jpg?t=178050034496" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
     <div class="img-grad"></div>
     <span class="img-src-badge src-badge" style="background:#1F0D03;color:#fb923c">C&amp;B</span>
-    <span class="img-timer countdown-timer timer-green" data-ends="2026-06-19T19:12:36Z">…</span>
+    <span class="img-timer countdown-timer timer-green" data-ends="2026-06-19T19:19:21Z">…</span>
   </div>
   <div class="card-body">
     <div class="card-top">
@@ -2249,12 +2249,12 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
  data-comp-count="118"
  data-fmv-range="$30K &amp;ndash; $47K"
  data-days-listed="5"
- data-ends="2026-06-19T19:12:36Z" data-listed="2026-06-12">
+ data-ends="2026-06-19T19:19:21Z" data-listed="2026-06-12">
   <div class="img-wrap">
     <img src="https://media.carsandbids.com/cdn-cgi/image/width=768,quality=70/7a0a3c6148108c9c64425dd85e0181fa3cccb652/photos/KdVed68x-eDFquth/edit/ACwtk.jpg?t=178111093198" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
     <div class="img-grad"></div>
     <span class="img-src-badge src-badge" style="background:#1F0D03;color:#fb923c">C&amp;B</span>
-    <span class="img-timer countdown-timer timer-green" data-ends="2026-06-19T19:12:36Z">…</span>
+    <span class="img-timer countdown-timer timer-green" data-ends="2026-06-19T19:19:21Z">…</span>
   </div>
   <div class="card-body">
     <div class="card-top">
@@ -2312,12 +2312,12 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
  data-comp-count="19"
  data-fmv-range="$104K &amp;ndash; $135K"
  data-days-listed="5"
- data-ends="2026-06-19T19:12:36Z" data-listed="2026-06-12">
+ data-ends="2026-06-19T19:19:21Z" data-listed="2026-06-12">
   <div class="img-wrap">
     <img src="https://media.carsandbids.com/cdn-cgi/image/width=768,quality=70/ab7dc6e8af346b9fc74261b2f8f56bdf4c0d6236/photos/Porsche911GTS2016002.jpg?t=178094166196" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
     <div class="img-grad"></div>
     <span class="img-src-badge src-badge" style="background:#1F0D03;color:#fb923c">C&amp;B</span>
-    <span class="img-timer countdown-timer timer-green" data-ends="2026-06-19T19:12:36Z">…</span>
+    <span class="img-timer countdown-timer timer-green" data-ends="2026-06-19T19:19:21Z">…</span>
   </div>
   <div class="card-body">
     <div class="card-top">
@@ -2375,12 +2375,12 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
  data-comp-count="55"
  data-fmv-range="$238K &amp;ndash; $265K"
  data-days-listed="5"
- data-ends="2026-06-19T19:19:41Z" data-listed="2026-06-12">
+ data-ends="2026-06-19T19:19:26Z" data-listed="2026-06-12">
   <div class="img-wrap">
     <img src="https://d2niwqq19lf86s.cloudfront.net/htwritable/media/prod/eyJ0aXRsZSI6IjY2MDAzIC0gMjAyNCBQb3JzY2hlIDkxMSBHVDMiLCJzbHVnIjoiNjYwMDMtMjAyNC1wb3JzY2hlLTkxMS1ndDMtNDk1YWEzZWIifQ/.thumbnails/38383245-f316-4078-a024-1c59cddcd34a.webp/38383245-f316-4078-a024-1c59cddcd34a-tiny-380x0.webp" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
     <div class="img-grad"></div>
     <span class="img-src-badge src-badge" style="background:#0A1F14;color:#4ade80">pcarmarket</span>
-    <span class="img-timer countdown-timer timer-green" data-ends="2026-06-19T19:19:41Z">…</span>
+    <span class="img-timer countdown-timer timer-green" data-ends="2026-06-19T19:19:26Z">…</span>
   </div>
   <div class="card-body">
     <div class="card-top">
@@ -3068,12 +3068,12 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
  data-comp-count="0"
  data-fmv-range="—"
  data-days-listed="1"
- data-ends="2026-06-22T18:59:44Z" data-listed="2026-06-16">
+ data-ends="2026-06-22T18:59:30Z" data-listed="2026-06-16">
   <div class="img-wrap">
     <img src="https://d2niwqq19lf86s.cloudfront.net/htwritable/media/prod/eyJ0aXRsZSI6IjY2MTE5IC0gMjAxNSBwb3JzY2hlIDkxMS1jYXJyZXJhLTRzIiwic2x1ZyI6IjY2MTE5LTIwMTUtcG9yc2NoZS05MTEtY2FycmVyYS00cy04YzY1ZTkyNyJ9/.thumbnails/38be8ed9-4b2a-4a6e-bfed-adaac25e088b.webp/38be8ed9-4b2a-4a6e-bfed-adaac25e088b-tiny-380x0.webp" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
     <div class="img-grad"></div>
     <span class="img-src-badge src-badge" style="background:#0A1F14;color:#4ade80">pcarmarket</span>
-    <span class="img-timer countdown-timer timer-green" data-ends="2026-06-22T18:59:44Z">…</span>
+    <span class="img-timer countdown-timer timer-green" data-ends="2026-06-22T18:59:30Z">…</span>
   </div>
   <div class="card-body">
     <div class="card-top">
@@ -3131,12 +3131,12 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
  data-comp-count="27"
  data-fmv-range="$187K &amp;ndash; $215K"
  data-days-listed="2"
- data-ends="2026-06-22T19:09:44Z" data-listed="2026-06-15">
+ data-ends="2026-06-22T19:09:30Z" data-listed="2026-06-15">
   <div class="img-wrap">
     <img src="https://d2niwqq19lf86s.cloudfront.net/htwritable/media/.thumbnails/a0face9b-3d5c-47a7-8971-1cbf9bb74741-0a863ac6-36c7-4541-abe5-56c11dd1e765-tiny-2048x0.webp/a0face9b-3d5c-47a7-8971-1cbf9bb74741-0a863ac6-36c7-4541-abe5-56c11dd1e765-tiny-2048x0-tiny-380x0.webp" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
     <div class="img-grad"></div>
     <span class="img-src-badge src-badge" style="background:#0A1F14;color:#4ade80">pcarmarket</span>
-    <span class="img-timer countdown-timer timer-green" data-ends="2026-06-22T19:09:44Z">…</span>
+    <span class="img-timer countdown-timer timer-green" data-ends="2026-06-22T19:09:30Z">…</span>
   </div>
   <div class="card-body">
     <div class="card-top">
@@ -3176,258 +3176,6 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
       <div class="expand-footer">
         <div class="etag-row"><span class="etag">991.1</span></div>
         <div class="expand-actions"><span class="deal-badge">39% below FMV</span><a class="go-btn" href="https://www.pcarmarket.com/auction/2016-porsche-911-gt3-rs-21" target="_blank" onclick="event.stopPropagation()">&#x2197; Go to auction</a></div>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="auc-card auc-urg-live" onclick="cardClick(event,this)"
- data-url="https://carsandbids.com/auctions/3ojlO54w/2015-porsche-911-gt3"
- data-gen="991.1" data-src="C&amp;B" data-tier="TIER1"
- data-price="72000" data-fmv="119000"
- data-fmv-low="111000"
- data-fmv-high="127000"
- data-bid="72000"
- data-lid="15241"
- data-mileage="999999"
- data-trans="Manual"
- data-color=""
- data-comp-count="37"
- data-fmv-range="$111K &amp;ndash; $127K"
- data-days-listed="2"
- data-ends="2026-06-22T19:12:36Z" data-listed="2026-06-15">
-  <div class="img-wrap">
-    <img src="https://media.carsandbids.com/cdn-cgi/image/width=768,quality=70/b0c6c1410477e2fd1777909047289247f8fdc5d6/photos/Porsche911GT32015008.jpg?t=178102193447" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
-    <div class="img-grad"></div>
-    <span class="img-src-badge src-badge" style="background:#1F0D03;color:#fb923c">C&amp;B</span>
-    <span class="img-timer countdown-timer timer-green" data-ends="2026-06-22T19:12:36Z">…</span>
-  </div>
-  <div class="card-body">
-    <div class="card-top">
-      <span class="gen-tag">991.1</span>
-      
-      <button class="fav-btn" data-url="https://carsandbids.com/auctions/3ojlO54w/2015-porsche-911-gt3" onclick="toggleFav(event,this)" title="Save" style="margin-left:auto">
-        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="8" cy="8" r="4.5"/>
-          <circle cx="8" cy="8" r="1.8" fill="var(--bg2)" stroke="none"/>
-          <rect x="11.5" y="7" width="9" height="2.5" rx="1.25"/>
-          <rect x="17" y="9.5" width="2.5" height="2.5" rx="0.8"/>
-          <rect x="13.5" y="9.5" width="2.5" height="3.5" rx="0.8"/>
-        </svg>
-      </button>
-    </div>
-    <div class="card-title">2015 Porsche 911 GT3</div>
-    <div class="card-bid-row">
-      <span class="bid-val">$72,000</span>
-      <span class="fmv-pill fmv-below">▼ 39% below FMV</span>
-    </div>
-    <div class="card-specs"><span class="spec-pill">Manual</span></div>
-  </div>
-  <div class="expand-panel">
-    <div class="expand-inner">
-      <div class="stat-row">
-        <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$111K &ndash; $127K</div></div>
-        <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">37 sales</div></div>
-        <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">2</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
-        <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">Manual</div></div>
-        <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
-      </div>
-      <div class="graph-wrap">
-        <div class="graph-label">Sold comps vs FMV <span class="graph-sub">37 transactions</span></div>
-        <svg class="graph-svg" data-lid="15241" data-fmv="119000" data-bid="72000" data-low="111000" data-high="127000"></svg>
-      </div>
-      <div class="expand-footer">
-        <div class="etag-row"><span class="etag">991.1</span><span class="etag">Coupe</span></div>
-        <div class="expand-actions"><span class="deal-badge">39% below FMV</span><a class="go-btn" href="https://carsandbids.com/auctions/3ojlO54w/2015-porsche-911-gt3" target="_blank" onclick="event.stopPropagation()">&#x2197; Go to auction</a></div>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="auc-card auc-urg-live" onclick="cardClick(event,this)"
- data-url="https://carsandbids.com/auctions/92oBg74b/2014-porsche-911-carrera-coupe"
- data-gen="991.1" data-src="C&amp;B" data-tier="TIER2"
- data-price="25000" data-fmv="69019"
- data-fmv-low="59500"
- data-fmv-high="134500"
- data-bid="25000"
- data-lid="15245"
- data-mileage="999999"
- data-trans=""
- data-color=""
- data-comp-count="45"
- data-fmv-range="$60K &amp;ndash; $134K"
- data-days-listed="2"
- data-ends="2026-06-22T19:12:36Z" data-listed="2026-06-15">
-  <div class="img-wrap">
-    <img src="https://media.carsandbids.com/cdn-cgi/image/width=768,quality=70/a5cc277df6ef4101510a8b02c47d55db6d9cbb50/photos/Porsche911CarreraCoupe2014002.jpg?t=178032688742" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
-    <div class="img-grad"></div>
-    <span class="img-src-badge src-badge" style="background:#1F0D03;color:#fb923c">C&amp;B</span>
-    <span class="img-timer countdown-timer timer-green" data-ends="2026-06-22T19:12:36Z">…</span>
-  </div>
-  <div class="card-body">
-    <div class="card-top">
-      <span class="gen-tag">991.1</span>
-      
-      <button class="fav-btn" data-url="https://carsandbids.com/auctions/92oBg74b/2014-porsche-911-carrera-coupe" onclick="toggleFav(event,this)" title="Save" style="margin-left:auto">
-        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="8" cy="8" r="4.5"/>
-          <circle cx="8" cy="8" r="1.8" fill="var(--bg2)" stroke="none"/>
-          <rect x="11.5" y="7" width="9" height="2.5" rx="1.25"/>
-          <rect x="17" y="9.5" width="2.5" height="2.5" rx="0.8"/>
-          <rect x="13.5" y="9.5" width="2.5" height="3.5" rx="0.8"/>
-        </svg>
-      </button>
-    </div>
-    <div class="card-title">2014 Porsche 911 Carrera Coupe</div>
-    <div class="card-bid-row">
-      <span class="bid-val">$25,000</span>
-      <span class="fmv-pill fmv-below">▼ 64% below FMV</span>
-    </div>
-    <div class="card-specs"></div>
-  </div>
-  <div class="expand-panel">
-    <div class="expand-inner">
-      <div class="stat-row">
-        <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$60K &ndash; $134K</div></div>
-        <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">45 sales</div></div>
-        <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">2</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
-        <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">—</div></div>
-        <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
-      </div>
-      <div class="graph-wrap">
-        <div class="graph-label">Sold comps vs FMV <span class="graph-sub">45 transactions</span></div>
-        <svg class="graph-svg" data-lid="15245" data-fmv="69019" data-bid="25000" data-low="59500" data-high="134500"></svg>
-      </div>
-      <div class="expand-footer">
-        <div class="etag-row"><span class="etag">991.1</span><span class="etag">Coupe</span></div>
-        <div class="expand-actions"><span class="deal-badge">64% below FMV</span><a class="go-btn" href="https://carsandbids.com/auctions/92oBg74b/2014-porsche-911-carrera-coupe" target="_blank" onclick="event.stopPropagation()">&#x2197; Go to auction</a></div>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="auc-card auc-urg-live" onclick="cardClick(event,this)"
- data-url="https://carsandbids.com/auctions/9Qx41J0k/2007-porsche-911-carrera-4s-coupe"
- data-gen="997.1" data-src="C&amp;B" data-tier="TIER2"
- data-price="13000" data-fmv="55000"
- data-fmv-low="41000"
- data-fmv-high="69500"
- data-bid="13000"
- data-lid="15250"
- data-mileage="999999"
- data-trans=""
- data-color=""
- data-comp-count="122"
- data-fmv-range="$41K &amp;ndash; $70K"
- data-days-listed="2"
- data-ends="2026-06-22T19:12:36Z" data-listed="2026-06-15">
-  <div class="img-wrap">
-    <img src="https://media.carsandbids.com/cdn-cgi/image/width=768,quality=70/c51905b0000b639a185eeb080dd879bf007f5604/photos/9n6aJDen-D6-Mu_r/edit/iZly3.jpg?t=178125386757" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
-    <div class="img-grad"></div>
-    <span class="img-src-badge src-badge" style="background:#1F0D03;color:#fb923c">C&amp;B</span>
-    <span class="img-timer countdown-timer timer-green" data-ends="2026-06-22T19:12:36Z">…</span>
-  </div>
-  <div class="card-body">
-    <div class="card-top">
-      <span class="gen-tag">997.1</span>
-      
-      <button class="fav-btn" data-url="https://carsandbids.com/auctions/9Qx41J0k/2007-porsche-911-carrera-4s-coupe" onclick="toggleFav(event,this)" title="Save" style="margin-left:auto">
-        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="8" cy="8" r="4.5"/>
-          <circle cx="8" cy="8" r="1.8" fill="var(--bg2)" stroke="none"/>
-          <rect x="11.5" y="7" width="9" height="2.5" rx="1.25"/>
-          <rect x="17" y="9.5" width="2.5" height="2.5" rx="0.8"/>
-          <rect x="13.5" y="9.5" width="2.5" height="3.5" rx="0.8"/>
-        </svg>
-      </button>
-    </div>
-    <div class="card-title">2007 Porsche 911 Carrera 4S Coupe</div>
-    <div class="card-bid-row">
-      <span class="bid-val">$13,000</span>
-      <span class="fmv-pill fmv-below">▼ 76% below FMV</span>
-    </div>
-    <div class="card-specs"></div>
-  </div>
-  <div class="expand-panel">
-    <div class="expand-inner">
-      <div class="stat-row">
-        <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$41K &ndash; $70K</div></div>
-        <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">122 sales</div></div>
-        <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">2</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
-        <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">—</div></div>
-        <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
-      </div>
-      <div class="graph-wrap">
-        <div class="graph-label">Sold comps vs FMV <span class="graph-sub">122 transactions</span></div>
-        <svg class="graph-svg" data-lid="15250" data-fmv="55000" data-bid="13000" data-low="41000" data-high="69500"></svg>
-      </div>
-      <div class="expand-footer">
-        <div class="etag-row"><span class="etag">997.1</span><span class="etag">Coupe</span></div>
-        <div class="expand-actions"><span class="deal-badge">76% below FMV</span><a class="go-btn" href="https://carsandbids.com/auctions/9Qx41J0k/2007-porsche-911-carrera-4s-coupe" target="_blank" onclick="event.stopPropagation()">&#x2197; Go to auction</a></div>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="auc-card auc-urg-live" onclick="cardClick(event,this)"
- data-url="https://carsandbids.com/auctions/92wQymBE/2001-porsche-boxster-s"
- data-gen="986" data-src="C&amp;B" data-tier="TIER2"
- data-price="9000" data-fmv="16000"
- data-fmv-low="12986"
- data-fmv-high="19000"
- data-bid="9000"
- data-lid="15258"
- data-mileage="999999"
- data-trans=""
- data-color=""
- data-comp-count="210"
- data-fmv-range="$13K &amp;ndash; $19K"
- data-days-listed="2"
- data-ends="2026-06-22T19:12:36Z" data-listed="2026-06-15">
-  <div class="img-wrap">
-    <img src="https://media.carsandbids.com/cdn-cgi/image/width=768,quality=70/438ad923cef6d8239e95d61e7d6849486bae11d9/photos/exterior/KYyl1azM-bLsq3V3/edit/2AdDK.jpg?t=178072609234" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
-    <div class="img-grad"></div>
-    <span class="img-src-badge src-badge" style="background:#1F0D03;color:#fb923c">C&amp;B</span>
-    <span class="img-timer countdown-timer timer-green" data-ends="2026-06-22T19:12:36Z">…</span>
-  </div>
-  <div class="card-body">
-    <div class="card-top">
-      <span class="gen-tag">986</span>
-      
-      <button class="fav-btn" data-url="https://carsandbids.com/auctions/92wQymBE/2001-porsche-boxster-s" onclick="toggleFav(event,this)" title="Save" style="margin-left:auto">
-        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="8" cy="8" r="4.5"/>
-          <circle cx="8" cy="8" r="1.8" fill="var(--bg2)" stroke="none"/>
-          <rect x="11.5" y="7" width="9" height="2.5" rx="1.25"/>
-          <rect x="17" y="9.5" width="2.5" height="2.5" rx="0.8"/>
-          <rect x="13.5" y="9.5" width="2.5" height="3.5" rx="0.8"/>
-        </svg>
-      </button>
-    </div>
-    <div class="card-title">2001 Porsche Boxster S</div>
-    <div class="card-bid-row">
-      <span class="bid-val">$9,000</span>
-      <span class="fmv-pill fmv-below">▼ 44% below FMV</span>
-    </div>
-    <div class="card-specs"></div>
-  </div>
-  <div class="expand-panel">
-    <div class="expand-inner">
-      <div class="stat-row">
-        <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$13K &ndash; $19K</div></div>
-        <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">210 sales</div></div>
-        <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">2</div></div>
-        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
-        <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">—</div></div>
-        <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
-      </div>
-      <div class="graph-wrap">
-        <div class="graph-label">Sold comps vs FMV <span class="graph-sub">210 transactions</span></div>
-        <svg class="graph-svg" data-lid="15258" data-fmv="16000" data-bid="9000" data-low="12986" data-high="19000"></svg>
-      </div>
-      <div class="expand-footer">
-        <div class="etag-row"><span class="etag">986</span><span class="etag">Cabriolet</span></div>
-        <div class="expand-actions"><span class="deal-badge">44% below FMV</span><a class="go-btn" href="https://carsandbids.com/auctions/92wQymBE/2001-porsche-boxster-s" target="_blank" onclick="event.stopPropagation()">&#x2197; Go to auction</a></div>
       </div>
     </div>
   </div>
@@ -3491,6 +3239,258 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
       <div class="expand-footer">
         <div class="etag-row"><span class="etag">987</span><span class="etag">Cabriolet</span></div>
         <div class="expand-actions"><span class="deal-badge">84% below FMV</span><a class="go-btn" href="https://bringatrailer.com/listing/2010-porsche-boxster-17/" target="_blank" onclick="event.stopPropagation()">&#x2197; Go to auction</a></div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="auc-card auc-urg-live" onclick="cardClick(event,this)"
+ data-url="https://carsandbids.com/auctions/3ojlO54w/2015-porsche-911-gt3"
+ data-gen="991.1" data-src="C&amp;B" data-tier="TIER1"
+ data-price="72000" data-fmv="119000"
+ data-fmv-low="111000"
+ data-fmv-high="127000"
+ data-bid="72000"
+ data-lid="15241"
+ data-mileage="999999"
+ data-trans="Manual"
+ data-color=""
+ data-comp-count="37"
+ data-fmv-range="$111K &amp;ndash; $127K"
+ data-days-listed="2"
+ data-ends="2026-06-22T19:19:21Z" data-listed="2026-06-15">
+  <div class="img-wrap">
+    <img src="https://media.carsandbids.com/cdn-cgi/image/width=768,quality=70/b0c6c1410477e2fd1777909047289247f8fdc5d6/photos/Porsche911GT32015008.jpg?t=178102193447" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
+    <div class="img-grad"></div>
+    <span class="img-src-badge src-badge" style="background:#1F0D03;color:#fb923c">C&amp;B</span>
+    <span class="img-timer countdown-timer timer-green" data-ends="2026-06-22T19:19:21Z">…</span>
+  </div>
+  <div class="card-body">
+    <div class="card-top">
+      <span class="gen-tag">991.1</span>
+      
+      <button class="fav-btn" data-url="https://carsandbids.com/auctions/3ojlO54w/2015-porsche-911-gt3" onclick="toggleFav(event,this)" title="Save" style="margin-left:auto">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="8" cy="8" r="4.5"/>
+          <circle cx="8" cy="8" r="1.8" fill="var(--bg2)" stroke="none"/>
+          <rect x="11.5" y="7" width="9" height="2.5" rx="1.25"/>
+          <rect x="17" y="9.5" width="2.5" height="2.5" rx="0.8"/>
+          <rect x="13.5" y="9.5" width="2.5" height="3.5" rx="0.8"/>
+        </svg>
+      </button>
+    </div>
+    <div class="card-title">2015 Porsche 911 GT3</div>
+    <div class="card-bid-row">
+      <span class="bid-val">$72,000</span>
+      <span class="fmv-pill fmv-below">▼ 39% below FMV</span>
+    </div>
+    <div class="card-specs"><span class="spec-pill">Manual</span></div>
+  </div>
+  <div class="expand-panel">
+    <div class="expand-inner">
+      <div class="stat-row">
+        <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$111K &ndash; $127K</div></div>
+        <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">37 sales</div></div>
+        <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">2</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
+        <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">Manual</div></div>
+        <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
+      </div>
+      <div class="graph-wrap">
+        <div class="graph-label">Sold comps vs FMV <span class="graph-sub">37 transactions</span></div>
+        <svg class="graph-svg" data-lid="15241" data-fmv="119000" data-bid="72000" data-low="111000" data-high="127000"></svg>
+      </div>
+      <div class="expand-footer">
+        <div class="etag-row"><span class="etag">991.1</span><span class="etag">Coupe</span></div>
+        <div class="expand-actions"><span class="deal-badge">39% below FMV</span><a class="go-btn" href="https://carsandbids.com/auctions/3ojlO54w/2015-porsche-911-gt3" target="_blank" onclick="event.stopPropagation()">&#x2197; Go to auction</a></div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="auc-card auc-urg-live" onclick="cardClick(event,this)"
+ data-url="https://carsandbids.com/auctions/92oBg74b/2014-porsche-911-carrera-coupe"
+ data-gen="991.1" data-src="C&amp;B" data-tier="TIER2"
+ data-price="25000" data-fmv="69019"
+ data-fmv-low="59500"
+ data-fmv-high="134500"
+ data-bid="25000"
+ data-lid="15245"
+ data-mileage="999999"
+ data-trans=""
+ data-color=""
+ data-comp-count="45"
+ data-fmv-range="$60K &amp;ndash; $134K"
+ data-days-listed="2"
+ data-ends="2026-06-22T19:19:21Z" data-listed="2026-06-15">
+  <div class="img-wrap">
+    <img src="https://media.carsandbids.com/cdn-cgi/image/width=768,quality=70/a5cc277df6ef4101510a8b02c47d55db6d9cbb50/photos/Porsche911CarreraCoupe2014002.jpg?t=178032688742" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
+    <div class="img-grad"></div>
+    <span class="img-src-badge src-badge" style="background:#1F0D03;color:#fb923c">C&amp;B</span>
+    <span class="img-timer countdown-timer timer-green" data-ends="2026-06-22T19:19:21Z">…</span>
+  </div>
+  <div class="card-body">
+    <div class="card-top">
+      <span class="gen-tag">991.1</span>
+      
+      <button class="fav-btn" data-url="https://carsandbids.com/auctions/92oBg74b/2014-porsche-911-carrera-coupe" onclick="toggleFav(event,this)" title="Save" style="margin-left:auto">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="8" cy="8" r="4.5"/>
+          <circle cx="8" cy="8" r="1.8" fill="var(--bg2)" stroke="none"/>
+          <rect x="11.5" y="7" width="9" height="2.5" rx="1.25"/>
+          <rect x="17" y="9.5" width="2.5" height="2.5" rx="0.8"/>
+          <rect x="13.5" y="9.5" width="2.5" height="3.5" rx="0.8"/>
+        </svg>
+      </button>
+    </div>
+    <div class="card-title">2014 Porsche 911 Carrera Coupe</div>
+    <div class="card-bid-row">
+      <span class="bid-val">$25,000</span>
+      <span class="fmv-pill fmv-below">▼ 64% below FMV</span>
+    </div>
+    <div class="card-specs"></div>
+  </div>
+  <div class="expand-panel">
+    <div class="expand-inner">
+      <div class="stat-row">
+        <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$60K &ndash; $134K</div></div>
+        <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">45 sales</div></div>
+        <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">2</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
+        <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">—</div></div>
+        <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
+      </div>
+      <div class="graph-wrap">
+        <div class="graph-label">Sold comps vs FMV <span class="graph-sub">45 transactions</span></div>
+        <svg class="graph-svg" data-lid="15245" data-fmv="69019" data-bid="25000" data-low="59500" data-high="134500"></svg>
+      </div>
+      <div class="expand-footer">
+        <div class="etag-row"><span class="etag">991.1</span><span class="etag">Coupe</span></div>
+        <div class="expand-actions"><span class="deal-badge">64% below FMV</span><a class="go-btn" href="https://carsandbids.com/auctions/92oBg74b/2014-porsche-911-carrera-coupe" target="_blank" onclick="event.stopPropagation()">&#x2197; Go to auction</a></div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="auc-card auc-urg-live" onclick="cardClick(event,this)"
+ data-url="https://carsandbids.com/auctions/9Qx41J0k/2007-porsche-911-carrera-4s-coupe"
+ data-gen="997.1" data-src="C&amp;B" data-tier="TIER2"
+ data-price="13000" data-fmv="55000"
+ data-fmv-low="41000"
+ data-fmv-high="69500"
+ data-bid="13000"
+ data-lid="15250"
+ data-mileage="999999"
+ data-trans=""
+ data-color=""
+ data-comp-count="122"
+ data-fmv-range="$41K &amp;ndash; $70K"
+ data-days-listed="2"
+ data-ends="2026-06-22T19:19:21Z" data-listed="2026-06-15">
+  <div class="img-wrap">
+    <img src="https://media.carsandbids.com/cdn-cgi/image/width=768,quality=70/c51905b0000b639a185eeb080dd879bf007f5604/photos/9n6aJDen-D6-Mu_r/edit/iZly3.jpg?t=178125386757" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
+    <div class="img-grad"></div>
+    <span class="img-src-badge src-badge" style="background:#1F0D03;color:#fb923c">C&amp;B</span>
+    <span class="img-timer countdown-timer timer-green" data-ends="2026-06-22T19:19:21Z">…</span>
+  </div>
+  <div class="card-body">
+    <div class="card-top">
+      <span class="gen-tag">997.1</span>
+      
+      <button class="fav-btn" data-url="https://carsandbids.com/auctions/9Qx41J0k/2007-porsche-911-carrera-4s-coupe" onclick="toggleFav(event,this)" title="Save" style="margin-left:auto">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="8" cy="8" r="4.5"/>
+          <circle cx="8" cy="8" r="1.8" fill="var(--bg2)" stroke="none"/>
+          <rect x="11.5" y="7" width="9" height="2.5" rx="1.25"/>
+          <rect x="17" y="9.5" width="2.5" height="2.5" rx="0.8"/>
+          <rect x="13.5" y="9.5" width="2.5" height="3.5" rx="0.8"/>
+        </svg>
+      </button>
+    </div>
+    <div class="card-title">2007 Porsche 911 Carrera 4S Coupe</div>
+    <div class="card-bid-row">
+      <span class="bid-val">$13,000</span>
+      <span class="fmv-pill fmv-below">▼ 76% below FMV</span>
+    </div>
+    <div class="card-specs"></div>
+  </div>
+  <div class="expand-panel">
+    <div class="expand-inner">
+      <div class="stat-row">
+        <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$41K &ndash; $70K</div></div>
+        <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">122 sales</div></div>
+        <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">2</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
+        <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">—</div></div>
+        <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
+      </div>
+      <div class="graph-wrap">
+        <div class="graph-label">Sold comps vs FMV <span class="graph-sub">122 transactions</span></div>
+        <svg class="graph-svg" data-lid="15250" data-fmv="55000" data-bid="13000" data-low="41000" data-high="69500"></svg>
+      </div>
+      <div class="expand-footer">
+        <div class="etag-row"><span class="etag">997.1</span><span class="etag">Coupe</span></div>
+        <div class="expand-actions"><span class="deal-badge">76% below FMV</span><a class="go-btn" href="https://carsandbids.com/auctions/9Qx41J0k/2007-porsche-911-carrera-4s-coupe" target="_blank" onclick="event.stopPropagation()">&#x2197; Go to auction</a></div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="auc-card auc-urg-live" onclick="cardClick(event,this)"
+ data-url="https://carsandbids.com/auctions/92wQymBE/2001-porsche-boxster-s"
+ data-gen="986" data-src="C&amp;B" data-tier="TIER2"
+ data-price="9000" data-fmv="16000"
+ data-fmv-low="12986"
+ data-fmv-high="19000"
+ data-bid="9000"
+ data-lid="15258"
+ data-mileage="999999"
+ data-trans=""
+ data-color=""
+ data-comp-count="210"
+ data-fmv-range="$13K &amp;ndash; $19K"
+ data-days-listed="2"
+ data-ends="2026-06-22T19:19:21Z" data-listed="2026-06-15">
+  <div class="img-wrap">
+    <img src="https://media.carsandbids.com/cdn-cgi/image/width=768,quality=70/438ad923cef6d8239e95d61e7d6849486bae11d9/photos/exterior/KYyl1azM-bLsq3V3/edit/2AdDK.jpg?t=178072609234" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
+    <div class="img-grad"></div>
+    <span class="img-src-badge src-badge" style="background:#1F0D03;color:#fb923c">C&amp;B</span>
+    <span class="img-timer countdown-timer timer-green" data-ends="2026-06-22T19:19:21Z">…</span>
+  </div>
+  <div class="card-body">
+    <div class="card-top">
+      <span class="gen-tag">986</span>
+      
+      <button class="fav-btn" data-url="https://carsandbids.com/auctions/92wQymBE/2001-porsche-boxster-s" onclick="toggleFav(event,this)" title="Save" style="margin-left:auto">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="8" cy="8" r="4.5"/>
+          <circle cx="8" cy="8" r="1.8" fill="var(--bg2)" stroke="none"/>
+          <rect x="11.5" y="7" width="9" height="2.5" rx="1.25"/>
+          <rect x="17" y="9.5" width="2.5" height="2.5" rx="0.8"/>
+          <rect x="13.5" y="9.5" width="2.5" height="3.5" rx="0.8"/>
+        </svg>
+      </button>
+    </div>
+    <div class="card-title">2001 Porsche Boxster S</div>
+    <div class="card-bid-row">
+      <span class="bid-val">$9,000</span>
+      <span class="fmv-pill fmv-below">▼ 44% below FMV</span>
+    </div>
+    <div class="card-specs"></div>
+  </div>
+  <div class="expand-panel">
+    <div class="expand-inner">
+      <div class="stat-row">
+        <div class="estat"><div class="estat-label">FMV Range</div><div class="estat-val">$13K &ndash; $19K</div></div>
+        <div class="estat"><div class="estat-label">Comps</div><div class="estat-val">210 sales</div></div>
+        <div class="estat"><div class="estat-label">Days Listed</div><div class="estat-val">2</div></div>
+        <div class="estat"><div class="estat-label">Mileage</div><div class="estat-val">— mi</div></div>
+        <div class="estat"><div class="estat-label">Transmission</div><div class="estat-val">—</div></div>
+        <div class="estat"><div class="estat-label">Color</div><div class="estat-val">—</div></div>
+      </div>
+      <div class="graph-wrap">
+        <div class="graph-label">Sold comps vs FMV <span class="graph-sub">210 transactions</span></div>
+        <svg class="graph-svg" data-lid="15258" data-fmv="16000" data-bid="9000" data-low="12986" data-high="19000"></svg>
+      </div>
+      <div class="expand-footer">
+        <div class="etag-row"><span class="etag">986</span><span class="etag">Cabriolet</span></div>
+        <div class="expand-actions"><span class="deal-badge">44% below FMV</span><a class="go-btn" href="https://carsandbids.com/auctions/92wQymBE/2001-porsche-boxster-s" target="_blank" onclick="event.stopPropagation()">&#x2197; Go to auction</a></div>
       </div>
     </div>
   </div>
@@ -3698,12 +3698,12 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
  data-comp-count="18"
  data-fmv-range="$84K &amp;ndash; $100K"
  data-days-listed="1"
- data-ends="2026-06-23T18:59:44Z" data-listed="2026-06-16">
+ data-ends="2026-06-23T18:59:30Z" data-listed="2026-06-16">
   <div class="img-wrap">
     <img src="https://d2niwqq19lf86s.cloudfront.net/htwritable/media/prod/eyJ0aXRsZSI6IjY1NzE2IC0gQm94c3RlciIsInNsdWciOiI2NTcxNi1ib3hzdGVyLWJhYzhlMDgxIn0/.thumbnails/0c3923fc-b203-4de7-abe3-7a6ed355dbfe.webp/0c3923fc-b203-4de7-abe3-7a6ed355dbfe-tiny-380x0.webp" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
     <div class="img-grad"></div>
     <span class="img-src-badge src-badge" style="background:#0A1F14;color:#4ade80">pcarmarket</span>
-    <span class="img-timer countdown-timer timer-green" data-ends="2026-06-23T18:59:44Z">…</span>
+    <span class="img-timer countdown-timer timer-green" data-ends="2026-06-23T18:59:30Z">…</span>
   </div>
   <div class="card-body">
     <div class="card-top">
@@ -3761,12 +3761,12 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
  data-comp-count="7"
  data-fmv-range="$298K &amp;ndash; $315K"
  data-days-listed="1"
- data-ends="2026-06-23T19:09:44Z" data-listed="2026-06-16">
+ data-ends="2026-06-23T19:09:30Z" data-listed="2026-06-16">
   <div class="img-wrap">
     <img src="https://d2niwqq19lf86s.cloudfront.net/htwritable/media/.thumbnails/b6f27a4d-9a93-4961-9502-39314da8e25e-1b224414-3a62-4809-97cb-54e769145f48-tiny-2048x0-1.webp/b6f27a4d-9a93-4961-9502-39314da8e25e-1b224414-3a62-4809-97cb-54e769145f48-tiny-2048x0-1-tiny-380x0.webp" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
     <div class="img-grad"></div>
     <span class="img-src-badge src-badge" style="background:#0A1F14;color:#4ade80">pcarmarket</span>
-    <span class="img-timer countdown-timer timer-green" data-ends="2026-06-23T19:09:44Z">…</span>
+    <span class="img-timer countdown-timer timer-green" data-ends="2026-06-23T19:09:30Z">…</span>
   </div>
   <div class="card-body">
     <div class="card-top">
@@ -3824,12 +3824,12 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
  data-comp-count="16"
  data-fmv-range="$80K &amp;ndash; $100K"
  data-days-listed="1"
- data-ends="2026-06-23T19:12:36Z" data-listed="2026-06-16">
+ data-ends="2026-06-23T19:19:21Z" data-listed="2026-06-16">
   <div class="img-wrap">
     <img src="https://media.carsandbids.com/cdn-cgi/image/width=768,quality=70/3bf551ddb2c3edadf589469e5dde6385882a55a7/photos/Porsche911CarreraSCoupe2018002.jpg?t=178119084404" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
     <div class="img-grad"></div>
     <span class="img-src-badge src-badge" style="background:#1F0D03;color:#fb923c">C&amp;B</span>
-    <span class="img-timer countdown-timer timer-green" data-ends="2026-06-23T19:12:36Z">…</span>
+    <span class="img-timer countdown-timer timer-green" data-ends="2026-06-23T19:19:21Z">…</span>
   </div>
   <div class="card-body">
     <div class="card-top">
@@ -3887,12 +3887,12 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
  data-comp-count="110"
  data-fmv-range="$67K &amp;ndash; $138K"
  data-days-listed="1"
- data-ends="2026-06-23T19:12:36Z" data-listed="2026-06-16">
+ data-ends="2026-06-23T19:19:21Z" data-listed="2026-06-16">
   <div class="img-wrap">
     <img src="https://media.carsandbids.com/cdn-cgi/image/width=768,quality=70/f51186f3a37942b3ae54fab02eb9bca29ea74102/photos/porscheboxster2024002.jpg?t=177990046287" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
     <div class="img-grad"></div>
     <span class="img-src-badge src-badge" style="background:#1F0D03;color:#fb923c">C&amp;B</span>
-    <span class="img-timer countdown-timer timer-green" data-ends="2026-06-23T19:12:36Z">…</span>
+    <span class="img-timer countdown-timer timer-green" data-ends="2026-06-23T19:19:21Z">…</span>
   </div>
   <div class="card-body">
     <div class="card-top">
@@ -3950,12 +3950,12 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
  data-comp-count="122"
  data-fmv-range="$41K &amp;ndash; $70K"
  data-days-listed="1"
- data-ends="2026-06-23T19:12:36Z" data-listed="2026-06-16">
+ data-ends="2026-06-23T19:19:21Z" data-listed="2026-06-16">
   <div class="img-wrap">
     <img src="https://media.carsandbids.com/cdn-cgi/image/width=768,quality=70/4822e9034b0b6b357b3f73fabdfc10e586c36f68/photos/application/s-c2A7yxw/edit/XKcqP.jpg?t=178092285500" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
     <div class="img-grad"></div>
     <span class="img-src-badge src-badge" style="background:#1F0D03;color:#fb923c">C&amp;B</span>
-    <span class="img-timer countdown-timer timer-green" data-ends="2026-06-23T19:12:36Z">…</span>
+    <span class="img-timer countdown-timer timer-green" data-ends="2026-06-23T19:19:21Z">…</span>
   </div>
   <div class="card-body">
     <div class="card-top">
@@ -4013,12 +4013,12 @@ html,body { background:var(--bg); color:var(--text); font-family:'Inter',sans-se
  data-comp-count="31"
  data-fmv-range="$98K &amp;ndash; $138K"
  data-days-listed="1"
- data-ends="2026-06-23T19:12:36Z" data-listed="2026-06-16">
+ data-ends="2026-06-23T19:19:21Z" data-listed="2026-06-16">
   <div class="img-wrap">
     <img src="https://media.carsandbids.com/cdn-cgi/image/width=768,quality=70/1477bbe21e8d6b5e719c7c3ccab577fd47dd8cc3/photos/Porsche911Type9922022002/edit/YE0AH.jpg?t=178150705655" alt="" class="auc-img" loading="lazy" onerror="this.src=&quot;data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%27400%27 height=%27220%27%3E%3Crect width=%27400%27 height=%27220%27 fill=%27%2318181F%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 dominant-baseline=%27middle%27 text-anchor=%27middle%27 font-family=%27monospace%27 font-size=%2712%27 fill=%27%2325252E%27%3ENo photo%3C/text%3E%3C/svg%3E&quot;">
     <div class="img-grad"></div>
     <span class="img-src-badge src-badge" style="background:#1F0D03;color:#fb923c">C&amp;B</span>
-    <span class="img-timer countdown-timer timer-green" data-ends="2026-06-23T19:12:36Z">…</span>
+    <span class="img-timer countdown-timer timer-green" data-ends="2026-06-23T19:19:21Z">…</span>
   </div>
   <div class="card-body">
     <div class="card-top">
@@ -10115,6 +10115,19 @@ function cycleTheme() {
   localStorage.setItem('ptox_theme', next);
   closeDD();
 }
+</script>
+<!-- Mobile bottom nav — hidden on desktop via @media(min-width:769px) -->
+<nav class="mob-bottom-nav" id="mob-bottom-nav">
+  <a class="mob-nav-item on" href="auctions.html"><i class="ti ti-car"></i><span>Market</span></a>
+  <a class="mob-nav-item" href="saved.html"><i class="ti ti-heart"></i><span>Saved</span></a>
+  <a class="mob-nav-item" href="search.html"><i class="ti ti-search"></i><span>Search</span></a>
+  <a class="mob-nav-item" href="market_report.html"><i class="ti ti-chart-line"></i><span>Report</span></a>
+  <div class="mob-nav-item" onclick="toggleDD()"><i class="ti ti-dots"></i><span>More</span></div>
+</nav>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="/auth.js"></script>
+<script>
+(async()=>{try{const r=await fetch('https://raw.githubusercontent.com/OCX11/rennmarkt/main/docs/stats.json',{cache:'no-store'});if(!r.ok)return;const s=await r.json();const fmt=n=>n>=1000?n.toLocaleString():String(n);const set=(id,v)=>{const el=document.getElementById(id);if(el&&v!=null)el.textContent=fmt(v);};set('s-active',s.n_active);set('s-new',s.n_new);set('s-auctions',s.n_auctions);set('s-comps',s.n_comps);set('s-deals',s.n_deals);}catch(e){}})();
 </script>
 </body>
 
